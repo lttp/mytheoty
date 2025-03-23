@@ -1,0 +1,860 @@
+%% !Mode:: "TeX:UTF-8"
+%\baselineskip 20pt
+
+\markboth{附录}{附录}
+%\addcontentsline{toc}{chapter}{附录}
+\appendix
+%\chapter*{附录}
+\addcontentsline{toc}{chapter}{附录}
+
+\chapter*{附录}
+
+
+\textbf{本文的主要符号及说明如下：}
+\begin{center}
+	\begin{longtable}{@{}lp{300pt}@{}}
+		\caption{本文的主要符号表}\\
+		\label{symbols:all}\\
+%			\vspace{0.5em}\centering\wuhao \\
+		%	\begin{tabular}{cc}
+			\hline
+			{\bfseries 符号} &  { \bfseries 描述} \\
+			\hline
+			$G$, $G^{(t)}$ &  动态网络及其$t$时刻的网络快照 \\
+			$K$,$N$,$T$ & 社团个数、节点个数和动态网络快照数量（即时间片个数） \\
+			$N^{(t)}$,$M^{(t)}$, $K^{(t)}$ &  $G^{(t)}$中的节点数、边数及社团数 \\
+			$W^{(t)}$, $W^{(t)}_{ij}$ &  $G^{(t)}$ 的邻接矩阵；$i$与$j$节点之间在$t$时刻的连边\\
+			${A}_k$ & 社团$k$的社团转移倾向矩阵 \\
+			$A^{(t)}$ &  网络快照$t-1$到$t$的社团转移矩阵 \\
+			${C}_i^{t}$ & 节点$i$在$t$时刻的节点级别转移倾向\\
+			$\mathbf{X}^{(t)}$ & $G^{(t)}$的特征矩阵 \\
+			$\mathbf{F}^{(t)}$ & $G^{(t)}$的表示矩阵 \\
+			$D$ & 节点表示维度 \\
+			$d^{(t)}_i$ & $G^{(t)}$中节点$v_i$的度 \\
+			$B$，$B_{kl}$ & 不同社团间节点的连边概率，亦称块矩阵、社团$k$内节点与社团$l$内的节点有边的概率\\
+			$Z$, $Z^{(t)}$ & $G$ 和 $G^{(t)}$的社团划分矩阵 \\
+			$z_i^{t}$ & 快照$t$中节点$i$所属于的社团归属，可以由one-hot向量表示 \\
+			$\pi$，$\pi_k$ & $z^{(t)}_i$的多项分布先验参数、快照$1$中节点$i$属于社团$k$的概率\\
+			${\gamma}$ ,${\mu}$ & ${\pi}$和${A}_k$的Dirchlet分布参数 \\
+			${\alpha}$ , ${\beta}$ & $B$的贝塔分布的参数 \\   
+			$\delta^{(t)}$, $\delta_i^{(t)}$ & $t$快照的节点流行度向量与第$i$个节点的流行度参数 \\
+			$\lambda$ & $\delta_i^{(t)}$的指数先验参数 \\
+			$\phi^{(t)}$, $\phi^{(t)}_i$ &$Z^{(t)}$与$z^{(t)}_i$的变分参数 \\
+			$\bar{\delta}^{(t)}$, $\bar{\delta}^{(t)}$ &$\delta^{(t)}$和$\delta^{(t)}_i$的变分参数 \\
+			$\tilde{\mu}^{(t)}$, $\tilde{\mu}^{(t)}_{kl}$ &$A^{(t)}$和$A^{(t)}_{kl}$的变分参数 \\
+			$\bm{\theta}_{c_i^{(t)}}^{(t)}$, $\bm{\sigma}_{c_i^{(t)}}^{(t)}$ & 生成的高斯分布的参数\\
+			$b_{i,j}^{(t)}$ &  生成的伯努利分布的参数 \\
+			$\Phi^{\mathbf{X}}$, $\Phi^{\mathbf{Z}}$& 多层感知器模型参数\\
+			$\mathbf{h}^{(t)}$ & GRU的隐藏状态表示 \\
+			$\hat{\bm{\theta}}^{(t)}_i$ , $\hat{\bm{\sigma}}^{(t)}_i$ & 变分推断的高斯分布的参数 \\
+			$\Delta^{(\leq T)}$ & $\mathbf{F}^{(\leq T)}, \mathbf{Z}^{(\leq T)}|\mathbf{W}^{(\leq T)},\mathbf{X}^{(\leq T)}$的缩写形式 \\
+			$\Delta^{(t)}$ & $\mathbf{F}^{(t)}, \mathbf{Z}^{(t)}|\mathbf{W}^{(\leq t)},\mathbf{X}^{(\leq t)},\mathbf{F}^{(< t)}$的缩写形式\\
+			$\mathcal{S}_i^{(t)}$ & 网络快照$t$中$v_i$的蒙特卡罗样本集 \\
+			$\gamma_{z_i^{(t)}}^{(t)}$ & $q(\mathbf{Z}_i^{(t)}|\mathbf{W}^{(t)},\mathbf{X}^{(t)})$的缩写形式 \\
+			\hline
+			%	\end{tabular}
+	\end{longtable}
+\end{center}
+
+
+\begin{proposition}
+	第三章所提出算法HB-DSBM参数的近似后验结果的推断
+\end{proposition}
+%\textbf{HB-DSBM参数的近似后验结果推断证明如下：}
+
+
+\begin{proof}
+	\label{HB-DSBM:inference}
+	由图模型~\ref{fig.4.1}与HB-DSBM的生成过程可写出模型的联合概率分布：
+	
+	\begin{equation}
+		\begin{split}
+			P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
+			= & \prod_{t=1}^T P(W^t | Z^t, B) \times  P(Z^1 | \pi) \times \prod_{t=2}^T P(Z^t | C^t) \\
+			& \times \prod_{t=2}^T P(C^t | A, Z^{t-1}) \times P(A | \mu) \times P(\pi | \gamma) \times P(B | \alpha, \beta) \\
+		\end{split}
+	\end{equation}
+	
+	
+	% \section{模型求解}
+	
+	% 本小结介绍针对本模型的高效的变分近似推断算法。
+	% \subsection{变分推断}
+	% 由于模型参数较多且复杂，直接推出模型后验$p(Z,C,B,A,\pi|W)$是困难的, 因此基于平均场理论，本节提出了用$q(Z,C,B,A,\pi)$ 来近似$p(Z,C,B,A,\pi|W)$. 为了简介，本节用$\Delta$ 来表示参数 $\{\pi,B,A,C,Z\}$. 更详细来说，即：
+	
+	% \begin{equation}
+		% \label{appendix:eq2}
+		% \begin{split}
+			% & q(\Delta) =  \prod_{t=1}^T \prod_{i=1}^N q(z_i^t) \prod_{t=2}^T \prod_{i=1}^N q(c_i^t)q(B)q(A)q(\pi)  \\
+			% \end{split}
+		% \end{equation}
+	
+	% 其中块矩阵变分参数$q(B|\widetilde{\alpha},\widetilde{\beta}) = \prod_{k,l\geq k} Beta(\widetilde{\alpha}_{kl},\widetilde{\beta}_{kl})$, 社团级别转移矩阵变分参数 $q(A|\widetilde{\mu}) = \prod_{k=1}^K \prod_{l=1}^K Dir(\widetilde{\mu}_{kl})$。 而社团归属变分参数$q(z_i^t|\widetilde{\phi}_i^t)$ 服从以$\widetilde{\phi}_i^t$为参数的多项分布。
+	% 而$q(c_i^t|\widetilde{\xi}_i^t)$和$q(\pi|\widetilde{\gamma})$都分别服从以$\widetilde{\xi}_i^t$和$\widetilde{\mu}_{kl}$为参数的狄利克雷分布。
+	
+	本节介绍基于变分推断的HB-DSBM参数后验求解方法，具体如下所述。
+	
+	\textbf{变分推断过程如下：}
+	
+	模型后验分布$p(Z, C, B, A, \pi | W)$由于各分部并非共轭分部，因此难以直接推断。本研究基于平均场理论，提出基于变分推断理论，以$q(Z, C, B, A, \pi)$近似替代$p(Z, C, B, A, \pi | W)$。为简化表述，本节将参数集合$\{\pi, B, A, C, Z\}$统一记作$\Delta$。具体而言，变分分布的因子分解形式如下：
+	
+	\begin{equation}
+		\label{appendix:eq2}
+		\begin{split}
+			& q(\Delta) = \prod_{t=1}^T \prod_{i=1}^N q(z_i^t) \cdot \prod_{t=2}^T \prod_{i=1}^N q(c_i^t) \cdot q(B) \cdot q(A) \cdot q(\pi) \\
+		\end{split}
+	\end{equation}
+	
+	其中，块矩阵的变分参数分布定义为$q(B | \widetilde{\alpha}, \widetilde{\beta}) = \prod_{k,l \geq k} Beta(\widetilde{\alpha}_{kl}, \widetilde{\beta}_{kl})$，社团层面转移矩阵的变分参数分布为$q(A | \widetilde{\mu}) = \prod_{k=1}^K \prod_{l=1}^K Dir(\widetilde{\mu}_{kl})$。节点社团归属的变分参数$q(z_i^t | \widetilde{\phi}_i^t)$遵循以$\widetilde{\phi}_i^t$为参数的多项分布。此外，节点级转移倾向的变分参数$q(c_i^t | \widetilde{\xi}_i^t)$和先验分布$q(\pi | \widetilde{\gamma})$分别服从以$\widetilde{\xi}_i^t$为分属以及以$\widetilde{\gamma}$为参数的Dirchlet分布。
+	
+	
+	% 因此有变分下界：
+	
+	% \begin{equation}
+		% \label{appendix:eq:3}
+		% \begin{split}
+			% &\widetilde{L}(q) = \sum_z \int_{\pi,B,A,C}q(\Delta) \log \frac{p(\Delta,W)}{q(\Delta)} 
+			% = E_{\widetilde{\phi},\widetilde{\alpha},\widetilde{\beta}} \sum_{t=1}^T [\log P(W^t|Z^t,B)] \\
+			% &+ E_{\widetilde{\gamma},\widetilde{\phi}}[\log P(Z^1|\pi)]+E_{\widetilde{\phi},\widetilde{\xi}} \sum_{t=2}^T [\log P(Z^t|C^t)] 
+			% + E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}} \sum_{t=2}^T [\log P(C^t|A,Z^{t-1})]\\
+			% &+ E_{\widetilde{\mu}}[\log P(A)]+E_{\widetilde{\gamma}}[\log P(\pi)] + E_{\widetilde{\alpha},\widetilde{\beta}}[\log P(B)]
+			% - E_{\widetilde{\gamma}}[\log q(\pi)] - E_{\widetilde{\alpha},\widetilde{\beta}}[\log q(B)]  - E_{\widetilde{\mu}}[\log q(A)]\\
+			% &- \sum_{t=2}^T \sum_{i=1}^N E_{\widetilde{\xi}}[\log q(C_i^t)] - \sum_{t=1}^T \sum_{i=1}^N E_{\widetilde{\phi}}[\log q(z_i^t)] \\
+			% \end{split}
+		% \end{equation}
+	
+	% 这里 $\widetilde{\phi},\widetilde{\xi},\widetilde{\alpha},\widetilde{\beta},\widetilde{\mu},\widetilde{\gamma}$ 即为变分参数。为了方便起见，本章省略掉了分布的条件部分。 例如，本章将 $q(\Delta|\widetilde{\phi},\widetilde{\xi},\widetilde{\alpha},\widetilde{\beta},\widetilde{\mu},\widetilde{\gamma})$ 和 $q(z_i^t|\widetilde{\phi}_i^t)$ 略写为$q(\Delta)$和$q(z_i^t)$。
+	% 因此该模型的变分下界(ELBO)$\widetilde{L}(q)$被写成了如上式\ref{appendix:eq:3}。
+	
+	% 随后通过最大化ELBO来获得最优的隐变量$Z,\pi,B,A,C$和模型参数$\gamma,\alpha,\beta,\mu$。 通过对不同的参数$\widetilde{\phi},\widetilde{\gamma},\widetilde{\alpha},\widetilde{\beta},\widetilde{\mu},\widetilde{\xi}$对$\widetilde{L}(q)$求偏导,并令导数为0求得每个参数的更新公式，即:
+	% \begin{equation}
+		% \begin{split}
+			% \nabla \widetilde{L}(q) = \{ \frac{\partial \widetilde{L}}{\partial \widetilde{\gamma}},\frac{\partial \widetilde{L}}{\partial \widetilde{\alpha}},\frac{\partial \widetilde{L}}{\partial \widetilde{\beta}},\frac{\partial \widetilde{L}}{\partial \widetilde{\mu}},\frac{\partial \widetilde{L}}{\partial \widetilde{\xi}},\frac{\partial \widetilde{L}}{\partial \widetilde{\phi}} \} = 0
+			% \end{split}
+		% \end{equation}
+	
+	
+	由此可得变分下界ELBO表达式：
+	
+	\begin{equation}
+		\label{appendix:eq:3}
+		\begin{split}
+			&\widetilde{L}(q) = \sum_z \int_{\pi,B,A,C} q(\Delta) \log \frac{p(\Delta,W)}{q(\Delta)} 
+			= E_{\widetilde{\phi},\widetilde{\alpha},\widetilde{\beta}} \sum_{t=1}^T [\log P(W^t|Z^t,B)] \\
+			&+ E_{\widetilde{\gamma},\widetilde{\phi}}[\log P(Z^1|\pi)] + E_{\widetilde{\phi},\widetilde{\xi}} \sum_{t=2}^T [\log P(Z^t|C^t)] 
+			+ E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}} \sum_{t=2}^T [\log P(C^t|A,Z^{t-1})] \\
+			&+ E_{\widetilde{\mu}}[\log P(A)] + E_{\widetilde{\gamma}}[\log P(\pi)] + E_{\widetilde{\alpha},\widetilde{\beta}}[\log P(B)] 
+			- E_{\widetilde{\gamma}}[\log q(\pi)] - E_{\widetilde{\alpha},\widetilde{\beta}}[\log q(B)]  \\
+			&- E_{\widetilde{\mu}}[\log q(A)]- \sum_{t=2}^T \sum_{i=1}^N E_{\widetilde{\xi}}[\log q(C_i^t)] - \sum_{t=1}^T \sum_{i=1}^N E_{\widetilde{\phi}}[\log q(z_i^t)] \\
+		\end{split}
+	\end{equation}
+	
+	其中，$\widetilde{\phi}, \widetilde{\xi}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}, \widetilde{\gamma}$为变分参数。为表述简洁，本章省略了分布的条件依赖部分。例如，$q(\Delta|\widetilde{\phi},\widetilde{\xi},\widetilde{\alpha},\widetilde{\beta},\widetilde{\mu},\widetilde{\gamma})$和$q(z_i^t|\widetilde{\phi}_i^t)$分别简化为$q(\Delta)$和$q(z_i^t)$。因此，模型的变分下界（ELBO）$\widetilde{L}(q)$可表达为上述公式\ref{appendix:eq:3}。
+	
+	随后，通过最大化ELBO来推导出隐变量$Z, \pi, B, A, C$以及模型参数$\gamma, \alpha, \beta, \mu$的最优解。具体方法是对变分参数$\widetilde{\phi}, \widetilde{\gamma}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}, \widetilde{\xi}$分别求$\widetilde{L}(q)$的偏导数，并令其等于零，从而得到各参数的更新公式，即：
+	
+	\begin{equation}
+		\begin{split}
+			\nabla \widetilde{L}(q) = \{ \frac{\partial \widetilde{L}}{\partial \widetilde{\gamma}}, \frac{\partial \widetilde{L}}{\partial \widetilde{\alpha}}, \frac{\partial \widetilde{L}}{\partial \widetilde{\beta}}, \frac{\partial \widetilde{L}}{\partial \widetilde{\mu}}, \frac{\partial \widetilde{L}}{\partial \widetilde{\xi}}, \frac{\partial \widetilde{L}}{\partial \widetilde{\phi}} \} = 0
+		\end{split}
+	\end{equation}
+	
+	每个参数的结果如下所示:
+	\textbf{对 $\widetilde{\gamma}$}:
+	
+	包含$\widetilde{\gamma}$的ELBO如下所示:
+	\begin{equation}
+		\begin{split}
+			& \widetilde{L}_{\widetilde{\gamma}} = E_{\widetilde{\gamma},\widetilde{\phi}}[\log P(Z^1|\pi)] + E_{\widetilde{\gamma}}[\log P(\pi)]- E_{\widetilde{\gamma}}[\log q(\pi)] \\
+			& = \log{\frac{\prod_{k=1}^K \log \Gamma (\widetilde{\gamma}_k)}{\Gamma (\sum_k \widetilde{\gamma}_k)}} 
+			+ \sum_{k=1}^K ( \gamma_k - \widetilde{\gamma}_k + \sum_{i=1}^N \widetilde{\phi}_{ik}^1)[\psi(\widetilde{\gamma}_k) - \psi(\sum_k \widetilde{\gamma}_k)]\\
+		\end{split}
+	\end{equation}
+	
+	这里 $\psi(x) = \frac{\Gamma'(x)}{\Gamma(x)} = \frac{\,d \log \Gamma(x)}{\, dx}$. 
+	通过将$\widetilde{L}_{\widetilde{\gamma}}$求解$\widetilde{\gamma}$的偏导,得到$\widetilde{\gamma}$的更新公式:
+	\begin{equation}
+		\label{appendix:eq4}
+		\begin{split}
+			\widetilde{\gamma}_k = \gamma_k + \sum_{i=1}^N \widetilde{\phi}_{ik}^1, \quad
+			% \widetilde{\mu}_{kl} \propto \mu_l + \frac{\sum_{t=2}^T \sum_i \widetilde{\phi}_{ik}^{t-1}}{T-1}
+		\end{split}
+	\end{equation}
+	
+	\textbf{对于$\widetilde{\xi}$}:
+	
+	ELBO中包含$\widetilde{\xi}$的式子如下所示:
+	\begin{equation}
+		\begin{split}
+			&\widetilde{L}_{\widetilde{\xi}} = E_{\widetilde{\phi},\widetilde{\xi}} \sum_{t=2}^T [\log P(Z^t|C^t)] 
+			+ E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}} \sum_{t=2}^T [\log P(C^t|A,Z^{t-1})] - \sum_{t=2}^T \sum_{i=1}^N E_{\widetilde{\xi}}[\log q(C_i^t)]\\
+		\end{split}
+	\end{equation}
+	
+	利用同样方法求得更新公式如下所示:
+	
+	\begin{equation}
+		\label{appendix:eq5}
+		\begin{split}
+			\widetilde{\xi}_{ik}^t \propto \widetilde{\phi}_{ik}^t + \sum_l \widetilde{\phi}_{il}^{t-1}(\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}} - 1) + 1
+		\end{split}
+	\end{equation}
+	
+	\textbf{对于参数$\widetilde{\alpha}$和$\widetilde{\beta}$}:
+	
+	ElBO中包含$\widetilde{\alpha}$和$\widetilde{\beta}$的式子如下所示:
+	\begin{equation}
+		\begin{split}
+			&\widetilde{L}_{\widetilde{\alpha},\widetilde{\beta}} = E_{\widetilde{\phi},\widetilde{\alpha},\widetilde{\beta}} \sum_{t=1}^T [\log P(W^t|Z^t,B)] 
+			- E_{\widetilde{\alpha},\widetilde{\beta}}[\log q(B)] + E_{\widetilde{\alpha},\widetilde{\beta}}[\log P(B)]\\
+			&= \sum_{k \leq l} \log\{\frac{\Gamma(\widetilde{\alpha}_{kl})\Gamma(\widetilde{\beta}_{kl})}{\Gamma(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})}   \}  \\
+			&+ \sum_{k=1}^K [\alpha_{kk}- \widetilde{\alpha}_{kk} +\sum_t \sum_{i < j} \widetilde{\phi}_{ik}^t\widetilde{\phi}_{jk}^t w_{ij}^t]
+			[\psi(\widetilde{\alpha}_{kk})-\psi (\widetilde{\alpha}_{kk}+\widetilde{\beta}_{kk})] \\
+			&+ \sum_{k=1}^K [\beta_{kk}- \widetilde{\beta}_{kk} +\sum_t \sum_{i < j} \widetilde{\phi}_{ik}^t\widetilde{\phi}_{jk}^t(1- w_{ij}^t)]
+			[\psi(\widetilde{\beta}_{kk})-\psi (\widetilde{\alpha}_{kk}+\widetilde{\beta}_{kk})] \\
+			&+ \sum_{k<l}^K [\alpha_{kl}- \widetilde{\alpha}_{kl} +\sum_t \sum_{i \neq j} \widetilde{\phi}_{ik}^t\widetilde{\phi}_{jk}^t w_{ij}^t]
+			[\psi(\widetilde{\alpha}_{kl})-\psi (\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] \\
+			&+ \sum_{k<l}^K [\beta_{kl}- \widetilde{\beta}_{kl} +\sum_t \sum_{i \neq j} \widetilde{\phi}_{ik}^t\widetilde{\phi}_{jk}^t(1- w_{ij}^t)]
+			[\psi(\widetilde{\beta}_{kl})-\psi (\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] \\
+		\end{split}
+	\end{equation}
+	
+	利用同样方法求得$\widetilde{\alpha}$和$\widetilde{\beta}$的更新公式如下:
+	
+	\begin{equation}
+		\label{appendix:eq6}
+		\begin{split}
+			& \widetilde{\alpha}_{kk} = \alpha_{kk} + \frac{\sum_t \sum_{i<j} \widetilde{\phi}_{ik}^t \widetilde{\phi}_{jk}^t w_{ij}^t}{T}  \\
+			& \widetilde{\beta}_{kk} = \beta_{kk} + \frac{\sum_t \sum_{i<j} \widetilde{\phi}_{ik}^t \widetilde{\phi}_{jk}^t (1-w_{ij}^t)}{T} \\
+			& \widetilde{\alpha}_{kl} = \alpha_{kl} + \frac{\sum_t \sum_{i \neq j} \widetilde{\phi}_{ik}^t \widetilde{\phi}_{jl}^t w_{ij}^t}{T} \\
+			& \widetilde{\beta}_{kl} = \beta_{kl} + \frac{\sum_t \sum_{i \neq j} \widetilde{\phi}_{ik}^t \widetilde{\phi}_{jl}^t (1-w_{ij}^t)}{T}  \\
+		\end{split}
+	\end{equation}
+	
+	\textbf{对于 $\widetilde{\mu}$}:
+	
+	ELBO中包含$\widetilde{\mu}$的式子如下所示:
+	
+	\begin{equation}
+		\begin{split}
+			& \widetilde{L}_{\widetilde{\mu}} = E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}} \sum_{t=2}^T [\log P(C^t|A,Z^{t-1})] 
+			- E_{\widetilde{\mu}}[\log q(A)]+ E_{\widetilde{\mu}}[\log P(A)]\\
+			&=\sum_{t=2}^T \sum_i \sum_k \sum_l \widetilde{\phi}_{ik}^{t-1} [\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) 
+			+ \frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}}(\psi(\widetilde{\xi}_{ik}^t)-\psi(\sum_l \widetilde{\xi}_{il}^t))]  \\
+			&-\log[\Gamma(\sum_l \widetilde{\mu}_{kl})] + \sum_l \log[\Gamma(\widetilde{\mu}_{kl})]
+			+ \sum_l (\mu_l - \widetilde{\mu}_{kl})[\psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl})]  \\
+		\end{split}
+	\end{equation}
+	
+	因此有:
+	\begin{equation}
+		\label{appendix:eq7}
+		\begin{split}
+			\widetilde{\mu}_{kl} \propto \mu_l + \frac{\sum_{t=2}^T \sum_i \widetilde{\phi}_{ik}^{t-1}}{T-1}
+		\end{split}
+	\end{equation}
+	
+	\textbf{对于 $\widetilde{\phi}$}:
+	
+	$\widetilde{\phi}$ 是社团归属$Z$的变分参数，对其求解时需要考虑前后快照对当前快照的影响，即时序演化信息,因此其在$t=1$、$t=T$以及$1<t<T$时略有不同。下面分情况讨论：
+	
+	\textbf{当$t=1$时}:
+	
+	ELBO中包含$\widetilde{\phi}$的项并考虑约束$\sum_k \widetilde{\phi}_{ik} = 1$，有:
+	
+	\begin{equation}
+		\begin{split}
+			&\widetilde{L}_{\widetilde{\phi}} = E_{\widetilde{\phi},\widetilde{\alpha},\widetilde{\beta}} [\log P(W^1|Z^1,B)] + E_{\widetilde{\gamma},\widetilde{\phi}}[\log P(Z^1|\pi)] \\
+			&+ E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}}[\log P(C^2|A,Z^1)] - E_{\widetilde{\phi}}[\log q(Z^1)]+\rho (\sum_k \widetilde{\phi}_{ik}-1)\\
+		\end{split}
+	\end{equation}
+	
+	因此有:
+	
+	%Here $\phi$ is the variational parameter of $Z$ with $T$ snapshot, we get the update rules of $\phi$ at different snapshots $t$ as follows.
+	%When $t=1$:
+	\begin{equation}
+		\label{appendix:eq8}
+		\begin{split}
+			&\widetilde{\phi}_{ik}^1 \propto \exp\{\sum_j \sum_l \widetilde{\phi}_{jl}^1 [w_{ij}^1[\psi(\widetilde{\alpha}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]
+			+ (1-w_{ij}^1)[\psi(\widetilde{\beta}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] ]   \\
+			& +[\psi(\widetilde{\gamma}_k)-\psi(\sum_l \widetilde{\gamma}_l) ] +[\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) 
+			+ \sum_l (\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}}-1)(\psi (\widetilde{\xi}_{ik}^2) - \psi(\sum_l \widetilde{\xi}_{il}^2))]  \} \\
+		\end{split}
+	\end{equation}
+	
+	\textbf{当$1<t<T$}:
+	
+	ELBO中包含$\widetilde{\phi}$的项，同时考虑$\sum_k \widetilde{\phi}_{ik} = 1 $，有:
+	
+	\begin{equation}
+		\begin{split}
+			& \widetilde{L}_{\widetilde{\phi}} = E_{\widetilde{\phi},\widetilde{\alpha},\widetilde{\beta}} [\log P(W^t|Z^t,B)]+E_{\widetilde{\phi},\widetilde{\xi}} [\log P(Z^t|C^t)]\\
+			&+  E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}} [\log P(C^{t+1}|A,Z^t)]- \sum_{i=1}^N E_{\widetilde{\phi}}[\log q(z_i^t)]\\
+		\end{split}
+	\end{equation}
+	%When $1<t<T$:
+	因此有:
+	\begin{equation}
+		\label{appendix:eq9}
+		\begin{split}
+			&\widetilde{\phi}_{ik}^t \propto \exp \{ \sum_j \sum_l \widetilde{\phi}_{jl}^t [w_{ij}^t[\psi(\widetilde{\alpha}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]
+			+ (1-w_{ij}^t)[\psi(\widetilde{\beta}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]]    \\
+			& + [\psi(\widetilde{\xi}_{ik}^t) - \psi(\sum_l \widetilde{\xi}_{il}^t)]+ [\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) 
+			+\sum_l (\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}} -1)(\psi(\widetilde{\xi}_{ik}^{t+1}) - \psi(\sum_l \widetilde{\xi}_{il}^{t+1}))]  \}\\
+		\end{split}
+	\end{equation} 
+	
+	\textbf{当$t=T$}:
+	
+	ELBO中包含$\widetilde{\phi}$的项同时考虑约束$\sum_k \widetilde{\phi}_{ik} = 1 $，有:
+	
+	\begin{equation}
+		\begin{split}
+			& \widetilde{L}_{\widetilde{\phi}} = E_{\widetilde{\phi},\widetilde{\alpha},\widetilde{\beta}} [\log P(W^T|Z^T,B)]+E_{\widetilde{\phi},\widetilde{\xi}} [\log P(Z^T|C^T)]
+			- \sum_{i=1}^N E_{\widetilde{\phi}}[\log q(z_i^T)]\\
+		\end{split}
+	\end{equation}
+	%   When $t=T$:
+	因此有:
+	\begin{equation}
+		\label{appendix:eq10}
+		\begin{split}
+			&\widetilde{\phi}_{ik}^T \propto \exp \{ \sum_j \sum_l \widetilde{\phi}_{jl}^T [w_{ij}^T[\psi(\widetilde{\alpha}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] + \\
+			&(1-w_{ij}^T)[\psi(\widetilde{\beta}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]]  + [\psi(\widetilde{\xi}_{ik}^T) - \psi(\sum_l \widetilde{\xi}_{il}^T)]\}  \\
+		\end{split}
+	\end{equation} 
+	其中$\psi(x) = \frac{\Gamma'(x)}{\Gamma(x)} = \frac{\,d \log \Gamma(x)}{\, dx}$.
+	
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\textbf{GEABS参数推断证明如下：}
+\begin{proposition}
+	第四章所提出GEABS算法的参数近似后验结果的推断
+\end{proposition}
+
+\begin{proof}
+	\label{GEABS:inference}
+	为了优化公式~\ref{eq:O8}的联合分布，需要计算给定观测变量和超参数的后验函数，可以写成如下形式：
+	\begin{equation}
+		Pr(Z,\delta, A, \pi, \lambda, B | W, \mu) =
+		\frac{Pr(W, Z,\delta, A, \pi, \lambda, \mu, B)}{Pr( W, \mu)}.
+		\label{appendix:eq:OA1}
+	\end{equation}
+	然而，直接计算公式~\ref{appendix:eq:OA1}是不可行的，因此本文通过变分推断，引入一个新的变分分布$q$来近似原参数的后验分布，其定义如下：
+	\begin{equation}
+		\begin{split}
+			q(\phi,\bar{\delta}, \tilde{\mu}) = \prod_t \Big[ \prod_i q(\phi_i^{(t)}) \prod_i q(\bar{\delta}_i^{(t)}) \prod_k \prod_l q(\tilde{\mu}_{kl}^{(t)}) \Big],
+		\end{split}
+		\label{appendix:qfunc}
+	\end{equation}
+	
+	其中，$\phi$、$\bar{\delta}$ 和 $\tilde{\mu}$ 是公式~\ref{eq:O8} 联合分布中 $Z$、$\delta$ 和 $A$ 的变分参数。  
+	具体来说：$z_i^t \sim Multi(\phi_i^{(t)})$，表示节点 $i$ 在时间 $t$ 的社区分配 $z_i^t$ 服从以 $\phi_i^{(t)}$ 为参数的多项分布；$\delta_i^{(t)} \sim \mathbf{1}(\bar{\delta_i^{(t)}})$，表示节点 $i$ 在时间 $t$ 的活跃状态 $\delta_i^{(t)}$ 服从以 $\bar{\delta_i^{(t)}}$ 为参数的指示分布；$A_{kl}^{(t)} \sim Dirichlet(\tilde{\mu}_{kl}^{(t)})$，表示社区 $k$ 到社区 $l$ 在时间 $t$ 的转移概率 $A_{kl}^{(t)}$ 服从以$\tilde{\mu}_{kl}^{(t)}$ 为参数的狄利克雷分布。而$q(\phi_i^{(t)})$表示$z_i^{(t)}$ 的近似后验分布；$q(\delta_i^{(t)})$表示$\delta_i^{(t)}$ 的近似后验分布；$\tilde{\mu}_{kl}^{(t)}$则表示$A_{kl}^{(t)}$ 的近似后验分布。下面将具体介绍变分EM步骤的对应参数更新公式的推断过程。
+	
+	\textbf{变分推断E步}
+	通过变分推断以及公式~\ref{appendix:qfunc}中的定义，利用Jensens不等式，其对数似然的下界可以表示为公式~\ref{appendix:qfunc1}，并且满足$\log Pr(W) = KL(q \| p) + \mathscr{L}(q)$。  
+	\begin{equation}
+		\log Pr(W)\ge E_q(\log Pr(W, Z,\delta, A) ) + H(q),
+		\label{appendix:qfunc1}
+	\end{equation}
+	忽略对数似然中的无关参数，$H(q)$表示变分分布的熵。$q$和$p$分别是近似后验分布和真实后验分布，$\mathscr{L}(q)$是变分推断的证据下界（即变分下界ELBO）。根据上式可以看出，最小化$KL(q \| p)$可以转化为最大化变分下界$\mathscr{L}(q)$。  
+	完整的模型对数似然和ELBO可以分别表示为公式~\ref{appendix:eq:OA} 和~\ref{appendix:ELBO}。
+	\begin{align}
+		&\log Pr(W, Z,\delta, A|\pi, \lambda, \mu, B) \nonumber\\
+		&  =\sum_{t=1}^{T} \bigg[ \sum_{w_{ij}^{(t)}=1} (1+\delta_i^{(t)}+\delta_j^{(t)}) \log b_{z_i^{(t)} z_j^{(t)}}  \nonumber\\
+		& +\sum_{w_{ij}^{(t)}=0} \log (1-b_{z_i^{(t)}  z_j^{(t)}}^{1+\delta_i^{(t)}+\delta_j^{(t)}})+\sum_{t=2}^{T} \sum_{i} \log A_{z_i^{(t-1)} z_i^{(t)}}^{(t)}  \bigg]  \nonumber \\
+		&  +\sum_{i} \log \pi_{z_i^{(1)}} + N\log \lambda  -\lambda \sum_{i} \delta_i^{(1)}  \nonumber \\
+		& +\sum_{t=2}^{T} \sum_k \Big[\log \Gamma \dot\sum_l \mu_{kl} - \sum_l \log \Gamma(\mu_{kl}) + \nonumber\\
+		& \sum_l(\mu_{kl} - 1)\log A_{kl}^{(t)} \Big]  +\sum_{t=2}^{T} \sum_i \Big[ \log \delta_i^{(t-1)} - \delta_i^{(t-1)} \delta_i^{(t)} \Big].  
+		\label{appendix:eq:OA}
+	\end{align}
+	\begin{align}
+		\mathscr{L} & (Z,\bar{\delta},\tilde{\mu};\pi,B,\lambda,\mu) \nonumber \\
+		& = \sum_{t=1}^T \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \nonumber\\
+		& -\sum_{t=1}^T \sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \nonumber\\
+		& +\sum_{t=2}^T \sum_i \sum_k \sum_l \phi_{ik}^{(t-1)}\phi_{il}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})]  \nonumber\\
+		& +\sum_i \sum_k \phi_{ik}^{(1)} \log \pi_k +  N\log \lambda -\lambda \sum_i \bar{\delta}_i^{(1)}  \nonumber \\
+		& +\sum_{t=2}^T \sum_k \sum_l(\mu_{kl} - 1) \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big]  \nonumber\\
+		& + \sum_{t=2}^{T} \sum_{i=1}^N \big[\log \bar{\delta}_i^{t-1} - \bar{\delta}_i^{t-1} \bar{\delta}_i^{t}\big] -E_q \log q.
+		\label{appendix:ELBO}
+	\end{align}
+	
+	% \begin{align}
+		% \mathscr{L}_t & (Z^{(t)},\delta^{(t)},\tilde{\mu}^{(t)}| \pi,B,\lambda)  \nonumber\\
+		% & \approx \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \nonumber\\
+		% & -\sum_{w_{ij}^{(t)}=0} \sum_{k,l} \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} + \sum_i \log \bar{\delta}_i^{(t-1)} \nonumber\\
+		% & +\sum_i \sum_{k,l} \phi_{il}^{(t-1)}\phi_{ik}^{(t)} \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \nonumber \\
+		% & +\sum_i \sum_{k,l} \phi_{ik}^{(t)}\phi_{il}^{(t+1)} \Big[\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})\Big] \nonumber\\
+		% & + \sum_{k,l} (\mu_{kl} - 1) \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \nonumber \\
+		% & - \sum_i \bar{\delta}_i^{(t-1)}\bar{\delta}_i^{(t)} - \sum_i \bar{\delta}_i^{(t)}\bar{\delta}_i^{(t+1)} - E_q \log q.
+		% \label{appendix:eq:elbo}
+		% \end{align} 
+	
+	在GEABS模型中，快照$t=1$的隐变量依赖于快照$t=2$的隐变量，而快照$T$的变量则受$T-1$的约束。对于快照$t=2, \cdots, T-1$的变量，其推断受到前后两个快照的组合影响。
+	% 方便起见，这里仅展示 $t=2, \cdots, T-1$ 时的一般推断过程。单个快照 $t \in [2, T-1]$ 的 ELBO 如公式~\ref{appendix:eq:elbo} 所示。
+	\textbf{$t=1$时的参数更新公式推导}
+	当$t=1$时，其联合概率分布可以表示为：
+	\begin{equation}
+		\begin{split}
+			Pr&(W^{(1)},Z^{(1)},\delta^{(1)}|\pi,B,A,\lambda)   \\
+			&  = \prod_{w_{ij}^{(1)}=1} B_{z_i^{(1)} z_j^{(1)}}^{1+\delta_i^{(1)}+\delta_j^{(1)}}  \prod_{w_{ij}^{(1)}=0} (1-B_{z_i^{(1)} z_j^{(1)}}^{1+\delta_i^{(1)}+\delta_j^{(1)}})  \prod_{i=1}^{n} A_{z_i^{(1)} z_i^{(2)}}   \\
+			&  \prod_{i=1}^{n} \pi_{z_i^{(1)}}  \prod_{i=1}^{n} \lambda e^{-\lambda \delta_i^{(1)}}  \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi \Sigma}} exp\{-\frac{(\delta_i^{(2)}-\delta_i^{(1)})^2}{2\Sigma}\}
+		\end{split}
+	\end{equation}
+	
+	
+	观测及隐变量的联合对数似然为：
+	\begin{equation}
+		\begin{split}
+			\log &Pr(W^{(1)},Z^{(1)},\delta^{(1)}|\pi,B,A,\lambda)  \\
+			&  =\sum_{w_{ij}^{(1)}=1} (1+\delta_i^{(1)}+\delta_j^{(1)}) \log b_{z_i^{(1)} z_j^{(1)}} +\sum_{w_{ij}^{(1)}=0} \log (1-b_{z_i^{(1)} z_j^{(1)}}^{1+\delta_i^{(1)}+\delta_j^{(1)}})+\sum_{i} \log A_{z_i^{(1)} z_i^{(2)}}   \\
+			&  +\sum_{i} \log \pi_{z_i^{(1)}} +N\log \lambda -\lambda \sum_{i} \delta_i^{(1)} -\frac{1}{2} N \log 2 \pi \Sigma -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(2)}-\delta_i^{(1)})^2)
+		\end{split}
+	\end{equation}
+	
+	
+	
+	利用泰勒近似方法，该联合对数似然可以近似为：
+	\begin{equation}
+		\begin{split}
+			\log &Pr(W^{(1)},Z^{(1)},\delta^{(1)}|\pi,B,A,\lambda)  \\
+			&  \approx \sum_{w_{ij}^{(1)}=1} (1+\delta_i^{(1)}+\delta_j^{(1)}) \log b_{z_i^{(1)} z_j^{(1)}} -\sum_{w_{ij}^{(1)}=0} b_{z_i^{(1)} z_j^{(1)}}^{1+\delta_i^{(1)}+\delta_j^{(1)}}+\sum_{i} \log A_{z_i^{(1)} z_i^{(2)}}   \\
+			&  +\sum_{i} \log \pi_{z_i^{(1)}} +N\log \lambda -\lambda \sum_{i} \delta_i^{(1)} -\frac{1}{2} N \log 2 \pi \Sigma -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(2)}-\delta_i^{(1)})^2)
+		\end{split}
+	\end{equation}
+	
+	变分下界（ELBO）则可以表示为：
+	\begin{equation}
+		\begin{split}
+			\mathscr{L}&(Z^{(1)},\delta^{(1)},\tilde{\mu}^1;\pi,B,\lambda,\mu)  \\
+			& \approx E_q \log Pr(W^{(1)},Z^{(1)},\delta^{(1)}|\pi,B,A,\lambda,\mu) - E_q \log q(Z^{(1)},\delta^{(1)})   \\
+			& =\sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)} \log b_{kl} \\
+			& -\sum_{w_{ij}^{(1)}=0} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)}  b_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \\
+			& +\sum_i \sum_k \sum_l \phi_{ik}^{(1)}\phi_{il}^{(2)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})] +\sum_i \sum_k \phi_{ik}^{(1)} \log \pi_k \\
+			& +  N\log \lambda -\lambda \sum_i \bar{\delta}_i^{(1)} +\sum_i\{ \log \delta_i^{1} - \delta_i^1 \delta_i^2\} -E_q \log q
+		\end{split}
+	\end{equation}
+	
+	对于 $\phi_i^{(1)}$ 的目标函数为：
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}&(\phi_i^{(1)})  \\
+			& = \sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(1)}=0} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)}  B_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}}  \\
+			& + \sum_k \sum_l \phi_{ik}^{(1)}\phi_{il}^{(2)} [\psi(\tilde{\mu}_{kl}^{(2)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(2)})]  \\
+			& + \sum_k \phi_{ik}^{(1)} \log \pi_k   - \sum_k \phi_{ik}^{(1)} \log \phi_{ik}^{(1)}
+		\end{split}
+	\end{equation}
+	
+	加入约束条件$\sum_k \phi_{ik}^{(1)} = 1$，则可以写出拉格朗日目标函数：
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}&(\phi_i^{(1)})  \\
+			& = \sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(1)}=0} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)}  B_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \\
+			& + \sum_k \sum_l \phi_{ik}^{(1)}\phi_{il}^{(2)} [\psi(\tilde{\mu}_{kl}^{(2)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})]   + \sum_k \phi_{ik}^{(1)} \log \pi_k   \\
+			& - \sum_k \phi_{ik}^{(1)} \log \phi_{ik}^{(1)}  +\varrho(\sum_k \phi_{ik}^{(1)}-1)
+		\end{split}
+	\end{equation}
+	
+	对$\phi_{ik}^{(1)}$进行求导，可获得梯度：
+	\begin{equation}
+		\begin{split}
+			\frac{\partial \mathscr{O}(\phi_i^{(1)})}{\partial \phi_{ik}^{(1)}} & = \{ \sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_l \phi_{jl}^{(1)} \log B_{kl} \\ 
+			& -\sum_{w_{ij}^{(1)}=0} \sum_l \phi_{jl}^{(1)}  B_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \\
+			& + \sum_l \phi_{il}^{(2)} [\psi(\tilde{\mu}_{kl}^{(2)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(2)})]\\
+			&+\log \pi_k  -1 +\varrho \} -\log \phi_{ik}^{(1)}
+		\end{split}
+		\label{appendix:eq:phi1}
+	\end{equation}
+	
+	
+	
+	因此，通过拉格朗日法，可获得$\phi_{ik}^{(1)}$的更新规则为：
+	\begin{equation}
+		\begin{split}
+			\phi _{ik}^{(1)} & \propto \pi_k \exp\{ \sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_l \phi_{jl}^{(1)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(1)}=0} \sum_l \phi_{jl}^{(1)}  b_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \\
+			& + \sum_l \phi_{il}^{(2)}[\psi(\tilde{\mu}_{kl}^{(2)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(2)})] \}
+		\end{split}
+	\end{equation}
+	
+	$\bar{\delta}_i^{(1)}$ 的目标函数为：
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}(\bar{\delta}_i^{(1)})  \\
+			& =\sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(1)}=0} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)}  B_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \\
+			&  -\lambda \bar{\delta}_i^{(1)} + \sum_i \{ \log \bar{\delta}_i^{(1)} - \bar{\delta}_i^{(1)} \bar{\delta}_i^{(2)} \}
+		\end{split}
+	\end{equation}
+	
+	
+	通过梯度上升法可获得$\bar{\delta}_i^{(1)}$的梯度为：
+	\begin{equation}
+		\begin{split}
+			\frac{\partial \mathscr{O}(\bar{\delta}_i^{(1)})}{\partial \bar{\delta}_i^{(1)}} & =\sum_{w_{ij}^{(1)}=1} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(1)}=0} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)}  B_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \log B_{kl} \\
+			& -\lambda - \bar{\delta}_i^{(2)} + \frac{1}{\bar{\delta}_i^{(1)}}
+		\end{split}
+		\label{appendix:eq:delta1}
+	\end{equation}
+	
+	\textbf{$1<t<T$时的参数更新公式推导}
+	$t$时刻的联合概率分布为：
+	\begin{equation}
+		\begin{split}
+			Pr&(W^{(t)},Z^{(t)},\delta^{(t)}|\pi,B,A,\lambda) \\
+			& =\prod_{w_{ij}^{(t)}=1} b_{z_i^{(t)} z_j^{(t)}}^{1+\delta_i^{(t)}+\delta_j^{(t)}}  \prod_{w_{ij}^{(t)}=0} (1-b_{z_i^{(t)} z_j^{(t)}}^{1+\delta_i^{(t)}+\delta_j^{(t)}}) \prod_{i=1}^{n} A_{z_i^{(t-1)} z_i^{(t)}} \prod_{i=1}^{n} A_{z_i^{(t)} z_i^{(t+1)}}  \\
+			&  \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi \Sigma}} exp\{-\frac{(\delta_i^{(t)}-\delta_i^{(t-1)})^2}{2\Sigma}\} \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi \Sigma}} exp\{-\frac{(\delta_i^{(t+1)}-\delta_i^{(t)})^2}{2\Sigma}\}
+		\end{split}
+	\end{equation}
+	
+	$t$时刻的观测变量和隐变量的联合对数似然为：
+	\begin{equation}
+		\begin{split}
+			\log &Pr(W^{(t)},Z^{(t)},\delta^{(t)}|\pi,B,A,\lambda)  \\
+			&  =\sum_{w_{ij}^{(t)}=1} (1+\delta_i^{(t)}+\delta_j^{(t)}) \log b_{z_i^{(t)} z_j^{(t)}} +\sum_{w_{ij}^{(t)}=0} \log (1-b_{z_i^{(t)} z_j^{(t)}}^{1+\delta_i^{(t)}+\delta_j^{(t)}})+\sum_{i} \log A_{z_i^{(t-1)} z_i^{(t)}}   \\
+			&  +\sum_{i} \log A_{z_i^{(t)} z_i^{(t+1)}} -N \log 2 \pi \Sigma -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(t)}-\delta_i^{(t-1)})^2-\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(t+1)}-\delta_i^{(t)})^2
+		\end{split}
+	\end{equation}
+	
+	通过泰勒近似，$t$时刻的联合对数似然可以近似为：
+	\begin{equation}
+		\begin{split}
+			\log &Pr(W^{(t)},Z^{(t)},\delta^{(t)}|\pi,B,A,\lambda)  \\
+			&  =\sum_{w_{ij}^{(t)}=1} (1+\delta_i^{(t)}+\delta_j^{(t)}) \log b_{z_i^{(t)} z_j^{(t)}} -\sum_{w_{ij}^{(t)}=0} b_{z_i^{(t)} z_j^{(t)}}^{1+\delta_i^{(t)}+\delta_j^{(t)}}+\sum_{i} \log A_{z_i^{(t-1)} z_i^{(t)}}   \\
+			&  +\sum_{i} \log A_{z_i^{(t)} z_i^{(t+1)}} -N \log 2 \pi \Sigma -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(t)}-\delta_i^{(t-1)})^2 -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(t+1)}-\delta_i^{(t)})^2
+		\end{split}
+	\end{equation}
+	
+	本节的任务是通过最大化$\mathscr{L}_t$来学习隐变量$Z^{(t)}$、$\delta^{(t)}$和$\tilde{\mu}^{(t)}$的变分参数。为此，可以对 $\mathscr{L}_t$ 关于变分参数分别进行求导，并将这些导数设为零，如下所示：
+	\begin{equation}
+		\nabla \mathscr{L}_t = \bigg\{ \frac{\partial \mathscr{L}_t}{\partial \phi_{ik}^{(t)}},\frac{\partial \mathscr{L}_t}{\partial \bar{\delta}_i^{(t)}},\frac{\partial \mathscr{L}_t}{\partial \tilde{\mu}_{kl}^{(t)}} \bigg\} = 0,
+	\end{equation}
+	
+	上述变分参数应满足以下约束条件：
+	\begin{equation}
+		\sum_{k=1}^{K^{(t)}} \phi_{ik}^{(t)} =1 ~~\text{且} \; \sum_{l=1}^{K^{(t)}} \tilde{\mu}_{kl}^{(t)} =1.
+		\label{appendix:cons}
+	\end{equation}
+	
+	与$t=1$时刻类似，通过拉格朗日法可以融入上述约束条件对导数进行求解，可以很容易地得到更新规则，如公式~\ref{appendix:eq:phit} ~\ref{appendix:eq:A}和~\ref{appendix:eq:deltat} 所示。
+	\begin{equation}
+		\begin{split}
+			\phi_{ik}^{(t)} \propto \\
+			&\exp\bigg\{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(t)}=0} \sum_l \phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}}  \\
+			& +\sum_k \phi_{ik}^{(t-1)} \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \\
+			&+ \sum_l \phi_{il}^{(t+1)} \Big[\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})\Big] \bigg\},
+			\label{appendix:eq:phit}
+		\end{split}
+	\end{equation}
+	
+	\begin{equation}
+		\tilde{\mu}_{kl}^t = \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} + \mu_{kl}.
+		\label{appendix:eq:A}
+	\end{equation}
+	
+	% 这些更新规则通过迭代优化变分参数，逐步提高证据下界（ELBO），从而实现对隐变量的有效推断。
+	
+	
+	% 对于 $\phi_i^{(t)}$ 的目标函数为：
+	% \begin{equation}
+		% \begin{split}
+			% \mathscr{O}&(\phi_i^{(t)})  \\
+			% & = \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \\
+			% & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \\
+			% &  +\sum_k \sum_l \phi_{ik}^{(t-1)}\phi_{il}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})]  \\
+			% &+ \sum_k \sum_l \phi_{ik}^{(t)}\phi_{il}^{(t+1)} [\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})]  -\sum_k \phi_{ik}^{(t)} \log \phi_{ik}^{(t)}
+			% \end{split}
+		% \end{equation}
+	
+	% 约束条件为：$\sum_k \phi_{ik}^{(t)} = 1$，对于每个节点 $i$。
+	
+	
+	
+	% 引入拉格朗日乘子 $\varrho$，拉格朗日目标函数为：
+	% \begin{equation}
+		% \begin{split}
+			% \mathscr{O}&(\phi_i^{(t)})  \\
+			% & = \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \\
+			% & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \\
+			% & + \sum_k \sum_l \phi_{ik}^{(t-1)}\phi_{il}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})] \\
+			% &+ \sum_k \sum_l \phi_{ik}^{(t)}\phi_{il}^{(t+1)} [\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})] \\
+			% & -\sum_k \phi_{ik}^{(t)} \log \phi_{ik}^{(t)}+\varrho(\sum_k \phi_{ik}^{(t)}-1)
+			% \end{split}
+		% \end{equation}
+	
+	
+	% 对 $\phi_{ik}^{(t)}$ 求导，得到梯度：
+	% \begin{equation}
+		% \begin{split}
+			% \frac{\partial \mathscr{O}(\phi_i^{(t)})}{\partial \phi_{ik}^{(t)}} &= \{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log b_{kl} -\sum_{w_{ij}^{(t)}=0} \sum_l \phi_{jl}^{(t)}  b_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}}  \\
+			% & + \sum_l \phi_{il}^{(t-1)} \log A_{lk}  \\
+			% & + \sum_l \phi_{il}^{(t+1)} \log A_{kl} -1 + \varrho \}- \log \phi_{ik}^{(t)}
+			% \end{split}
+		% \end{equation}
+	
+	
+	% 通过将梯度设为零并解方程，可以得到最优 $\phi_i^{(t)}$ 的更新规则：
+	% Therefore, the updating equation for optimal $\phi_i^{(t)}$ is given by,
+	% \begin{align}
+		% \phi_{ik}^{(t)} & \propto \exp\bigg\{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log B_{kl} \nonumber\\
+		% & -\sum_{w_{ij}^{(t)}=0} \sum_l \phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \nonumber \\
+		% & +\sum_k \phi_{ik}^{(t-1)} \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \nonumber\\
+		% & + \sum_l \phi_{il}^{(t+1)} \Big[\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})\Big] \bigg\},
+		% \label{appendix:eq:phit}\\
+		% \tilde{\mu}_{kl}^t &= \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} + \mu_{kl}.
+		% \label{appendix:eq:A}
+		% \end{align}
+	
+	% \begin{equation}
+		% \begin{split}
+			% & \mathscr{O}(\tilde{\mu}_{kl}^t)=  \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})] \\
+			% & +  (\mu_{kl} - 1) [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})] - E_{\tilde{\mu}_{kl}^{(t)}} \log \tilde{\mu}_{kl}^{(t)}
+			% \end{split}
+		% \label{appendix:eq:simmu}
+		% \end{equation}
+	
+	% For $\bar{\delta}_i^{(t)}$, the objective is:
+	% \begin{equation}
+		% \begin{split}
+			% \mathscr{O}&(\bar{\delta}_i^{(t)}) =\sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \\
+			% & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \\
+			% & + \sum_i \log \bar{\delta}_i^{(t-1)}  - \sum_i \bar{\delta}_i^{(t-1)}\bar{\delta}_i^{(t)} - \sum_i \bar{\delta}_i^{(t)}\bar{\delta}_i^{(t+1)} - \bar{\delta}_i^{(t)}\log \bar{\delta}_i^{(t)}
+			% \end{split}
+		% \end{equation}
+	
+	% The optimal $\bar{\delta}_i^{(t)}$ is obtained by gradient ascend, and the gradient is derived as:
+	% However, there is a small challenge in deriving $\bar{\delta}_i^{(t)}$ for it has no closed solution. So we take a fast gradient descent method to update it and the gradient is as Eq.~\ref{appendix:eq:deltat}.
+	\begin{align}
+		\frac{\partial \mathscr{L}_t}{\partial \bar{\delta}_i^{(t)}} & =\sum_{w_{ij}^{(t)}=1} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl}  \nonumber\\
+		& -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \log B_{kl} \nonumber\\
+		& -\bar{\delta}_i^{(t-1)} - \bar{\delta}_i^{(t+1)} - \log \bar{\delta}_i^{(t)} - 1.
+		\label{appendix:eq:deltat}
+	\end{align}
+	
+	% For $\tilde{\mu}$, the objective is:
+	
+	
+	
+	% By calculating the gradient of $\tilde{\mu}_{kl}^t$ and make the derivative equals to $0$, the optimal $\tilde{\mu}_{kl}^t$ is given by:
+	
+	
+	\textbf{$t=T$时的生成过程推断}
+	
+	当$t =T$时，模型的联合概率分布为：
+	\begin{equation}
+		\begin{split}
+			Pr&(W^{(T)},Z^{(T)},\delta^{(T)}|\pi,B,A,\lambda)  \\
+			&= \prod_{w_{ij}^{(T)}=1} b_{z_i^{(T)} z_j^{(T)}}^{1+\delta_i^{(T)}+\delta_j^{(T)}}  \prod_{w_{ij}^{(T)}=0} (1-b_{z_i^{(T)} z_j^{(T)}}^{1+\delta_i^{(T)}+\delta_j^{(T)}}) \\
+			& \prod_{i=1}^{n} A_{z_i^{(T-1)} z_i^{(T)}}  \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi \Sigma}} exp\{-\frac{(\delta_i^{(T)}-\delta_i^{(T-1)})^2}{2\Sigma}\}
+		\end{split}
+	\end{equation}
+	
+	考虑到所有的观测及隐变量的对数似然为：
+	\begin{equation}
+		\begin{split}
+			\log & Pr(W^{(T)},Z^{(T)},\delta^{(T)}|\pi,B,A,\lambda) \\
+			&=\sum_{w_{ij}^{(T)}=1} (1+\delta_i^{(T)}+\delta_j^{(T)}) \log b_{z_i^{(T)} z_j^{(T)}} +\sum_{w_{ij}^{(T)}=0} \log (1-b_{z_i^{(T)} z_j^{(T)}}^{1+\delta_i^{(T)}+\delta_j^{(T)}})\\
+			& +\sum_{i} \log A_{z_i^{(T-1)} z_i^{(T)}}  -\frac{1}{2}N \log 2 \pi \Sigma -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(T)}-\delta_i^{(T-1)})^2
+		\end{split}
+	\end{equation}
+	
+	通过泰勒近似可得,
+	\begin{equation}
+		\begin{split}
+			\log &Pr(W^{(T)},Z^{(T)},\delta^{(T)}|\pi,B,A,\lambda)  \\
+			&  =\sum_{w_{ij}^{(T)}=1} (1+\delta_i^{(T)}+\delta_j^{(T)}) \log b_{z_i^{(T)} z_j^{(T)}} -\sum_{w_{ij}^{(T)}=0} b_{z_i^{(T)} z_j^{(T)}}^{1+\delta_i^{(T)}+\delta_j^{(T)}}\\
+			& +\sum_{i} \log A_{z_i^{(T-1)} z_i^{(T)}}  -\frac{1}{2}N \log 2 \pi \Sigma -\frac{1}{2\Sigma} \sum_{i} (\delta_i^{(T)}-\delta_i^{(T-1)})^2
+		\end{split}
+	\end{equation}
+	
+	故其变分下界ELBO为：
+	\begin{equation}
+		\begin{split}
+			\mathscr{L}&(Z^{(T)},\delta^{(T)},\tilde{\mu}^T;\pi,B,\lambda)  \\
+			& \approx \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  B_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \\
+			& +\sum_i \sum_k \sum_l \phi_{ik}^{(T-1)}\phi_{il}^{(T)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})]  \\
+			&  + \sum_k \sum_l (\mu_{kl} - 1) [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})]   \\
+			& + \sum_i \log \bar{\delta}_i^{(T-1)} - \sum_i \bar{\delta}_i^{(T-1)}\bar{\delta}_i^{(T)}  - E_q \log q
+		\end{split}
+	\end{equation}
+	
+	对$\phi_i^{(T)}$,其目标函数可写为:
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}&(\phi_i^{(T)})  \\
+			& = \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  B_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \\
+			& + \sum_l \sum_k \phi_{il}^{(T-1)}\phi_{ik}^{(T)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})]  -\sum_k \phi_{ik}^{(T)} \log \phi_{ik}^{(T)}
+		\end{split}
+	\end{equation}
+	
+	对每个节点$i$,存在约束$s.t. \sum_k \phi_{ik}^{(T)} = 1$.
+	
+	利用拉格朗日法，引入拉格朗乘子并对其求梯度，可得$\phi_i^{(t)}$的更新公式：
+	
+	% \begin{equation}
+		% \begin{split}
+			% \mathscr{O}&(\phi_i^{(T)})  \\
+			% & = \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl} \\
+			% & -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  B_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \\
+			% & + \sum_k \sum_l \phi_{ik}^{(T-1)}\phi_{il}^{(T)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})]  -\sum_k \phi_{ik}^{(T)} \log \phi_{ik}^{(T)} \\
+			% & +\varrho (\sum_k \phi_{ik}^{(T)}-1)
+			% \end{split}
+		% \end{equation}
+	
+	% and the gradient is:
+	% \begin{equation}
+		% \begin{split}
+			% \frac{\partial \mathscr{O}(\phi_i^{(T)})}{\partial \phi_{ik}^{(T)}}&  = \{ \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_l \phi_{jl}^{(T)} \log b_{kl} -\sum_{w_{ij}^{(T)}=0} \sum_l \phi_{jl}^{(T)}  b_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}}  \\
+			% & + \sum_l \phi_{il}^{(T-1)} \log A_{lk}  -1 + \varrho \}- \log \phi_{ik}^{(T)}
+			% \end{split}
+		% \end{equation}
+	
+	\begin{equation}
+		\begin{split}
+			\phi_{ik}^{(T)} & \propto \exp\{ \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_l \phi_{jl}^{(T)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(T)}=0} \sum_l \phi_{jl}^{(T)}  b_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}}  \\
+			& + \sum_l \phi_{il}^{(T-1)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})] \}
+		\end{split}
+		\label{appendix:eq:phiT}
+	\end{equation}
+	同理，$\bar{\delta}_i^{(T)}$的更新公式如下：
+	
+	% For $\bar{\delta}_i^{(T)}$, the objective is:
+	% \begin{equation}
+		% \begin{split}
+			% \mathscr{O}&(\bar{\delta}_i^{(T)})  \\
+			% & = \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl}\\
+			% & -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  B_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \\
+			% &  + \sum_i \log \bar{\delta}_i^{(T-1)} - \sum_i \bar{\delta}_i^{(T-1)}\bar{\delta}_i^{(T)}  - \bar{\delta}_i^{(T)}\log \bar{\delta}_i^{(T)}
+			% \end{split}
+		% \end{equation}
+	
+	% The optimal $\bar{\delta}_i^{(T)}$ is obtained by gradient ascend, and the gradient is derived as:
+	
+	\begin{equation}
+		\begin{split}
+			& \frac{\partial \mathscr{O}(\bar{\delta}_i^{(T)})}{\partial \bar{\delta}_i^{(T)}}  = \sum_{w_{ij}^{(T)}=1} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl} \\
+			& -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  b_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \log b_{kl} \\
+			&  -\bar{\delta}_i^{(T-1)} - \log \bar{\delta}_i^{(T)} -1
+		\end{split}
+		\label{appendix:eq:deltaT}
+	\end{equation}
+	
+	\textbf{变分推断M步}
+	在变分推断E步中，已经通过推断得到变分参数$\phi^{(t)}$、$\delta^{(t)}$和$\tilde{\mu}^{(t)}$的更新公式，以最大化ELBO。本节将更新模型参数来最大化对数似然，二者交替更新即可获得模型最优解。与变分E步的推断方法类似，可以轻松获得模型参数的更新公式：
+	\begin{equation}
+		\pi_k \propto \sum_i \phi_{ik}^{(1)},~\lambda = \frac{1}{N} \sum_i \bar{\delta}_i^{(1)},~B_{kl} \propto \alpha \frac{\partial \mathscr{L}(B_{kl})}{\partial B_{kl}},
+		\label{appendix:eq:pi}
+	\end{equation}
+	其中$\alpha$是学习率，而$B_{kl}$的梯度更新公式如下：
+	\begin{align}
+		& \frac{\partial \mathscr{L}(B_{kl})}{\partial B_{kl}}= \frac{\sum_{t=1}^T \sum_{w_{ij}^{(t)}=1}(1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \phi_{ik}^{(t)} \phi_{jl}^{(t)}}{b_{kl}}\nonumber \\
+		& -\sum_{t=1}^T \sum_{w_{ij}^{(t)}=0}(1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \phi_{ik}^{(t)} \phi_{jl}^{(t)} B_{kl}^{ \bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}}.
+		\label{appendix:eq:B}
+	\end{align}
+	下面简单介绍模型参数的计算方式：
+	对于$\pi$，其目标函数可写为：
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}(\pi)=\sum_i \sum_k \phi_{ik}^{(1)} \log \pi_k
+		\end{split}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{split}
+			s.t. \sum_k \pi _k = 1
+		\end{split}
+	\end{equation}
+	
+	其拉格朗日函数为：
+	
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}(\pi)=\sum_i \sum_k \phi_{ik}^{(1)} \log \pi_k +\varrho(\sum_k \pi_k -1)
+		\end{split}
+	\end{equation}
+	
+	易得其梯度为：
+	\begin{equation}
+		\begin{split}
+			\frac{\partial \mathscr{O}(\pi)}{\partial \pi_k}=\sum_i \frac{\phi_{ik}^{(1)}}{\pi_k}+\varrho
+		\end{split}
+	\end{equation}
+	
+	对$\lambda$其目标函数为：
+	\begin{equation}
+		\begin{split}
+			\mathscr{O}(\lambda)=N \log \lambda - \lambda \sum_i \bar{\delta}_i^{(1)}
+		\end{split}
+	\end{equation}
+	
+	易得梯度：
+	\begin{equation}
+		\begin{split}
+			\frac{\partial \mathscr{O}(\lambda)}{\partial \lambda}= \frac{N}{\lambda}-\sum_i \bar{\delta}_i^{(1)}
+		\end{split}
+	\end{equation}
+	
+	因此$\lambda$的更新公式为：
+	\begin{equation}
+		\begin{split}
+			\lambda = \frac{1}{N} \sum_i \bar{\delta}_i^{(1)}
+		\end{split}
+		\label{appendix:eq:lambda}
+	\end{equation}
+	
+	对于参数$B$其目标函数为：
+	\begin{equation}
+		\begin{split}
+			& \mathscr{O}(B_{kl})=\sum_{t=1}^T \sum_{w_{ij}^{(t)}=1}(1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \phi_{ik}^{(t)} \phi_{jl}^{(t)} \log B_{kl} \\
+			& -\sum_{t=1}^T \sum_{w_{ij}^{(t)}=0} \phi_{ik}^{(t)} \phi_{jl}^{(t)} B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}}
+		\end{split}
+	\end{equation}
+	其更新公式可根据梯度上升法获得，考虑到计算效率问题，其更新公式可优为Eq.~\ref{appendix:eq:sBT}：
+	\begin{equation}
+		\begin{split}
+			{B}_{kl}= \frac{\sum_{t=1}^{T} \sum_{i \sim j} (\phi_{ik}^{(t)}\phi_{jl}^{(t)}+ \phi_{il}^{(t)}\phi_{jk}^{(t)}) W^{(t)}_{ij}}{\sum_{t=1}^{T} \sum_{i \sim j} (\phi_{ik}^{(t)}\phi_{jl}^{(t)}+ \phi_{il}^{(t)}\phi_{jk}^{(t)}) }.
+		\end{split}
+		\label{appendix:eq:sBT}
+	\end{equation}
+	上述公式忽略了节点流行度对$B$的影响以获得更加的计算效率。本算法还考虑到当社团数量随时间发生变化时，可以将$B$替换为$B^{(t)} \in (0, 1)^{K^{(t)} \times K^{(t)}}$。
+	
+	通过对变分参数与模型参数的交替更新，模型收敛后，可以获得最优拟合结果。另外，社团标签$z^{(t)}$和转移矩阵$A^{(t)}$可利用公式~\ref{appendix:eq:cZ}获得。
+	\begin{equation}
+		\begin{split}
+			z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl}^{(t)},
+		\end{split}
+		\label{appendix:eq:cZ}
+	\end{equation}
+	另外，$q(\delta_i^t)$是以$\bar{\delta_i^t}$为参数的退化分布（即单点分布），因此$\delta_i^t = \bar{\delta_i^t}$。
+	% is a degenerated distribution with the parameter $\bar{\delta_i^t}$, so the parameter $\delta_i^t = \bar{\delta_i^t}$.
+\end{proof}
+
+

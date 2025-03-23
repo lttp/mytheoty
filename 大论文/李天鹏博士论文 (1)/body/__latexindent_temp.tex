@@ -1,0 +1,461 @@
+% !Mode:: "TeX:UTF-8"
+\baselineskip 20pt
+
+%-------------------------------------------------------------------------
+\chapter{信息传播影响因素分析}
+\label{chap:3}
+
+理解信息的传播规律、分析驱动信息传播的影响因素能够用于构建信息传播预测模型，提升信息传播预测精度，应用于诸如病毒营销\cite{leskovec2007dynamics}、推荐\cite{wu2019dual}、竞选策略制定\cite{bond201261}、传播控制\cite{zhao2019online}等问题领域。 
+便捷的因特网访问和大量社交网络平台的出现（如 Twitter、微博、Digg、Flickr 等）带来了大规模的社交网络数据，日趋成熟的数据挖掘技术为大规模社交网络数据挖掘提供了可能。
+大部分研究主要关注影响信息传播覆盖率的相关因素，而忽略了信息传播过程的机制以及时间因素\cite{zhang2017big}。
+本章节基于真实世界中的在线社交网络数据，分析信息传播过程以及信息传播控制机制。分析结果将有助于后续信息传播级联预测模型的构建。
+
+\section{引言}
+
+
+
+
+
+
+
+\section{数据集}
+
+本章实验用到的数据集主要有 Twitter 数据集、新浪微博数据集、Digg 数据集、以及 Flickr 数据集。数据集描述如下。
+
+
+\subsection{Twitter 数据集}
+Twitter 是国外流行的社交网络平台，用户可以在该平台上创建、转发内容长度不超过 140 字的帖子，帖子内容往往包括由 bit.ly 或者 tinyurl 等缩略网址服务商提供的 URL。本章使用的 Twitter 数据集来源于南加州大学信息科学研究所提供的公开数据 Twitter 2010 data set \cite{twitterdata}，
+该数据集由 Nathan O. Hodas 等人基于 Twitter 社交平台提供的 API 在 2010 年秋天爬取 3 周得到 \cite{hodas2014simple}，包括用户发帖数据集、用户数据集、用户关系数据集。
+其中用户发帖数据集包含 300 万条帖子，帖子中涉及 70,343 条不重复的 URL；用户数据集包括发布、转发这些帖子的用户，共抓取 70 万名用户；用户关系数据集包括用户之间存在的关注关系，共抓取 3,600 万条。
+ 
+用户发帖数据字段包括：帖子涉及的 URL、帖子 id、帖子创建时间、发帖/转帖用户 id、发帖/转帖用户昵称、用户所发布/转发帖子在包含相同 URL 帖子中的时间顺序等；
+用户数据字段包括：用户id、用户昵称、粉丝数量、关注数量等；
+用户关系数据字段包括：用户id、粉丝id。
+
+
+本章以用户为节点，以用户之间存在的关注关系作为边，构建用户社交网络；将包含相同 URL 的帖子组成一个集合，构建信息传播级联数据。
+由于本章重点研究信息传播的影响因素，因此参考 Jing Zhang 等人  \cite{zhang2013social} 对新浪微博数据的处理，本章去除了 Twitter 数据集中同一用户对包含相同 URL 帖子的转发行为，仅保留第一次转发行为，处理后的数据包括 1,211,940 条发帖/转发数据。
+Twitter 数据集相关统计量如表 \ref{tabana:twitter} 所示，单个级联最多可以有 17,025 条帖子，参与用户数量最多达到 17,025 名。
+
+\begin{table}[]
+	\begin{center}
+		\caption{Twitter 数据集相关统计量}
+		\begin{tabular}{lcccc}
+			\toprule[1.5pt]
+			 & 最大值 & 最小值 & 平均值 & 中位数\\
+			\midrule[1pt]
+			用户粉丝数量 & 69,449 & 0 & 49.86 & 7 \\
+			单个用户发帖/转帖帖量 & 133 & 1 & 1.64 & 1 \\
+			级联大小 & 17,025 & 1 & 18.34 & 1 \\
+			单个级联参与用户数量 & 17,025 & 1 & 18.34 & 1 \\
+			\bottomrule[1.5pt]
+		\end{tabular}
+		\label{tabana:twitter}
+		\vspace{\baselineskip}
+	\end{center}
+\end{table}
+
+
+用户粉丝数量分布如图 \ref{figana:twitterdegree} 所示，使用双对数坐标轴展示，横坐标表示单个用户的粉丝数量，纵坐标表示拥有特定粉丝数量的用户数量。从图中可知，用户粉丝数量服从长尾分布。用户发帖/转帖数量分布如图 \ref{figana:twitteracts} 所示，使用双对数坐标轴展示，横坐标表示单个用户的发帖/转帖数量，纵坐标表示对应发帖/转帖量的用户数量。从图中可知，用户发帖/转帖数量近似服从密律分布。
+
+\begin{figure}
+	\centering
+	\subfigure[用户粉丝数量分布]{
+		\begin{minipage}[t]{0.5\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{twitterdegree.png}
+			%\caption{fig1}
+		\end{minipage}%
+		\label{figana:twitterdegree}
+	}%
+	%\hspace{in}
+	\subfigure[用户发帖/转帖数量分布]{
+		\begin{minipage}[t]{0.5\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{twitteracts.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:twitteracts}
+	}
+    \caption{Twitter 数据集用户相关统计量分布}
+    \label{figana:twitter}
+\end{figure}
+
+\subsection{新浪微博数据集}
+新浪微博是国内流行的社交网络平台，与国外社交网络平台 Twitter 相似，用户可以在该平台上发布、转发不超过 140字的帖子。在新浪微博社交网络平台上，用户之间具有关注和被关注关系，当用户 A 关注了用户 B，B 的发帖和转发行为就能被用户 A 看到。
+本章使用的数据集来自清华 Aminer 项目提供的 Weibo-Net-Tweet \cite{weibodata}，该数据集由 Jing Zhang 等人 \cite{zhang2013social} 基于国内新浪微博提供的 API 爬取得到，包括用户数据集、用户关系数据集、用户发帖/转帖数据集和信息传播级联数据集。
+用户数据集包括 100 个种子用户，以及他们的关注者和关注者的关注者，共有 1,787,443 名用户；
+用户关系数据集包括所抓取 1,787,443 用户的 355,095,815 条粉丝关系和 58,408,029 条相互关注关系；
+信息传播级联数据集包括 300,000 条原始帖子以及这些帖子被不重复用户转发的记录（Jing Zhang 等人去除了同一用户的多次转发，仅保留了第一次转发），共包含约 3 千万条转发记录。
+
+
+
+用户数据字段包括：用户 id、用户昵称、双向关注用户数量、所在城市等；
+用户关系数据字段包括：用户 id、粉丝用户 id、是否关注该粉丝用户；
+用户发帖/转帖数据字段包括：帖子 id、发帖时间、发帖用户 id、帖子被转发次数、转发用户 id、转发时间；
+信息传播级联数据字段包括：原始帖子 id、帖子被转发次数、转发用户 id、用户转发时间。
+
+
+本章以微博数据中的用户为节点，以用户之间存在的相互关注关系为边，构建用户社交网络；并根据信息传播级联数据中的原始帖子 id 从用户发帖/转帖数据集中找出对应发帖用户 id，删除发帖用户 id 缺失的信息传播级联数据。
+数据集相关统计量如表 \ref{tabana:weibo} 所示，从表中可知用户的粉丝数量 \cite{2020wujing} 过多，存在僵尸粉的可能。因此，本章使用用户之间的相互关注关系构建用户社交网络。
+
+
+\begin{table}[]
+	\begin{center}
+		\caption{新浪微博数据集相关统计量}
+		\begin{tabular}{lcccc}
+			\toprule[1.5pt]
+			 & 最大值 & 最小值 & 平均值 & 中位数\\
+			\midrule[1pt]
+			用户相互关注数量 & 2,983 & 0 & 210.60 & 114 \\
+			用户粉丝数量 & 54,164,442 & 0 & 9,849.46 & 493 \\
+			用户关注数量 & 3,000 & 0 & 467.21 & 280 \\
+			单个用户发帖/转帖数量 & 819,454 & 0 & 1,555.76 & 664 \\
+			级联大小 & 38,996 & 1 & 118.98 & 18 \\
+			\bottomrule[1.5pt]
+		\end{tabular}
+		\label{tabana:weibo}
+		\vspace{\baselineskip}
+	\end{center}
+\end{table}
+
+
+\begin{figure}
+	\centering
+	\subfigure[用户粉丝数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weibofoll.png}
+			%\caption{fig1}
+		\end{minipage}%
+		\label{figana:weibofoll}
+	}
+	\subfigure[用户关注数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weibofri.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:weibofri}
+	}
+
+	\subfigure[用户相互关注数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weibobi.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:weibobi}
+	}
+	\subfigure[用户发帖/转帖数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weiboacts.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:weiboacts}
+	}
+    \caption{新浪微博数据集用户相关统计量分布}
+    \label{figana:weibo}
+\end{figure}
+
+
+新浪微博数据集中的用户相关统计量分布如图 \ref{figana:weibo} 所示，所有的图均使用双对数坐标展示。
+用户粉丝数量分布如图 \ref{figana:weibofoll} 所示，横坐标表示单个用户的粉丝数量，纵坐标表示对应粉丝数量的用户数量。从图中可知用户拥有粉丝数量服从长尾分布，大部分用户拥有的粉丝数量在 1000 个以内。
+用户关注数量分布如图 \ref{figana:weibofri} 所示，横坐标表示单个用户的关注数量，纵坐标表示对应关注数量的用户数量。从图中可知用户的关注数量在 1000 以内分布较为均匀。
+用户相互关注数量分布如图 \ref{figana:weibobi} 所示，横坐标表示单个用户的相互关注数量，纵坐标表示对应相互关注数量的用户数量。从图中可知用户相互关注数量服从长尾分布。
+用户发帖/转帖数量分布如图 \ref{figana:weiboacts} 所示，横坐标表示单个用户的发帖/转帖数量，纵坐标表示对应发帖/转帖数量的用户数量。从图中可知单个用户的发帖/转帖数量服从长尾分布。
+
+
+
+\subsection{Digg 数据集}
+Digg 是较早出现的社交媒体平台，在 2007-2009 年期间，该平台拥有超过 300 万名注册用户。Digg 社交媒体平台中的用户可以在平台上提交关于某类新闻的故事，用户可以对这些故事进行投票。同时 Digg 社交媒体平台上的用户之间具有关注关系，当用户 A 关注了用户 B，则用户 B 对故事的投票行为就可以被用户 A 看到。
+本章使用的 Digg 数据集来自南加州大学信息科学研究所提供的 Digg 2009 \cite{diggdata}。
+该数据集由 Tad Hogg 等人基于 Digg 社交媒体平台提供的 API 在 2009 年 6 月到 2009 年 7 月期间爬取得到 \cite{hogg2012social}，包括用户关系数据集和故事投票数据集。用户关系数据集刻画 Digg 社交媒体平台上用户之间的关注关系，去除了与其他用户没有关注关系的用户，共有 71,367 名用户之间的 1,731,658 条关注关系；故事投票数据集刻画用户对 Digg 社交媒体平台上故事的投票行为，共有 3,553 个故事的 3,018,197 次投票。
+
+
+用户关系数据字段包括：用户id、关注用户id、是否存在双向关注关系；
+故事投票数据字段包括：故事id、投票者id、投票时间，其中第一个投票者表示在平台上提交该故事的用户。
+
+
+本章以 Digg 数据中的用户为节点，以用户之间存在的关注关系为边，构建用户社交网络；并基于故事 id 对投票者 id 和对应的投票时间进行分组，形成针对特定故事id的投票者和投票时间集合，作为信息传播级联。
+针对 Digg 数据集，本章同样参考 Jing Zhang 等人  \cite{zhang2013social} 对新浪微博数据的处理，去除了同一用户对相同故事 id 的多次投票行为，仅保留第一次投票数据。处理后的数据包含 3,010,898 条提交故事/给故事投票的行为数据。
+数据集相关统计量如表 \ref{tabana:digg} 所示，级联的最大值为 24,067，平均值是 847.42，级联规模较大；用户的粉丝数量相对用户相互关注数量较多，为了减少僵尸粉的影响，本章使用用户之间的相互关注关系构建用户社交网络。
+
+
+\begin{table}[]
+	\begin{center}
+		\caption{Digg 数据集相关统计量}
+		\begin{tabular}{lcccc}
+			\toprule[1.5pt]
+			 & 最大值 & 最小值 & 平均值 & 中位数\\
+			\midrule[1pt]
+			用户关注数量 & 995 & 1 & 24.26 & 3 \\
+			用户粉丝数量 & 12,038 & 1 & 6.71 & 1 \\
+			用户相互关注数量 & 886 & 1 & 15.24 & 2 \\
+			单个用户提交故事/给故事投票的数量 & 3,415 & 1 & 21.60 & 4 \\
+			级联大小 & 24,067 & 122 & 847.42 & 527 \\
+			单个级联参与用户数量 & 24,067 & 122 & 847.42 & 527 \\
+			\bottomrule[1.5pt]
+		\end{tabular}
+		\label{tabana:digg}
+		\vspace{\baselineskip}
+	\end{center}
+\end{table}
+
+
+\begin{figure}
+	\centering
+	\subfigure[用户粉丝数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{diggfoll.png}
+			%\caption{fig1}
+		\end{minipage}%
+		\label{figana:diggfoll}
+	}
+	\subfigure[用户关注数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{diggfri.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:diggfri}
+	}
+
+	\subfigure[用户相互关注数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{diggbi.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:diggbi}
+	}
+	\subfigure[用户提交故事/给故事投票数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{diggacts.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:diggacts}
+	}
+    \caption{Digg 数据集用户相关统计量分布}
+    \label{figana:digg}
+\end{figure}
+
+Digg 数据集中的用户相关统计量分布如图 \ref{figana:digg} 所示，所有的图均使用双对数坐标展示。用户粉丝数量分布如图 \ref{figana:diggfoll} 所示，横坐标表示单个用户的粉丝数量，纵坐标表示对应粉丝数量的用户数量。从图中可知用户拥有粉丝数量近似服从密律分布。用户关注数量分布如图 \ref{figana:diggfri} 所示，横坐标表示单个用户的关注数量，纵坐标表示对应关注数量的用户数量。从图中可知用户的关注数量在近似服从密律分布。用户相互关注数量分布如图 \ref{figana:diggbi} 所示，横坐标表示单个用户的相互关注数量，纵坐标表示对应相互关注数量的用户数量。从图中可知用户相互关注数量近似服从密律分布。用户提交新闻/投票数量分布如图 \ref{figana:diggacts} 所示，横坐标表示单个用户提交故事/给故事投票的数量，纵坐标表示对应提交故事/给故事投票数量的用户数量。从图中可知用户提交故事/给故事投票的数量分布近似服从密律分布。
+
+
+
+\subsection{Flickr 数据集}
+Flickr 是一个用于照片分享的社交媒体平台，用户可以上传、评论照片，用户之间存在朋友关系，多个用户可以组成一个兴趣小组。
+如果用户 A 关注了用户 B，或者用户 A 与用户 B 之间在一个兴趣组，那么用户 A 上传、共享、或者评论的照片就能被用户 B 看到。
+本章使用的 Flickr 数据集来自清华 Aminer 项目提供的 Flickr-large \cite{flickrdata}。该数据集包含由清华 Aminer 项目团队基于 Flickr 公开的 API 接口爬取得到，包括用户关系数据集、用户所属兴趣组数据集以及评论数据集。
+用户关系数据集刻画用户之间的朋友关系，共有 2,037,538 位用户之间的 219,098,660 条朋友关系；
+用户所属兴趣组数据集刻画用户关注的兴趣组，共有 2,037,538 位用户与 655,917 个兴趣组之间的 60,462,402 条关系；
+评论数据集主要刻画用户对 1,262,978 张图片的评论，共包括 14,913,164 条评论。
+
+
+
+用户关系数据字段包括：用户 id、具有朋友关系的用户 id。
+用户所属兴趣组数据字段包括：用户 id、用户所属兴趣小组 id。
+评论数据字段包括：照片 id、上传照片的用户 id、评论照片的用户 id、用户的评论内容。
+
+
+本章以 Flickr 数据中的用户为节点，以用户之间存在的朋友关系为边，构建用户社交网络；并基于照片 id 对评论用户 id 进行分组，形成针对特定照片 id 的评论用户集合，作为信息传播级联。
+并参考 Jing Zhang 等人  \cite{zhang2013social} 对新浪微博数据的处理，去除了 Flickr 数据集中同一用户对相同照片 id 的多次评论行为，仅保留第一次评论数据。
+处理后的数据集相关统计量如表 \ref{tabana:flickr} 所示，级联大小最大值是 36,936，平均值是 2,596.90，级联规模较大；单个级联参与的用户数量最大值是 39,811，平均值是 3,742.59，单个级联参与的用户规模较大。 
+
+\begin{table}[]
+	\begin{center}
+		\caption{Flickr 数据集相关统计量}
+		\begin{tabular}{lcccc}
+			\toprule[1.5pt]
+			 & 最大值 & 最小值 & 平均值 & 中位数\\
+			\midrule[1pt]
+			用户朋友数量 & 22,605 & 1 & 117.72 & 26 \\
+			单个用户提交/评论照片数量 & 4,621 & 1 & 12.19 & 2 \\
+			级联大小 & 34 & 2 & 6.08 & 3 \\
+			单个级联参与用户数量 & 34 & 2 & 6.08 & 3 \\
+			\bottomrule[1.5pt]
+		\end{tabular}
+		\label{tabana:flickr}
+		\vspace{\baselineskip}
+	\end{center}
+\end{table}
+
+
+\begin{figure}
+	\centering
+	\subfigure[用户朋友数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{flickrbi.png}
+			%\caption{fig1}
+		\end{minipage}%
+		\label{figana:flickrbi}
+	}
+	\subfigure[用户兴趣组数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{flickrngroup.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:flickrngroup}
+	}
+
+	\subfigure[兴趣组包含用户数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{flickrnguser.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:flickrnguser}
+	}
+	\subfigure[用户上传/评论照片数量分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{flickrnacts.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:flickrnacts}
+	}
+    \caption{Flickr 数据集用户相关统计量分布}
+    \label{figana:flickr}
+\end{figure}
+
+
+Flickr 数据集中的用户相关统计量分布如图 \ref{figana:flickr} 所示，所有的图均使用双对数坐标展示。
+用户朋友数量分布如图 \ref{figana:flickrbi} 所示，横坐标表示单个用户的朋友数量，纵坐标表示拥有对应朋友数量的用户数量。从图中可知用户的朋友数量近似服从密律分布。
+用户关注兴趣组数量分布如图 \ref{figana:flickrngroup} 所示，横坐标表示单个用户关注的兴趣组数量，纵坐标表示关注对应数量兴趣组的用户数量。从图中可知用户关注的兴趣组数量近似服从密律分布。
+兴趣组包含用户数量分布如图 \ref{figana:flickrnguser} 所示，横坐标表示单个兴趣组包含的用户数量，纵坐标表示包含对应用户数量的兴趣组的数量。从图中可知兴趣组包含的用户数量近似服从密律分布。
+用户上传/评论照片的数量分布如图 \ref{figana:flickrnacts} 所示，横坐标表示单个用户上传/评论照片的数量，纵坐标表示对应上传/评论照片数量的用户数量。从图中可知用户上传/评论照片的数量近似服从密律分布。
+
+
+
+\section{信息传播级联数据分析}
+
+通过前面对数据的描述可知，数据中存在较多的不活跃用户。
+为了去除不活跃用户对信息传播因素分析的影响，本章参考四个数据集中用户级联参与行为的次数分布，
+对四个数据集分别做了预处理：去除 Twitter 数据集中发帖/转帖量少于 3 次的非活跃用户，去除新浪微博数据集中发帖/转帖量少于 100 次的非活跃用户，去除 Digg 数据集中提交故事/给故事投票数量少于 23 次的非活跃用户，去除 Flickr 数据集中提交/评论照片数量少于 10 的非活跃用户，并去除这些用户的所有信息传播级联行为数据以及与其他用户之间的社交关系数据。
+在此基础上，本章对信息传播级联的相关特征进行了简要刻画，然后分析了信息传播的影响因素，具体如下。 
+
+\subsection{信息传播级联相关特征刻画}
+本部分将从信息传播级联大小、信息传播级联最大半径两个方面对信息传播级联进行刻画，具体如下。
+
+\begin{figure}
+	\centering
+	\subfigure[Twitter 数据集级联大小分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{twicas.png}
+			%\caption{fig1}
+		\end{minipage}%
+		\label{figana:twicas}
+	}
+	\subfigure[新浪微博数据集级联大小分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weicas.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:weicas}
+	}
+
+	\subfigure[Digg 数据集级联大小分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{digcas.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:digcas}
+	}
+	\subfigure[Flickr 数据集级联大小分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{flicas.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:flicas}
+	}
+    \caption{四个数据集对应的信息传播级联大小分布}
+    \label{figana:cas}
+\end{figure}
+
+
+\textbf{（1）信息传播级联大小：}对于一个信息传播级联 $S=\{(v_{i},t_{i})|v_{i}\in V,0\le i \le N\}$，其大小定义为所有用户参与该信息传播级联的次数之和，形式化表示为 $|S|=N$。
+
+预处理后的四个数据集对应的信息传播级联大小分布如图 \ref{figana:cas} 所示，横坐标表示信息传播级联大小，纵坐标表示对应大小的级联数量。
+图 \ref{figana:twicas} 表示 Twitter 数据集的级联大小分布，使用双对数坐标展示，从图中可知 Twitter 数据集中的信息传播级联大小最大接近 100,000 的规模，且服从长尾分布。
+图 \ref{figana:weicas} 表示新浪微博数据集的级联大小分布，使用双对数坐标展示，从图中可知新浪微博数据集中的信息传播级联大小最大接近 10,000 的规模，且近似服从密律分布。
+图 \ref{figana:digcas} 表示 Digg 数据集的级联大小分布，使用横坐标为对数的半对数坐标展示，从图中可知 Digg 数据集中的信息传播级联大小在 100 到 10,000 规模的范围内数量相差不大。
+图 \ref{figana:flicas} 表示 Flickr 数据集的级联大小分布，使用双对数坐标展示，从图中可知 Flickr 数据集中的信息传播级联大小相比其他数据集较小，级联大小的分布相对均匀。
+
+
+
+
+
+\textbf{（2）信息传播级联直径：}
+对于一个信息传播级联 $S_{k}$，将转发节点 $v_{i}$ 与源节点 $v_{0}$ 之间的社交网络最短路径定义为节点 $v_{i}$ 在级联 $S_{k}$ 上的\textbf{路径长度}。级联 $S_{k}$ 中所有转发节点对应的路径长度集合可以
+形式化表示为 $D^{S_{k}} = \{d_{min}(v_{i},v_{0})|v_{i} \in V, v_{0} \in V\}$，其中 $d_{min}(a,b)$ 表示为社交网络中节点 $a$ 与节点 $b$ 的最短路径长度。级联 $S_{k}$ 对应的路径长度集合中最大的路径长度定义为信息传播级联直径。
+信息传播级联直径可以用来刻画信息传播级联在社交网络中的传播深度。
+
+
+预处理后的四个数据集对应的信息传播级联直径分布如图 \ref{figana:casdim} 所示。
+图 \ref{figana:twicasdim} 表示 Twitter 数据集的级联直径分布，使用双对数坐标展示，从图中可知 Twitter 数据集中的信息传播级联大小最大接近 100,000 的规模，且服从长尾分布。
+图 \ref{figana:weicasdim} 表示新浪微博数据集的级联直径分布，使用双对数坐标展示，从图中可知新浪微博数据集中的信息传播级联大小最大接近 10,000 的规模，且近似服从密律分布。
+图 \ref{figana:digcasdim} 表示 Digg 数据集的级联直径分布，使用横坐标为对数的半对数坐标展示，从图中可知 Digg 数据集中的信息传播级联大小在 100 到 1,000 规模的范围内数量相差不大。
+图 \ref{figana:flicasdim} 表示 Flickr 数据集的级联直径分布，使用双对数坐标展示，从图中可知 Flickr 数据集中的信息传播级联大小相比其他数据集较小，级联大小的分布近似服从密律。
+
+
+\begin{figure}
+	\centering
+	\subfigure[Twitter 数据集级联直径分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{twicasdim.png}
+			%\caption{fig1}
+		\end{minipage}%
+		\label{figana:twicasdim}
+	}
+	\subfigure[新浪微博数据集级联直径分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weibofri.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:weicasdim}
+	}
+
+	\subfigure[Digg 数据集级联直径分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weibobi.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:digcasdim}
+	}
+	\subfigure[Flickr 数据集级联直径分布]{
+		\begin{minipage}[t]{0.48\linewidth}
+			\centering
+			\includegraphics[width=\textwidth]{weiboacts.png}
+			%\caption{fig2}
+		\end{minipage}%
+		\label{figana:flicasdim}
+	}
+    \caption{四个数据集对应的信息传播级联直径分布}
+    \label{figana:casdim}
+\end{figure}
+
+
+
+
+
+\textbf{（3）信息传播级联包含社团数量：}对于一个信息传播级联 $S_{k}$，将参与该级联的所有用户所属的不重复社团数量定义为信息传播级联 $S_{k}$ 包含的社团数量，形式化表示为：。
+
+
+\subsection{信息传播影响因素分析}
+
+
+\section{本章小结}
+本章选取 Twitter、新浪微博、Digg、Flickr 四个社交媒体平台作为研究对象，基于公开的用户关系和信息传播行为数据集，对信息传播进行了分析，
