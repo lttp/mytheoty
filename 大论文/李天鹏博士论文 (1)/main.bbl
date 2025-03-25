@@ -27,8 +27,8 @@ International Journal of Environment and Pollution, 2002, 18~(5):  463--485.
 Barnes~M~R, Karan~M, McQuistin~S, \emph{et~al}.
 Temporal network analysis of email communication patterns in a long standing
   hierarchy~[C].
-In Proceedings of the International AAAI Conference on Web and Social Media,
-  2024:  126--138.
+In Proceedings of the International Applications of Artificial Intelligence
+  Conference on Web and Social Media, 2024:  126--138.
 
 \bibitem{mariani2024collective}
 Mariani~M~S, Battiston~F, Horv{\'a}t~E-{\'A}, \emph{et~al}.
@@ -406,8 +406,8 @@ In Proceedings of the 43rd international ACM SIGIR conference on research and
 \bibitem{pareja2020evolvegcn}
 Pareja~A, Domeniconi~G, Chen~J, \emph{et~al}.
 Evolvegcn: Evolving graph convolutional networks for dynamic graphs~[C].
-In Proceedings of the AAAI conference on artificial intelligence, 2020:
-  5363--5370.
+In Proceedings of the Conference on Applications of Artificial Intelligence,
+  2020:  5363--5370.
 
 \bibitem{sankar2018dynamic}
 Sankar~A, Wu~Y, Gou~L, \emph{et~al}.
@@ -447,8 +447,8 @@ Knowledge-Based Systems, 2020, 187:  104816.
 Yao~Y, Joe-Wong~C.
 Interpretable clustering on dynamic graphs with recurrent graph neural
   networks~[C].
-In Proceedings of the AAAI Conference on Artificial Intelligence, 2021:
-  4608--4616.
+In Proceedings of the Conference on Applications of Artificial Intelligence,
+  2021:  4608--4616.
 
 \bibitem{zhong2014evolution}
 Zhong~W, An~H, Gao~X, \emph{et~al}.
@@ -901,8 +901,8 @@ BMC bioinformatics, 2009, 10~(1):  213.
 Rossi~R~A, Ahmed~N~K.
 The Network Data Repository with Interactive Graph Analytics and
   Visualization~[C/OL].
-In Proceedings of the Twenty-Ninth AAAI Conference on Artificial Intelligence,
-  2015.
+In Proceedings of the Twenty-Ninth Conference on Applications of Artificial
+  Intelligence, 2015.
 \url{http://networkrepository.com}.
 
 \bibitem{mislove-2009-socialnetworksthesis}
@@ -995,7 +995,8 @@ Stat, 2022, 11~(1):  e426.
 He~D, Feng~Z, Jin~D, \emph{et~al}.
 Joint identification of network communities and semantics via integrative
   modeling of network topologies and node contents~[C].
-In Proceedings of the AAAI Conference on Artificial Intelligence, 2017.
+In Proceedings of the Conference on Applications of Artificial Intelligence,
+  2017.
 
 \bibitem{10214123}
 Deng~C, Xu~X-J, Ying~S.
@@ -1165,7 +1166,8 @@ IEEE Transactions on Network Science and Engineering, 2020, 7~(3):  2067--2077.
 \bibitem{peel2015detecting}
 Peel~L, Clauset~A.
 Detecting change points in the large-scale structure of evolving networks~[C].
-In Proceedings of the AAAI Conference on Artificial Intelligence, 2015.
+In Proceedings of the Conference on Applications of Artificial Intelligence,
+  2015.
 
 \bibitem{huang2020laplacian}
 Huang~S, Hitti~Y, Rabusseau~G, \emph{et~al}.
@@ -1199,7 +1201,8 @@ Proceedings of the National Academy of Sciences, 2013, 110~(36):  14534--14539.
 Chikhaoui~B, Chiazzaro~M, Wang~S.
 A new granger causal model for influence evolution in dynamic social networks:
   The case of dblp~[C].
-In Proceedings of the AAAI Conference on Artificial Intelligence, 2015.
+In Proceedings of the Conference on Applications of Artificial Intelligence,
+  2015.
 
 \bibitem{palla2005uncovering}
 Palla~G, Der{\'e}nyi~I, Farkas~I, \emph{et~al}.
@@ -1352,7 +1355,7 @@ IEEE Transactions on Neural Networks and Learning Systems, 2018, 29~(5):
 \bibitem{zhou2018dynamic}
 Zhou~L, Yang~Y, Ren~X, \emph{et~al}.
 Dynamic network embedding by modeling triadic closure process~[C].
-In Thirty-Second AAAI Conference on Artificial Intelligence, 2018.
+In Thirty-Second Conference on Applications of Artificial Intelligence, 2018.
 
 \bibitem{Yang.2020.Shen}
 Yang~M, Liu~J, Chen~L, \emph{et~al}.
@@ -1432,7 +1435,8 @@ Network Science, 2015, 3~(3):  326--347.
 Rossi~R, Ahmed~N.
 The network data repository with interactive graph analytics and
   visualization~[C].
-In Proceedings of the AAAI Conference on Artificial Intelligence, 2015.
+In Proceedings of the Conference on Applications of Artificial Intelligence,
+  2015.
 
 \bibitem{Krzakala.2013.Zhang}
 Krzakala~F, Moore~C, Mossel~E, \emph{et~al}.

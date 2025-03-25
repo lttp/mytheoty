@@ -25,30 +25,12 @@
 异常检测是数据挖掘和模式识别的重要任务之一~\cite{chandola2009anomaly,zenati2018adversarially}，其目的就是寻找数据的正常模式中隐藏的不常见模式，即“离群点”。异常检测吸引了大量研究，并已广泛应用于多个领域，如欺诈检测~\cite{ahmed2016survey}和异常行为检测~\cite{amraee2018anomaly}。因此，近年来提出了多种方法。由于复杂网络可以用于建模众多现实世界系统，从国际航空运输~\cite{kasai2016network}到团队协作网络~\cite{zhou2019towards}，从社交网络~\cite{lv2017social}到引用网络~\cite{ley2002dblp}，近年来，网络异常检测也受到了广泛关注，成为当前研究中的关键问题之一。与一般的异常检测类似，但有所超越，复杂网络中的异常检测通常指的是寻找那些模式显著偏离网络绝大多数节点的节点~\cite{ding2019interactive,ding2020inductive}，或是触发网络在不同层次（即微观层次、中观层次和宏观层次）发生显著结构变化的节点~\cite{ranshous2015anomaly}。
 
 
-%{A}{nomaly} detection is an important task in data mining and pattern recognition~\cite{chandola2009anomaly,zenati2018adversarially}.
-%Its purpose is to find cases that hide rare patterns in a given data set that do not conform to the expected normal behavior.
-% Anomaly detection attracts much research and has been applied to many fields, such as fraud detection~\cite{ahmed2016survey} and abnormal behavioral detection~\cite{amraee2018anomaly}. So a variety of methods have been proposed in the past years.
-% For that complex network can be used in modeling a myriad of real-world systems, ranging from international air transportation~\cite{kasai2016network} to team collaboration networks~\cite{zhou2019towards}, from social networks~\cite{lv2017social} to citation networks~\cite{ley2002dblp}, recent years, network anomaly detection has also been received much attention and  has become one of the key issues in current research.
-% Similar to anomaly detection, but beyond it, anomaly detection in complex networks usually refers to find nodes whose patterns significantly deviate from the vast majority of the network~\cite{ding2019interactive,ding2020inductive} or that trigger the significant structural changes of the network at different levels (i.e., micro level, mesoscopic level and macro level)~\cite{ranshous2015anomaly}.
-%% 加一段静态网络异常检测的方法简介
-
-% Since the network structure itself evolves over time (dynamic or temporal network)~\cite{huang2015triadic}, such as the addition and disappearance of nodes and varying of edges which also drive the dynamic behavior of communities. So it is difficult to determine whether changes in a dynamic network are normal or abnormal.
-% The causes of network anomalies are also complex, and there are many forms of anomalies denoted, including abnormal nodes, abnormal edges, abnormal subgraphs, detection of change points~\cite{ranshous2015anomaly}.
-% At the same time, anomaly detection in dynamic networks helps to better understand the evolution status of the network, assess the anomaly degree of the network and its impact, and formulate effective intervention measures to deal with potential crises in the network.
-% For example, it can improve the accuracy of community detection by properly using anomaly detection to find the non-smooth evolution time point, which is caused by the evolution of the network. It can also be used in anomaly gene identification biological systems, climate prediction and financial markets.
 
 由于网络结构本身随时间演化（动态或时间网络）\cite{huang2015triadic}，例如节点的增加和消失以及边的变化，这些因素也驱动了社团的动态行为。因此，确定动态网络中的变化是正常还是异常变得非常困难。网络异常的原因也非常复杂，异常的形式多种多样，包括异常节点、异常边、异常子图以及变化点检测\cite{ranshous2015anomaly}。与此同时，动态网络中的异常检测有助于更好地理解网络的演化状态，评估网络的异常程度及其影响，并制定有效的干预措施来应对网络中的潜在危机。例如，通过适当使用异常检测来发现由网络演化引起的非平稳演化时间点，可以提高社团检测的准确性。它还可以应用于生物系统中的异常基因识别、气候预测和金融市场等领域。
 
 一般来说，大多数现有的异常检测方法通常基于特定的视角，即分别在宏观、微观和中观层次上追踪动态网络在不同时间的演化，忽略了这三个层次上异常的相互影响。例如，~\cite{hassanzadeh2013semi,heard2010bayesian} 聚焦于微观层次的异常检测（即异常节点或边），~\cite{8648298,7953678,XIAO2019124} 聚焦于各种神经网络的异常检测，以改进收敛性能，~\cite{hulovatyy2016scout,cheung2020simultaneous} 聚焦于宏观层次的异常检测（即变化点）。事实上，在网络演化过程中，多个类型的异常同时发生是很有可能的，并且不同层次上的异常之间是相关的，在一个层次上的异常检测也有助于其他层次上的异常检测。以金融市场中的异常检测为例。在一个金融交易网络中，节点是账户，边是账户之间的交易。那么，微观层次的异常事件可以是与不同社团频繁交易的节点。在现实生活中，该账户可能是正常账户，也可能是用于欺诈的账户。
 
-%The Mesoscopic level abnormal event can be that a group of accounts trade with each other frequently before, suddenly they split into two groups or more. 
-% An abnormal event at the mesoscopic level can be a group of accounts that frequently trade with each other before suddenly splitting into two or more groups. This group of accounts, in real life, maybe all belonging to a large company, then the split event may indicate that this company has been reorganized. The abnormal event at the macro level is that the entire market has experienced great fluctuation, which is reflected in the financial market network as a point of network change. Furthermore, the accumulation of abnormal accounts can cause drastic changes in account groups, and the big events of the whole market may affect all the account groups and accounts(such as the financial crisis).
-% As shown in Fig.~\ref{fig:example}, the state of node $v_{7}$ in the network is constantly changing with time, so it can be regarded as an abnormal point in the evolution of the entire network. In other words, its anomaly causes the entire network anomaly.
-% However, the anomaly of $v_{7}$ can also be seen as the result of an anomaly at the mesoscopic level (i.e., division and merger of communities).
-% This results in the coupling of micro-level (abnormal node) and mesoscopic-level (abnormal subgraph) anomalies in the process of network evolution.
-% %Thus it can be seen that there is a correlation between anomalies at different levels, and anomaly detection at one level is also helpful for anomaly detection at other levels.
-% Only considering a single type of abnormality is not enough to support the complete mining of the law of network evolution.
-% That is, the abnormalities of the network at the macro, micro, and mesoscopic levels are closely related to each other and are driven by deeper factors. The anomaly is only the appearance, and the essence is unknown.
+
 在中观层次上，异常事件可以是一些账户之间频繁交易，随后突然分裂成两个或更多的群体。这些账户在现实生活中可能都属于一个大型公司，那么这一分裂事件可能表明该公司已经进行了重组。在宏观层次上的异常事件是整个市场发生了剧烈波动，这在金融市场网络中表现为网络变化的一个节点。此外，异常账户的积累可能导致账户群体发生剧变，而整个市场的大事件可能会影响所有账户群体和账户（如金融危机）。如图~\ref{fig:example}所示，网络中节点$v_{7}$的状态随时间不断变化，因此它可以被视为整个网络演化中的异常点。换句话说，它的异常导致了整个网络的异常。然而，$v_{7}$的异常也可以视为中观层次异常的结果（即社团的划分和合并）。这导致了网络演化过程中微观层次（异常节点）和中观层次（异常子图）异常的耦合。因此，可以看出，不同层次的异常之间是有相关性的，在一个层次上的异常检测也有助于其他层次上的异常检测。仅仅考虑单一类型的异常不足以支持网络演化规律的全面挖掘。换言之，网络在宏观、微观和中观层次上的异常是相互密切关联的，并且受到更深层次因素的驱动。异常只是表象，背后的本质尚未揭示。
 
 \begin{figure}[htbp]
@@ -60,18 +42,7 @@
 
 
 
-% Only a few heuristic methods consider the correlation between anomalies at different levels, such as~\cite{hulovatyy2016scout} and~\cite{cheung2020simultaneous} detect community structures anomaly and change points simultaneously.
-% However, they only consider some but not all levels of anomalies, and some need to manually define features.
-% Besides, these methods do not have a unified framework, they realize different levels of anomaly detection step by step, which cannot model the coupling relationship between anomalies to achieve mutual enhancement.
-% To catch the correlation between anomalies at different levels and better detect the anomaly of node, community, change points and the entire network, we use a unified Generation model to analyze the dynamic network for Exploring the Abnormal Behaviors of different Scales (GEABS) due to the poor interpretability of anomaly detection methods based on network characteristics~\cite{wang2019nodes,cheng2008robust,darst2016detection}. 
-% %Therefore, we use a unified framework to study the correlation between anomalies at different levels in this paper, which can better detect the anomaly of node, community, change points and the entire network.
-% % Due to the poor interpretability of anomaly detection methods based on network characteristics~\cite{akoglu2010event,cheng2008robust,darst2016detection}, it is difficult to identify changes in the evolutionary paradigm of the network.
-% We use the characteristic that the generative model has good interpretability to explore the essence of this abnormality in this paper.
-% Specifically, we denote the parameters of node popularity, community membership to generate the dynamic network with stochastic block model (SBM), and accurately identify network evolution abnormalities by whether the parameter changes exceed the threshold calculated by a defined operator.
-% In addition to detecting anomalies, our model can also detect the community structure.
-% We optimize our method by variational inference.
-% % Specifically, we introduce network abnormal parameters on the basis of the generative model, and accurately identify network evolution abnormalities by whether the parameter changes exceed the threshold. At the same time, by constructing a dynamic community transfer matrix, the dynamic network can be portrayed at the macro, mesoscopic, and micro levels at multiple scales.
-% The main contributions of this paper can be categorized as follows:
+
 
 只有少数启发式方法考虑了不同层次异常之间的相关性，例如~\cite{hulovatyy2016scout}和~\cite{cheung2020simultaneous}同时检测社团结构异常和网络快照变更点。然而，它们仅考虑了部分而非所有层次的异常，且有些方法需要手动定义特征。此外，这些方法没有统一的框架，它们通过逐步实现不同层次的异常检测，无法建模异常之间的耦合关系，也无法实现异常之间的相互增强。为了捕捉不同层次异常之间的相关性，并更好地检测节点、社团、网络快照的异常，本章采用了统一的生成模型来建模动态网络，以探索不同尺度的异常行为~\cite{wang2019nodes,cheng2008robust,darst2016detection}。 
 
@@ -82,14 +53,9 @@
 % 另一方面，动态网络生成模型建模了网络在生成与演化过程中的复杂机制，此类模型能够支撑动态网络的多种下游任务。例如，前文描述的HB-DSBM模型中，通过拟合社团归属$z$的先验分布$Mult(\pi)$，即可确定网络中任意节点的社团划分；拟合模型中的伯努利分布$Bernoulli(·|B)$，即可预测网络中任意两个节点的边。然而对于网络中的
 具体而言，本方法利用生成模型良好的可解释性来探讨异常的本质。本章将节点的流行度、社团成员关系等参数表示为随机块模型（SBM），通过节点流行度来刻画动态网络中节点的异质性，并基于模型参数设计了节点-社团-网络多层异常的检测指标，依次扩展随机块模型在动态网络中任务层面的适用范围。
 
-本文的主要贡献可以概括如下：
+本章的主要贡献可以概括如下：
 
-% \begin{itemize}
-%     \item[$\bullet$] We propose an anomaly detection method based on a generative model, which takes into account the interaction of anomalies at different levels, and captures all types of anomalies that may occur during the evolution of the network.
-%     \item[$\bullet$] We realize the correlation analysis of network macroscopic, mesoscopic, and micro-scale abnormalities by introducing network parameters and transition matrix based on Stochastic Block Model (SBM).
-%     \item[$\bullet$] We use variational inference to achieve efficient optimization. Our model has good versatility, can be easily applied to various generative models, and has good interpretability.
-%     \item[$\bullet$] Experimental results demonstrate that the proposed model can significantly improve the performance of network anomaly detection compared with the state-of-the-art on both synthetic datasets and real-world networks.
-% \end{itemize} 
+
 \begin{itemize} 
     \item[$\bullet$] 本章提出基于随机块模型的动态网络建模方法GEABS（\textbf{G}eneration model to analyze the dynamic network for \textbf{E}xploring the \textbf{A}bnormal \textbf{B}ehaviors of different \textbf{S}cales），该方法通过建模动态网络节点-社团-网络快照的层次演化模式，并融入节点流行度参数刻画了节点的动态演化行为与拓扑异质性，以提升模型对于动态网络的建模能力。
     \item[$\bullet$] 利用熵与高阶距离度量等指标，结合模型刻画的网络参数，分别设计了网络 、社团、节点的多层次异常检测指标，扩展了本模型的动态网络演化分析能力。
@@ -98,13 +64,13 @@
 \end{itemize}
 
 
-\section{模型描述\label{chap4:model}}
+\section{GEABS模型描述\label{chap4:model}}
 
 \label{sec:method}
 本节首先介绍模型问题定义及参数介绍，随后详细介绍本文提出的动态网络生成模型的架构及其参数后验推断过程。
 
 
-\subsection{准备工作}
+\subsection{GEABS的准备工作}
 给定一个动态网络 $G =\{ G^{(1)}, G^{(2)}, \cdots, G^{(T)} \}$，每个 $G^{(t)} (1 \le t \le T)$ 是在时间 $t$ 的快照网络。这里记 $N^{(t)}$、$K^{(t)}$ 和 $W^{(t)}$ 分别为快照网络 $G^{(t)}$ 的节点数、社团数和邻接矩阵。为了方便推断与理解，本章假设 $N^{(t)} = N$ 随时间 $t$ 保持不变，而 $W^{(t)}$ 和 $K^{(t)}$ 随时间变化。如果网络是无向无权的，当节点 $V_i$ 和 $V_j$ 在快照 $t$ 上有边时，记 $W^{(t)}_{ij} = 1$ ；否则 $W^{(t)}_{ij} = 0$。本文假设动态网络为无向无权网络，但可以很容易地扩展到加权或有向网络（通过将连边概率矩阵$B$约束为非对称矩阵或更改连边概率为泊松分布）。
 
 对于动态网络 $G$，记社团结构为 $Z = \{ Z^{(1)}, Z^{(2)}, \cdots, Z^{(T)} \}$。这里 $Z^{(t)} \in \{0, 1 \}^{K_t \times K_t}$，且 $Z^{(t)}_{ik} = 1$ 表示节点 $V_i$ 属于社团 $k$，$K_t$ 是快照 $t$ 的社团数。在本模型中，只考虑非重叠社团，即 $\sum_{k=1}^{K_t} Z^{(t)}_{ik} = 1$。此外，为了方便，也记 $z^{(t)}_{i} = k$ 代替 $Z^{(t)}_{ik} = 1$。
@@ -121,33 +87,12 @@
 在这里，本章将这些问题称为动态网络中的演化异常。网络层面的异常易于分析和评估，但后两个异常难以量化。在本章的GEABS模型中，将从生成模型与社团检测的角度给出网络演化异常的具体定义并进行检测。
 本文涉及的主要符号总结在附录A.1~表~\ref{symbols:all} 中。
 
-\subsection{生成模型}
+\subsection{GEABS模型的生成过程}
 
 本节将详细介绍GEABS模型的生成过程。对于一个动态网络，它由两部分组成，即网络快照 $t=1$ 和 $t \ge 2$。
 
 \subsubsection{在$G^{(1)}$中的生成过程}
 在$t=1$时，本方法将其视为为静态网络 $G^{(1)}$。如图~\ref{fig:graphmodel}(a)所示，其生成过程在\textbf{算法~\ref{gent1}}中给出。
-% Given a dynamic network $G =\{ G^{(1)}, G^{(2)}, \cdots, G^{(T)} \}$, each $G^{(t)} (1 \le t \le T)$ is the snapshot network at $t$. We denote the $N^{(t)}$, $K^{(t)}$ and $W^{(t)}$ as the number of nodes, communities and the similarity matrix of snapshot network $G^{(t)}$. Usually, we could assume that $N^{(t)} = N$ is constant with $t$ and $W^{(t)}$ and $K^{(t)}$ are varying with time. If the network is undirected and binary, we denote $W^{(t)}_{ij} = 1$ if nodes $V_i$ and $V_j$ share a link at snapshot $t$ and $W^{(t)}_{ij} = 0$ otherwise. Here we assume the dynamic network satisfies this type, however, it can be easily extended to weighted or directed networks.
-
-% For the dynamic network $G$, we denote the community structure as $Z = \{ Z^{(1)}, Z^{(2)}, \cdots, Z^{(T)} \}$. Here $Z^{(t)} \in \{0, 1 \}^{K_t \times K_t}$, and $Z^{(t)}_{ik} = 1$ means node $V_i$ belonging community $k$ and $K_t$ is the number of communities at snapshot $t$. In our model, we only consider the non-overlapping community, i.e., $\sum_{k=1}^{K_t} Z^{(t)}_{ik} = 1$. Furthermore, we also denote $z^{(t)}_{i} = k$ instead of $Z^{(t)}_{ik} = 1$ for convenience.
-
-% Based on the above, we are committed to discovering abnormal patterns in the network. We formalize it as following.
-% \begin{itemize}
-%     \item \textbf{Macro level (network anomaly)}: it is usually same to change point, i.e. we find a set $  \mathcal{t} = \{t : |f(G^{(t-1)}) -f(G^{(t)})| > \epsilon  \} $, $f$ is a function on snapshot network and $\epsilon$ is a predefined threshold. 
-%     \item \textbf{Mesoscopic level (community anomaly)}: if community structure $Z^{(t-1)}$ and $Z^{(t-1)}$ have a significant difference, it means there are community events, e.g., community growth and contraction, merge and split.
-%     \item \textbf{Micro level (node anomaly)}: Based on the community membership $Z = \{ Z^{(1)}, Z^{(2)}, \cdots, Z^{(T)} \}$, if one node changes community affiliation frequently, it should be abnormal in the dynamic network.
-% \end{itemize}
-
-% Here, we call these questions an evolutionary anomaly in a dynamic network. The first one is easy to analyze and evaluate, however, the last two questions are difficult to quantify. In our GEABS model, we will analyze the network anomaly detection from the perspective of the generative model with community detection.
-% A list of major notations involved in this paper is summarized
-% in Table~\ref{notation}.
-
-% \subsection{The Generative Model}
-
-% Here, we will present the detailed generative process of GEABS model. For a dynamic network, it consists of two parts, i.e., network snapshots $t=1$ and $t \ge 2$.
-
-% \subsubsection{Generative Process on $G^{(1)}$}
-% At snapshot $t=1$, it is usually modeled as a static network for $G^{(1)}$. As, in the graph model in Fig.~\ref{fig:graphmodel} (a) the generative process is presented in \textbf{Algorithm~\ref{gent1}}. 
 
 \begin{algorithm}[H]
 \caption{$t=1$}\label {gent1}
@@ -186,9 +131,7 @@
     %\vspace{-0.1in}
 \end{figure}
 
-% This process is similar to the generation of stochastic block model (SBM), $\pi \in (0,1)^{K^{(1)}}$ is the probability vector of the multinomial distribution and $\sum_k \pi_k =1$. It is also the distribution of the size of communities, i.e. the probability of randomly selecting a node belonging to different communities. $B \in (0,1)^{K^{(1)} \times K^{(1)}}$ is the interaction probability between communities, i.e., the probability of having a link between any two nodes in their respective communities.
-% Then, we can sample the latent variable $Z_i^{(1)}$ for each node from the multinomial distribution with $\pi$. Last, based on the SBM, for each node pair $i \ne j$, the $W^{(1)}_{ij}$ is sampled from $Bernoulli(B_{z_i^{(1)} z_j^{(1)}})$.
-% However, it loses the different characteristics of each node, i.e. it means that nodes of the same community are equivalent. To model the difference of nodes in the network, we design popular parameter $\delta^{(1)}_i$ for node $V_i$, we treat it as learnable parameters not determined value (such as the degrees) for that it can be used for the anomaly detection in our model, i.e. $W^{(1)}_{ij} \sim Bernoulli\left(B_{z_i^{(1)} z_j^{(1)}}^{1+\delta_i^{(1)} + \delta_j^{(1)}}\right)$. In this way, it can avoid the community of homogeneous results in the network and identify the popularity of nodes in the network, not just its degree. It has also been proven that it can capture the power-law distribution in the network and has an advantage over SBM and degree-corrected stochastic block model. 
+
 该过程类似于随机块模型（SBM）的生成，$\pi \in (0,1)^{K^{(1)}}$ 是多项分布的参数向量，其中$\sum_k \pi_k =1$，该分布用于控制节点归属不同社团的概率。$B \in (0,1)^{K^{(1)} \times K^{(1)}}$ 是分属不同社团间的节点的连边概率，即在各自社团中的任意两个节点之间存在边的概率。
 随后，从具有 $\pi$ 的多项分布中为每个节点采样潜在变量 $Z_i^{(1)}$作为节点$i$的社团划分。最后，对于每对节点 $i \ne j$，$W^{(1)}_{ij}$ 从 $Bernoulli(B_{z_i^{(1)} z_j^{(1)}})$ 中采样以获得邻接矩阵。
 
@@ -252,16 +195,9 @@
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{模型联合概率分布推断}
+\subsection{GEABS模型的参数近似后验推断}
 
-% For our GEABS model, there are two kinds of formalization, online and offline. The former only focuses on the snapshot $t$ and the previous data, the latter deals with all snapshots of the dynamic network. Here, we only give offline formalization to learn the evolution of abnormal patterns. 
 
-% At snapshot $1$, based on the graph model and its generative process, the joint probability distribution of the observable variables $W^{(1)}$ and latent variables $Z^{(1)}$ and $\delta^{(t)}$ is as follows:% Eq.~\ref{eq:O1}.
-% \begin{align}
-% O_1 = & Pr(W^{(1)}, Z^{(1)}, \delta^{(1)} |\pi, \lambda, B) \nonumber\\
-% = & Pr(W^{(1)}|Z^{(1)},B,\delta^{(1)})  Pr(\delta^{(1)}|\lambda) Pr(Z^{(1)}|\pi). 
-% \label{eq:O1}
-% \end{align}
 
 GEABS模型有两种形式化方法，分别为在线方法和离线方法。前者只关注快照$t$及其之前的网络数据，后者则会同时考虑动态网络的所有快照。本节只给出离线的形式化表示（离线的形式化表示推断更加全面）。
 
@@ -448,8 +384,8 @@ q(\phi,\bar{\delta}, \tilde{\mu}) = \prod_t \Big[ \prod_i q(\phi_i^{(t)}) \prod_
 \end{equation}
 
 其中，$\phi$、$\bar{\delta}$ 和 $\tilde{\mu}$ 是公式~\ref{eq:O8} 联合分布中 $Z$、$\delta$ 和 $A$ 的变分参数。  
-具体来说：$z_i^t \sim Multi(\phi_i^{(t)})$，表示节点 $i$ 在时间 $t$ 的社区分配 $z_i^t$ 服从以 $\phi_i^{(t)}$ 为参数的多项分布；$\delta_i^{(t)} \sim \mathbf{1}(\bar{\delta_i^{(t)}})$，表示节点 $i$ 在时间 $t$ 的活跃状态 $\delta_i^{(t)}$ 服从以 $\bar{\delta_i^{(t)}}$ 为参数的指示分布；$A_{kl}^{(t)} \sim Dirichlet(\tilde{\mu}_{kl}^{(t)})$，表示社区 $k$ 到社区 $l$ 在时间 $t$ 的转移概率 $A_{kl}^{(t)}$ 服从以$\tilde{\mu}_{kl}^{(t)}$ 为参数的狄利克雷分布。而$q(\phi_i^{(t)})$表示$z_i^{(t)}$ 的近似后验分布；$q(\delta_i^{(t)})$表示$\delta_i^{(t)}$ 的近似后验分布；$\tilde{\mu}_{kl}^{(t)}$则表示$A_{kl}^{(t)}$ 的近似后验分布。下面将具体介绍变分EM步骤的对应参数更新公式的推断过程。
-\subsection{变分推断E步}
+具体来说：$z_i^t \sim Multi(\phi_i^{(t)})$，表示节点 $i$ 在时间 $t$ 的社区分配 $z_i^t$ 服从以 $\phi_i^{(t)}$ 为参数的多项分布；$\delta_i^{(t)} \sim \mathbf{1}(\bar{\delta_i^{(t)}})$，表示节点 $i$ 在时间 $t$ 的活跃状态 $\delta_i^{(t)}$ 服从以 $\bar{\delta_i^{(t)}}$ 为参数的指示分布；$A_{kl}^{(t)} \sim Dirichlet(\tilde{\mu}_{kl}^{(t)})$，表示社区 $k$ 到社区 $l$ 在时间 $t$ 的转移概率 $A_{kl}^{(t)}$ 服从以$\tilde{\mu}_{kl}^{(t)}$ 为参数的狄利克雷分布。而$q(\phi_i^{(t)})$表示$z_i^{(t)}$ 的近似后验分布；$q(\delta_i^{(t)})$表示$\delta_i^{(t)}$ 的近似后验分布；$\tilde{\mu}_{kl}^{(t)}$则表示$A_{kl}^{(t)}$ 的近似后验分布。下面将具体介绍变分EM步的对应参数更新公式的推断过程。
+
 通过变分推断以及公式~\ref{qfunc}中的定义，利用Jensens不等式，其对数似然的下界可以表示为公式~\ref{qfunc1}，并且满足$\log Pr(W) = KL(q \| p) + \mathscr{L}(q)$。  
 \begin{equation}
 \log Pr(W)\ge E_q(\log Pr(W, Z,\delta, A) ) + H(q),
@@ -468,20 +404,10 @@ q(\phi,\bar{\delta}, \tilde{\mu}) = \prod_t \Big[ \prod_i q(\phi_i^{(t)}) \prod_
 \label{ELBO}
 \end{align}
 
-% \begin{align}
-% \mathscr{L}_t & (Z^{(t)},\delta^{(t)},\tilde{\mu}^{(t)}| \pi,B,\lambda)  \nonumber\\
-% & \approx \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \nonumber\\
-% & -\sum_{w_{ij}^{(t)}=0} \sum_{k,l} \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} + \sum_i \log \bar{\delta}_i^{(t-1)} \nonumber\\
-% & +\sum_i \sum_{k,l} \phi_{il}^{(t-1)}\phi_{ik}^{(t)} \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \nonumber \\
-% & +\sum_i \sum_{k,l} \phi_{ik}^{(t)}\phi_{il}^{(t+1)} \Big[\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})\Big] \nonumber\\
-% & + \sum_{k,l} (\mu_{kl} - 1) \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \nonumber \\
-% & - \sum_i \bar{\delta}_i^{(t-1)}\bar{\delta}_i^{(t)} - \sum_i \bar{\delta}_i^{(t)}\bar{\delta}_i^{(t+1)} - E_q \log q.
-% \label{eq:elbo}
-% \end{align} 
+\subsection{隐变量更新公式推断}
 
-在GEABS模型中，快照$t=1$的隐变量依赖于快照$t=2$的隐变量，而快照$T$的变量则受$T-1$的约束。对于快照$t=2, \cdots, T-1$的变量，其推断受到前后两个快照的组合影响。
-% 方便起见，这里仅展示 $t=2, \cdots, T-1$ 时的一般推断过程。单个快照 $t \in [2, T-1]$ 的 ELBO 如公式~\ref{eq:elbo} 所示。
-\subsubsection{$t=1$时的参数更新公式}
+在GEABS模型中，快照$t=1$的隐变量依赖于快照$t=2$的隐变量，而快照$T$的变量则受$T-1$的约束。对于快照$t=2, \cdots, T-1$的变量，其推断受到前后两个快照的组合影响。参数及隐变量的更新公式推断详细内容见~\ref{GEABS:inference}，这里直接给出更新公式。
+\subsubsection{$t=1$时的隐变量更新公式}
 当$t=1$时，$\phi_{ik}^{(1)}$的更新规则为：
 \begin{equation}
 \begin{split}
@@ -501,7 +427,7 @@ $\bar{\delta}_i^{(1)}$的梯度为：
 \label{eq:delta1}
 \end{equation}
 
-\subsubsection{$1<t<T$时的参数更新公式推导}
+\subsubsection{$1<t<T$时的隐变量更新公式}
 $\phi_{ik}^{(t)}、\tilde{\mu}_{kl}^t、\frac{\partial \mathscr{L}_t}{\partial \bar{\delta}_i^{(t)}}$的更新规则如公式~\ref{eq:phit} ~\ref{eq:A}和~\ref{eq:deltat} 所示：
    \begin{equation}
    \begin{split}
@@ -519,78 +445,7 @@ $\phi_{ik}^{(t)}、\tilde{\mu}_{kl}^t、\frac{\partial \mathscr{L}_t}{\partial \
    \label{eq:A}
    \end{equation}
 
-% 这些更新规则通过迭代优化变分参数，逐步提高证据下界（ELBO），从而实现对隐变量的有效推断。
- 
 
-% 对于 $\phi_i^{(t)}$ 的目标函数为：
-% \begin{equation}
-% \begin{split}
-% \mathscr{O}&(\phi_i^{(t)})  \\
-% & = \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \\
-% & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \\
-% &  +\sum_k \sum_l \phi_{ik}^{(t-1)}\phi_{il}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})]  \\
-% &+ \sum_k \sum_l \phi_{ik}^{(t)}\phi_{il}^{(t+1)} [\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})]  -\sum_k \phi_{ik}^{(t)} \log \phi_{ik}^{(t)}
-% \end{split}
-% \end{equation}
-
-% 约束条件为：$\sum_k \phi_{ik}^{(t)} = 1$，对于每个节点 $i$。
-
-
-
-% 引入拉格朗日乘子 $\varrho$，拉格朗日目标函数为：
-% \begin{equation}
-% \begin{split}
-% \mathscr{O}&(\phi_i^{(t)})  \\
-% & = \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \\
-% & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \\
-% & + \sum_k \sum_l \phi_{ik}^{(t-1)}\phi_{il}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})] \\
-% &+ \sum_k \sum_l \phi_{ik}^{(t)}\phi_{il}^{(t+1)} [\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})] \\
-% & -\sum_k \phi_{ik}^{(t)} \log \phi_{ik}^{(t)}+\varrho(\sum_k \phi_{ik}^{(t)}-1)
-% \end{split}
-% \end{equation}
-
-
-% 对 $\phi_{ik}^{(t)}$ 求导，得到梯度：
-% \begin{equation}
-% \begin{split}
-% \frac{\partial \mathscr{O}(\phi_i^{(t)})}{\partial \phi_{ik}^{(t)}} &= \{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log b_{kl} -\sum_{w_{ij}^{(t)}=0} \sum_l \phi_{jl}^{(t)}  b_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}}  \\
-% & + \sum_l \phi_{il}^{(t-1)} \log A_{lk}  \\
-% & + \sum_l \phi_{il}^{(t+1)} \log A_{kl} -1 + \varrho \}- \log \phi_{ik}^{(t)}
-% \end{split}
-% \end{equation}
-
-
-% 通过将梯度设为零并解方程，可以得到最优 $\phi_i^{(t)}$ 的更新规则：
-% Therefore, the updating equation for optimal $\phi_i^{(t)}$ is given by,
-% \begin{align}
-% \phi_{ik}^{(t)} & \propto \exp\bigg\{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log B_{kl} \nonumber\\
-% & -\sum_{w_{ij}^{(t)}=0} \sum_l \phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \nonumber \\
-% & +\sum_k \phi_{ik}^{(t-1)} \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \nonumber\\
-% & + \sum_l \phi_{il}^{(t+1)} \Big[\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})\Big] \bigg\},
-% \label{eq:phit}\\
-% \tilde{\mu}_{kl}^t &= \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} + \mu_{kl}.
-% \label{eq:A}
-% \end{align}
-
-% \begin{equation}
-% \begin{split}
-% & \mathscr{O}(\tilde{\mu}_{kl}^t)=  \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} [\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})] \\
-% & +  (\mu_{kl} - 1) [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})] - E_{\tilde{\mu}_{kl}^{(t)}} \log \tilde{\mu}_{kl}^{(t)}
-% \end{split}
-% \label{eq:simmu}
-% \end{equation}
-
-% For $\bar{\delta}_i^{(t)}$, the objective is:
-% \begin{equation}
-% \begin{split}
-% \mathscr{O}&(\bar{\delta}_i^{(t)}) =\sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl} \\
-% & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \\
-% & + \sum_i \log \bar{\delta}_i^{(t-1)}  - \sum_i \bar{\delta}_i^{(t-1)}\bar{\delta}_i^{(t)} - \sum_i \bar{\delta}_i^{(t)}\bar{\delta}_i^{(t+1)} - \bar{\delta}_i^{(t)}\log \bar{\delta}_i^{(t)}
-% \end{split}
-% \end{equation}
-
-% The optimal $\bar{\delta}_i^{(t)}$ is obtained by gradient ascend, and the gradient is derived as:
-% However, there is a small challenge in deriving $\bar{\delta}_i^{(t)}$ for it has no closed solution. So we take a fast gradient descent method to update it and the gradient is as Eq.~\ref{eq:deltat}.
 \begin{align}
 \frac{\partial \mathscr{L}_t}{\partial \bar{\delta}_i^{(t)}} & =\sum_{w_{ij}^{(t)}=1} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)} \log B_{kl}  \nonumber\\
 & -\sum_{w_{ij}^{(t)}=0} \sum_k \sum_l \phi_{ik}^{(t)}\phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}} \log B_{kl} \nonumber\\
@@ -598,34 +453,12 @@ $\phi_{ik}^{(t)}、\tilde{\mu}_{kl}^t、\frac{\partial \mathscr{L}_t}{\partial \
 \label{eq:deltat}
 \end{align}
 
-% For $\tilde{\mu}$, the objective is:
 
 
-
-% By calculating the gradient of $\tilde{\mu}_{kl}^t$ and make the derivative equals to $0$, the optimal $\tilde{\mu}_{kl}^t$ is given by:
-
-
-\subsubsection{$t=T$时的生成过程推断}
+\subsubsection{$t=T$时的隐变量更新公式}
 
 $\phi_i^{(t)}$的更新公式为：
 
-% \begin{equation}
-% \begin{split}
-% \mathscr{O}&(\phi_i^{(T)})  \\
-% & = \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl} \\
-% & -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  B_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \\
-% & + \sum_k \sum_l \phi_{ik}^{(T-1)}\phi_{il}^{(T)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})]  -\sum_k \phi_{ik}^{(T)} \log \phi_{ik}^{(T)} \\
-% & +\varrho (\sum_k \phi_{ik}^{(T)}-1)
-% \end{split}
-% \end{equation}
-
-% and the gradient is:
-% \begin{equation}
-% \begin{split}
-% \frac{\partial \mathscr{O}(\phi_i^{(T)})}{\partial \phi_{ik}^{(T)}}&  = \{ \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_l \phi_{jl}^{(T)} \log b_{kl} -\sum_{w_{ij}^{(T)}=0} \sum_l \phi_{jl}^{(T)}  b_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}}  \\
-% & + \sum_l \phi_{il}^{(T-1)} \log A_{lk}  -1 + \varrho \}- \log \phi_{ik}^{(T)}
-% \end{split}
-% \end{equation}
 
 \begin{equation}
 \begin{split}
@@ -638,17 +471,7 @@ $\phi_i^{(t)}$的更新公式为：
 
 $\bar{\delta}_i^{(T)}$的更新公式如下：
 
-% For $\bar{\delta}_i^{(T)}$, the objective is:
-% \begin{equation}
-% \begin{split}
-% \mathscr{O}&(\bar{\delta}_i^{(T)})  \\
-% & = \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl}\\
-% & -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  B_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \\
-% &  + \sum_i \log \bar{\delta}_i^{(T-1)} - \sum_i \bar{\delta}_i^{(T-1)}\bar{\delta}_i^{(T)}  - \bar{\delta}_i^{(T)}\log \bar{\delta}_i^{(T)}
-% \end{split}
-% \end{equation}
 
-% The optimal $\bar{\delta}_i^{(T)}$ is obtained by gradient ascend, and the gradient is derived as:
 
 \begin{equation}
 \begin{split}
@@ -659,7 +482,7 @@ $\bar{\delta}_i^{(T)}$的更新公式如下：
 \label{eq:deltaT}
 \end{equation}
 
-\subsection{变分推断M步}
+\subsection{参数更新公式推断}
 在变分推断E步中，已经通过推断得到变分参数$\phi^{(t)}$、$\delta^{(t)}$和$\tilde{\mu}^{(t)}$的更新公式，以最大化ELBO。本节将更新模型参数来最大化对数似然，二者交替更新即可获得模型最优解。与变分E步的推断方法类似，可以轻松获得模型参数的更新公式：
 \begin{equation}
 \pi_k \propto \sum_i \phi_{ik}^{(1)},~\lambda = \frac{1}{N} \sum_i \bar{\delta}_i^{(1)},~B_{kl} \propto \alpha \frac{\partial \mathscr{L}(B_{kl})}{\partial B_{kl}},
@@ -691,7 +514,7 @@ z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl
 另外，$q(\delta_i^t)$是以$\bar{\delta_i^t}$为参数的退化分布（即单点分布），因此$\delta_i^t = \bar{\delta_i^t}$。
 % is a degenerated distribution with the parameter $\bar{\delta_i^t}$, so the parameter $\delta_i^t = \bar{\delta_i^t}$.
 
-上述参数的更新公式推断详细内容见~\ref{GEABS:inference}。
+
 
 \subsection{算法流程}
 根据前述推断结果，这里提出GEABS的最大化ELBO $\mathscr{L}(q)$算法，算法流程如算法~\ref{chap4:alg1}所示：
@@ -725,8 +548,7 @@ z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{复杂度分析}
-GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^2N^2)$。其中$T$是网络快照数、$N$是网络中的节点数、$K$是社团的平均个数。理论上，本模型的复杂度不高于动态随机块模型，即$O(N^2)$。考虑到大部分真实世界网络都是稀疏的，本模型可以进一步引入负采样或并行计算来优化模型的计算效率。
+GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^2N^2)$。其中$T$是网络快照数、$N$是网络中的节点数、$K$是社团的平均个数。考虑到大部分真实世界网络都是稀疏的，且社团个数远远少于节点个数，本模型可以进一步引入负采样或并行计算来优化模型的计算效率。
 
 \section{实验评测\label{chap4:experiment}}
 
@@ -748,18 +570,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 \item \textbf{World trade network~\cite{worldset2002}}：世界贸易网络数据记录了$1948$年至$2000$年间$196$个国家和地区的年度进出口贸易总额。本章将数据整理成了一个动态网络，该网络包含$196$个节点，$5,735$条边和$53$个网络快照，每个快照记录了全球一年的各国家和地区的贸易关系。
 \end{itemize}
 
-% The experimental part involves one synthetic network and three real-world networks, namely, Kit-email network, Enron email network, and World trade network. Their details are as follows: 
 
-% \begin{itemize}  
-
-% \item  \textbf{Synthetic Data~\cite{greene2010tracking}}: For this dataset, several community-level events are introduced to make it more similar to real-world networks. We use this dataset to evaluate the effectiveness of the community-level anomaly parameter $A$. To achieve this goal, we generate a dynamic network with merge and split events in consecutive snapshots. This network contains $10$ snapshots, $250$ nodes, and a fixed community number of $22$. 
-
-% \item \textbf{Kit-email network~\cite{gorkedynamic}}: This email network is composed of $1,097$ email IDs (the number of nodes) and $27,887$ messages. We use it to construct a temporal network with time intervals of $6$ months, and the number of snapshots of this temporal network is $8$. The number of communities is $27$. Nodes in this network represent senders and recipients and the edges denote the relationships.
-
-% \item \textbf{Enron email network~\cite{benston2002enron}}: The Enron network is constructed by email communications between $151$ senior managers of Enron Energy, which filed for bankruptcy in $2001$ after it was found to be fraudulent. We extracted a dynamic social network with $12$ time snapshots by month, which containing $151$ nodes. Each time snapshot includes monthly communications of senior management, the edges linking the senders and receivers of emails. In addition, according to the company’s development timeline, we identified $7$ incidents, which largely affected the structure of the Enron mail network. 
-
-% \item \textbf{World trade network~\cite{worldset2002}}: World trade network data records the total annual import and export trade volume of $196$ countries from the year $1948$ to $2000$. We sorted the data into a dynamic network, which included $196$ nodes, $5,735$ edges, and $53$ time slices. The edge of each time slice is the total annual trade volume between the two countries. 
-% \end{itemize}
 
 
 \subsection{社团检测}
@@ -770,28 +581,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
   \item \textbf{PisCES~\cite{liu2018using}}：该方法从谱优化的角度来实现对动态网络的社团检测，其结合了进化谱聚类方法与度修正的思想，从全局优化的角度实现对动态网络的最优社团结构求解。
   \item \textbf{DSBM~\cite{yang2011detecting}}：该方法是基于经典随机块模型SBM的动态社团检测和演化分析中最成功的生成模型之一，即动态随机块模型。该模型在SBM的基础上通过引入社团转移矩阵实现对动态网络社团演化的建模。
 \end{itemize}
-% For community detection, we compare our method GEABS with $4$ popular baseline methods, which contains:
-% \begin{itemize}
-%   \item \textbf{ECD~\cite{liu2019evolutionary}}: It combines the proposed new genetic operator and classic genetic operators to exploit inter and intra connections between nodes. This approach improves the discovery of evolving community structures and finds the best balance between clustering accuracy and temporal smoothness.
-%   \item \textbf{DECS~\cite{liu2020detecting}}: It is a novel algorithm based on genome representation, employing Population Generation via Label Propagation (PGLP) for population initialization and decomposition framework for multi-objective optimization.
-%   \item \textbf{PisCES~\cite{liu2018using}}: From the perspective of spectral optimization, this is a global method that can infer the evolution by combining a series of networks, eigenvector smoothing, and degree correction.
-%   \item \textbf{DSBM~\cite{yang2011detecting}}: It is the most successful generative model for dynamic community detection and evolution analysis based on SBM.
-% \end{itemize}
 
-% We evaluate the community detection performance of our model and baselines within three performance metrics in both synthetic dataset and real-world dataset kit-email.
-
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.48\textwidth]{figures/chap05/Kit-emaili2Communitydetection.pdf}
-%   \caption{community detection result in kit-email data}
-%   \label{fig:kit-email}
-% \end{figure}
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.48\textwidth]{figures/chap05/mergesplitC.pdf}
-%   \caption{community detection result in synthetic data}
-%   \label{fig:mergesplitC}
-% \end{figure}
 
 本节在生成数据集和真实世界数据集Kit-email上利用三种评价指标来评估各动态社团检测方法的效果。
 
@@ -825,13 +615,6 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 
 
  
-
-
-
-
-
-
-
  
 \subsection{快照级别异常检测}
 
@@ -1050,17 +833,23 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 
 
 
-\subsection{案例研究}
+\subsection{GEABS数据挖掘实证}
 
-为了进一步挖掘本模型的演化异常检测能力，本节同时从宏观、微观和介观层面可视化了GEABS模型在国际贸易数据集上检测到的演化异常。如图~\ref{fig:worldtradecase}所示，从图中可以看出，不同的级别异常指数可能由不同的因素所引起，通过横向与纵向对比，可以有效对动态网络的演化异常进行深入挖掘。例如，在$1950$年，英国举行了关贸总协定（GATT）第三回合谈判，这使得当年有多个国际贸易团体发生合并（社团级别）。而在节点层面，注意到中国（CHN）的$\delta$值非常高，经调研，我国于$1949$年建国，且并未加入国际贸易组织，因而$1950$年的国际贸易并不稳定。
+为了进一步挖掘本模型的演化异常检测能力，本节同时从宏观、微观和介观层面可视化了GEABS模型在国际贸易数据集上检测到的演化异常。如图~\ref{fig:worldtradecaseCN}及图~\ref{fig:worldtradecaseN}所示。其中，图~\ref{fig:worldtradecaseCN}展示了在世界贸易网络中，网络变更点与对应的社团变化之间的关系；而图图~\ref{fig:worldtradecaseN}则展示了对应时间点的异常节点与挑选的核心节点的异常值。从图中可以看出，不同的级别异常指数可能由不同的因素所引起，通过横向与纵向对比，可以有效对动态网络的演化异常进行深入挖掘。例如，在$1950$年，英国举行了关贸总协定（GATT）第三回合谈判，这使得当年有多个国际贸易团体发生合并（社团级别）。而在节点层面，注意到中国（CHN）的$\delta$值非常高，经调研，我国于$1949$年建国，且并未加入国际贸易组织，因而$1950$年的国际贸易并不稳定。
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures/chap05/worldtrade-combine-new.pdf}
-	\caption{World Trade的层次异常检测案例}
-	\label{fig:worldtradecase}
+	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-CNlevel.pdf}
+	\caption{World Trade的层次异常检测案例-社团及网络级别}
+	\label{fig:worldtradecaseCN}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-Nlevel.pdf}
+	\caption{World Trade的层次异常检测案例-节点级别}
+	\label{fig:worldtradecaseN}
+\end{figure}
 $1973$年的石油危机使得俄罗斯的$\delta$值急剧上升。由于俄罗斯的主要出口商品是石油，中东石油危机对俄罗斯的石油出口影响巨大，反而对其他主要国家影响较小。有趣的是，苏联的解体（$1991$年）甚至没有影响俄罗斯的进出口贸易（节点层面），但这一事件使得多个国家集团分裂（社团层面）。
 
 另外从图中可以发现，每一次的国际重要事件总会使小国的$\delta$值达到最高。这表明在全球性事件中，小国比大国更易受到影响，这也符合直觉。此外，社团级别的异常和网络级别的异常密切相关，图~\ref{fig:worldtradecase}中的大多数网络变更点都存在社团的重大变化，如$1949$年、$1955$年和$1983$年。然而，节点级别的异常总是受到社团或网络级别的事件影响，例如前文提到的小国节点级沿海异常。这一现象揭示了网络不同层次之间的演化存在更复杂的关系，值得进一步研究。
@@ -1071,4 +860,4 @@ $1973$年的石油危机使得俄罗斯的$\delta$值急剧上升。由于俄罗
 
 本章从动态随机块模型对动态网络建模的能力与演化分析能力出发提出了GEABS生成模型。首先提出了引入节点流行度参数来刻画动态网络中的节点异质性以更好地提升生成模型对动态网络的建模能力；其次提出了基于GEABS不同维度参数的网络-社团-节点不同层次的演化异常检测指标以扩展生成模型在动态网络中的演化分析能力；最后提出了基于变分推断的模型求解方法，利用变分EM方法结合拉格朗日法实现了对模型参数和隐变量的交替更新求解。实验表明，GEABS相较对比方法具有更优的动态网络建模能力，且提出的网络层次演化异常识别参数能够有效地识别动态网络节点、社团与网络快照的演化异常。通过对世界贸易网络World Trade数据集的案例研究也证明了本章所提出的层次演化异常识别指标能够在横向、纵向对比中挖掘动态网络节点、社团、网络快照之间更加复杂的交互依赖关系，能够为动态复杂系统规律挖掘提供有效支撑。
 
-而从模型复杂度角度来看，GEABS具有生成模型的通病，即随着模型设计的精细化，其参数求解效率逐渐下降。虽然可以通过引入负采样、并行计算等方法提升模型的计算效率，但依然难以适用于大规模网络。然而能够适用于大规模网络的图表示学习方法由于其黑盒特性，亦难以像生成模型一样有效地支撑对于真实世界的规律挖掘与分析。因此在下一章，本文将提出结合生成模型与深度模型的动态网络建模方法，通过深度生成模型实现网络表示学习与生成模型的有效结合。
+而从模型复杂度角度来看，GEABS具有生成模型的通病，即随着模型设计的精细化，其参数求解效率逐渐下降。虽然可以通过引入负采样、并行计算等方法提升模型的计算效率，但依然难以适用于大规模网络。而能够适用于大规模网络的深度学习方法由于其黑盒特性，难以像生成模型一样有效地支撑对于真实世界的规律挖掘与分析。因此在下一章，本文将提出结合生成模型与深度模型的动态网络建模方法，通过深度生成模型实现网络表示学习与生成模型的有效结合。

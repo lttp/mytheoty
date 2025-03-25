@@ -2,7 +2,7 @@
 \baselineskip 20pt
 
 
-\chapter{基于深度生成模型的动态网络建模}
+\chapter{基于变分自编码器的动态网络深度社团检测方法}
 \label{chap:6}
 
 随着网络表示学习的快速发展，生成模型对网络拓扑的解耦以及对网络语义信息的聚合大大降低了大规模网络的计算复杂度，逐渐替代了现有的矩阵分解、概率图模型等方法对网络进行直接建模的方法。然而其基于图神经网络的深度学习方法对网络的建模是黑盒建模，即其模型中的参数并不具备现实或物理意义，而其强大的拟合能力能够较好地刻画节点的拓扑与属性信息，间接支撑复杂网络的下游任务效果，但难以为动态网络演化模式分析、网络功能结构挖掘等提供帮助。因此，本章提出基于深度生成模型的动态网络建模方法（VGRGMM），通过变分自编码器架构，结合深度序列模型建模动态网络，引入混合高斯先验来同时计算动态网络的社团结果，即提升了模型的运行效率，也为后续网络演化分析提供了可解释的中间参数用以支撑对动态网络的后续挖掘。在真实世界数据和生成数据的大量实验表明，VGRGMM模型在社团检测及社团演化分析任务中都表现出优于对比方法的效果，证明了VGRGMM模型可以在结合深度学习模型框架与生成模型的结合中融合二者的优点。
@@ -38,7 +38,7 @@
 \end{itemize}
 
 
-\section{模型描述\label{chap6:model}}
+\section{VGRGMM模型描述\label{chap6:model}}
 
 % \label{sec:method}
 %=============Figure1 VGRGMM==============
@@ -268,7 +268,7 @@ z_i^{(t)} \sim \bm{Cat}(\bm{\pi}^{(t)}),
 
 VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其复杂度与大部分同类方法相差不大，且依赖于对社团初始化的效果，可以通过对每个快照进行谱聚类以提升其计算效率。
 
-\section{实验\label{chap6:experiment}}
+\section{VGRGMM模型实验\label{chap6:experiment}}
 
 本节将引入多种动态网络数据集和对比方法，并在社团检测任务上使用了四种评估指标来验证VGRGMM方法在社团检测任务中的效果。
 
@@ -416,14 +416,14 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 
 本章还展示了对于没有社团真相的动态网络的实验结果，基于模块度$Q$进行评估，如图~\ref{fig:noTruth}所示，VGRGMM在图中的四组网络上也表现出最佳或次佳的性能。此外，VGRGMM、AFFECT、DYNMOGA、DECS和VGRNN都表现出优异的结果，因为这些方法要么模型设计是基于模块度优化进行的改进，要么建模了动态网络的时序演化。
 
-\begin{sidewaystable}
+\begin{table}
 \centering
 % \begin{table*}
-\caption{\label{tab2}不同方法的运行时间对比}
+\caption{\label{tab2}不同方法的运行时间对比（s）}
 \vspace{0.5em}\centering\wuhao
- \begin{tabular}{ccccccccccc}
+ \begin{tabular}{cp{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.85cm}p{0.85cm}p{0.7cm}}
 \hline
-\diagbox{方法名}{平均运行时间(s)}{数据集}& Var & HS11 & HS12 & Primary & Workplace & Cellphone & Enron & Voles & fbmessages & Synth \\
+\diagbox{方法名}{数据集}& Var & HS11 & HS12 & Pri & Work & Cphone & Enron & Voles & fbmsg & Synth \\
 \hline
 DynAE & 91.7 & 57.5 & 65.9 & 75.1 & 52.3 & 91.1 & 60.6 & 382.2  & 254.8 & 10943.2\\
 
@@ -446,11 +446,11 @@ VGRGMM & 35.4 & 5.522 & 8.9 & 22.8 & 6.4& 32.9 &  12.2 & 12.7 & 40.0 & 9036.1\\
 \end{tabular} 
 
 % \end{table*}
-\end{sidewaystable}
+\end{table}
 
 
 \subsubsection{大规模数据实验结果}
-为验证所提出的VGRGMM的计算效率，本节将社团检测效果较好的对比方法的运行时间成本与VGRGMM进行了对比。所有方法均在相同的实验环境中运行（使用CPU），并将训练轮数（epoch）设置为$50$，并计算其运行时间的平均值。
+为验证所提出的VGRGMM的计算效率，本节将社团检测效果较好的对比方法的运行时间成本与VGRGMM进行了对比。所有方法均在相同的实验环境中运行（使用CPU），并将训练轮数（epoch）设置为$50$，并计算其运行时间的平均值，结果如表~\ref{tab2}所示，其中Pri表示Primary数据集、Work表示Workplace数据集、Cphone表示CellPhone数据集、fbmsg表示fbmessages数据集。
 % %Result is shown in Table~\ref{tab2}.
 \begin{figure}
     \centering
@@ -464,10 +464,23 @@ VGRGMM & 35.4 & 5.522 & 8.9 & 22.8 & 6.4& 32.9 &  12.2 & 12.7 & 40.0 & 9036.1\\
 
 %
 
+\subsubsection{鲁棒性及稳定性测试}
+为了测试模型对于真实世界数据的鲁棒性与稳定性，本节挑选了基于深度VAE的模型DynAE、DynAERNN、DynGEM、DynRNN以及VGRNN与VGRGMM进行对比，因上述对比方法均对参数初始化较敏感。如图~\ref{fig:STNQ}所示，小提琴图的宽度表示模型结果的概率分布，每个模型运行$30$次得到。从图中可以看出，VGRGMM在有标签数据cellphone与无标签数据Var的数据上结果均优于对比方法，在cellphone数据中的稳定性较好，但在Var数据的稳定性相较于对比方法存在一定劣势，但其结果分布的均值相较对比方法有很大提升，且大部分结果均优于对比方法。
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=.6\textwidth]{figures/chap06/STNQ.pdf}
+	\caption{模型稳定性对比小提琴图}
+	\label{fig:STNQ}
+\end{figure}
 
-
-
+本节进一步利用cellphone数据对模型进行了鲁棒性测试，如图~\ref{fig:robustWP}所示，横坐标表示对cellphone随机抽取边的比例。随着网络的边被移除比例提升，网络的结构被破坏程度也越来越高。从图中可以看出，VGRGMM的鲁棒性随网络边的扰动变化不大，因模型的混合高斯先验能够很好地捕获数据分布，精准地刻画了网络的高阶生成机制（即社团结构 ），因此模型对网络噪声敏感性较低，具备良好的鲁棒性。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=.6\textwidth]{figures/chap06/workplaceRBNA.pdf}
+	\caption{模型鲁棒性小提琴图}
+	\label{fig:robustWP}
+\end{figure}
 
 \subsection{可视化结果}
 
@@ -494,25 +507,25 @@ VGRGMM可以同时实现动态网络嵌入和社团检测任务，相较与传�
 \subsection{参数敏感性分析}
 
 
+
+
+在本研究的模型VGRGMM中，除了嵌入维度$D$之外，没有其他额外的超参数。本研究分析了$D$对动态网络中社团检测结果的敏感性。本节选择了两个数据集，Primary和Enron数据集，分别使用\emph{NMI}和$Q$进行评估。如图~\ref{fig:Hyper} 所示，VGRGMM在两个网络中每个快照上$D$从$4$到$128$变化的结果。VGRGMM在节点表示向量维度为$32$时可以达到最佳性能。如果维度$D < 32$，则没有足够的维度来刻画网络结构。反之，当$D > 32$时，节点表示向量将对动态网络过拟合，因此在实验中设置$D = 32$。
+
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=.7\textwidth]{figures/chap06/DimensionsOndifferentData-t.pdf}
-    \caption{VGRGMM 的参数敏感性分析}
-    \label{fig:Hyper}
-    \vspace{0cm}
+	\centering
+	\includegraphics[width=.7\textwidth]{figures/chap06/DimensionsOndifferentData-t.pdf}
+	\caption{VGRGMM 的参数敏感性分析}
+	\label{fig:Hyper}
+	\vspace{0cm}
 \end{figure}
 
 
-幸运的是，在本研究的模型VGRGMM中，除了嵌入维度$D$之外，没有其他额外的超参数。本研究分析了$D$对动态网络中社团检测结果的敏感性。本节选择了两个数据集，Primary和Enron数据集，分别使用\emph{NMI}和$Q$进行评估。如图~\ref{fig:Hyper} 所示，VGRGMM在两个网络中每个快照上$D$从$4$到$128$变化的结果。VGRGMM在节点表示向量维度为$32$时可以达到最佳性能。如果维度$D < 32$，则没有足够的维度来刻画网络结构。反之，当$D > 32$时，节点表示向量将对动态网络过拟合，因此在实验中设置$D = 32$。
 
 
+\subsection{实证分析}
 
 
-
-\subsection{案例分析}
-
-
-最后，本章还展示了一个案例分析，以揭示VGRGMM在动态社团演化分析中的有效性。通过HS12动态社团检测，本节将VGRGMM和VGRNN的结果与快照$t=7$和$t=8$的社团真实值进行了比较。如图~\ref{fig:case} 所示，其可视化了两个连续快照中具有$5$个社团的子图的变化。在快照$7$中，VGRGMM几乎完美地识别了快照中的社团结构，而VGRNN则错误地划分了一些紫色节点的社团结果。从快照$t=7$到$t=8$的横向对比可以看出，红色社团发生了明显变化，一些节点加入了橙色社团（从图~\ref{fig:case} (a) 到 (d)）。受这种节点社团演化的影响，VGRNN无法准确识别快照$8$的社团结果，例如节点$8$和$88$，反之，VGRGMM仍然实现了较准确的社团划分结果。
+最后，本章还展示了一个实证分析，以揭示VGRGMM在动态社团演化分析中的有效性。通过HS12动态社团检测，本节将VGRGMM和VGRNN的结果与快照$t=7$和$t=8$的社团真实值进行了比较。如图~\ref{fig:case} 所示，其可视化了两个连续快照中具有$5$个社团的子图的变化。在快照$7$中，VGRGMM几乎完美地识别了快照中的社团结构，而VGRNN则错误地划分了一些紫色节点的社团结果。从快照$t=7$到$t=8$的横向对比可以看出，红色社团发生了明显变化，一些节点加入了橙色社团（从图~\ref{fig:case} (a) 到 (d)）。受这种节点社团演化的影响，VGRNN无法准确识别快照$8$的社团结果，例如节点$8$和$88$，反之，VGRGMM仍然实现了较准确的社团划分结果。
 同时，从社团演化的角度（即纵向比较VGRGMM和VGRNN），VGRNN将太多属于红色社团的节点转移到其他社团，这与真实值不一致。
 
 
