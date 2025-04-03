@@ -377,8 +377,8 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 &+ E_{\widetilde{\gamma},\widetilde{\phi}}[\log P(Z^1|\pi)] + E_{\widetilde{\phi},\widetilde{\xi}} \sum_{t=2}^T [\log P(Z^t|C^t)] 
 + E_{\widetilde{\xi},\widetilde{\phi},\widetilde{\mu}} \sum_{t=2}^T [\log P(C^t|A,Z^{t-1})] \\
 &+ E_{\widetilde{\mu}}[\log P(A)] + E_{\widetilde{\gamma}}[\log P(\pi)] + E_{\widetilde{\alpha},\widetilde{\beta}}[\log P(B)] 
-- E_{\widetilde{\gamma}}[\log q(\pi)] - E_{\widetilde{\alpha},\widetilde{\beta}}[\log q(B)] - E_{\widetilde{\mu}}[\log q(A)] \\
-&- \sum_{t=2}^T \sum_{i=1}^N E_{\widetilde{\xi}}[\log q(C_i^t)] - \sum_{t=1}^T \sum_{i=1}^N E_{\widetilde{\phi}}[\log q(z_i^t)] \\
+- E_{\widetilde{\gamma}}[\log q(\pi)] - E_{\widetilde{\alpha},\widetilde{\beta}}[\log q(B)] \\
+&- E_{\widetilde{\mu}}[\log q(A)] - \sum_{t=2}^T \sum_{i=1}^N E_{\widetilde{\xi}}[\log q(C_i^t)] - \sum_{t=1}^T \sum_{i=1}^N E_{\widetilde{\phi}}[\log q(z_i^t)] \\
 \end{split}
 \end{equation}
 
@@ -443,10 +443,10 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 \begin{equation}
 \label{eq8}
 \begin{split}
-&\widetilde{\phi}_{ik}^1 \propto \exp\{\sum_j \sum_l \widetilde{\phi}_{jl}^1 [w_{ij}^1[\psi(\widetilde{\alpha}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]
-  + (1-w_{ij}^1)[\psi(\widetilde{\beta}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] ]   \\
-& +[\psi(\widetilde{\gamma}_k)-\psi(\sum_l \widetilde{\gamma}_l) ] +[\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) 
-+ \sum_l (\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}}-1)(\psi (\widetilde{\xi}_{ik}^2) - \psi(\sum_l \widetilde{\xi}_{il}^2))]  \} \\
+&\widetilde{\phi}_{ik}^1 \propto \exp\{\sum_j \sum_l \widetilde{\phi}_{jl}^1 [w_{ij}^1[\psi(\widetilde{\alpha}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]\\
+ &+ (1-w_{ij}^1)[\psi(\widetilde{\beta}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] ]   \\
+& +[\psi(\widetilde{\gamma}_k)-\psi(\sum_l \widetilde{\gamma}_l) ] +[\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) \\
+&+ \sum_l (\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}}-1)(\psi (\widetilde{\xi}_{ik}^2) - \psi(\sum_l \widetilde{\xi}_{il}^2))]  \} \\
 \end{split}
 \end{equation}
 
@@ -455,10 +455,10 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 \begin{equation}
 \label{eq9}
 \begin{split}
-&\widetilde{\phi}_{ik}^t \propto \exp \{ \sum_j \sum_l \widetilde{\phi}_{jl}^t [w_{ij}^t[\psi(\widetilde{\alpha}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]
-+ (1-w_{ij}^t)[\psi(\widetilde{\beta}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]]    \\
-& + [\psi(\widetilde{\xi}_{ik}^t) - \psi(\sum_l \widetilde{\xi}_{il}^t)]+ [\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) 
-+\sum_l (\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}} -1)(\psi(\widetilde{\xi}_{ik}^{t+1}) - \psi(\sum_l \widetilde{\xi}_{il}^{t+1}))]  \}\\
+&\widetilde{\phi}_{ik}^t \propto \exp \{ \sum_j \sum_l \widetilde{\phi}_{jl}^t [w_{ij}^t[\psi(\widetilde{\alpha}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]\\
+&+ (1-w_{ij}^t)[\psi(\widetilde{\beta}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]]    \\
+& + [\psi(\widetilde{\xi}_{ik}^t) - \psi(\sum_l \widetilde{\xi}_{il}^t)]+ [\sum_l \psi(\widetilde{\mu}_{kl}) - \psi(\sum_l \widetilde{\mu}_{kl}) \\
+&+\sum_l (\frac{\widetilde{\mu}_{kl}}{\sum_l \widetilde{\mu}_{kl}} -1)(\psi(\widetilde{\xi}_{ik}^{t+1}) - \psi(\sum_l \widetilde{\xi}_{il}^{t+1}))]  \}\\
 \end{split}
 \end{equation} 
 
@@ -467,8 +467,8 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 \begin{equation}
 \label{eq10}
 \begin{split}
-&\widetilde{\phi}_{ik}^T \propto \exp \{ \sum_j \sum_l \widetilde{\phi}_{jl}^T [w_{ij}^T[\psi(\widetilde{\alpha}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})] + \\
-&(1-w_{ij}^T)[\psi(\widetilde{\beta}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]]  + [\psi(\widetilde{\xi}_{ik}^T) - \psi(\sum_l \widetilde{\xi}_{il}^T)]\}  \\
+&\widetilde{\phi}_{ik}^T \propto \exp \{ \sum_j \sum_l \widetilde{\phi}_{jl}^T [w_{ij}^T[\psi(\widetilde{\alpha}_{kl}) - \psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]  \\
+&+(1-w_{ij}^T)[\psi(\widetilde{\beta}_{kl})-\psi(\widetilde{\alpha}_{kl}+\widetilde{\beta}_{kl})]]  + [\psi(\widetilde{\xi}_{ik}^T) - \psi(\sum_l \widetilde{\xi}_{il}^T)]\}  \\
 \end{split}
 \end{equation} 
 其中$\psi(x) = \frac{\Gamma'(x)}{\Gamma(x)} = \frac{\,d \log \Gamma(x)}{\, dx}$.
@@ -553,7 +553,8 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 	\item DECS~\cite{liu2020detecting}通过启发式的融合人口模型与标签传播算法，改进了多目标优化方法以获得更好的聚类效果。
 	\item ESPRA~\cite{wang2017dynamic}将资源分配指数（RA）与拓扑扰动模型进行融合，形成了基于密度估计的社团检测算法。
 	\item GenLouvain~\cite{jutla2011generalized}改进的模块度优化算法，通过启发式的优化提升了模型对时序耦合的建模效果。
-	\item AFFECT~\cite{xu2014adaptive}将经典的进化聚类算法进行改进，去除了平衡参数，提升了模型的鲁棒性与聚类效果。
+%	\item AFFECT~\cite{xu2014adaptive}将经典的进化聚类算法进行改进，去除了平衡参数，提升了模型的鲁棒性与聚类效果。
+	\item AdaDyGNN~\cite{Li2024DyGNN}基于强化学习的动态表示学习方法，通过设计决策机制对网络中的边的变化进行影响进行过滤以提升模型鲁棒性。
 	\item DYNMOGA~\cite{folino2014evolutionary}基于多目标优化的进化聚类算法，可以自动确定社团个数并同时考虑了历史信息的影响。
 	\item DSBM~\cite{yang2011detecting}经典动态随机块模型，作为本文方法的消融，通过设计社团转移矩阵显式地刻画网络及社团的演化。
 	\item PisCES~\cite{liu2018global}基于全局优化的谱聚类算法，同时考虑了网络演化、谱平滑以及度修正因素。
@@ -572,7 +573,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{figures/chap03/dsbm/newpics/generateData1223.pdf}
+	\includegraphics[width=\textwidth]{figures/chap03/dsbm/chap3generateData1223.pdf}
 	\caption{生成数据集中的社团检测结果}
 	\label{fig.4.2}
 \end{figure}
@@ -585,7 +586,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{figures/chap03/dsbm/newpics/realData1223.pdf}
+	\includegraphics[width=0.9\textwidth]{figures/chap03/dsbm/chap3realData1223.pdf}
 	\caption{真实世界数据的社团检测结果}
 	\label{fig.4.4}
 \end{figure}
@@ -734,7 +735,7 @@ $E_i$越大，表示节点$i$的演化越频繁，则认为其是异常节点。
 
 
 \section{本章小结}
-本章首先从实际出发，通过创新性地将节点在动态网络的社团转移倾向异质性挖掘问题转化为节点的社团转移与否的二分类问题，对$15$个各类真实世界动态网络数据进行了实证分析，进而得出结论，\textbf{动态网络中，节点的社团转移存在异质性，且与节点的度具有较高关联性}。根据上述结论，本章进一步基于动态随机块模型设计了层次贝叶斯动态随机块模型，其层次贝叶斯生成结构能够在刻画动态社团演化模式时同时建模节点的社团转移异质性。另外针对所提出的HB-DSBM模型，利用变分推断对模型参数的更新进行了详细的推断，利用合理的优化策略，模型具备适应大规模数据计算的潜力。同类方法的对比也显示出HB-DSBM在动态网络社团检测以及社团演化分析任务中更加高效准确。另外，本文提出的基于节点转移异质性参数提出的节点演化异常指数也在实际分析中得以验证其有效性。
+本章首先从实际出发，通过创新性地将节点在动态网络的社团转移倾向异质性挖掘问题转化为节点的社团转移与否的二分类问题，对$15$个各类真实世界动态网络数据进行了实证分析，进而得出结论，动态网络中，节点的社团转移存在异质性，且与节点的度具有较高关联性。根据上述结论，本章进一步基于动态随机块模型设计了层次贝叶斯动态随机块模型，其层次贝叶斯生成结构能够在刻画动态社团演化模式时同时建模节点的社团转移异质性。另外针对所提出的HB-DSBM模型，利用变分推断对模型参数的更新进行了详细的推断，利用合理的优化策略，模型具备适应大规模数据计算的潜力。同类方法的对比也显示出HB-DSBM在动态网络社团检测以及社团演化分析任务中更加高效准确。另外，本文提出的基于节点转移异质性参数提出的节点演化异常指数也在实际分析中得以验证其有效性。
 
 然而从模型设计的角度来看，HB-DSBM仍然存在一定缺陷，首先，其对节点的社团转移异质性建模主要从生成角度而进行的设计，即假设节点的社团转移异质性与社团级别的节点转移倾向有关。具体来说，节点的社团转移异质性服从以其社团级别社团转移倾向为参数的狄利克雷分布。该设计虽然合理，但该参数并未与动态网络中的节点属性直接关联，因此在实际的下游任务中无法直接用于解释不通节点的社团转移倾向；其次，生成模型的优势之一是对于多种下游任务的适配，而所提出的节点演化异常指数还有进一步挖掘其能力的可能。因此，后续章节将针对HB-DSBM中存在的上述问题进行改进。
 

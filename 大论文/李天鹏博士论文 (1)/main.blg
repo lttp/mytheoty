@@ -14,7 +14,7 @@ A level-1 auxiliary file: appendix/inferences.aux
 A level-1 auxiliary file: appendix/acknowledgements.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated field_info (elt_size=4) to 16430 items from 5000.
+Reallocated field_info (elt_size=4) to 16610 items from 5000.
 Database file #1: references/reference.bib
 Repeated entry---line 494 of file references/reference.bib
  : @article{jin2021survey
@@ -228,63 +228,63 @@ Repeated entry---line 3448 of file references/reference.bib
  : @inproceedings{liu2020detecting
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3467 of file references/reference.bib
+Repeated entry---line 3497 of file references/reference.bib
  : @article{jutla2011generalized
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3473 of file references/reference.bib
+Repeated entry---line 3503 of file references/reference.bib
  : @inproceedings{pareja2020evolvegcn
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3648 of file references/reference.bib
+Repeated entry---line 3678 of file references/reference.bib
  : @article{liu2018global
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3673 of file references/reference.bib
+Repeated entry---line 3703 of file references/reference.bib
  : @article{tang2014detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3707 of file references/reference.bib
+Repeated entry---line 3737 of file references/reference.bib
  : @article{goyal2020dyngraph2vec
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3860 of file references/reference.bib
+Repeated entry---line 3890 of file references/reference.bib
  : @article{goyal2018dyngem
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3878 of file references/reference.bib
+Repeated entry---line 3908 of file references/reference.bib
  : @article{ma2017evolutionary
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4002 of file references/reference.bib
+Repeated entry---line 4032 of file references/reference.bib
  : @inproceedings{zhao2019large
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4032 of file references/reference.bib
+Repeated entry---line 4062 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4068 of file references/reference.bib
+Repeated entry---line 4098 of file references/reference.bib
  : @article{yang2011detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4135 of file references/reference.bib
+Repeated entry---line 4165 of file references/reference.bib
  : @article{folino2013evolutionary
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4172 of file references/reference.bib
+Repeated entry---line 4202 of file references/reference.bib
  : @article{kim2009particle
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4349 of file references/reference.bib
+Repeated entry---line 4379 of file references/reference.bib
  : @inproceedings{wang2008commtracker
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4450 of file references/reference.bib
+Repeated entry---line 4480 of file references/reference.bib
  : @inproceedings{zhou2018dynamic
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4513 of file references/reference.bib
+Repeated entry---line 4543 of file references/reference.bib
  :   @article{mucha2010community
  :                              ,
 I'm skipping whatever remains of this entry
@@ -410,6 +410,7 @@ Warning--empty editor in hassanzadeh2013semi
 Warning--The editor in cheng2008robust is missing.
 Warning--empty editor in cheng2008robust
 Warning--empty pages in worldset2002
+Warning--The refdate in COSTA2023110202 is missing.
 `editor' is a missing field, not a string, for entry hartmann2016clustering
 while executing---line 2538 of file TJUThesis.bst
 Warning--there's a publisher but no address in hartmann2016clustering
@@ -458,49 +459,51 @@ Warning--empty editor in ditursi2017local
 Warning--The editor in rossi2015network is missing.
 Warning--empty editor in rossi2015network
 Warning--empty pages in rossi2015network
+Warning--The editor in li2024contrastive is missing.
+Warning--empty editor in li2024contrastive
 Warning--The editor in wang2022powerful is missing.
 Warning--empty editor in wang2022powerful
 
 Done.
-You've used 254 entries,
+You've used 258 entries,
             4577 wiz_defined-function locations,
-            2339 strings with 57101 characters,
-and the built_in function-call counts, 168580 in all, are:
-= -- 19593
-> -- 2720
-< -- 231
-+ -- 1641
-- -- 822
-* -- 13123
-:= -- 18461
-add.period$ -- 766
-call.type$ -- 254
+            2354 strings with 57865 characters,
+and the built_in function-call counts, 171305 in all, are:
+= -- 19913
+> -- 2766
+< -- 235
++ -- 1669
+- -- 836
+* -- 13324
+:= -- 18755
+add.period$ -- 779
+call.type$ -- 258
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 417
-duplicate$ -- 11038
-empty$ -- 17648
-format.name$ -- 822
-if$ -- 41673
+cite$ -- 424
+duplicate$ -- 11208
+empty$ -- 17926
+format.name$ -- 836
+if$ -- 42358
 int.to.chr$ -- 0
-int.to.str$ -- 254
+int.to.str$ -- 258
 missing$ -- 3
-newline$ -- 1278
-num.names$ -- 257
-pop$ -- 1086
+newline$ -- 1299
+num.names$ -- 261
+pop$ -- 1103
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 5501
+skip$ -- 5605
 stack$ -- 0
-substring$ -- 19733
-swap$ -- 3667
-text.length$ -- 231
+substring$ -- 20035
+swap$ -- 3738
+text.length$ -- 235
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 2988
-warning$ -- 163
-while$ -- 1687
-width$ -- 257
-write$ -- 2258
+type$ -- 3037
+warning$ -- 166
+while$ -- 1714
+width$ -- 261
+write$ -- 2295
 (There were 71 error messages)

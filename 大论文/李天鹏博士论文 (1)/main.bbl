@@ -4,12 +4,12 @@
 \bibitem{watts1998collective}
 Watts~D~J, Strogatz~S~H.
 Collective dynamics of ‘small-world’networks~[J].
-nature, 1998, 393~(6684):  440--442.
+Nature, 1998, 393~(6684):  440--442.
 
 \bibitem{albert1999diameter}
 Albert~R, Jeong~H, Barab{\'a}si~A-L.
 Diameter of the world-wide web~[J].
-nature, 1999, 401~(6749):  130--131.
+Nature, 1999, 401~(6749):  130--131.
 
 \bibitem{mets2014combining}
 Mets~K, Ojea~J~A, Develder~C.
@@ -46,6 +46,18 @@ A review and prospect for the complexity and resilience of urban public transit
   network based on complex network theory~[J].
 Complexity, 2018, 2018~(1):  2156309.
 
+\bibitem{zhu2016scalable}
+Zhu~L, Guo~D, Yin~J, \emph{et~al}.
+{Scalable Temporal Latent Space Inference for Link Prediction in Dynamic Social
+  Networks}~[J].
+IEEE Transactions on Knowledge and Data Engineering, 2016, 28~(10):
+  2765--2777.
+
+\bibitem{ahmed2016survey}
+Ahmed~M, Mahmood~A~N, Islam~M~R.
+A survey of anomaly detection techniques in financial domain~[J].
+Future Generation Computer Systems, 2016, 55:  278--288.
+
 \bibitem{kumar2024community}
 Kumar~M, Mishra~S, Singh~S~S, \emph{et~al}.
 Community-enhanced link prediction in dynamic networks~[J].
@@ -54,7 +66,7 @@ ACM Transactions on the Web, 2024, 18~(2):  1--32.
 \bibitem{fortunato2016community}
 Fortunato~S, Hric~D.
 Community detection in networks: A user guide~[J].
-Physics reports, 2016, 659:  1--44.
+Physics Reports, 2016, 659:  1--44.
 
 \bibitem{palla2007quantifying}
 Palla~G, Barab{\'a}si~A-L, Vicsek~T.
@@ -91,7 +103,7 @@ In International Conference on Applied Intelligence, 2024:  139--149.
 \bibitem{girvan2002community}
 Girvan~M, Newman~M~E.
 Community structure in social and biological networks~[J].
-Proceedings of the national academy of sciences, 2002, 99~(12):  7821--7826.
+Proceedings of the National Academy of Sciences, 2002, 99~(12):  7821--7826.
 
 \bibitem{jin2021survey}
 Jin~D, Yu~Z, Jiao~P, \emph{et~al}.
@@ -125,7 +137,8 @@ Physical Review E—Statistical, Nonlinear, and Soft Matter Physics, 2012,
 Jeub~L~G, Balachandran~P, Porter~M~A, \emph{et~al}.
 Think locally, act locally: Detection of small, medium-sized, and large
   communities in large networks~[J].
-Physical Review E, 2015, 91~(1):  012821.
+Physical Review E—Statistical, Nonlinear, and Soft Matter Physics, 2015,
+  91~(1):  012821.
 
 \bibitem{traag2011narrow}
 Traag~V~A, Van~Dooren~P, Nesterov~Y.
@@ -142,7 +155,7 @@ Physical Review E—Statistical, Nonlinear, and Soft Matter Physics, 2007,
 \bibitem{pons2006computing}
 Pons~P, Latapy~M.
 Computing communities in large networks using random walks~[J].
-Journal of graph algorithms and applications, 2006, 10~(2):  191--218.
+Journal of Graph Algorithms and Applications, 2006, 10~(2):  191--218.
 
 \bibitem{JSJA201912008}
 尹欣红, 赵世燕, 陈晓云.
@@ -153,7 +166,7 @@ Journal of graph algorithms and applications, 2006, 10~(2):  191--218.
 Snijders~T~A, Nowicki~K.
 Estimation and prediction for stochastic blockmodels for graphs with latent
   block structure~[J].
-Journal of classification, 1997, 14~(1):  75--100.
+Journal of Classification, 1997, 14~(1):  75--100.
 
 \bibitem{karrer2011stochastic}
 Karrer~B, Newman~M~E.
@@ -211,7 +224,7 @@ In Proceedings ot the Workshop on Semantic Network Analysis, International
 \bibitem{rossetti2018community}
 Rossetti~G, Cazabet~R.
 Community discovery in dynamic networks: a survey~[J].
-ACM computing surveys, 2018, 51~(2):  1--37.
+ACM Computing Surveys, 2018, 51~(2):  1--37.
 
 \bibitem{rosvall2010mapping}
 Rosvall~M, Bergstrom~C~T.
@@ -636,12 +649,12 @@ Journal of Experimental Algorithmics (JEA), 2013, 18:  1--1.
 \bibitem{mucha2010community}
 Mucha~P~J, Richardson~T, Macon~K, \emph{et~al}.
 Community structure in time-dependent, multiscale, and multiplex networks~[J].
-science, 2010, 328~(5980):  876--878.
+Science, 2010, 328~(5980):  876--878.
 
 \bibitem{lee1999learning}
 Lee~D~D, Seung~H~S.
 Learning the parts of objects by non-negative matrix factorization~[J].
-nature, 1999, 401~(6755):  788--791.
+Nature, 1999, 401~(6755):  788--791.
 
 \bibitem{cai2010graph}
 Cai~D, He~X, Han~J, \emph{et~al}.
@@ -961,6 +974,12 @@ Jutla~I~S, Jeub~L~G, Mucha~P~J.
 A generalized Louvain method for community detection implemented in MATLAB~[J].
 URL http://netwiki. amath. unc. edu/GenLouvain, 2011.
 
+\bibitem{Li2024DyGNN}
+Li~H, Li~C, Feng~K, \emph{et~al}.
+Robust Knowledge Adaptation for Dynamic Graph Neural Networks~[J].
+IEEE Transactions on Knowledge and Data Engineering, 2024, 36~(11):
+  6920--6933.
+
 \bibitem{folino2014evolutionary}
 Folino~F, Pizzuti~C.
 An evolutionary multiobjective approach for community discovery in dynamic
@@ -977,7 +996,7 @@ Knowledge-Based Systems, 2021, 213:  106693.
 Ma~S, Su~L, Zhang~Y.
 Determining the number of communities in degree-corrected stochastic block
   models~[J].
-Journal of machine learning research, 2021, 22~(69):  1--63.
+Journal of Machine Learning Research, 2021, 22~(69):  1--63.
 
 \bibitem{godoy2016accurate}
 Godoy-Lorite~A, Guimer{\`a}~R, Moore~C, \emph{et~al}.
@@ -1018,11 +1037,6 @@ ACM Computing Surveys, 2009, 41~(3):  1--58.
 Zenati~H, Romain~M, Foo~C-S, \emph{et~al}.
 Adversarially learned anomaly detection~[C].
 In 2018 IEEE International Conference on Data Mining, 2018:  727--736.
-
-\bibitem{ahmed2016survey}
-Ahmed~M, Mahmood~A~N, Islam~M~R.
-A survey of anomaly detection techniques in financial domain~[J].
-Future Generation Computer Systems, 2016, 55:  278--288.
 
 \bibitem{amraee2018anomaly}
 Amraee~S, Vafaei~A, Jamshidi~K, \emph{et~al}.
@@ -1145,6 +1159,13 @@ Gleditsch~K~S.
 Expanded Trade and {GDP} Data.
 2002.
 Accessed: 2023-10-15.
+
+\bibitem{COSTA2023110202}
+Costa~A~R, Ralha~C~G.
+AC2CD: An actor–critic architecture for community detection in dynamic social
+  networks~[J/OL].
+Knowledge-Based Systems, 2023, 261:  110202.
+\url{https://www.sciencedirect.com/science/article/pii/S0950705122012989}.
 
 \bibitem{liu2018using}
 Liu~F, Choi~D, Xie~L, \emph{et~al}.
@@ -1437,6 +1458,12 @@ The network data repository with interactive graph analytics and
   visualization~[C].
 In Proceedings of the Conference on Applications of Artificial Intelligence,
   2015.
+
+\bibitem{li2024contrastive}
+Li~Y, Chen~J, Chen~C, \emph{et~al}.
+Contrastive deep nonnegative matrix factorization for community detection~[C].
+In ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP), 2024:  6725--6729.
 
 \bibitem{Krzakala.2013.Zhang}
 Krzakala~F, Moore~C, Mossel~E, \emph{et~al}.
