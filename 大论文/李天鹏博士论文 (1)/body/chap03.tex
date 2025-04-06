@@ -597,7 +597,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 \subsection{社团演化分析}
 
 
-社团演化方面，本节分别针对生成数据1、生成数据2以及DBLP数据进行了社团演化的可视化展示，如图~\ref{fig:SankeyFacetnet}~\ref{fig:SankeyAsonamMS}和图~\ref{fig:SankeyDBLP}所示，其中第一个GroundTruth代表社团真相。需要注意的是，由于ESPRA和AFFECT在生成数据2与DBLP数据中的社团演化效果较差，因此图中进行了省略。由图中可以看出，HB-DSBM能够准确的刻画动态网络的社团演化，且对于复杂的社团演化行为均具有较好的刻画能力。而DSBM由于缺少节点演化异质性假设，因此其难以建模复杂的社团演化行为，而其余方法如PisCES、DYNMOGA等由于模型设计的问题，呈现出了混乱的社团演化行为，难以正确刻画社团的演化，因此无法支撑对动态网络社团演化的分析。
+社团演化方面，本节分别针对生成数据1、生成数据2以及DBLP数据进行了社团演化的可视化展示，如图~\ref{fig:SankeyFacetnet}~\ref{fig:SankeyAsonamMS}和图~\ref{fig:SankeyDBLP}所示，其中第一个GroundTruth代表社团真相。需要注意的是，由于ESPRA和AdaDyGNN在生成数据2与DBLP数据中的社团演化效果较差，因此图中进行了省略。由图中可以看出，HB-DSBM能够准确的刻画动态网络的社团演化，且对于复杂的社团演化行为均具有较好的刻画能力。而DSBM由于缺少节点演化异质性假设，因此其难以建模复杂的社团演化行为，而其余方法如PisCES、DYNMOGA等由于模型设计的问题，呈现出了混乱的社团演化行为，难以正确刻画社团的演化，因此无法支撑对动态网络社团演化的分析。
 
 
 
@@ -627,7 +627,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 	\subfigure[ESPRA]{
 		\includegraphics[width=.3\textwidth,height=.125\textwidth]{figures/chap03/dsbm/facetNetEvolution/espra.pdf}
 	}
-	\subfigure[AFFECT]{
+	\subfigure[AdaDyGNN]{
 		\includegraphics[width=.3\textwidth,height=.125\textwidth]{figures/chap03/dsbm/facetNetEvolution/affect.pdf}
 	}
 	\caption{生成数据1中参数为$\sigma = 5$, $nC = 9$ and $aD = 20$的社团演化桑基图}
