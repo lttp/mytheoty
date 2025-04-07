@@ -2,7 +2,7 @@
 \baselineskip 20pt
 
 
-\chapter{基于变分自编码器的动态网络深度社团检测方法}
+\chapter{基于深度生成模型的动态网络社团检测大规模扩展}
 \label{chap:6}
 
 随着网络表示学习的快速发展，生成模型对网络拓扑的解耦以及对网络语义信息的聚合大大降低了大规模网络的计算复杂度，逐渐替代了现有的矩阵分解、概率图模型等方法对网络进行直接建模的方法。然而其基于图神经网络的深度学习方法对网络的建模是黑盒建模，即其模型中的参数并不具备现实或物理意义，而其强大的拟合能力能够较好地刻画节点的拓扑与属性信息，间接支撑复杂网络的下游任务效果，但难以为动态网络演化模式分析、网络功能结构挖掘等提供帮助。因此，本章提出基于深度生成模型的动态网络建模方法（VGRGMM），通过变分自编码器架构，结合深度序列模型建模动态网络，引入混合高斯先验来同时计算动态网络的社团结果，即提升了模型的运行效率，也为后续网络演化分析提供了可解释的中间参数用以支撑对动态网络的后续挖掘。在真实世界数据和生成数据的大量实验表明，VGRGMM模型在社团检测及社团演化分析任务中都表现出优于对比方法的效果，证明了VGRGMM模型可以在结合深度学习模型框架与生成模型的结合中融合二者的优点。
@@ -207,38 +207,10 @@ z_i^{(t)} \sim \bm{Cat}(\bm{\pi}^{(t)}),
 
 \noindent其中，$\mathcal{S}_i^{(t)}$是SGVB估计器中，$t$时刻节点$v_i \in V^{(t)}$的蒙特卡洛（MC）样本集，$\pi_{z_i^{(t)}}^{(t)}$表示社团$z_i^{(t)}$的先验概率，而$\gamma_{z_i^{(t)}}^{(t)}$表示$q(\mathbf{Z}_i^{(t)}|\mathbf{W}^{(t)},\mathbf{X}^{(t)})$。
 
-本研究接下来将探讨如何通过最大化$\mathcal{L}_{ELBO}$来对模型进行求解：
-\begin{align}
- {\mathcal{L}_{ELBO}} & = \sum_{t=1}^T \int_{\bm{F}^{(t)}} \sum_{z_i^{(t)}} q(\bm{F}^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)},\bm{F}^{(<t)})q(z_i^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)}) \nonumber \\
- & \quad \cdot\log\Bigg[\frac{p(\bm{X}^{(t)}, \bm{W}^{(t)} | \bm{F}^{(t)}) p(\bm{F}^{(t)})}{q(\bm{F}^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}, \bm{F}^{(< t)})} \cdot\frac{p(z_i^{(t)}|\bm{F}^{(t)})}{q(z_i^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)})} \Bigg]d\bm{F}\nonumber\\
- & = \sum_{t=1}^T \Bigg[\int_{\bm{F}^{(t)}}q(\bm{F}^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)},\bm{F}^{(< t)}) \nonumber \\ 
- & \quad \quad \quad \cdot \log\frac{p(\bm{X}^{(t)}, \bm{W}^{(t)} | \bm{F}^{(t)}) p(\bm{F}^{(t)})}{q(\bm{F}^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}, \bm{F}^{(< t)})} d\bm{F} \nonumber \\
- & \quad - \int_{\bm{F}^{(t)}} q(\bm{F}^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)},\bm{F}^{(< t)}) \nonumber\\
- & \quad \quad \cdot D_{KL}\left[q(z_i^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}) \parallel p(z_i^{(t)}|\bm{F}^{(t)})\right] d\bm{F} \Bigg],
-\end{align}
-其中，前项与社团$z$无关，后项为$KL(\cdot || \cdot)$散度，显然是非负的。因此，当$\mathcal{L}_{ELBO}$达到最大值时，$D_{KL}\left[q(z_i^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}) \parallel p(z_i^{(t)}|\bm{F}^{(t)})\right] dF =0$是最适合的。 
-% \fi
-% \iffalse
-因此，在式~(\ref{eq:14})中计算$q(z_i^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)})$遵循以下等式：
-\begin{equation}
-    q(z_i^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)}) = p(z_i^{(t)}|\bm{F}^{(t)}) =\frac{p(z^{(t)})p(\bm{F}^{(t)}|z_i^{(t)})}{\sum_{z^{'}=1}^{K^{(t)}} p(z^{'})p(\bm{F}^{(t)}|z^{'})}.
-\end{equation}
-
-由于$Z^{(t)}$与$\bm{F}^{(t)}$存在较强的相关性，因此可以减少均场假设导致的信息丢失。
-
-
-
-
-
-
-
-
-\textbf{算法}~\ref{algorithm:chap6}提供了VGRGMM方法的伪代码。其中\ref{al:enstart}-\ref{al:enend}对应编码（推断）过程，而~\ref{al:destart}-\ref{al:deend}对应解码（生成）过程。~\ref{al:ev}是捕捉演化依赖性的过程。~\ref{al:trstart}和~\ref{al:trend}描述了每次训练迭代的优化过程。VGRGMM与其他基于网络表示学习的动态社团检测方法的最大区别在于，一旦VGRGMM训练完成，其可以自然地为所有快照中的节点分配社团，如~\ref{al:ass}所示。
-% 其中选择概率最大的社团。
-
 \begin{algorithm}
 	\caption{VGRGMM算法的伪代码} %
 	%
+	
 	\algorithmicrequire ~迭代次数 $L$，邻接矩阵 $\mathbf{W}^{(\le T)}$ 和特征矩阵 $\mathbf{X}^{(\le T)}$。\\
 	\algorithmicensure ~节点表示矩阵 $\mathbf{F}^{(\le T)}$ 和社团分配矩阵 $\mathbf{Z}^{(\le T)}$。 \\
 	\begin{algorithmic}[1]
@@ -265,6 +237,57 @@ z_i^{(t)} \sim \bm{Cat}(\bm{\pi}^{(t)}),
 	\end{algorithmic}
 	\label{algorithm:chap6}
 \end{algorithm}
+
+本研究接下来将探讨如何通过最大化$\mathcal{L}_{ELBO}$来对模型进行求解：
+\begin{align}
+ {\mathcal{L}_{ELBO}} & = \sum_{t=1}^T \int_{\bm{F}^{(t)}} \sum_{z_i^{(t)}} q(\bm{F}^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)},\bm{F}^{(<t)})q(z_i^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)}) \nonumber \\
+ & \quad \cdot\log\Bigg[\frac{p(\bm{X}^{(t)}, \bm{W}^{(t)} | \bm{F}^{(t)}) p(\bm{F}^{(t)})}{q(\bm{F}^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}, \bm{F}^{(< t)})} \cdot\frac{p(z_i^{(t)}|\bm{F}^{(t)})}{q(z_i^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)})} \Bigg]d\bm{F}\nonumber\\
+ & = \sum_{t=1}^T \Bigg[\int_{\bm{F}^{(t)}}q(\bm{F}^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)},\bm{F}^{(< t)}) \nonumber \\ 
+ & \quad \quad \quad \cdot \log\frac{p(\bm{X}^{(t)}, \bm{W}^{(t)} | \bm{F}^{(t)}) p(\bm{F}^{(t)})}{q(\bm{F}^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}, \bm{F}^{(< t)})} d\bm{F} \nonumber \\
+ & \quad - \int_{\bm{F}^{(t)}} q(\bm{F}^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)},\bm{F}^{(< t)}) \nonumber\\
+ & \quad \quad \cdot D_{KL}\left[q(z_i^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}) \parallel p(z_i^{(t)}|\bm{F}^{(t)})\right] d\bm{F} \Bigg],
+\end{align}
+其中，前项与社团$z$无关，后项为$KL(\cdot || \cdot)$散度，显然是非负的。因此，当$\mathcal{L}_{ELBO}$达到最大值时，$D_{KL}\left[q(z_i^{(t)}|\bm{X}^{(t)},\bm{W}^{(t)}) \parallel p(z_i^{(t)}|\bm{F}^{(t)})\right] dF =0$是最适合的。 
+% \fi
+% \iffalse
+因此，在式~(\ref{eq:14})中计算$q(z_i^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)})$遵循以下等式：
+\begin{equation}
+    q(z_i^{(t)}|\bm{W}^{(t)},\bm{X}^{(t)}) = p(z_i^{(t)}|\bm{F}^{(t)}) =\frac{p(z^{(t)})p(\bm{F}^{(t)}|z_i^{(t)})}{\sum_{z^{'}=1}^{K^{(t)}} p(z^{'})p(\bm{F}^{(t)}|z^{'})}.
+\end{equation}
+
+由于$Z^{(t)}$与$\bm{F}^{(t)}$存在较强的相关性，因此可以减少均场假设导致的信息丢失。
+
+
+
+%\begin{algorithm}
+%	\caption{VGRGMM算法的伪代码}
+%	\algorithmicrequire ~迭代次数 $L$，邻接矩阵 $\mathbf{W}^{(\le T)}$，特征矩阵 $\mathbf{X}^{(\le T)}$ \\
+%	\algorithmicensure ~节点表示矩阵 $\mathbf{F}^{(\le T)}$，社团分配矩阵 $\mathbf{Z}^{(\le T)}$ 
+%	\begin{algorithmic}[1]
+%		\STATE 初始化：$\bm{\pi^{(t)}} \sim \bm{\mathcal{U}(0,1)}$ ($1 \le t \le T$)，$\mathbf{h}^{(0)}=\mathbf{0}$
+%		\FOR {$t = 1,...,T$} 
+%		\STATE 获取高斯参数 $\hat{\mathbf{\theta}}^{(t)}, \hat{\mathbf{\sigma}}^{(t)}$ (式~(\ref{eq:10}))
+%		\STATE 生成节点表示 $\mathbf{F}_i^{(t)}$ (式~(\ref{eq:11}))
+%		\STATE 学习GRU隐藏状态 $\mathbf{h}^{(t)}$ (式~(\ref{eq:8}))
+%		\FOR {每个 $v_i \in V^{(t)}$}
+%		\STATE 采样社团划分 $\mathbf{Z}_i^{(t)} \sim \boldsymbol{Cat}(\bm{\pi}^{(t)})$
+%		\STATE MC采样 $\mathcal{S}_i^{(t)} \subseteq V^{(t)}$~\cite{kingma2013auto}
+%		\STATE 重构 $\mathbf{W}_{i,s}^{(t)}$ ($v_s \in \mathcal{S}_i^{(t)}$, 式~(\ref{chap6:eq:3}))
+%		\ENDFOR
+%		\ENDFOR
+%		\STATE 计算 $\mathcal{L}_{ELBO}$ (式~(\ref{eq:16}))
+%		\STATE 通过SGD最大化 $\mathcal{L}_{ELBO}$ 更新参数
+%		\STATE 重复步骤 2-10 直到迭代 $L$ 次
+%		\STATE 获取社团分配 $\mathbf{Z}^{(\le T)}$ (式~(\ref{eq:12}))
+%		\RETURN $\mathbf{F}^{(\le T)}, \mathbf{Z}^{(\le T)}$
+%	\end{algorithmic}
+%	\label{algorithm:chap6}
+%\end{algorithm}
+算法~\ref{algorithm:chap6}提供了VGRGMM方法的伪代码。其中\ref{al:enstart}-\ref{al:enend}行对应编码（推断）过程，而~\ref{al:destart}-\ref{al:deend}行对应解码（生成）过程。~\ref{al:ev}行是捕捉演化依赖性的过程。~\ref{al:trstart}行和~\ref{al:trend}行描述了每次训练迭代的优化过程。VGRGMM与其他基于网络表示学习的动态社团检测方法的最大区别在于，一旦VGRGMM训练完成，其可以自然地为所有快照中的节点分配社团，如~\ref{al:ass}行所示。
+% 其中选择概率最大的社团。
+
+
+
 
 VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其复杂度与大部分同类方法相差不大，且依赖于对社团初始化的效果，可以通过对每个快照进行谱聚类以提升其计算效率。
 
@@ -333,7 +356,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 %选择了七种先前发表的代表性方法，根据非深度学习模型（AFFECT、DYNMOGA和DECS）和深度学习模型（DynGEM、DynAE、DynRNN、DynAERNN和VGRNN）的分类来检测社团，其中动态网络嵌入通过GMM方法获得并用于聚类。
 \begin{itemize}
 %    \item \textbf{AdaDyGNN}~\cite{Li2024DyGNN}：该方法属于经典的进化聚类算法，不同于大部分进化聚类算法将时间平滑性融入到损失函数中，该方法通过精确追踪社团随时间变化的临近性来实现对动态社团演化的建模。
- 	\item \textbf{AdaDyGNN}~\cite{Li2024DyGNN}：该方法从动态网络演化过程中节点与边的变化噪声过滤角度设计了基于强化学习的动态图神经网络鲁棒性知识自适应框架，通过将节点变化的选择问题转化为序列决策过程实现对动态网络的鲁邦性表示学习。
+ 	\item \textbf{AdaDyGNN}~\cite{Li2024DyGNN}：该方法从动态网络演化过程中节点与边的噪声过滤角度设计了基于强化学习的动态图神经网络知识自适应框架，通过将节点变化的选择问题转化为序列决策过程实现对动态网络的鲁棒性表示学习。
     \item \textbf{DYNMOGA}~\cite{folino2013evolutionary}：该方法将动态网络中的社团检测任务视为一个多目标优化问题。第一个目标是在当前快照搜索社团结构，第二个目标则是最小化当前快照与前一个快照的社团结构差异以捕获时序平滑性。
     \item \textbf{DECS}~\cite{liu2020detecting}：该方法在经典进化聚类算法的基础上，提出了新的基因突变算子来确保节点及其邻居有更大的概率划分到同意社团，并引入了基因矩阵来编码网络结构信息以提升社团搜索效率。
     \item \textbf{DynGEM}~\cite{goyal2018dyngem}：该方法以深度自编码器为核心，利用深度学习生成高度非线性的节点表示并以此重构所观测到的动态网络。
@@ -342,7 +365,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
     \item \textbf{DynRNN}~\cite{goyal2020dyngraph2vec}：该方法以当前时刻之前的所有网络快照作为输入，利用RNN建模网络的时序演化模式，将当前时刻的网络结构作为输出，从而能够捕捉每个快照节点之间以及多个快照的非线性交互。
     \item \textbf{DynAERNN}~\cite{goyal2020dyngraph2vec}：该方法的模型框架与DynRNN相同，改进点主要关注对动态网络快照的重构，通过自编码器来对其进行实现。
     \item \textbf{VGRNN}~\cite{hajiramezanali2019variational}：该方法在时序建模中依然通过RNN来实现，但其自编码器部分为节点引入了先验概率（即变分自编码器），并利用变分推断与SGVB实现对随机变量的梯度传播。
-    \item \textbf{VGAECD}：该方法在静态网络上独立使用变分图自编码器进行社团检测。其思路与\cite{choong2018learning}中的方法一致，也是本章所提出VGRGMM方法中忽略动态网络快照间依赖关系的特例。
+    \item \textbf{VGAECD}：该方法在静态网络上独立使用变分图自编码器进行社团检测。其思路与\cite{choong2018learning}中的方法一致，也是本章所提出VGRGMM方法中忽略动态网络快照间依赖关系的特例，可以视作消融。
 \end{itemize}
 
 
@@ -362,7 +385,6 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 \item \textbf{模块度（Q）}：其衡量了所划分社团内节点连边的紧密程度，其通过对比所识别社团结构在网络快照中的紧密程度与空模型的紧密程度之差。模块度越高，表示社团内节点连边越紧密，社团间节点连边越稀疏。
 \end{itemize}
 需要注意的是，\emph{NMI}、\emph{AC}和\emph{ARI}仅在数据中存在社团标签时适用，而$Q$可以在没有真实社团标签的情况下进行测量。较大的\emph{NMI}、\emph{ARI}和$Q$值表示社团划分结果更好，而\emph{AC}越小则表示社团划分结果更好。
-
 各评价指标的详细定义见~\ref{chap2:metrics}
 
 
@@ -515,7 +537,7 @@ VGRGMM可以同时实现动态网络嵌入和社团检测任务，相较与传�
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.7\textwidth]{figures/chap06/DimensionsOndifferentData-t.pdf}
+	\includegraphics[width=.6\textwidth]{figures/chap06/DimensionsOndifferentData-t.pdf}
 	\caption{VGRGMM 的参数敏感性分析}
 	\label{fig:Hyper}
 	\vspace{0cm}

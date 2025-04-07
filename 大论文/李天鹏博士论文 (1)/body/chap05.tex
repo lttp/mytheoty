@@ -204,7 +204,7 @@ GEABS模型有两种形式化方法，分别为在线方法和离线方法。前
 在快照$t=1$，基于图模型及其生成过程，观测变量$W^{(1)}$和隐变量 $Z^{(1)}$及$\delta^{(t)}$的联合概率分布如下：
 \begin{align}
 O_1 = & Pr(W^{(1)}, Z^{(1)}, \delta^{(1)} |\pi, \lambda, B) \nonumber\\
-= & Pr(W^{(1)}|Z^{(1)},B,\delta^{(1)})  Pr(\delta^{(1)}|\lambda) Pr(Z^{(1)}|\pi). 
+= & Pr(W^{(1)}|Z^{(1)},B,\delta^{(1)})  Pr(\delta^{(1)}|\lambda) Pr(Z^{(1)}|\pi),
 \label{eq:O1}
 \end{align}
 其中 $Pr(Z^{(1)} | \pi)$ 是第一个快照$t=1$中的社团划分的概率分布，$Pr(\delta^{(1)} | \lambda)$ 是初始节点流行度的概率分布。它们可以表示为：
@@ -311,7 +311,7 @@ O_t = & Pr(W^{(t)}, Z^{(t)}, \delta^{(t)}, A^{(t)} |\mu, Z^{(t-1)}, \delta^{(t-1
 \begin{split}
 Pr&(W,Z,\delta|\pi,B,A,\lambda) \\
 =    &   \prod_{t=1}^{T} Pr(W^{(t)}|Z^{(t)},B,\delta^{(t)}) \prod_{t=2}^{T} Pr(Z^{(t)}|Z^{(t-1)},A^{(t)})   \\
-& Pr(Z^{(1)}|\pi) Pr(\delta^{(1)}|\lambda) \prod_{t=2}^{T} Pr(\delta^{(t)}|\delta^{(t-1)}) \prod_{t=2}^{T} Pr(A^{(t)} | \mu)\\
+& Pr(Z^{(1)}|\pi) Pr(\delta^{(1)}|\lambda) \prod_{t=2}^{T} Pr(\delta^{(t)}|\delta^{(t-1)}) \prod_{t=2}^{T} Pr(A^{(t)} | \mu).\\
 \label{eq:03}
 \end{split}
 \end{equation}
@@ -413,7 +413,7 @@ q(\phi,\bar{\delta}, \tilde{\mu}) = \prod_t \Big[ \prod_i q(\phi_i^{(t)}) \prod_
 \begin{split}
 \phi _{ik}^{(1)} & \propto \pi_k \exp\{ \sum_{w_{ij}^{(1)}=1} (1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}) \sum_l \phi_{jl}^{(1)} \log B_{kl} \\
 & -\sum_{w_{ij}^{(1)}=0} \sum_l \phi_{jl}^{(1)}  b_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \\
-& + \sum_l \phi_{il}^{(2)}[\psi(\tilde{\mu}_{kl}^{(2)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(2)})] \}
+& + \sum_l \phi_{il}^{(2)}[\psi(\tilde{\mu}_{kl}^{(2)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(2)})] \},
 \end{split}
 \end{equation}
 
@@ -422,7 +422,7 @@ $\bar{\delta}_i^{(1)}$的梯度为：
 \begin{split}
 \frac{\partial \mathscr{O}(\bar{\delta}_i^{(1)})}{\partial \bar{\delta}_i^{(1)}} & =\sum_{w_{ij}^{(1)}=1} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)} \log B_{kl} \\
 & -\sum_{w_{ij}^{(1)}=0} \sum_k \sum_l \phi_{ik}^{(1)}\phi_{jl}^{(1)}  B_{kl}^{1+\bar{\delta}_i^{(1)}+\bar{\delta}_j^{(1)}} \log B_{kl} \\
-& -\lambda - \bar{\delta}_i^{(2)} + \frac{1}{\bar{\delta}_i^{(1)}}
+& -\lambda - \bar{\delta}_i^{(2)} + \frac{1}{\bar{\delta}_i^{(1)}},
 \end{split}
 \label{eq:delta1}
 \end{equation}
@@ -441,7 +441,7 @@ $\phi_{ik}^{(t)}$、$\tilde{\mu}_{kl}^t$、$\frac{\partial \mathscr{L}_t}{\parti
    \end{equation}
 
    \begin{equation}
-   \tilde{\mu}_{kl}^t = \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} + \mu_{kl}.
+   \tilde{\mu}_{kl}^t = \sum_i \phi_{il}^{(t-1)} \phi_{ik}^{(t)} + \mu_{kl},
    \label{eq:A}
    \end{equation}
 
@@ -464,7 +464,7 @@ $\phi_i^{(t)}$的更新公式为：
 \begin{split}
 \phi_{ik}^{(T)} & \propto \exp\{ \sum_{w_{ij}^{(T)}=1} (1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}) \sum_l \phi_{jl}^{(T)} \log B_{kl} \\
 & -\sum_{w_{ij}^{(T)}=0} \sum_l \phi_{jl}^{(T)}  b_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}}  \\
-& + \sum_l \phi_{il}^{(T-1)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})] \}
+& + \sum_l \phi_{il}^{(T-1)} [\psi(\tilde{\mu}_{kl}^{(T)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(T)})] \},
 \end{split}
 \label{eq:phiT}
 \end{equation}
@@ -477,7 +477,7 @@ $\bar{\delta}_i^{(T)}$的更新公式如下：
 \begin{split}
 & \frac{\partial \mathscr{O}(\bar{\delta}_i^{(T)})}{\partial \bar{\delta}_i^{(T)}}  = \sum_{w_{ij}^{(T)}=1} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)} \log B_{kl} \\
 & -\sum_{w_{ij}^{(T)}=0} \sum_k \sum_l \phi_{ik}^{(T)}\phi_{jl}^{(T)}  b_{kl}^{1+\bar{\delta}_i^{(T)}+\bar{\delta}_j^{(T)}} \log b_{kl} \\
-&  -\bar{\delta}_i^{(T-1)} - \log \bar{\delta}_i^{(T)} -1
+&  -\bar{\delta}_i^{(T-1)} - \log \bar{\delta}_i^{(T)} -1.
 \end{split}
 \label{eq:deltaT}
 \end{equation}
@@ -507,7 +507,7 @@ $\bar{\delta}_i^{(T)}$的更新公式如下：
 通过对变分参数与模型参数的交替更新，模型收敛后，可以获得最优拟合结果。另外，社团标签$z^{(t)}$和转移矩阵$A^{(t)}$可利用公式~\ref{eq:cZ}获得。
 \begin{equation}
 \begin{split}
-z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl}^{(t)},
+z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl}^{(t)}.
 \end{split}
 \label{eq:cZ}
 \end{equation}
@@ -589,13 +589,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 
 
 \subsubsection{动态社团检测的评价指标}
-{精度} （AC） 或称为错误率~\cite{lin2009analyzing} 指的是社团真相与所检测社团结果之间的距离度量，各个快照的AC值越低，则社团划分效果越好。
-
-与大多数时序社团检测工作~\cite{hartmann2016clustering}一样，本章也将使用~{归一化互信息} (NMI) 作为性能指标之一来评估所提出的模型和对比方法在动态网络中的社团检测的效果。
-
-{调整兰德指数} (ARI) 是另一种用于聚类和社团检测性能的指标。ARI值越打，表示社团检测效果越好。
-
-各评价指标的具体定义见~\ref{chap2:metrics}动态社团检测评价指标。
+{精度} （AC） 或称为错误率~\cite{lin2009analyzing} 指的是社团真相与所检测社团结果之间的距离度量，各个快照的AC值越低，则社团划分效果越好。与大多数时序社团检测工作~\cite{hartmann2016clustering}一样，本章也将使用~{归一化互信息} (NMI) 作为性能指标之一来评估所提出的模型和对比方法在动态网络中的社团检测的效果。{调整兰德指数} (ARI) 是另一种用于聚类和社团检测性能的指标。ARI值越打，表示社团检测效果越好。各评价指标的具体定义见~\ref{chap2:metrics}动态社团检测评价指标。
 
 \subsubsection{社团检测结果}
 
@@ -658,6 +652,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 			\bottomrule
 		\end{tabular}
 	\end{threeparttable}  
+	\vspace{-2cm}
 \end{table}  
 
 
@@ -696,6 +691,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 			\bottomrule
 		\end{tabular}
 	\end{threeparttable}  
+	\vspace{-1cm}
 \end{table}
 
 
@@ -843,6 +839,7 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-CNlevel.pdf}
 	\caption{World Trade的层次异常检测案例-社团及网络级别}
 	\label{fig:worldtradecaseCN}
+	\vspace{-2cm}
 \end{figure}
 
 \begin{figure}
@@ -850,6 +847,7 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-Nlevel.pdf}
 	\caption{World Trade的层次异常检测案例-节点级别}
 	\label{fig:worldtradecaseN}
+%	\vspace{-2cm}
 \end{figure}
 $1973$年的石油危机使得俄罗斯的$\delta$值急剧上升。由于俄罗斯的主要出口商品是石油，中东石油危机对俄罗斯的石油出口影响巨大，反而对其他主要国家影响较小。有趣的是，苏联的解体（$1991$年）甚至没有影响俄罗斯的进出口贸易（节点层面），但这一事件使得多个国家集团分裂（社团层面）。
 
