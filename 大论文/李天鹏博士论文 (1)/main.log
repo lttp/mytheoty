@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.1)  9 APR 2025 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.19)  10 APR 2025 03:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,9 +6,9 @@ entering extended mode
 (./main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/book.cls
+(c:/texlive/2025/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/bk12.clo
+(c:/texlive/2025/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
@@ -23,20 +23,19 @@ File: bk12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-)
-(./setup/package.tex
-(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (./setup/package.tex
+(c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -47,10 +46,10 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
+(c:/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+(c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \col@sep=\dimen142
 \ar@mcellbox=\box52
@@ -64,41 +63,42 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \minrowclearance=\skip53
 \rownum=\count271
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+(c:/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box54
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+)
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks19
 \pgfutil@tempdima=\dimen144
 \pgfutil@tempdimb=\dimen145
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box55
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
@@ -106,15 +106,16 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 \Gin@req@height=\dimen146
 \Gin@req@width=\dimen147
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks21
 \pgfkeys@temptoks=\toks22
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
-tered.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
 \pgfkeys@tmptoks=\toks23
 ))
 \pgf@x=\dimen148
@@ -137,35 +138,30 @@ tered.code.tex
 \t@pgf@tokb=\toks25
 \t@pgf@tokc=\toks26
 \pgf@sys@id@count=\count276
-
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count277
 \pgfsyssoftpath@bigbuffer@items=\count278
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen158
 \pgfmath@count=\count279
 \pgfmath@box=\box56
@@ -173,30 +169,29 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@stack@operand=\toks28
 \pgfmath@stack@operation=\toks29
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
 .code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count280
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
+))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen159
 \pgf@picmaxx=\dimen160
@@ -213,124 +208,108 @@ File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@zx=\dimen171
 \pgf@zy=\dimen172
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@path@lastx=\dimen173
 \pgf@path@lasty=\dimen174
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@end@additional=\dimen175
 \pgf@shorten@start@additional=\dimen176
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
 \pgf@picture@serial@count=\count281
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen177
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen178
 \pgf@pt@y=\dimen179
 \pgf@pt@temp=\dimen180
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowsep=\dimen181
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen182
 \pgf@sys@shading@range@num=\count282
 \pgf@shadingcount=\count283
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfexternal@startupbox=\box60
-)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodeparttextbox=\box61
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepstart=\dimen183
 \pgf@nodesepend=\dimen184
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen185
 \pgffor@skip=\dimen186
 \pgffor@stack=\toks30
 \pgffor@toks=\toks31
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count284
 \pgfplotmarksize=\dimen187
@@ -352,8 +331,7 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofcurrentchild=\count287
 \tikz@fig@count=\count288
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count289
 \pgfmatrixcurrentcolumn=\count290
@@ -361,33 +339,32 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 \tikz@expandcount=\count292
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryarrows.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
-code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \arrowsize=\dimen196
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarypositioning.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryautomata.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryautomata.code.tex
 File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.multipart.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.multipart.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
+ultipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartlowerbox=\box66
 \pgfnodeparttwobox=\box67
@@ -410,10 +387,10 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartsixbox=\box84
 \pgfnodepartfivebox=\box85
 )))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
-s.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
 \pgfdecoratedcompleteddistance=\dimen197
 \pgfdecoratedremainingdistance=\dimen198
 \pgfdecoratedinputsegmentcompleteddistance=\dimen199
@@ -425,62 +402,62 @@ s.code.tex
 )
 \tikz@lib@dec@box=\box86
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryfit.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarybackgrounds.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@layerbox@background=\box87
 \pgf@layerboxsaved@background=\box88
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarycalc.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.geometric.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.geometric.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.g
+eometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.misc.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.misc.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
+isc.code.tex
 File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.symbols.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.symbols.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.s
+ymbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.arrows.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.arrows.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.a
+rrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.callouts.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.callouts.code.tex)))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarysnakes.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.callouts.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.c
+allouts.code.tex)))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarysnakes.code.tex
 File: tikzlibrarysnakes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
 
@@ -488,35 +465,35 @@ Package pgf Warning: Snakes have been superseded by decorations. Please use the
  decoration libraries instead of the snakes library on input line 14.
 
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.pathmorphing.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathmorphing.code.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.pathreplacing.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathreplacing.code.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.shapes.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.shapes.code.tex)))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.markings.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.markings.code.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryplotmarks.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.shapes.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.shapes.code.tex)))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.markings.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.markings.code.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
-ks.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
+tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+)) (c:/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks32
 \t@pgfplots@tokb=\toks33
 \t@pgfplots@tokc=\toks34
@@ -524,78 +501,66 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \c@pgfplots@coordindex=\count294
 \c@pgfplots@scanlineindex=\count295
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
-.code.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
-ode.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
-soldpgfsupp_loader.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
-e.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
+x))
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_loader.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
-soldpgfsupp_pgfutil-common-lists.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
-.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-liststructure.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-liststructureext.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-array.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_pgfutil-common-lists.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+cture.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+ctureext.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
+de.tex
 \c@pgfplotsarray@tmp=\count296
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-matrix.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
-shared.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
+ode.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
+ode.tex
 \c@pgfplotstable@counta=\count297
 \t@pgfplotstable@a=\toks38
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-deque.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
-de.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
-ta.code.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
-.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
-s.surfshading.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
+de.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.
+tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.te
+x)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
+ading.code.tex
 \c@pgfplotslibrarysurf@no=\count298
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
-.surfshading.pgfsys-pdftex.def)))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
-code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
-e.tex))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
-ode.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
-ode.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
-r.code.tex
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
-code.tex)))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
-tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
-g.code.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
-e.tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
-tex)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
-)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
-x)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
-ts.contourlua.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-pdftex.def)))
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.t
+ex
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.t
+ex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.conto
+urlua.code.tex)
 \pgfplots@numplots=\count299
 \pgfplots@xmin@reg=\dimen261
 \pgfplots@xmax@reg=\dimen262
@@ -604,38 +569,39 @@ ts.contourlua.code.tex)
 \pgfplots@zmin@reg=\dimen265
 \pgfplots@zmax@reg=\dimen266
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty
+(c:/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(c:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+))
+(c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+(c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+(c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -644,11 +610,11 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+(c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
@@ -667,14 +633,14 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \c@LT@chunks=\count304
 \LT@p@ftn=\toks39
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+(c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count305
@@ -690,7 +656,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen275
 \Gm@dimlist=\toks40
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
+(c:/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box94
 \beforetitleunit=\skip58
@@ -702,11 +668,11 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen279
 \titlewidthfirst=\dimen280
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titletoc.sty
+(c:/texlive/2025/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2025/01/04 v2.17 TOC entries
 \ttl@leftsep=\dimen281
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(c:/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip60
@@ -725,27 +691,27 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip73
 \@temptokenb=\toks42
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctex.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/ctex.sty
+(c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-01-18 L3 programming layer (loader) 
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count308
 \l__pdf_internal_box=\box95
 ))
 Package: ctex 2022/07/14 v2.5.10 Chinese adapter in LaTeX (CTEX)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexpatch.sty
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def
+(c:/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
@@ -755,30 +721,30 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 \g__ctex_section_depth_int=\count310
 \g__ctex_font_size_int=\count311
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/engine/ctex-engine-pdftex.de
-f
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/engine/ctex-engine-pdftex.def
 File: ctex-engine-pdftex.def 2022/07/14 v2.5.10 (pdf)LaTeX adapter (CTEX)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKutf8.sty
+
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKutf8.sty
 Package: CJKutf8 2021/10/16 4.8.5
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+(c:/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.sty
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.sty
 Package: CJK 2021/10/16 4.8.5
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.sty
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.sty
 Package: MULEenc 2021/10/16 4.8.5
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.enc
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.enc
 File: CJK.enc 2021/10/16 4.8.5
 Now handling font encoding C00 ...
 ... no UTF-8 mapping file for font encoding C00
@@ -847,10 +813,10 @@ Now handling font encoding C62 ...
 )
 \CJK@indent=\box97
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjkpunct/CJKpunct.sty
+(c:/texlive/2025/texmf-dist/tex/latex/cjkpunct/CJKpunct.sty
 Package: CJKpunct 2016/05/14 4.8.4
 \CJKpunct@cnta=\count312
 \CJKpunct@cntb=\count313
@@ -864,14 +830,14 @@ Package: CJKpunct 2016/05/14 4.8.4
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2026 (decimal 8230)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjkpunct/CJKpunct.spa))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKspace.sty
+(c:/texlive/2025/texmf-dist/tex/latex/cjkpunct/CJKpunct.spa))
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKspace.sty
 Package: CJKspace 2021/10/16 3.8.0
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexspa.def
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/ctexspa.def
 File: ctexspa.def 2022/07/14 v2.5.10 Space info for CJKpunct (CTEX)
 )
 \ccwd=\dimen283
@@ -879,53 +845,53 @@ File: ctexspa.def 2022/07/14 v2.5.10 Space info for CJKpunct (CTEX)
 )
 \l__ctex_ziju_dim=\dimen284
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+(c:/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count317
 \l__zhnum_tmp_int=\count318
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+(c:/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.d
-ef
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
 File: ctex-scheme-chinese.def 2022/07/14 v2.5.10 Chinese scheme for generic (CT
 EX)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+))
+(c:/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
 
 Package ctex Warning: CTeX fontset `windowsnew' is deprecated.
 (ctex)                Fontset `windows' will be used instead.
 
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows
-.def
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def
 File: ctex-fontset-windows.def 2022/07/14 v2.5.10 Windows fonts definition (CTE
 X)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg
+))
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/11/05 v2.17t AMS math features
 \@mathmargin=\skip75
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks45
 \ex@=\dimen285
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen286
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count319
@@ -976,10 +942,10 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -987,22 +953,22 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty
+(c:/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/flafter.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/flafter.sty
 Package: flafter 2021/07/31 v1.4e Standard LaTeX floats after reference (FMi)
 Applying: [2015/01/01] float order in 2-column on input line 49.
 Already applied: [0000/00/00] float order in 2-column on input line 151.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+(c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip78
 \multirow@cntb=\count331
 \multirow@dima=\skip79
 \bigstrutjot=\dimen294
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+(c:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen295
 \lightrulewidth=\dimen296
@@ -1022,7 +988,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count335
 \@thisrulewidth=\dimen307
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+(c:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen308
 \TX@old@table=\dimen309
@@ -1032,10 +998,10 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count336
 \TX@ftn=\toks50
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/rotating.sty
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count337
@@ -1044,19 +1010,19 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box100
 \rot@mess@toks=\toks51
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/diagbox/diagbox.sty
+(c:/texlive/2025/texmf-dist/tex/latex/diagbox/diagbox.sty
 Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/pict2e.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pict2e/pict2e.sty
 Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/pict2e.cfg
+(c:/texlive/2025/texmf-dist/tex/latex/pict2e/pict2e.cfg
 File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
 )
 Package pict2e Info: Driver file: pdftex.def on input line 112.
 Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+(c:/texlive/2025/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks52
@@ -1069,7 +1035,7 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \pIIe@tempdime=\dimen319
 \pIIe@tempdimf=\dimen320
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+(c:/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count338
 \calc@Bcount=\count339
@@ -1092,7 +1058,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \diagbox@outsepl=\dimen327
 \diagbox@outsepr=\dimen328
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.sty
+(c:/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip85
 \subfigcapskip=\skip86
@@ -1108,11 +1074,11 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(c:/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip89
 \subfig@bottom=\skip90
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ccaption/ccaption.sty
+(c:/texlive/2025/texmf-dist/tex/latex/ccaption/ccaption.sty
 Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
 \@contcwidth=\skip91
 \@contindw=\skip92
@@ -1121,14 +1087,14 @@ Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
 \c@@contsubnum=\count345
 \c@newflo@tctr=\count346
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
+(c:/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip95
 \bibsep=\skip96
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count347
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+(c:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip97
 \enit@outerparindent=\dimen331
@@ -1137,7 +1103,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count348
 \enitdp@description=\count349
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/txfonts.sty
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -1223,7 +1189,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 LaTeX Font Info:    Redeclaring math symbol \mathsterling on input line 164.
 LaTeX Info: Redefining \not on input line 1043.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
+(c:/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup10
 \symboldletters=\mathgroup11
@@ -1231,7 +1197,7 @@ Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldlargesymbols=\mathgroup13
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+(c:/texlive/2025/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
 \theorem@style=\toks54
@@ -1272,16 +1238,16 @@ Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1175.
 \thm@amstmpdepth=\dimen336
 \tagwidth=\dimen337
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKnumb.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKnumb.sty
 Package: CJKnumb 2021/10/16 4.8.5
 \CJK@q=\count352
 \CJK@r=\count353
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+(c:/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup14
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
+(c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@unique=\count354
 \c@ALC@line=\count355
@@ -1290,11 +1256,11 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip107
 \algorithmicindent=\skip108
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+(c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+(c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count358
 \float@exts=\toks72
@@ -1305,37 +1271,37 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@algorithm=\toks74
 \c@algorithm=\count359
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cmap/cmap.sty
+(c:/texlive/2025/texmf-dist/tex/latex/cmap/cmap.sty
 Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
 
 
 Package cmap Warning: fontenc already loaded - some fonts may be unprocessed.
 
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+(c:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+(c:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+(c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count360
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count361
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+(c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
@@ -1343,17 +1309,17 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \Hy@linkcounter=\count362
 \Hy@pagecounter=\count363
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+(c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count364
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -1376,10 +1342,10 @@ Package hyperref Info: Bookmarks ON on input line 4424.
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen339
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -1394,7 +1360,7 @@ Package hyperref Info: Link coloring OFF on input line 6062.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -1404,10 +1370,10 @@ package with kernel methods
 )
 Package hyperref Info: Driver: hpdftex.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(c:/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
@@ -1415,26 +1381,27 @@ with kernel methods
 \Fld@listcount=\count370
 \c@bookmark@seq@number=\count371
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
-(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip109
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+))
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
 7.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txr.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )<<ot1.cmap>>
 (./main.aux (./body/chap01.aux) (./body/chap02.aux) (./body/chap03.aux)
@@ -1447,7 +1414,7 @@ LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 27.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 27.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -1455,7 +1422,7 @@ LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
 27.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omstxsy.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -1469,7 +1436,7 @@ LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
 27.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omxtxex.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -1477,7 +1444,7 @@ LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 2
 7.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxexa.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -1550,7 +1517,7 @@ LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count372
 \scratchdimen=\dimen342
@@ -1639,86 +1606,83 @@ Package hyperref Info: Link coloring OFF on input line 27.
 ) (./preface/cover.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newline' on input line 103.
+(hyperref)                removing `\newline' on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 104.
 LaTeX Font Info:    Trying to load font information for C70+rm on input line 10
-3.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+4.
+(c:/texlive/2025/texmf-dist/tex/latex/ctex/fd/c70rm.fd
 File: c70rm.fd 2022/07/14 v2.5.10 Chinese font definition (CTEX)
 )
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 103.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 104.
 <<oml.cmap>><<oms.cmap>><<omx.cmap>>
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-03.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsya.fd
+04.
+ (c:/texlive/2025/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-03.
+04.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyb.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-03.
+04.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxmia.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-03.
+04.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyc.fd
+(c:/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-3.
+4.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
+(c:/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for C70+zhsong on input lin
-e 103.
+e 104.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/zhmetrics/c70zhsong.fd
+(c:/texlive/2025/texmf-dist/tex/latex/zhmetrics/c70zhsong.fd
 File: c70zhsong.fd 2009/09/23 4.8.2
 )
 Package CJKpunct Info: use punctuation spaces for family 'zhsong' with punctsty
-le (quanjiao) on input line 103.
+le (quanjiao) on input line 104.
 
 
-
-(/usr/local/texlive/2025/texmf-dist/tex/generic/ctex/zhmap/ctex-zhmap-windows.t
-ex
+(c:/texlive/2025/texmf-dist/tex/generic/ctex/zhmap/ctex-zhmap-windows.tex
 File: ctex-zhmap-windows.tex 2022/07/14 v2.5.10 Windows font map loader for pdf
 TeX and DVIPDFMx (CTEX)
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{UGBK.sfd
-}{Unicode.sfd}) [1
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{UGBK.sfd}{Unicod
+e.sfd}) [1
 
 
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 
 [2
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 104.
 LaTeX Font Info:    Trying to load font information for C70+kai on input line 1
-03.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/zhmetrics/c70kai.fd
+04.
+ (c:/texlive/2025/texmf-dist/tex/latex/zhmetrics/c70kai.fd
 File: c70kai.fd 2009/09/23 4.8.2
 )
-Overfull \hbox (1.04988pt too wide) in alignment at lines 103--103
+Overfull \hbox (1.04988pt too wide) in alignment at lines 104--104
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
 
  []
 
@@ -1733,15 +1697,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--103
 
 ]
 LaTeX Font Info:    Trying to load font information for C70+hei on input line 1
-03.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/zhmetrics/c70hei.fd
+04.
+ (c:/texlive/2025/texmf-dist/tex/latex/zhmetrics/c70hei.fd
 File: c70hei.fd 2009/09/23 4.8.2
 )
 Package CJKpunct Info: punctuation spaces for family 'hei' do not exist. Use fa
-mily 'def' instead. on input line 103.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+mily 'def' instead. on input line 104.
 
 
 
@@ -1749,7 +1710,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 \makecover
+l.104 \makecover
                  [1
 
 ]
@@ -1759,8 +1720,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 \makecover
-                 [2]
+l.104 \makecover
+                 [2
+
+
+]
 Underfull \vbox (badness 7468) has occurred while \output is active []
 
 
@@ -1770,14 +1734,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.III}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 \makecover
+l.104 \makecover
                  [3
-
-
 
 ]
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 104.
 
 
 
@@ -1785,7 +1747,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.IV}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 \clearpage
+l.106 \clearpage
                  [4]) (./main.toc
 
 [5
@@ -1817,46 +1779,51 @@ l.105 \clearpage
 ]
 
 [2]
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 56.
+
+[3]
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 60.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 56.
+(Font)              size <10.95> substituted on input line 60.
 
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10.5> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 56.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 60.
 Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
-quanjiao) on input line 56.
+quanjiao) on input line 60.
 
-Underfull \hbox (badness 8170) in paragraph at lines 56--56
+Underfull \hbox (badness 8170) in paragraph at lines 60--60
 []|\C70/rm/m/n/10.5/7e ” \C70/rm/m/n/10.5/67 ú \C70/rm/m/n/10.5/4f ù \C70/rm/m/
 n/10.5/8d V \C70/rm/m/n/10.5/4e é \C70/rm/m/n/10.5/52 ^^] \C70/rm/m/n/10.5/59 À
 
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 56--56
+Underfull \hbox (badness 6559) in paragraph at lines 60--60
 []|\C70/rm/m/n/10.5/57 ˙ \C70/rm/m/n/10.5/4e é \C70/rm/m/n/10.5/7e ﬂ \C70/rm/m/
 n/10.5/8b ° \C70/rm/m/n/10.5/63 ® \C70/rm/m/n/10.5/65 ≠ \C70/rm/m/n/10.5/76 Ñ \
 C70/rm/m/n/10.5/60 ^^] Û|\C70/rm/m/n/10.5/ff ^^L|
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 56--56
+Underfull \hbox (badness 1859) in paragraph at lines 60--60
 []|\C70/rm/m/n/10.5/51 v \C70/rm/m/n/10.5/74 ^^F \C70/rm/m/n/10.5/8b ∫ \C70/rm/
 m/n/10.5/66 Ù \C70/rm/m/n/10.5/52 † \C70/rm/m/n/10.5/5b å \C70/rm/m/n/10.5/55 Ñ
 |\C70/rm/m/n/10.5/ff ^^L|
  []
 
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <7.34996> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 60.
 
+Package natbib Warning: Citation `snijders1997estimation' on page 4 undefined o
+n input line 60.
 
-[3]
-<figures/chap01/classification of dcd.png, id=854, 890.5216pt x 332.24799pt>
+<figures/chap01/classification of dcd.png, id=849, 804.18564pt x 332.24799pt>
 File: figures/chap01/classification of dcd.png Graphic file (type png)
 <use figures/chap01/classification of dcd.png>
 Package pdftex.def Info: figures/chap01/classification of dcd.png  used on inpu
-t line 74.
-(pdftex.def)             Requested size: 426.79134pt x 159.23387pt.
+t line 78.
+(pdftex.def)             Requested size: 341.43436pt x 141.0641pt.
 
 
 [4]
@@ -1874,82 +1841,133 @@ t line 74.
 [10]
 
 [11]
-<figures/chap01/framework.png, id=1034, 682.92725pt x 442.83563pt>
-File: figures/chap01/framework.png Graphic file (type png)
-<use figures/chap01/framework.png>
-Package pdftex.def Info: figures/chap01/framework.png  used on input line 216.
-(pdftex.def)             Requested size: 320.09349pt x 207.56517pt.
-
 
 [12]
+<figures/chap01/framework.png, id=1054, 682.92725pt x 442.83563pt>
+File: figures/chap01/framework.png Graphic file (type png)
+<use figures/chap01/framework.png>
+Package pdftex.def Info: figures/chap01/framework.png  used on input line 221.
+(pdftex.def)             Requested size: 384.10959pt x 249.07416pt.
+
 
 [13]
 
-[14 <./figures/chap01/framework.png>])
+[14 <./figures/chap01/framework.png>]
 
-[15]
+[15])
+
+[16]
 \openout2 = `body/chap02.aux'.
 
  (./body/chap02.tex
-
-[16
-
-
-
-
-]
 Á¨¨2Á´† 2.
 
-Underfull \hbox (badness 1859) in paragraph at lines 29--29
-\C70/rm/m/n/10.5/98 ù \C70/rm/m/n/10.5/59 ^^V \C70/rm/m/n/10.5/76 Ñ \C70/rm/m/n
-/10.5/6d K \C70/rm/m/n/10.5/8b ’ \C70/rm/m/n/10.5/78 n \C70/rm/m/n/10.5/5b ö|\C
-70/rm/m/n/10.5/ff ^^L|
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/54 / \C70/rm/b/
+n/10.5/53 — \C70/rm/b/n/10.5/5f ^^O
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 29--29
+Underfull \hbox (badness 4429) in paragraph at lines 36--36
+[]|\C70/rm/m/n/10.5/68 9 \C70/rm/m/n/10.5/63 n \C70/rm/m/n/10.5/79 > \C70/rm/m/
+n/10.5/56 ‚ \C70/rm/m/n/10.5/76 Ñ \C70/rm/m/n/10.5/69 Ç \C70/rm/m/n/10.5/5f ı \
+C70/rm/m/n/10.5/5b ö \C70/rm/m/n/10.5/4e I \C70/rm/m/n/10.5/4f ^^X
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 36--36
+\C70/rm/m/n/10.5/53 ^^V \C70/rm/m/n/10.5/63 ^^G \C70/rm/m/n/10.5/68 ^^G|\C70/rm
+/m/n/10.5/ff ^^L| \C70/zhsong/m/n/10.5/52 ) \C70/rm/m/n/10.5/75 ( \C70/zhsong/m
+/n/10.5/54 ^^D \C70/rm/m/n/10.5/79 Õ \C70/rm/m/n/10.5/4f ^^X \C70/rm/m/n/10.5/5
+3 ^^V
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 36--36
+\C70/rm/m/n/10.5/65 π \C70/rm/m/n/10.5/6c ’ \C70/rm/m/n/10.5/89 „ \C70/zhsong/m
+/n/10.5/51 ≥ \C70/rm/m/n/10.5/79 > \C70/rm/m/n/10.5/56 ‚ \C70/rm/m/n/10.5/68 ¿ 
+\C70/rm/m/n/10.5/6d K \C70/rm/m/n/10.5/76 Ñ\OT1/txr/m/n/10.5 NP-
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/77 È \C70/rm/b/
+n/10.5/96 5 \C70/rm/b/n/10.5/52 ^^F
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 36--36
+[]|\C70/rm/m/n/10.5/57 ˙ \C70/rm/m/n/10.5/4e é \C70/rm/m/n/10.5/97 ^ \C70/zhson
+g/m/n/10.5/8d ^^_ \C70/rm/m/n/10.5/77 È \C70/rm/m/n/10.5/96 5 \C70/zhsong/m/n/1
+0.5/52 ^^F \C70/rm/m/n/10.5/89 „ \C70/zhsong/m/n/10.5/62 Ä \C70/rm/m/n/10.5/67 
+/|\C70/rm/m/n/10.5/ff ^^L|
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 36--36
+\C70/rm/m/n/10.5/99 ñ \C70/zhsong/m/n/10.5/51 H \C70/rm/m/n/10.5/5b ˘ \C70/zhso
+ng/m/n/10.5/52 ® \C70/rm/m/n/10.5/60 ^^A \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5
+/7e ‹ \C70/rm/m/n/10.5/8f € \C70/rm/m/n/10.5/88 L \C70/rm/m/n/10.5/5e ˙
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/8c 1 \C70/rm/b/
+n/10.5/4f ^^X \C70/rm/b/n/10.5/53 ^^V
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/59 ^^Z \C70/rm/
+b/n/10.5/76 Ó \C70/rm/b/n/10.5/68 ^^G
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/52 ® õ \C70/rm/
+b/n/10.5/5b f
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/96 è \C70/rm/b/
+n/10.5/67 : \C70/rm/b/n/10.5/57 W
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 36--36
 []|\C70/rm/m/n/10.5/6a ! \C70/rm/m/n/10.5/57 ã \C70/rm/m/n/10.5/53 Ô \C70/rm/m/
 n/10.5/89 „ \C70/rm/m/n/10.5/91   \C70/rm/m/n/10.5/60 ' \C70/rm/m/n/10.5/5f :|\
 C70/rm/m/n/10.5/ff ^^L|
  []
 
 
-Underfull \hbox (badness 7047) in paragraph at lines 29--29
+Underfull \hbox (badness 7047) in paragraph at lines 36--36
 \C70/zhsong/m/n/10.5/62 i \C70/rm/m/n/10.5/5c U \C70/rm/m/n/10.5/60 ' \C70/rm/m
 /n/10.5/5f :|\C70/rm/m/n/10.5/ff ^^L| \C70/zhsong/m/n/10.5/80 ˝ \C70/rm/m/n/10.
 5/59 ^^_
  []
 
 
-Underfull \hbox (badness 8170) in paragraph at lines 29--29
-[]|\C70/rm/m/n/10.5/6a ! \C70/rm/m/n/10.5/57 ã \C70/rm/m/n/10.5/5e ˙ \C70/rm/m/
-n/10.5/6a ! \C70/zhsong/m/n/10.5/7c æ \C70/rm/m/n/10.5/5e ¶ \C70/zhsong/m/n/10.
-5/8d ä
+Underfull \hbox (badness 1412) in paragraph at lines 36--36
+[]|\C70/rm/b/n/10.5/57 ˙ \C70/rm/b/n/10.5/4e é \C70/rm/b/n/10.5/6d Ò \C70/rm/b/
+n/10.5/5e ¶ \C70/rm/b/n/10.5/5b f
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 29--29
-\C70/rm/m/n/10.5/9a ÿ|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/53 ¬ \C70/rm/m/
-n/10.5/65 p \C70/rm/m/n/10.5/91 œ \C70/zhsong/m/n/10.5/8d ä \C70/rm/m/n/10.5/59
- ^^Z|\C70/rm/m/n/10.5/ff ^^L|
- []
-
-
-Underfull \hbox (badness 8170) in paragraph at lines 29--29
+Underfull \hbox (badness 8170) in paragraph at lines 36--36
 []|\C70/rm/m/n/10.5/6a ! \C70/rm/m/n/10.5/57 ã \C70/rm/m/n/10.5/8f – \C70/rm/m/
 n/10.5/88 L \C70/rm/m/n/10.5/65 H \C70/rm/m/n/10.5/73 á \C70/rm/m/n/10.5/8f É
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 29--29
-[]|\C70/rm/m/n/10.5/5c ^ \C70/rm/m/n/10.5/4e é |\C70/rm/m/n/10.5/20 ^^\|\C70/rm
-/m/n/10.5/9e — \C70/rm/m/n/10.5/76 “|\C70/rm/m/n/10.5/20 ^^]| \C70/rm/m/n/10.5/
-6a !
- []
+
+[17
 
 
 
-[17]
+
+]
 
 [18]
 
@@ -1964,17 +1982,9 @@ Underfull \hbox (badness 6094) in paragraph at lines 29--29
 [23]
 
 [24]
-LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 109.
-
-
-Package natbib Warning: Citation `sankar2018dynamic' on page 25 undefined on in
-put line 109.
-
-
 
 [25]
-Underfull \hbox (badness 6559) in paragraph at lines 136--136
+Underfull \hbox (badness 6559) in paragraph at lines 134--134
 []|\C70/rm/m/n/10.5/5c ^^F \C70/zhsong/m/n/10.5/80 T \C70/zhsong/m/n/10.5/54 ^^
 H \C70/rm/m/n/10.5/69 Ç \C70/rm/m/n/10.5/73 á \C70/zhsong/m/n/10.5/52 ^^F \C70/
 zhsong/m/n/10.5/5e ^^C \C70/zhsong/m/n/10.5/52 ^^F \C70/rm/m/n/10.5/89 „|\C70/r
@@ -1986,14 +1996,14 @@ m/m/n/10.5/ff ^^L|
 [26]
 
 [27]
-Underfull \hbox (badness 4479) in paragraph at lines 167--169
+Underfull \hbox (badness 4479) in paragraph at lines 165--167
 \C70/zhsong/b/n/12/51 v \C70/zhsong/b/n/12/4e -$\OML/txmi/m/it/12 n[]$\C70/zhso
-ng/b/n/12/88 h \C70/zhsong/b/n/12/79 :$\OMS/txsy/m/n/12 C[]$\C70/zhsong/b/n/12/
+ng/m/n/12/88 h \C70/zhsong/m/n/12/79 :$\OMS/txsy/m/n/12 C[]$\C70/zhsong/m/n/12/
 76 Ñ \C70/zhsong/m/n/12/7b ,$\OML/txmi/m/it/12 i$\C70/zhsong/b/n/12/4e * \C70/z
-hsong/b/n/12/5b P \C70/zhsong/m/n/12/96 ∆ \C70/zhsong/b/n/12/4e ^^N$\OMS/txsy/m
-/n/12 C[]$\C70/zhsong/b/n/12/76 Ñ \C70/zhsong/m/n/12/7b ,$\OML/txmi/m/it/12 j$\
-C70/zhsong/b/n/12/4e * \C70/zhsong/b/n/12/5b P \C70/zhsong/m/n/12/96 ∆ \C70/zhs
-ong/b/n/12/4e K \C70/zhsong/m/n/12/95 Ù \C70/zhsong/b/n/12/76 Ñ \C70/zhsong/b/n
+hsong/m/n/12/5b P \C70/zhsong/m/n/12/96 ∆ \C70/zhsong/b/n/12/4e ^^N$\OMS/txsy/m
+/n/12 C[]$\C70/zhsong/m/n/12/76 Ñ \C70/zhsong/m/n/12/7b ,$\OML/txmi/m/it/12 j$\
+C70/zhsong/b/n/12/4e * \C70/zhsong/m/n/12/5b P \C70/zhsong/m/n/12/96 ∆ \C70/zhs
+ong/b/n/12/4e K \C70/zhsong/m/n/12/95 Ù \C70/zhsong/m/n/12/76 Ñ \C70/zhsong/b/n
 /12/51 l q C \C70/zhsong/m/n/12/7d   \C70/zhsong/b/n/12/65 p \C70/zhsong/m/n/12
 /91 œ|\C70/zhsong/b/n/12/ff ^^L| $\OML/txmi/m/it/12 a[] \OT1/txr/m/n/12 =
  []
@@ -2017,21 +2027,12 @@ ong/b/n/12/4e K \C70/zhsong/m/n/12/95 Ù \C70/zhsong/b/n/12/76 Ñ \C70/zhsong/b/n
 
 
 [31]
-<figures/chap03/figure/modelChap3.png, id=1337, 572.82463pt x 452.05127pt>
+<figures/chap03/figure/modelChap3.png, id=1358, 572.82463pt x 452.05127pt>
 File: figures/chap03/figure/modelChap3.png Graphic file (type png)
 <use figures/chap03/figure/modelChap3.png>
 Package pdftex.def Info: figures/chap03/figure/modelChap3.png  used on input li
 ne 25.
 (pdftex.def)             Requested size: 341.43436pt x 269.44633pt.
-
-Missing character: There is no ê in font txr!
-Missing character: There is no Ç in font txr!
-Missing character: There is no π in font txr!
-Missing character: There is no Ó in font txr!
-Missing character: There is no Ç in font txr!
-Missing character: There is no π in font txr!
-Missing character: There is no ˆ in font txr!
-Missing character: There is no Ù in font txr!
 
 
 [32]
@@ -2044,7 +2045,26 @@ put line 41.
 [34]
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+<figures/chap03/figure/15cmp.pdf, id=1416, 433.62pt x 289.08pt>
+File: figures/chap03/figure/15cmp.pdf Graphic file (type pdf)
+<use figures/chap03/figure/15cmp.pdf>
+Package pdftex.def Info: figures/chap03/figure/15cmp.pdf  used on input line 15
+3.
+(pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
+<figures/chap03/figure/resultGenlou.pdf, id=1417, 433.62pt x 289.08pt>
+File: figures/chap03/figure/resultGenlou.pdf Graphic file (type pdf)
+<use figures/chap03/figure/resultGenlou.pdf>
+Package pdftex.def Info: figures/chap03/figure/resultGenlou.pdf  used on input 
+line 156.
+(pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
+<figures/chap03/figure/resultPNAS15.pdf, id=1418, 433.62pt x 289.08pt>
+File: figures/chap03/figure/resultPNAS15.pdf Graphic file (type pdf)
+<use figures/chap03/figure/resultPNAS15.pdf>
+Package pdftex.def Info: figures/chap03/figure/resultPNAS15.pdf  used on input 
+line 159.
+(pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 Digg\C70/rm/m/n/10.5/79 > \C70/zhsong/m/n/10.5/4e § \C70/r
 m/m/n/10.5/7f Q \C70/rm/m/n/10.5/7a Ÿ \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e
  ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5/95 Ù \C7
@@ -2052,12 +2072,12 @@ m/m/n/10.5/7f Q \C70/rm/m/n/10.5/7a Ÿ \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 ia-facebook-
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 156--156
+Underfull \hbox (badness 2951) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 Facebook\C70/zhsong/m/n/10.5/51 s \C70/rm/m/n/10.5/6c Ë \C
 70/zhsong/m/n/10.5/4e ^^N \C70/rm/m/n/10.5/88 ´ \C70/zhsong/m/n/10.5/51 s \C70/
 rm/m/n/10.5/6c Ë \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹$[]$|\C70/rm/m/n/10
@@ -2066,12 +2086,12 @@ rm/m/n/10.5/6c Ë \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹$[]$|\C70/rm/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 ia-slashdot-
  []
 
 
-Underfull \hbox (badness 6220) in paragraph at lines 156--156
+Underfull \hbox (badness 6220) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 Slashdot$[]$\C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7a Ÿ \C
 70/zhsong/m/n/10.5/76 Ñ \C70/rm/m/n/10.5/95 Ó \C70/rm/m/n/10.5/7b T \C70/rm/m/n
 /10.5/7f Q \C70/rm/m/n/10.5/7e ‹|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ
@@ -2079,12 +2099,12 @@ Underfull \hbox (badness 6220) in paragraph at lines 156--156
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 ia-stackexch-
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 156--156
+Underfull \hbox (badness 4441) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 StackOverflow$[]$\C70/zhsong/m/n/10.5/76 Ñ \C70/rm/m/n/10.
 5/95 Ó \C70/rm/m/n/10.5/7b T \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹|\C70/r
 m/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5/95 Ù \C70/zhsong/m/n/
@@ -2092,17 +2112,17 @@ m/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5/95 Ù \C70/zhsong/m/n/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 ia-yahoo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 soc-epinions-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 Wikipedia\C70/zhsong/m/n/10.5/76 Ñ \C70/rm/m/n/10.5/98 u \
 C70/rm/m/n/10.5/97 b \C70/zhsong/m/n/10.5/62 ï \C70/rm/m/n/10.5/79 h \C70/rm/m/
 n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5
@@ -2110,7 +2130,7 @@ n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 Wikipedia\C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/98 u \C70/
 zhsong/m/n/10.5/51 s \C70/zhsong/m/n/10.5/80 T \C70/rm/m/n/10.5/7f Q \C70/rm/m/
 n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5
@@ -2118,12 +2138,12 @@ n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5
  []
 
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 156--156
+Overfull \hbox (2.0pt too wide) in paragraph at lines 193--193
 []|$\OT1/txr/m/n/10.5 39953145$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\C70/rm/m/n/10.5/6b ‘ \C70/zhsong/m/n/10.5/72 y \C70/zhsong/m/n/10.5/5e ^^A$
 []$\C70/zhsong/m/n/10.5/76 Ñ \C70/rm/m/n/10.5/4f · \C70/zhsong/m/n/10.5/4e ˚ \C
 70/rm/m/n/10.5/94 ˛ \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹|\C70/rm/m/n/10.
@@ -2132,66 +2152,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--156
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\C70/rm/m/n/10.5/81 8 \C70/zhsong/m/n/10.5/4e f \C70/rm/m/n/10.5/67 – \C70/r
 m/m/n/10.5/8b ∫ \C70/zhsong/m/n/10.5/57 [ \C70/zhsong/m/n/10.5/5e ^^V \C70/rm/m
 /n/10.5/5b P \C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/f
 f ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5/95 Ù \C70/zhsong/m/n/10.5/8d Ë
  []
 
-<figures/chap03/figure/15cmp.pdf, id=1410, 433.62pt x 289.08pt>
-File: figures/chap03/figure/15cmp.pdf Graphic file (type pdf)
-<use figures/chap03/figure/15cmp.pdf>
-Package pdftex.def Info: figures/chap03/figure/15cmp.pdf  used on input line 18
-1.
-(pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
-<figures/chap03/figure/resultGenlou.pdf, id=1411, 433.62pt x 289.08pt>
-File: figures/chap03/figure/resultGenlou.pdf Graphic file (type pdf)
-<use figures/chap03/figure/resultGenlou.pdf>
-Package pdftex.def Info: figures/chap03/figure/resultGenlou.pdf  used on input 
-line 184.
-(pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
-<figures/chap03/figure/resultPNAS15.pdf, id=1412, 433.62pt x 289.08pt>
-File: figures/chap03/figure/resultPNAS15.pdf Graphic file (type pdf)
-<use figures/chap03/figure/resultPNAS15.pdf>
-Package pdftex.def Info: figures/chap03/figure/resultPNAS15.pdf  used on input 
-line 187.
-(pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
 
 
 [36 <./figures/chap03/figure/15cmp.pdf> <./figures/chap03/figure/resultGenlou.p
 df> <./figures/chap03/figure/resultPNAS15.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap03/figure/resu
-ltPNAS15.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: pdflatex.exe (file ./figures/chap03/figure/resultPNAS15.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 >]
 
 [37]
-<figures/chap03/figure/alldata-DG.pdf, id=1570, 1300.86pt x 1445.4pt>
+<figures/chap03/figure/alldata-DG.pdf, id=1593, 1300.86pt x 1445.4pt>
 File: figures/chap03/figure/alldata-DG.pdf Graphic file (type pdf)
 <use figures/chap03/figure/alldata-DG.pdf>
 Package pdftex.def Info: figures/chap03/figure/alldata-DG.pdf  used on input li
-ne 199.
-(pdftex.def)             Requested size: 256.0774pt x 284.53156pt.
-<figures/chap03/figure/alldata-aND.pdf, id=1571, 1300.86pt x 1445.4pt>
-File: figures/chap03/figure/alldata-aND.pdf Graphic file (type pdf)
-<use figures/chap03/figure/alldata-aND.pdf>
-Package pdftex.def Info: figures/chap03/figure/alldata-aND.pdf  used on input l
-ine 208.
-(pdftex.def)             Requested size: 256.0774pt x 284.53156pt.
+ne 203.
+(pdftex.def)             Requested size: 362.77524pt x 403.07718pt.
 
 
 [38 <./figures/chap03/figure/alldata-DG.pdf>]
-<figures/chap04/graph-model_v3_cuted.pdf, id=1592, 1013.89104pt x 504.71921pt>
-File: figures/chap04/graph-model_v3_cuted.pdf Graphic file (type pdf)
-<use figures/chap04/graph-model_v3_cuted.pdf>
-Package pdftex.def Info: figures/chap04/graph-model_v3_cuted.pdf  used on input
- line 230.
-(pdftex.def)             Requested size: 384.10959pt x 191.20998pt.
+<figures/chap03/figure/alldata-aND.pdf, id=1612, 1300.86pt x 1445.4pt>
+File: figures/chap03/figure/alldata-aND.pdf Graphic file (type pdf)
+<use figures/chap03/figure/alldata-aND.pdf>
+Package pdftex.def Info: figures/chap03/figure/alldata-aND.pdf  used on input l
+ine 228.
+(pdftex.def)             Requested size: 362.77524pt x 403.07718pt.
 
 
 [39 <./figures/chap03/figure/alldata-aND.pdf>]
+<figures/chap04/graph-model_v3_cuted.pdf, id=1633, 1013.89104pt x 504.71921pt>
+File: figures/chap04/graph-model_v3_cuted.pdf Graphic file (type pdf)
+<use figures/chap04/graph-model_v3_cuted.pdf>
+Package pdftex.def Info: figures/chap04/graph-model_v3_cuted.pdf  used on input
+ line 242.
+(pdftex.def)             Requested size: 384.10959pt x 191.20998pt.
+
 
 [40 <./figures/chap04/graph-model_v3_cuted.pdf>]
 
@@ -2200,230 +2202,239 @@ Package pdftex.def Info: figures/chap04/graph-model_v3_cuted.pdf  used on input
 [42]
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 509--511
-
- []
-
-
 
 [44]
-
-[45]
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
-53.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ts1txr.fd
+46.
+ (c:/texlive/2025/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
 
-[46]
-<figures/chap03/dsbm/chap3generateData1223.pdf, id=1805, 2956.80293pt x 1527.46
+[45]
+<figures/chap03/dsbm/chap3generateData1223.pdf, id=1822, 2956.80293pt x 1527.46
 6pt>
 File: figures/chap03/dsbm/chap3generateData1223.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/chap3generateData1223.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/chap3generateData1223.pdf  used on
- input line 577.
+ input line 570.
 (pdftex.def)             Requested size: 426.79134pt x 220.46303pt.
-<figures/chap03/dsbm/chap3realData1223.pdf, id=1808, 2069.67442pt x 1527.466pt>
+<figures/chap03/dsbm/chap3realData1223.pdf, id=1825, 2069.67442pt x 1527.466pt>
 
 File: figures/chap03/dsbm/chap3realData1223.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/chap3realData1223.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/chap3realData1223.pdf  used on inp
-ut line 590.
-(pdftex.def)             Requested size: 384.10959pt x 283.46246pt.
-
-
-[47 <./figures/chap03/dsbm/chap3generateData1223.pdf>]
-<figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf, id=2029, 307.33821pt x 
+ut line 583.
+(pdftex.def)             Requested size: 341.43436pt x 251.9744pt.
+<figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf, id=1829, 307.33821pt x 
 307.77885pt>
 File: figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf Graphic file (type 
 pdf)
 <use figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf 
- used on input line 610.
+ used on input line 600.
 (pdftex.def)             Requested size: 102.43018pt x 53.3455pt.
-<figures/chap03/dsbm/facetNetEvolution/DSBM.pdf, id=2030, 561.64499pt x 560.810
+<figures/chap03/dsbm/facetNetEvolution/DSBM.pdf, id=1830, 561.64499pt x 560.810
 76pt>
 File: figures/chap03/dsbm/facetNetEvolution/DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/DSBM.pdf  used o
-n input line 613.
+n input line 603.
 (pdftex.def)             Requested size: 102.42865pt x 53.34602pt.
-<figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf, id=2031, 308.2195pt x 307.77
+<figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf, id=1831, 308.2195pt x 307.77
 885pt>
 File: figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf  used
- on input line 616.
+ on input line 606.
 (pdftex.def)             Requested size: 102.43231pt x 53.3455pt.
-<figures/chap03/dsbm/facetNetEvolution/gen.pdf, id=2032, 448.73347pt x 449.3899
+<figures/chap03/dsbm/facetNetEvolution/gen.pdf, id=1832, 448.73347pt x 449.3899
 1pt>
 File: figures/chap03/dsbm/facetNetEvolution/gen.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/gen.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/gen.pdf  used on
- input line 619.
+ input line 609.
 (pdftex.def)             Requested size: 102.4328pt x 53.34845pt.
-<figures/chap03/dsbm/facetNetEvolution/PisCES.pdf, id=2033, 307.77885pt x 307.3
+<figures/chap03/dsbm/facetNetEvolution/PisCES.pdf, id=1833, 307.77885pt x 307.3
 372pt>
 File: figures/chap03/dsbm/facetNetEvolution/PisCES.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/PisCES.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/PisCES.pdf  used
- on input line 622.
+ on input line 612.
 (pdftex.def)             Requested size: 102.43144pt x 53.34868pt.
-<figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf, id=2034, 449.38982pt x 449.
+<figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf, id=1834, 449.38982pt x 449.
 38991pt>
 File: figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf Graphic file (type pdf)
 
 <use figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf  use
-d on input line 625.
+d on input line 615.
 (pdftex.def)             Requested size: 102.43176pt x 53.34845pt.
-<figures/chap03/dsbm/facetNetEvolution/DECS.pdf, id=2035, 448.73296pt x 449.389
+<figures/chap03/dsbm/facetNetEvolution/DECS.pdf, id=1835, 448.73296pt x 449.389
 91pt>
 File: figures/chap03/dsbm/facetNetEvolution/DECS.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/DECS.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/DECS.pdf  used o
-n input line 628.
+n input line 618.
 (pdftex.def)             Requested size: 102.43268pt x 53.34845pt.
-<figures/chap03/dsbm/facetNetEvolution/espra.pdf, id=2036, 449.38991pt x 448.73
+<figures/chap03/dsbm/facetNetEvolution/espra.pdf, id=1836, 449.38991pt x 448.73
 245pt>
 File: figures/chap03/dsbm/facetNetEvolution/espra.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/espra.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/espra.pdf  used 
-on input line 631.
+on input line 621.
 (pdftex.def)             Requested size: 102.4318pt x 53.34572pt.
-<figures/chap03/dsbm/facetNetEvolution/affect.pdf, id=2037, 307.77885pt x 307.7
+<figures/chap03/dsbm/facetNetEvolution/affect.pdf, id=1837, 307.77885pt x 307.7
 7885pt>
 File: figures/chap03/dsbm/facetNetEvolution/affect.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/affect.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/affect.pdf  used
- on input line 634.
+ on input line 624.
 (pdftex.def)             Requested size: 102.43144pt x 53.3455pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf, id=2038, 448.0759pt x 
+
+
+[46]
+
+[47 <./figures/chap03/dsbm/chap3generateData1223.pdf> <./figures/chap03/dsbm/ch
+ap3realData1223.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/chap3realData1223.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf, id=2218, 448.0759pt x 
 450.70381pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf Graphic file (type
  pdf)
 <use figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf
-  used on input line 646.
+  used on input line 642.
 (pdftex.def)             Requested size: 102.4331pt x 64.01276pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf, id=2039, 448.73296pt x 450.70
+<figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf, id=2219, 448.73296pt x 450.70
 381pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf  used 
-on input line 649.
+on input line 645.
 (pdftex.def)             Requested size: 102.43268pt x 64.01276pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf, id=2040, 448.73347pt x 449.
+<figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf, id=2220, 448.73347pt x 449.
 38991pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf Graphic file (type pdf)
 
 <use figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf  use
-d on input line 652.
+d on input line 648.
 (pdftex.def)             Requested size: 102.4328pt x 64.01129pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf, id=2041, 448.73296pt x 449.389
+<figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf, id=2221, 448.73296pt x 449.389
 91pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf  used o
-n input line 655.
+n input line 651.
 (pdftex.def)             Requested size: 102.43268pt x 64.01129pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf, id=2042, 448.73296pt x 450.
+<figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf, id=2222, 448.73296pt x 450.
 04736pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf Graphic file (type pdf)
 
 <use figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf  use
-d on input line 658.
+d on input line 654.
 (pdftex.def)             Requested size: 102.43268pt x 64.01567pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf, id=2043, 449.38991pt x 449
+<figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf, id=2223, 449.38991pt x 449
 .38991pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf Graphic file (type pdf
 )
 <use figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf  us
-ed on input line 661.
+ed on input line 657.
 (pdftex.def)             Requested size: 102.4318pt x 64.01129pt.
-<figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf, id=2045, 449.39041pt x 448.
+<figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf, id=2225, 449.39041pt x 448.
 07501pt>
 File: figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf Graphic file (type pdf)
 
 <use figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf  use
-d on input line 675.
+d on input line 670.
 (pdftex.def)             Requested size: 102.4319pt x 42.67696pt.
-<figures/chap03/dsbm/dblpEvolution/DSBM.pdf, id=2046, 450.04736pt x 448.07602pt
+<figures/chap03/dsbm/dblpEvolution/DSBM.pdf, id=2226, 450.04736pt x 448.07602pt
 >
 File: figures/chap03/dsbm/dblpEvolution/DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/DSBM.pdf  used on in
-put line 678.
+put line 673.
 (pdftex.def)             Requested size: 102.43057pt x 42.67705pt.
-<figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf, id=2047, 448.73296pt x 450.0473
+<figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf, id=2227, 448.73296pt x 450.0473
 6pt>
 File: figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf  used on
- input line 681.
+ input line 676.
 (pdftex.def)             Requested size: 102.43268pt x 42.6794pt.
-<figures/chap03/dsbm/dblpEvolution/gen.pdf, id=2048, 449.38991pt x 448.73245pt>
+<figures/chap03/dsbm/dblpEvolution/gen.pdf, id=2228, 449.38991pt x 448.73245pt>
 
 File: figures/chap03/dsbm/dblpEvolution/gen.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/gen.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/gen.pdf  used on inp
-ut line 684.
+ut line 679.
 (pdftex.def)             Requested size: 102.4318pt x 42.67795pt.
-<figures/chap03/dsbm/dblpEvolution/PisCES.pdf, id=2049, 448.0765pt x 449.38991p
+<figures/chap03/dsbm/dblpEvolution/PisCES.pdf, id=2229, 448.0765pt x 449.38991p
 t>
 File: figures/chap03/dsbm/dblpEvolution/PisCES.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/PisCES.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/PisCES.pdf  used on 
-input line 687.
+input line 682.
 (pdftex.def)             Requested size: 102.43324pt x 42.67876pt.
-<figures/chap03/dsbm/dblpEvolution/dynmoga.pdf, id=2050, 449.38991pt x 449.3899
+<figures/chap03/dsbm/dblpEvolution/dynmoga.pdf, id=2230, 449.38991pt x 449.3899
 1pt>
 File: figures/chap03/dsbm/dblpEvolution/dynmoga.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/dynmoga.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/dynmoga.pdf  used on
- input line 690.
+ input line 685.
 (pdftex.def)             Requested size: 102.4318pt x 42.67876pt.
-
-
-[48 <./figures/chap03/dsbm/chap3realData1223.pdf>]
-
-[49 <./figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf> <./figures/chap03
-/dsbm/facetNetEvolution/DSBM.pdf> <./figures/chap03/dsbm/facetNetEvolution/HBDS
-BM.pdf> <./figures/chap03/dsbm/facetNetEvolution/gen.pdf> <./figures/chap03/dsb
-m/facetNetEvolution/PisCES.pdf> <./figures/chap03/dsbm/facetNetEvolution/dynmog
-a.pdf> <./figures/chap03/dsbm/facetNetEvolution/DECS.pdf> <./figures/chap03/dsb
-m/facetNetEvolution/espra.pdf> <./figures/chap03/dsbm/facetNetEvolution/affect.
-pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf> <./figures/chap
-03/dsbm/ASONEMmsEvolution/1DSBM.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1
-HBDSBM.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf> <./figures/chap0
-3/dsbm/ASONEMmsEvolution/1PisCES.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/
-1dynmoga.pdf>]
-<figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf, id=2343, 1158.40
+<figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf, id=2231, 1158.40
 273pt x 311.13037pt>
 File: figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf Graphic file
  (type pdf)
 <use figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMa
-p3.pdf  used on input line 700.
+p3.pdf  used on input line 695.
 (pdftex.def)             Requested size: 196.32687pt x 52.73004pt.
-<figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf, id=2344, 1152.
+<figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf, id=2232, 1152.
 85pt x 312.98228pt>
 File: figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf Graphic fi
 le (type pdf)
 <use figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeat
-Map3.pdf  used on input line 704.
+Map3.pdf  used on input line 699.
 (pdftex.def)             Requested size: 196.32687pt x 53.29701pt.
 
-Underfull \hbox (badness 2486) in paragraph at lines 718--720
+
+[48 <./figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf> <./figures/chap03
+/dsbm/facetNetEvolution/DSBM.pdf> <./figures/chap03/dsbm/facetNetEvolution/HBDS
+BM.pdf> <./figures/chap03/dsbm/facetNetEvolution/gen.pdf> <./figures/chap03/dsb
+m/facetNetEvolution/PisCES.pdf> <./figures/chap03/dsbm/facetNetEvolution/dynmog
+a.pdf> <./figures/chap03/dsbm/facetNetEvolution/DECS.pdf> <./figures/chap03/dsb
+m/facetNetEvolution/espra.pdf> <./figures/chap03/dsbm/facetNetEvolution/affect.
+pdf>]
+
+[49 <./figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf> <./figures/chap0
+3/dsbm/ASONEMmsEvolution/1DSBM.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1H
+BDSBM.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf> <./figures/chap03
+/dsbm/ASONEMmsEvolution/1PisCES.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1
+dynmoga.pdf> <./figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf> <./figures/c
+hap03/dsbm/dblpEvolution/DSBM.pdf> <./figures/chap03/dsbm/dblpEvolution/HB-DSBM
+.pdf> <./figures/chap03/dsbm/dblpEvolution/gen.pdf> <./figures/chap03/dsbm/dblp
+Evolution/PisCES.pdf> <./figures/chap03/dsbm/dblpEvolution/dynmoga.pdf> <./figu
+res/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf> <./figures/chap03/dsb
+m/blockMatrixVis/ASONMScommunityHeatMap3.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/blockMatrixVis/ASONMSc
+ommunityHeatMap3.pdf): PDF inclusion: multiple pdfs with page group included in
+ a single page
+>]
+Underfull \hbox (badness 2486) in paragraph at lines 713--715
 $\OML/txmi/m/it/12 E[]$\C70/rm/m/n/12/8d ä \C70/rm/m/n/12/59 '|\C70/rm/m/n/12/f
-f ^^L| \C70/zhsong/b/n/12/88 h \C70/rm/m/n/12/79 : \C70/rm/m/n/12/82 Ç \C70/rm/
+f ^^L| \C70/zhsong/m/n/12/88 h \C70/rm/m/n/12/79 : \C70/rm/m/n/12/82 Ç \C70/rm/
 m/n/12/70 π$\OML/txmi/m/it/12 i$\C70/rm/m/n/12/76 Ñ \C70/zhsong/m/n/12/6f ^^T \
-C70/rm/m/n/12/53 ^^V \C70/rm/m/n/12/8d ä \C70/zhsong/b/n/12/98 ë \C70/rm/m/n/12
+C70/rm/m/n/12/53 ^^V \C70/rm/m/n/12/8d ä \C70/zhsong/m/n/12/98 ë \C70/rm/m/n/12
 /7e A|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/52 ^^Y \C70/rm/m/n/12/8b § \C70/rm/
 m/n/12/4e : \C70/rm/m/n/12/51 v \C70/rm/m/n/12/66 / \C70/rm/m/n/12/5f ^^B \C70/
 rm/m/n/12/5e 8 \C70/rm/m/n/12/82 Ç \C70/rm/m/n/12/70 π|\C70/rm/m/n/12/30 ^^B| \
@@ -2431,57 +2442,43 @@ C70/rm/m/n/12/59 Ç \C70/rm/m/n/12/56 ˛ []\OT1/txr/m/n/12 3-12[]\C70/zhsong/b/n/
 12/62 @ \C70/rm/m/n/12/79 :|\C70/rm/m/n/12/ff ^^L|
  []
 
-<figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf, id=2347, 650.9211pt x 403.379
+<figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf, id=2534, 650.9211pt x 403.379
 52pt>
 File: figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf  used 
-on input line 726.
+on input line 721.
 (pdftex.def)             Requested size: 128.0387pt x 79.34497pt.
-<figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf, id=2348, 647.61345pt x 403.
+<figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf, id=2535, 647.61345pt x 403.
 37952pt>
 File: figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf Graphic file (type pdf)
 
 <use figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf  use
-d on input line 729.
+d on input line 724.
 (pdftex.def)             Requested size: 128.0387pt x 79.7512pt.
-<figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf, id=2349, 649.58804pt x 403.3795
+<figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf, id=2536, 649.58804pt x 403.3795
 2pt>
 File: figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf  used on
- input line 732.
+ input line 727.
 (pdftex.def)             Requested size: 128.0387pt x 79.505pt.
 
 
-[50 <./figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf> <./figures/chap03/dsb
-m/dblpEvolution/DSBM.pdf> <./figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf> <./
-figures/chap03/dsbm/dblpEvolution/gen.pdf> <./figures/chap03/dsbm/dblpEvolution
-/PisCES.pdf> <./figures/chap03/dsbm/dblpEvolution/dynmoga.pdf>])
+[50 <./figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf> <./figures/chap03/dsbm/
+anomaly/patentAnomalyPic6.pdf
 
-[51 <./figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf> <./figures
-/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap03/dsbm/blockM
-atrixVis/ASONMScommunityHeatMap3.pdf): PDF inclusion: multiple pdfs with page g
-roup included in a single page
-> <./figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap03/dsbm/anomal
-y/dblpAnomalyPic6.pdf): PDF inclusion: multiple pdfs with page group included i
-n a single page
-> <./figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap03/dsbm/anomal
-y/patentAnomalyPic6.pdf): PDF inclusion: multiple pdfs with page group included
- in a single page
+pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/anomaly/patentAnomalyP
+ic6.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
 > <./figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap03/dsbm/anomal
-y/msAnomalyPic6.pdf): PDF inclusion: multiple pdfs with page group included in 
-a single page
->]
+pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/anomaly/msAnomalyPic6.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>])
+
+[51]
 \openout2 = `body/chap04.aux'.
 
  (./body/chap04.tex)
@@ -2508,16 +2505,24 @@ v \C70/rm/m/n/12/4e ^^M \C70/rm/m/n/12/90 ^^B \C70/zhsong/m/n/12/91 M \C70/rm/m
 m/m/n/12/ff ^^L| \C70/rm/m/n/12/67 * \C70/zhsong/m/n/12/80 ^^C \C70/zhsong/m/n/
 12/86 Q \C70/zhsong/m/n/12/94 à \C70/rm/m/n/12/5b ˘ \C70/rm/m/n/12/52 ® \C70/rm
 /m/n/12/60 ^^A \C70/rm/m/n/12/7f Q \C70/rm/m/n/12/7e ‹ \C70/rm/m/n/12/65 ˆ \C70
-/rm/m/n/12/5e è \C70/rm/m/n/12/53 ÿ ^^V \C70/rm/m/n/12/8f € \C70/zhsong/b/n/12/
+/rm/m/n/12/5e è \C70/rm/m/n/12/53 ÿ ^^V \C70/rm/m/n/12/8f € \C70/zhsong/m/n/12/
 88 L \C70/rm/m/n/12/5e ˙ \C70/zhsong/b/n/12/6a !|\C70/rm/m/n/12/30 ^^B|
  []
 
 
 
 [53]
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 25.
+
+
+Package natbib Warning: Citation `ahmed2016survey' on page 54 undefined on inpu
+t line 25.
+
+
 
 [54]
-<figures/chap05/chap5motivation.png, id=2694, 930.29436pt x 541.78249pt>
+<figures/chap05/chap5motivation.png, id=2712, 930.29436pt x 541.78249pt>
 File: figures/chap05/chap5motivation.png Graphic file (type png)
 <use figures/chap05/chap5motivation.png>
 Package pdftex.def Info: figures/chap05/chap5motivation.png  used on input line
@@ -2538,7 +2543,7 @@ m/m/n/12/6b ! \C70/rm/m/n/12/5f ^^B \C70/rm/m/n/12/5e 8 \C70/rm/m/n/12/4e K \C7
 Underfull \hbox (badness 4872) in paragraph at lines 47--48
 \C70/rm/m/n/12/59 Ç\OT1/txr/m/n/12 SCOUT$[]$\C70/rm/m/n/12/54 å\OT1/txr/m/n/12 
 MDL$[]$\C70/rm/m/n/12/54 ^^L \C70/rm/m/n/12/65 ˆ \C70/rm/m/n/12/68 ¿ \C70/zhson
-g/b/n/12/6d K \C70/rm/m/n/12/79 > \C70/rm/m/n/12/56 ‚ \C70/rm/m/n/12/7e ” \C70/
+g/m/n/12/6d K \C70/rm/m/n/12/79 > \C70/rm/m/n/12/56 ‚ \C70/rm/m/n/12/7e ” \C70/
 rm/m/n/12/67 Ñ \C70/rm/m/n/12/5f ^^B \C70/rm/m/n/12/5e 8 \C70/rm/m/n/12/54 å \C
 70/rm/m/n/12/7f Q \C70/rm/m/n/12/7e ‹ \C70/rm/m/n/12/5f Î \C70/zhsong/m/n/12/71
  g \C70/rm/m/n/12/53 ÿ \C70/rm/m/n/12/66 Ù \C70/rm/m/n/12/70 π|\C70/rm/m/n/12/3
@@ -2553,12 +2558,12 @@ rm/m/n/12/67 Ñ \C70/rm/m/n/12/5f ^^B \C70/rm/m/n/12/5e 8 \C70/rm/m/n/12/54 å \C
 [56]
 
 [57]
-<figures/chap05/graph1.png, id=2727, 309.3156pt x 366.168pt>
+<figures/chap05/graph1.png, id=2745, 309.3156pt x 366.168pt>
 File: figures/chap05/graph1.png Graphic file (type png)
 <use figures/chap05/graph1.png>
 Package pdftex.def Info: figures/chap05/graph1.png  used on input line 125.
 (pdftex.def)             Requested size: 110.9634pt x 131.35663pt.
-<figures/chap05/graph2.png, id=2728, 399.894pt x 378.6948pt>
+<figures/chap05/graph2.png, id=2746, 399.894pt x 378.6948pt>
 File: figures/chap05/graph2.png Graphic file (type png)
 <use figures/chap05/graph2.png>
 Package pdftex.def Info: figures/chap05/graph2.png  used on input line 128.
@@ -2587,38 +2592,29 @@ Missing character: There is no È in font txr!
 [65]
 
 [66]
-Underfull \hbox (badness 1400) in paragraph at lines 551--552
+Underfull \hbox (badness 1400) in paragraph at lines 550--551
 []\OT1/txr/m/n/12 GEABS\C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/59 ^^M \C70/rm/m/n/12
 /67 B \C70/rm/m/n/12/5e ¶ \C70/rm/m/n/12/4e ; \C70/zhsong/b/n/12/89 Å \C70/rm/m
-/n/12/4f ù \C70/rm/m/n/12/8d V \C70/rm/m/n/12/4e é \C70/rm/m/n/12/5b ˘ \C70/rm/
-m/n/12/53 ¬ \C70/rm/m/n/12/65 p$\OML/txmi/m/it/12 ^^^$\C70/rm/m/n/12/76 Ñ \C70/
-rm/m/n/12/8b ° \C70/zhsong/b/n/12/7b ó|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/51
- v \C70/rm/m/n/12/59 ^^M \C70/rm/m/n/12/67 B \C70/rm/m/n/12/5e ¶ \C70/rm/m/n/12
-/4e :$\OML/txmi/m/it/12 O\OT1/txr/m/n/12 (\OML/txmi/m/it/12 TK[]N[]\OT1/txr/m/n
-/12 )$|\C70/rm/m/n/12/30 ^^B| \C70/rm/m/n/12/51 v
+/n/12/4f ù \C70/rm/m/n/12/8d V \C70/rm/m/n/12/4e é \C70/zhsong/b/n/12/5b ˘ \C70
+/rm/m/n/12/53 ¬ \C70/rm/m/n/12/65 p$\OML/txmi/m/it/12 ^^^$\C70/rm/m/n/12/76 Ñ \
+C70/rm/m/n/12/8b ° \C70/zhsong/b/n/12/7b ó|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/1
+2/51 v \C70/rm/m/n/12/59 ^^M \C70/rm/m/n/12/67 B \C70/rm/m/n/12/5e ¶ \C70/rm/m/
+n/12/4e :$\OML/txmi/m/it/12 O\OT1/txr/m/n/12 (\OML/txmi/m/it/12 TK[]N[]\OT1/txr
+/m/n/12 )$|\C70/rm/m/n/12/30 ^^B| \C70/rm/m/n/12/51 v
  []
 
 
 
 [67]
-Underfull \hbox (badness 5064) in paragraph at lines 566--567
-[]\OT1/txr/bx/n/12 Kit-email \C70/zhsong/b/n/12/7f Q[][] \C70/rm/m/n/12/7e ‹[][
-]$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8b Â \C70/zhsong/b/n/12/75 5 \C70/r
-m/m/n/12/5b P \C70/rm/m/n/12/90 Æ \C70/rm/m/n/12/4e ˆ \C70/zhsong/b/n/12/7f Q \
-C70/rm/m/n/12/7e ‹ \C70/zhsong/b/n/12/75 1$\OT1/txr/m/n/12 1\OML/txmi/m/it/12 ;
- \OT1/txr/m/n/12 097$\C70/rm/m/n/12/4e * \C70/zhsong/b/n/12/75 5 \C70/rm/m/n/12
-/5b P \C70/rm/m/n/12/90 Æ \C70/rm/m/n/12/4e ˆ\OT1/txr/m/n/12 ID |\C70/rm/m/n/12
-/ff ^^H|\C70/zhsong/b/n/12/82 Ç \C70/zhsong/b/n/12/70 π|\C70/rm/m/n/12/ff 	|
- []
-
-
-Underfull \hbox (badness 3343) in paragraph at lines 570--571
-[]\OT1/txr/bx/n/12 World trade net-work$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/
-12/4e ^^V \C70/zhsong/b/n/12/75 L \C70/rm/m/n/12/8d 8 \C70/rm/m/n/12/66 ^^S \C7
-0/zhsong/b/n/12/7f Q \C70/rm/m/n/12/7e ‹ \C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 
-n \C70/rm/m/n/12/8b ∞ \C70/rm/m/n/12/5f U \C70/rm/m/n/12/4e Ü$\OT1/txr/m/n/12 1
-948$\C70/rm/m/n/12/5e t \C70/zhsong/m/n/12/81 Û$\OT1/txr/m/n/12 2000$\C70/rm/m/
-n/12/5e t
+Underfull \hbox (badness 5064) in paragraph at lines 565--566
+[]\OT1/txr/bx/n/12 Kit-email \C70/zhsong/b/n/12/7f Q[][] \C70/zhsong/b/n/12/7e 
+‹[][]$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8b Â \C70/zhsong/b/n/12/75 5 \C
+70/zhsong/b/n/12/5b P \C70/rm/m/n/12/90 Æ \C70/rm/m/n/12/4e ˆ \C70/zhsong/b/n/1
+2/7f Q \C70/zhsong/b/n/12/7e ‹ \C70/zhsong/b/n/12/75 1$\OT1/txr/m/n/12 1\OML/tx
+mi/m/it/12 ; \OT1/txr/m/n/12 097$\C70/rm/m/n/12/4e * \C70/zhsong/b/n/12/75 5 \C
+70/zhsong/b/n/12/5b P \C70/rm/m/n/12/90 Æ \C70/rm/m/n/12/4e ˆ\OT1/txr/m/n/12 ID
+ |\C70/rm/m/n/12/ff ^^H|\C70/zhsong/b/n/12/82 Ç \C70/zhsong/b/n/12/70 π|\C70/rm
+/m/n/12/ff 	|
  []
 
 
@@ -2626,53 +2622,55 @@ n/12/5e t
 [68]
 
 [69]
-<figures/chap05/chap4Kit-emaili2Communitydetection.pdf, id=2935, 1810.85286pt x
+<figures/chap05/chap4Kit-emaili2Communitydetection.pdf, id=2953, 1810.85286pt x
  567.881pt>
 File: figures/chap05/chap4Kit-emaili2Communitydetection.pdf Graphic file (type 
 pdf)
 <use figures/chap05/chap4Kit-emaili2Communitydetection.pdf>
 Package pdftex.def Info: figures/chap05/chap4Kit-emaili2Communitydetection.pdf 
- used on input line 600.
+ used on input line 599.
 (pdftex.def)             Requested size: 384.10959pt x 120.45432pt.
-<figures/chap05/chap4mergesplitC.pdf, id=2936, 1826.81876pt x 567.881pt>
+<figures/chap05/chap4mergesplitC.pdf, id=2954, 1826.81876pt x 567.881pt>
 File: figures/chap05/chap4mergesplitC.pdf Graphic file (type pdf)
 <use figures/chap05/chap4mergesplitC.pdf>
 Package pdftex.def Info: figures/chap05/chap4mergesplitC.pdf  used on input lin
-e 606.
+e 605.
 (pdftex.def)             Requested size: 384.10959pt x 119.39717pt.
 
-Underfull \hbox (badness 1320) in paragraph at lines 621--622
+Underfull \hbox (badness 1320) in paragraph at lines 620--621
 []\OT1/txr/bx/n/12 CICPD$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8f Ÿ \C70/rm
-/m/n/12/66 / \C70/rm/m/n/12/4e ^^@ \C70/rm/m/n/12/79 Õ \C70/rm/m/n/12/65 ∞ \C70
-/zhsong/b/n/12/98 ñ \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/57 ˙ \C70/rm/m/n/12/4e é
- \C70/rm/m/n/12/79 > \C70/rm/m/n/12/56 ‚ \C70/rm/m/n/12/68 ¿ \C70/rm/m/n/12/6d 
-K \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/53 ÿ \C70/rm/m/n/12/66 Ù \C70/zhsong/b/n/1
-2/70 π \C70/rm/m/n/12/68 ¿ \C70/rm/m/n/12/6d K \C70/rm/m/n/12/65 π \C70/rm/m/n/
-12/6c ’|\C70/rm/m/n/12/30 ^^B| \C70/rm/m/n/12/5b É \C70/rm/m/n/12/4f ^^?
+/m/n/12/66 / \C70/rm/m/n/12/4e ^^@ \C70/zhsong/b/n/12/79 Õ \C70/rm/m/n/12/65 ∞ 
+\C70/zhsong/m/n/12/98 ñ \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/57 ˙ \C70/rm/m/n/12/
+4e é \C70/zhsong/b/n/12/79 > \C70/zhsong/b/n/12/56 ‚ \C70/rm/m/n/12/68 ¿ \C70/r
+m/m/n/12/6d K \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/53 ÿ \C70/rm/m/n/12/66 Ù \C70/
+zhsong/b/n/12/70 π \C70/rm/m/n/12/68 ¿ \C70/rm/m/n/12/6d K \C70/rm/m/n/12/65 π 
+\C70/zhsong/b/n/12/6c ’|\C70/rm/m/n/12/30 ^^B| \C70/zhsong/b/n/12/5b É \C70/rm/
+m/n/12/4f ^^?
  []
 
 
 
 [70 <./figures/chap05/chap4Kit-emaili2Communitydetection.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
+Underfull \hbox (badness 7814) in paragraph at lines 765--766
 []\C70/rm/m/n/12/59 Ç \C70/rm/m/n/12/88 h []\OT1/txr/m/n/12 4-3[]\C70/zhsong/b/
-n/12/62 @ \C70/rm/m/n/12/79 :|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/67 , \C70/r
-m/m/n/12/7a ‡ \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/65 π \C70/rm/m/n/12/6c ’\OT1/t
-xr/m/n/12 GEABS\C70/rm/m/n/12/57 ( \C70/zhsong/b/n/12/62 @ \C70/rm/m/n/12/67 	 
-\C70/rm/m/n/12/5b ˘ \C70/zhsong/b/n/12/6b ‘ \C70/rm/m/n/12/65 π \C70/rm/m/n/12/
-6c ’ \C70/rm/m/n/12/4e - \C70/rm/m/n/12/88 h \C70/zhsong/m/n/12/73 ∞ \C70/rm/m/
-n/12/67 ^^@ \C70/rm/m/n/12/4f s|\C70/rm/m/n/12/30 ^^B|
+n/12/62 @ \C70/zhsong/b/n/12/79 :|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/67 , \C
+70/rm/m/n/12/7a ‡ \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/65 π \C70/zhsong/b/n/12/6c
+ ’ \OT1/txr/m/n/12 GEABS \C70/rm/m/n/12/57 ( \C70/zhsong/b/n/12/62 @ \C70/rm/m/
+n/12/67 	 \C70/zhsong/b/n/12/5b ˘ \C70/zhsong/b/n/12/6b ‘ \C70/rm/m/n/12/65 π \
+C70/zhsong/b/n/12/6c ’ \C70/rm/m/n/12/4e - \C70/rm/m/n/12/88 h \C70/zhsong/m/n/
+12/73 ∞ \C70/rm/m/n/12/67 ^^@ \C70/rm/m/n/12/4f s|\C70/rm/m/n/12/30 ^^B|
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 766--767
-\C70/rm/m/n/12/5f ^^B \C70/rm/m/n/12/5e 8 \C70/rm/m/n/12/4e ã ˆ \C70/rm/m/n/12/
-76 Ñ \C70/rm/m/n/12/51 ˚ \C70/rm/m/n/12/4e - \C70/zhsong/m/n/12/73 á|\C70/rm/m/
-n/12/30 ^^B| \C70/zhsong/b/n/12/75 1 \C70/rm/m/n/12/4e é \OT1/txr/m/n/12 World 
-Trade\C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 n \C70/rm/m/n/12/96 ∆ \C70/rm/m/n/12
-/76 ¯ \C70/rm/m/n/12/5b ˘ \C70/rm/m/n/12/59 ^^M \C70/rm/m/n/12/67 B|\C70/rm/m/n
-/12/ff ^^L| \OT1/txr/m/n/12 NetWalk\C70/rm/m/n/12/54 å\OT1/txr/m/n/12 LAD\C70/r
-m/m/n/12/57 ( \C70/rm/m/n/12/8b Â
+Underfull \hbox (badness 1097) in paragraph at lines 765--766
+\C70/rm/m/n/12/63 n \C70/rm/m/n/12/96 ∆ \C70/rm/m/n/12/4e - \C70/rm/m/n/12/88 h
+ \C70/zhsong/m/n/12/73 ∞ \C70/rm/m/n/12/4e ^^M \C70/rm/m/n/12/4f s|\C70/rm/m/n/
+12/30 ^^B| \C70/rm/m/n/12/4f F \C70/rm/m/n/12/57 ( \OT1/txr/m/n/12 En-ron\C70/r
+m/m/n/12/65 p \C70/rm/m/n/12/63 n \C70/rm/m/n/12/96 ∆ \C70/rm/m/n/12/4e -|\C70/
+rm/m/n/12/ff ^^L| \OT1/txr/m/n/12 NetWalk\C70/rm/m/n/12/51 w \C70/rm/m/n/12/67 
+	 \C70/zhsong/b/n/12/82 o \C70/rm/m/n/12/59 } \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/1
+2/51 ˚ \C70/rm/m/n/12/4e - \C70/zhsong/m/n/12/73 á|\C70/rm/m/n/12/30 ^^B| \C70/
+rm/m/n/12/71 6 \C70/zhsong/m/n/12/80 ^^L|\C70/rm/m/n/12/ff ^^L|
  []
 
 
@@ -2680,57 +2678,56 @@ m/m/n/12/57 ( \C70/rm/m/n/12/8b Â
 [71 <./figures/chap05/chap4mergesplitC.pdf>]
 
 [72]
-<figures/chap05/nethitrate-enron-new.pdf, id=3082, 470.91559pt x 293.54605pt>
+<figures/chap05/nethitrate-enron-new.pdf, id=3100, 470.91559pt x 293.54605pt>
 File: figures/chap05/nethitrate-enron-new.pdf Graphic file (type pdf)
 <use figures/chap05/nethitrate-enron-new.pdf>
 Package pdftex.def Info: figures/chap05/nethitrate-enron-new.pdf  used on input
- line 776.
+ line 775.
 (pdftex.def)             Requested size: 149.37956pt x 93.11696pt.
-<figures/chap05/nethitrate-World-new.pdf, id=3083, 470.91559pt x 293.54605pt>
+<figures/chap05/nethitrate-World-new.pdf, id=3101, 470.91559pt x 293.54605pt>
 File: figures/chap05/nethitrate-World-new.pdf Graphic file (type pdf)
 <use figures/chap05/nethitrate-World-new.pdf>
 Package pdftex.def Info: figures/chap05/nethitrate-World-new.pdf  used on input
- line 778.
+ line 777.
 (pdftex.def)             Requested size: 149.37956pt x 93.11696pt.
-<figures/chap05/mergesplitAGND.pdf, id=3084, 2258.24881pt x 258.46161pt>
+<figures/chap05/mergesplitAGND.pdf, id=3102, 2258.24881pt x 258.46161pt>
 File: figures/chap05/mergesplitAGND.pdf Graphic file (type pdf)
 <use figures/chap05/mergesplitAGND.pdf>
 Package pdftex.def Info: figures/chap05/mergesplitAGND.pdf  used on input line 
-794.
+793.
 (pdftex.def)             Requested size: 298.75262pt x 34.19275pt.
-<figures/chap05/mergesplitA.pdf, id=3085, 2244.1963pt x 258.46161pt>
+<figures/chap05/mergesplitA.pdf, id=3103, 2244.1963pt x 258.46161pt>
 File: figures/chap05/mergesplitA.pdf Graphic file (type pdf)
 <use figures/chap05/mergesplitA.pdf>
-Package pdftex.def Info: figures/chap05/mergesplitA.pdf  used on input line 796
+Package pdftex.def Info: figures/chap05/mergesplitA.pdf  used on input line 795
 .
 (pdftex.def)             Requested size: 298.75262pt x 34.40572pt.
-<figures/chap05/mergesplitAPisCES.pdf, id=3086, 2258.24881pt x 258.46161pt>
+<figures/chap05/mergesplitAPisCES.pdf, id=3104, 2258.24881pt x 258.46161pt>
 File: figures/chap05/mergesplitAPisCES.pdf Graphic file (type pdf)
 <use figures/chap05/mergesplitAPisCES.pdf>
 Package pdftex.def Info: figures/chap05/mergesplitAPisCES.pdf  used on input li
-ne 798.
+ne 797.
 (pdftex.def)             Requested size: 298.75262pt x 34.19275pt.
 
 
 [73 <./figures/chap05/nethitrate-enron-new.pdf> <./figures/chap05/nethitrate-Wo
 rld-new.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap05/nethitrate-
-World-new.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: pdflatex.exe (file ./figures/chap05/nethitrate-World-new.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap05/EnronTransA-heatmap.pdf, id=3200, 2464.24031pt x 287.27327pt>
+<figures/chap05/EnronTransA-heatmap.pdf, id=3219, 2464.24031pt x 287.27327pt>
 File: figures/chap05/EnronTransA-heatmap.pdf Graphic file (type pdf)
 <use figures/chap05/EnronTransA-heatmap.pdf>
 Package pdftex.def Info: figures/chap05/EnronTransA-heatmap.pdf  used on input 
-line 812.
+line 811.
 (pdftex.def)             Requested size: 298.75262pt x 34.82635pt.
-<figures/chap05/worldtradenode-adjusted.pdf, id=3202, 771.04222pt x 396.25917pt
+<figures/chap05/worldtradenode-adjusted.pdf, id=3221, 771.04222pt x 396.25917pt
 >
 File: figures/chap05/worldtradenode-adjusted.pdf Graphic file (type pdf)
 <use figures/chap05/worldtradenode-adjusted.pdf>
 Package pdftex.def Info: figures/chap05/worldtradenode-adjusted.pdf  used on in
-put line 826.
+put line 825.
 (pdftex.def)             Requested size: 256.0774pt x 131.60637pt.
 
 
@@ -2738,35 +2735,32 @@ put line 826.
 
 [75 <./figures/chap05/mergesplitAGND.pdf> <./figures/chap05/mergesplitA.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap05/mergesplitA
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./figures/chap05/mergesplitA.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
 > <./figures/chap05/mergesplitAPisCES.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap05/mergesplitA
-PisCES.pdf): PDF inclusion: multiple pdfs with page group included in a single 
-page
+pdfTeX warning: pdflatex.exe (file ./figures/chap05/mergesplitAPisCES.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
 > <./figures/chap05/EnronTransA-heatmap.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap05/EnronTransA
--heatmap.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: pdflatex.exe (file ./figures/chap05/EnronTransA-heatmap.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./figures/chap05/worldtradenode-adjusted.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap05/worldtraden
-ode-adjusted.pdf): PDF inclusion: multiple pdfs with page group included in a s
-ingle page
+pdfTeX warning: pdflatex.exe (file ./figures/chap05/worldtradenode-adjusted.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap05/worldtrade-CNlevel.pdf, id=3453, 1277.22163pt x 625.79788pt>
+<figures/chap05/worldtrade-CNlevel.pdf, id=3471, 1277.22163pt x 625.79788pt>
 File: figures/chap05/worldtrade-CNlevel.pdf Graphic file (type pdf)
 <use figures/chap05/worldtrade-CNlevel.pdf>
 Package pdftex.def Info: figures/chap05/worldtrade-CNlevel.pdf  used on input l
-ine 839.
+ine 838.
 (pdftex.def)             Requested size: 426.79134pt x 209.11124pt.
-<figures/chap05/worldtrade-Nlevel.pdf, id=3454, 1246.6575pt x 470.23682pt>
+<figures/chap05/worldtrade-Nlevel.pdf, id=3472, 1246.6575pt x 470.23682pt>
 File: figures/chap05/worldtrade-Nlevel.pdf Graphic file (type pdf)
 <use figures/chap05/worldtrade-Nlevel.pdf>
 Package pdftex.def Info: figures/chap05/worldtrade-Nlevel.pdf  used on input li
-ne 847.
+ne 846.
 (pdftex.def)             Requested size: 426.79134pt x 160.98338pt.
 
 
@@ -2789,7 +2783,7 @@ ne 847.
 [79]
 
 [80]
-<figures/chap06/VGRGMM.png, id=4093, 2920.87209pt x 1531.25095pt>
+<figures/chap06/VGRGMM.png, id=4111, 2920.87209pt x 1531.25095pt>
 File: figures/chap06/VGRGMM.png Graphic file (type png)
 <use figures/chap06/VGRGMM.png>
 Package pdftex.def Info: figures/chap06/VGRGMM.png  used on input line 47.
@@ -2797,13 +2791,13 @@ Package pdftex.def Info: figures/chap06/VGRGMM.png  used on input line 47.
 
 Underfull \hbox (badness 8094) in paragraph at lines 55--56
 []\C70/rm/m/n/12/67 , \C70/zhsong/b/n/12/82 Ç \C70/zhsong/m/n/12/99 ñ \C70/rm/m
-/n/12/51 H \C70/rm/m/n/12/4e À \C70/rm/m/n/12/7e Õ \C70/rm/m/n/12/67 , \C70/rm/
-m/n/12/7a ‡ \C70/zhsong/b/n/12/62 @ \C70/rm/m/n/12/4f ^^? \C70/zhsong/b/n/12/75
- ( \C70/rm/m/n/12/76 Ñ \C70/zhsong/b/n/12/7b & \C70/rm/m/n/12/53 ˜   \C70/rm/m/
-n/12/51 v \C70/rm/m/n/12/5b ö \C70/rm/m/n/12/4e I|\C70/rm/m/n/12/ff ^^L| \C70/r
-m/m/n/12/96 è \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/4e À \C70/rm/m/n/12/7e Õ \C7
-0/rm/m/n/12/67 , \C70/rm/m/n/12/7a ‡ \C70/zhsong/b/n/12/62 @ \C70/rm/m/n/12/63 
-– \C70/rm/m/n/12/51 ˙
+/n/12/51 H \C70/rm/m/n/12/4e À \C70/zhsong/b/n/12/7e Õ \C70/rm/m/n/12/67 , \C70
+/rm/m/n/12/7a ‡ \C70/zhsong/b/n/12/62 @ \C70/rm/m/n/12/4f ^^? \C70/zhsong/b/n/1
+2/75 ( \C70/rm/m/n/12/76 Ñ \C70/zhsong/b/n/12/7b & \C70/rm/m/n/12/53 ˜   \C70/r
+m/m/n/12/51 v \C70/zhsong/b/n/12/5b ö \C70/rm/m/n/12/4e I|\C70/rm/m/n/12/ff ^^L
+| \C70/rm/m/n/12/96 è \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/4e À \C70/zhsong/b/n
+/12/7e Õ \C70/rm/m/n/12/67 , \C70/rm/m/n/12/7a ‡ \C70/zhsong/b/n/12/62 @ \C70/r
+m/m/n/12/63 – \C70/rm/m/n/12/51 ˙
  []
 
 
@@ -2812,21 +2806,20 @@ m/m/n/12/96 è \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/4e À \C70/rm/m/n/12/7e Õ \C7
 
 [82 <./figures/chap06/VGRGMM.png
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap06/VGRGMM.png)
-: large interlaced PNG might cause out of memory (use non-interlaced PNG to fix
- this)
+pdfTeX warning: pdflatex.exe (file ./figures/chap06/VGRGMM.png): large interlac
+ed PNG might cause out of memory (use non-interlaced PNG to fix this)
 >]
 
 [83]
 Underfull \hbox (badness 2221) in paragraph at lines 124--126
 \C70/rm/m/n/12/51 v \C70/rm/m/n/12/4e -|\C70/rm/m/n/12/ff ^^L| $\OT1/txr/bx/n/1
 2 W[]$\C70/zhsong/b/n/12/75 ( \C70/rm/m/n/12/4e é \C70/zhsong/b/n/12/7b Ä \C70/
-rm/m/n/12/53 ^^V \C70/rm/m/n/12/88 h \C70/rm/m/n/12/79 : \C70/rm/m/n/12/5e è \C
-70/rm/m/n/12/52 ^^W$\OMS/txsy/m/n/12 f\OT1/txr/bx/n/12 W[]\OML/txmi/m/it/12 ; \
-OT1/txr/bx/n/12 W[]\OML/txmi/m/it/12 ; [] ; \OT1/txr/bx/n/12 W[]\OMS/txsy/m/n/1
-2 g$|\C70/rm/m/n/12/ff ^^L| \C70/zhsong/m/n/12/80 ^^L$\OT1/txr/bx/n/12 F[]$\OT1
-/txr/m/n/12 , $\OT1/txr/bx/n/12 Z[]$\C70/rm/m/n/12/4e Â \C70/rm/m/n/12/53   \C7
-0/rm/m/n/12/54 ^^N \C70/rm/m/n/12/65 á
+rm/m/n/12/53 ^^V \C70/rm/m/n/12/88 h \C70/zhsong/b/n/12/79 : \C70/rm/m/n/12/5e 
+è \C70/rm/m/n/12/52 ^^W$\OMS/txsy/m/n/12 f\OT1/txr/bx/n/12 W[]\OML/txmi/m/it/12
+ ; \OT1/txr/bx/n/12 W[]\OML/txmi/m/it/12 ; [] ; \OT1/txr/bx/n/12 W[]\OMS/txsy/m
+/n/12 g$|\C70/rm/m/n/12/ff ^^L| \C70/zhsong/m/n/12/80 ^^L$\OT1/txr/bx/n/12 F[]$
+\OT1/txr/m/n/12 , $\OT1/txr/bx/n/12 Z[]$\C70/rm/m/n/12/4e Â \C70/rm/m/n/12/53  
+ \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/65 á
  []
 
 
@@ -2836,10 +2829,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
 []\C70/rm/m/n/12/4e : Ü \C70/rm/m/n/12/4f ^^X \C70/rm/m/n/12/53 ^^V$\OML/txmi/m
 /it/12 q\OT1/txr/m/n/12 (^^A[])$\C70/rm/m/n/12/4f ^^? \C70/rm/m/n/12/51 v \C70/
 rm/m/n/12/8d ã \C70/rm/m/n/12/8f — \C70/rm/m/n/12/4e é \C70/rm/m/n/12/77 ^^_ \C
-70/rm/m/n/12/5b û \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/9a å$\OML/txmi/m/it/12 p
-\OT1/txr/m/n/12 (^^A[])$|\C70/rm/m/n/12/ff ^^L| \C70/zhsong/b/n/12/97 ^^@ \C70/
-zhsong/b/n/12/89 Å \C70/rm/m/n/12/67 ^^@ \C70/zhsong/b/n/12/5c ^^O \C70/rm/m/n/
-12/53 ^^V\OT1/txr/m/n/12 KL\C70/rm/m/n/12/65 c
+70/zhsong/b/n/12/5b û \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/9a å$\OML/txmi/m/it/
+12 p\OT1/txr/m/n/12 (^^A[])$|\C70/rm/m/n/12/ff ^^L| \C70/zhsong/b/n/12/97 ^^@ \
+C70/zhsong/b/n/12/89 Å \C70/rm/m/n/12/67 ^^@ \C70/zhsong/b/n/12/5c ^^O \C70/rm/
+m/n/12/53 ^^V\OT1/txr/m/n/12 KL\C70/rm/m/n/12/65 c
  []
 
 
@@ -2857,39 +2850,38 @@ ML/txmi/m/it/12 log$\C70/rm/m/n/12/4f < \C70/rm/m/n/12/71 6|\C70/rm/m/n/12/ff ^
 
 
 [85]
-Underfull \hbox (badness 10000) in paragraph at lines 214--216
-
- []
-
-
 
 [86]
 
-[87]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[88]
+
+
+[87]
 Underfull \hbox (badness 3989) in paragraph at lines 301--302
 []\C70/zhsong/b/n/12/75 ^^_[][] \C70/zhsong/b/n/12/62 ^^P[][] \C70/rm/m/n/12/65
  p[][] \C70/rm/m/n/12/63 n[][] \C70/zhsong/b/n/12/96 ∆[][]|\C70/rm/m/n/12/ff ^^
 Z| \C70/zhsong/b/n/12/6b d \C70/rm/m/n/12/7c { \C70/rm/m/n/12/65 p \C70/rm/m/n/
-12/63 n \C70/rm/m/n/12/53 ^^E \C70/rm/m/n/12/54 + \C70/rm/m/n/12/4e $ \C70/rm/m
-/n/12/7e ƒ \C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 n \C70/zhsong/b/n/12/96 ∆|\C70
-/rm/m/n/12/ff ^^L| \C70/zhsong/b/n/12/7b , \C70/rm/m/n/12/4e ^^@ * \C70/zhsong/
-b/n/12/75 ^^_ \C70/zhsong/b/n/12/62 ^^P \C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 n
- \C70/zhsong/b/n/12/96 ∆ \C70/rm/m/n/12/66 / \C70/rm/m/n/12/68 9
+12/63 n \C70/rm/m/n/12/53 ^^E \C70/rm/m/n/12/54 + \C70/rm/m/n/12/4e $ \C70/zhso
+ng/b/n/12/7e ƒ \C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 n \C70/zhsong/b/n/12/96 ∆|
+\C70/rm/m/n/12/ff ^^L| \C70/zhsong/b/n/12/7b , \C70/rm/m/n/12/4e ^^@ * \C70/zhs
+ong/b/n/12/75 ^^_ \C70/zhsong/b/n/12/62 ^^P \C70/rm/m/n/12/65 p \C70/rm/m/n/12/
+63 n \C70/zhsong/b/n/12/96 ∆ \C70/rm/m/n/12/66 / \C70/rm/m/n/12/68 9
  []
 
 
+
+[88]
 Underfull \hbox (badness 3229) in paragraph at lines 302--303
-[]\C70/rm/m/n/12/51 w[][] \C70/rm/m/n/12/67 	[][] \C70/zhsong/b/n/12/77 ^^_[][]
- \C70/rm/m/n/12/5b û[][] \C70/rm/m/n/12/79 >[][] \C70/rm/m/n/12/56 ‚[][] \C70/r
-m/m/n/12/68 ^^G[][] \C70/zhsong/b/n/12/7b ~[][] \C70/rm/m/n/12/76 Ñ[][] \C70/zh
-song/b/n/12/77 ^^_[][] \C70/rm/m/n/12/5b û[][] \C70/rm/m/n/12/79 >[][] \C70/rm/
-m/n/12/4e §[][] \C70/zhsong/b/n/12/7f Q[][] \C70/rm/m/n/12/7e ‹[][]|\C70/rm/m/n
-/12/ff ^^Z| \C70/rm/m/n/12/53 ^^E \C70/rm/m/n/12/54 + \C70/rm/m/n/12/56 € \C70/
-rm/m/n/12/4e * \C70/rm/m/n/12/52 ® \C70/rm/m/n/12/60 ^^A \C70/rm/m/n/12/79 > \C
-70/rm/m/n/12/4e § \C70/zhsong/b/n/12/7f Q \C70/rm/m/n/12/7e ‹|\C70/rm/m/n/12/ff
- ^^L| \C70/rm/m/n/12/53 s
+[]\C70/rm/m/n/12/51 w[][] \C70/zhsong/b/n/12/67 	[][] \C70/zhsong/b/n/12/77 ^^_
+[][] \C70/zhsong/b/n/12/5b û[][] \C70/zhsong/b/n/12/79 >[][] \C70/zhsong/b/n/12
+/56 ‚[][] \C70/zhsong/b/n/12/68 ^^G[][] \C70/zhsong/b/n/12/7b ~[][] \C70/zhsong
+/b/n/12/76 Ñ[][] \C70/zhsong/b/n/12/77 ^^_[][] \C70/zhsong/b/n/12/5b û[][] \C70
+/zhsong/b/n/12/79 >[][] \C70/rm/m/n/12/4e §[][] \C70/zhsong/b/n/12/7f Q[][] \C7
+0/zhsong/b/n/12/7e ‹[][]|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/53 ^^E \C70/rm/m
+/n/12/54 + \C70/zhsong/b/n/12/56 € \C70/rm/m/n/12/4e * \C70/rm/m/n/12/52 ® \C70
+/rm/m/n/12/60 ^^A \C70/zhsong/b/n/12/79 > \C70/rm/m/n/12/4e § \C70/zhsong/b/n/1
+2/7f Q \C70/zhsong/b/n/12/7e ‹|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/53 s
  []
 
 
@@ -2897,38 +2889,39 @@ rm/m/n/12/4e * \C70/rm/m/n/12/52 ® \C70/rm/m/n/12/60 ^^A \C70/rm/m/n/12/79 > \C
 [89]
 Underfull \hbox (badness 2556) in paragraph at lines 365--366
 []\OT1/txr/bx/n/12 DynRNN$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8b Â \C70/r
-m/m/n/12/65 π \C70/rm/m/n/12/6c ’ \C70/rm/m/n/12/4e Â \C70/rm/m/n/12/5f S \C70/
-rm/m/n/12/52 M \C70/rm/m/n/12/65 ˆ \C70/rm/m/n/12/52 ; \C70/rm/m/n/12/4e K \C70
-/rm/m/n/12/52 M \C70/rm/m/n/12/76 Ñ \C70/zhsong/b/n/12/62 @ \C70/rm/m/n/12/67 	
- \C70/zhsong/b/n/12/7f Q \C70/rm/m/n/12/7e ‹ \C70/rm/m/n/12/5f Î \C70/rm/m/n/12
-/71 g \C70/rm/m/n/12/4f \ \C70/rm/m/n/12/4e : \C70/rm/m/n/12/8f ì \C70/rm/m/n/1
-2/51 e|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/52 )
+m/m/n/12/65 π \C70/zhsong/b/n/12/6c ’ \C70/rm/m/n/12/4e Â \C70/rm/m/n/12/5f S \
+C70/rm/m/n/12/52 M \C70/rm/m/n/12/65 ˆ \C70/rm/m/n/12/52 ; \C70/rm/m/n/12/4e K 
+\C70/rm/m/n/12/52 M \C70/zhsong/b/n/12/76 Ñ \C70/zhsong/b/n/12/62 @ \C70/zhsong
+/b/n/12/67 	 \C70/zhsong/b/n/12/7f Q \C70/zhsong/b/n/12/7e ‹ \C70/rm/m/n/12/5f 
+Î \C70/rm/m/n/12/71 g \C70/rm/m/n/12/4f \ \C70/rm/m/n/12/4e : \C70/rm/m/n/12/8f
+ ì \C70/rm/m/n/12/51 e|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/52 )
  []
 
 
 
 [90]
-
-[91]
-<figures/chap06/chap5synthData.pdf, id=4287, 3115.60226pt x 513.91035pt>
+<figures/chap06/chap5synthData.pdf, id=4299, 3115.60226pt x 513.91035pt>
 File: figures/chap06/chap5synthData.pdf Graphic file (type pdf)
 <use figures/chap06/chap5synthData.pdf>
 Package pdftex.def Info: figures/chap06/chap5synthData.pdf  used on input line 
 407.
 (pdftex.def)             Requested size: 426.79134pt x 70.3943pt.
-<figures/chap06/chap5realDataGHS-box.pdf, id=4289, 3115.60226pt x 441.88605pt>
+
+
+[91]
+<figures/chap06/chap5realDataGHS-box.pdf, id=4309, 3115.60226pt x 441.88605pt>
 File: figures/chap06/chap5realDataGHS-box.pdf Graphic file (type pdf)
 <use figures/chap06/chap5realDataGHS-box.pdf>
 Package pdftex.def Info: figures/chap06/chap5realDataGHS-box.pdf  used on input
  line 424.
 (pdftex.def)             Requested size: 426.79134pt x 60.52858pt.
-<figures/chap06/chap5realDataGpw-box.pdf, id=4290, 3115.60226pt x 441.88605pt>
+<figures/chap06/chap5realDataGpw-box.pdf, id=4310, 3115.60226pt x 441.88605pt>
 File: figures/chap06/chap5realDataGpw-box.pdf Graphic file (type pdf)
 <use figures/chap06/chap5realDataGpw-box.pdf>
 Package pdftex.def Info: figures/chap06/chap5realDataGpw-box.pdf  used on input
  line 425.
 (pdftex.def)             Requested size: 426.79134pt x 60.52858pt.
-<figures/chap06/chap5realDataNG.pdf, id=4291, 2717.95111pt x 507.38597pt>
+<figures/chap06/chap5realDataNG.pdf, id=4311, 2717.95111pt x 507.38597pt>
 File: figures/chap06/chap5realDataNG.pdf Graphic file (type pdf)
 <use figures/chap06/chap5realDataNG.pdf>
 Package pdftex.def Info: figures/chap06/chap5realDataNG.pdf  used on input line
@@ -2936,411 +2929,428 @@ Package pdftex.def Info: figures/chap06/chap5realDataNG.pdf  used on input line
 (pdftex.def)             Requested size: 426.79134pt x 79.66595pt.
 
 
-[92 <./figures/chap06/chap5synthData.pdf>]
-Overfull \hbox (4.00215pt too wide) in paragraph at lines 450--450
+[92 <./figures/chap06/chap5synthData.pdf> <./figures/chap06/chap5realDataGHS-bo
+x.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/chap06/chap5realDataGHS-box.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/chap06/chap5realDataGpw-box.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/chap06/chap5realDataGpw-box.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (4.00215pt too wide) in paragraph at lines 453--453
 []|\OT1/txr/m/n/10.5 HS11| 
  []
 
 
-Overfull \hbox (4.00215pt too wide) in paragraph at lines 450--450
+Overfull \hbox (4.00215pt too wide) in paragraph at lines 453--453
 []|\OT1/txr/m/n/10.5 HS12| 
  []
 
 
-Overfull \hbox (3.15164pt too wide) in paragraph at lines 450--450
+Overfull \hbox (3.15164pt too wide) in paragraph at lines 453--453
 []|\OT1/txr/m/n/10.5 Work| 
  []
 
 
-Overfull \hbox (12.74866pt too wide) in paragraph at lines 450--450
+Overfull \hbox (12.74866pt too wide) in paragraph at lines 453--453
 []|\OT1/txr/m/n/10.5 Cphone| 
  []
 
 
-Overfull \hbox (5.74515pt too wide) in paragraph at lines 450--450
+Overfull \hbox (5.74515pt too wide) in paragraph at lines 453--453
 []|\OT1/txr/m/n/10.5 Enron| 
  []
 
 
-Overfull \hbox (2.06496pt too wide) in paragraph at lines 450--450
+Overfull \hbox (2.06496pt too wide) in paragraph at lines 453--453
 []|\OT1/txr/m/n/10.5 fbmsg| 
  []
 
 
-Overfull \hbox (4.59015pt too wide) in paragraph at lines 450--451
+Overfull \hbox (4.59015pt too wide) in paragraph at lines 453--454
 []|\OT1/txr/m/n/10.5 Synth| 
  []
 
 
-Overfull \hbox (14.20816pt too wide) in paragraph at lines 452--453
+Overfull \hbox (1.30318pt too wide) in paragraph at lines 455--455
+[]|\OT1/txr/m/n/10.5 91.7| 
+ []
+
+
+Overfull \hbox (14.20816pt too wide) in paragraph at lines 455--456
 []|\OT1/txr/m/n/10.5 10943.2| 
  []
 
 
-Overfull \hbox (14.20816pt too wide) in paragraph at lines 454--455
+Overfull \hbox (1.30318pt too wide) in paragraph at lines 457--457
+[]|\OT1/txr/m/n/10.5 94.9| 
+ []
+
+
+Overfull \hbox (14.20816pt too wide) in paragraph at lines 457--458
 []|\OT1/txr/m/n/10.5 10102.3| 
  []
 
 
-Overfull \hbox (3.70816pt too wide) in paragraph at lines 456--456
+Overfull \hbox (6.55318pt too wide) in paragraph at lines 459--459
 []|\OT1/txr/m/n/10.5 103.5| 
  []
 
 
-Overfull \hbox (3.70816pt too wide) in paragraph at lines 456--456
+Overfull \hbox (3.70816pt too wide) in paragraph at lines 459--459
 []|\OT1/txr/m/n/10.5 103.3| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 456--457
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 459--460
 []|\OT1/txr/m/n/10.5 9862.5| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 458--459
+Overfull \hbox (1.30318pt too wide) in paragraph at lines 461--461
+[]|\OT1/txr/m/n/10.5 47.0| 
+ []
+
+
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 461--462
 []|\OT1/txr/m/n/10.5 5620.1| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (11.80318pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 2601.2| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 1937.5| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 2017.0| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 1903.9| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 2532.8| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 3012.1| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 460--460
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 2109.4| 
  []
 
 
-Overfull \hbox (4.68999pt too wide) in paragraph at lines 460--460
+Overfull \hbox (4.68999pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 8904.7| 
  []
 
 
-Overfull \hbox (4.68999pt too wide) in paragraph at lines 460--460
+Overfull \hbox (4.68999pt too wide) in paragraph at lines 463--463
 []|\OT1/txr/m/n/10.5 8936.9| 
  []
 
 
-Overfull \hbox (14.20816pt too wide) in paragraph at lines 460--461
+Overfull \hbox (14.20816pt too wide) in paragraph at lines 463--464
 []|\OT1/txr/m/n/10.5 35724.6| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (11.80318pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2930.1| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2632.1| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2500.2| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2610.8| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2712.0| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2812.9| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 462--462
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 2633.0| 
  []
 
 
-Overfull \hbox (9.93999pt too wide) in paragraph at lines 462--462
+Overfull \hbox (9.93999pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 10389.7| 
  []
 
 
-Overfull \hbox (9.93999pt too wide) in paragraph at lines 462--462
+Overfull \hbox (9.93999pt too wide) in paragraph at lines 465--465
 []|\OT1/txr/m/n/10.5 11397.4| 
  []
 
 
-Overfull \hbox (14.20816pt too wide) in paragraph at lines 462--463
+Overfull \hbox (14.20816pt too wide) in paragraph at lines 465--466
 []|\OT1/txr/m/n/10.5 33761.9| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (11.80318pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2814.6| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2477.8| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2530.2| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2634.3| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2262.4| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2822.9| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 464--464
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 2494.7| 
  []
 
 
-Overfull \hbox (9.93999pt too wide) in paragraph at lines 464--464
+Overfull \hbox (9.93999pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 11111.8| 
  []
 
 
-Overfull \hbox (9.93999pt too wide) in paragraph at lines 464--464
+Overfull \hbox (9.93999pt too wide) in paragraph at lines 467--467
 []|\OT1/txr/m/n/10.5 12532.6| 
  []
 
 
-Overfull \hbox (14.20816pt too wide) in paragraph at lines 464--465
+Overfull \hbox (14.20816pt too wide) in paragraph at lines 467--468
 []|\OT1/txr/m/n/10.5 38650.2| 
  []
 
 
-Overfull \hbox (3.70816pt too wide) in paragraph at lines 466--466
+Overfull \hbox (6.55318pt too wide) in paragraph at lines 469--469
 []|\OT1/txr/m/n/10.5 100.8| 
  []
 
 
-Overfull \hbox (3.70816pt too wide) in paragraph at lines 466--466
+Overfull \hbox (3.70816pt too wide) in paragraph at lines 469--469
 []|\OT1/txr/m/n/10.5 106.5| 
  []
 
 
-Overfull \hbox (3.70816pt too wide) in paragraph at lines 466--466
+Overfull \hbox (3.70816pt too wide) in paragraph at lines 469--469
 []|\OT1/txr/m/n/10.5 114.8| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 466--467
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 469--470
 []|\OT1/txr/m/n/10.5 9620.4| 
  []
 
 
-Overfull \hbox (3.70816pt too wide) in paragraph at lines 468--468
+Overfull \hbox (1.30318pt too wide) in paragraph at lines 471--471
+[]|\OT1/txr/m/n/10.5 35.4| 
+ []
+
+
+Overfull \hbox (3.70816pt too wide) in paragraph at lines 471--471
 []|\OT1/txr/m/n/10.5 5.522| 
  []
 
 
-Overfull \hbox (8.95816pt too wide) in paragraph at lines 468--469
+Overfull \hbox (8.95816pt too wide) in paragraph at lines 471--472
 []|\OT1/txr/m/n/10.5 9036.1| 
  []
 
-<figures/chap06/chap5bigdata-ia-soc.pdf, id=4410, 1226.81151pt x 415.79967pt>
+
+Underfull \hbox (badness 3690) in paragraph at lines 481--482
+\C70/rm/m/n/12/59 ' \C70/zhsong/b/n/12/89 ƒ \C70/rm/m/n/12/6a ! \C70/zhsong/b/n
+/12/77 ^^_ \C70/zhsong/b/n/12/5b û \C70/zhsong/b/n/12/7f Q \C70/zhsong/b/n/12/7
+e ‹ \C70/rm/m/n/12/4e 
+ \C70/zhsong/b/n/12/76 Ñ \C70/rm/m/n/12/65 H \C70/zhsong/b/n/12/67 ú|\C70/rm/m/
+n/12/ff ^^L| \C70/zhsong/b/n/12/67 , \C70/rm/m/n/12/78 ^^T \C70/rm/m/n/12/7a v 
+\C70/zhsong/b/n/12/5c ^^F\OT1/txr/m/n/12 VGRGMM\C70/rm/m/n/12/4e ^^N 	 * \C70/r
+m/m/n/12/65 H \C70/zhsong/b/n/12/67 ú \C70/rm/m/n/12/8f É \C70/rm/m/n/12/59 } \
+C70/zhsong/b/n/12/76 Ñ \C70/zhsong/b/n/12/5b ˘ \C70/zhsong/b/n/12/6b ‘ \C70/rm/
+m/n/12/65 π
+ []
+
+
+
+[93 <./figures/chap06/chap5realDataNG.pdf>]
+<figures/chap06/chap5bigdata-ia-soc.pdf, id=4628, 1226.81151pt x 415.79967pt>
 File: figures/chap06/chap5bigdata-ia-soc.pdf Graphic file (type pdf)
 <use figures/chap06/chap5bigdata-ia-soc.pdf>
 Package pdftex.def Info: figures/chap06/chap5bigdata-ia-soc.pdf  used on input 
-line 481.
+line 485.
 (pdftex.def)             Requested size: 341.43436pt x 115.71886pt.
 
+Underfull \hbox (badness 8094) in paragraph at lines 491--492
+[]\C70/rm/m/n/12/4e : Ü \C70/rm/m/n/12/6d K \C70/rm/m/n/12/8b ’ \C70/rm/m/n/12/
+6a ! \C70/rm/m/n/12/57 ã \C70/zhsong/b/n/12/5b ˘ \C70/rm/m/n/12/4e é \C70/zhson
+g/b/n/12/77 ^^_ \C70/zhsong/b/n/12/5b û \C70/rm/m/n/12/4e ^^V \C70/zhsong/b/n/1
+2/75 L \C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 n \C70/zhsong/b/n/12/76 Ñ \C70/zhs
+ong/m/n/12/9c Å \C70/zhsong/b/n/12/68 “ \C70/rm/m/n/12/60 ' \C70/rm/m/n/12/4e ^
+^N \C70/rm/m/n/12/7a 3 \C70/zhsong/b/n/12/5b ö \C70/rm/m/n/12/60 '|\C70/rm/m/n/
+12/ff ^^L| \C70/zhsong/b/n/12/67 , \C70/zhsong/b/n/12/82 Ç \C70/rm/m/n/12/63 ^^
+Q \C70/rm/m/n/12/90 	 \C70/rm/m/n/12/4e Ü
+ []
 
-[93 <./figures/chap06/chap5realDataGHS-box.pdf> <./figures/chap06/chap5realData
-Gpw-box.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap06/chap5realDa
-taGpw-box.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
-> <./figures/chap06/chap5realDataNG.pdf
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+\C70/rm/m/n/12/57 ˙ \C70/rm/m/n/12/4e é \C70/rm/m/n/12/6d Ò \C70/rm/m/n/12/5e ¶
+\OT1/txr/m/n/12 VAE\C70/zhsong/b/n/12/76 Ñ \C70/rm/m/n/12/6a ! \C70/rm/m/n/12/5
+7 ã\OT1/txr/m/n/12 AdaDyGNN|\C70/rm/m/n/12/30 ^^A| \OT1/txr/m/n/12 DynAERNN|\C7
+0/rm/m/n/12/30 ^^A| \OT1/txr/m/n/12 DynGEM|\C70/rm/m/n/12/30 ^^A| \OT1/txr/m/n/
+12 DynRNN\C70/rm/m/n/12/4e Â
+ []
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap06/chap5realDa
-taNG.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
-ge
->]
-Underfull \hbox (badness 3690) in paragraph at lines 487--488
-\C70/rm/m/n/12/59 ' \C70/zhsong/b/n/12/89 ƒ \C70/rm/m/n/12/6a ! \C70/zhsong/b/n
-/12/77 ^^_ \C70/rm/m/n/12/5b û \C70/zhsong/b/n/12/7f Q \C70/rm/m/n/12/7e ‹ \C70
-/rm/m/n/12/4e 
- \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/65 H \C70/rm/m/n/12/67 ú|\C70/rm/m/n/12/ff 
-^^L| \C70/rm/m/n/12/67 , \C70/rm/m/n/12/78 ^^T \C70/rm/m/n/12/7a v \C70/zhsong/
-b/n/12/5c ^^F\OT1/txr/m/n/12 VGRGMM\C70/rm/m/n/12/4e ^^N 	 * \C70/rm/m/n/12/65 
-H \C70/rm/m/n/12/67 ú \C70/rm/m/n/12/8f É \C70/rm/m/n/12/59 } \C70/rm/m/n/12/76
- Ñ \C70/rm/m/n/12/5b ˘ \C70/zhsong/b/n/12/6b ‘ \C70/rm/m/n/12/65 π
+
+Underfull \hbox (badness 2469) in paragraph at lines 491--492
+\C70/rm/m/n/12/53  \OT1/txr/m/n/12 VGRNN\C70/rm/m/n/12/4e ^^N\OT1/txr/m/n/12 VG
+RGMM\C70/rm/m/n/12/8f € \C70/rm/m/n/12/88 L \C70/zhsong/b/n/12/5b ˘ \C70/zhsong
+/b/n/12/6b ‘|\C70/rm/m/n/12/ff ^^L| \C70/zhsong/b/n/12/56 ‡ \C70/rm/m/n/12/4e 
+ \C70/rm/m/n/12/8f  \C70/zhsong/b/n/12/5b ˘ \C70/zhsong/b/n/12/6b ‘ \C70/rm/m/
+n/12/65 π \C70/zhsong/b/n/12/6c ’ \C70/rm/m/n/12/57 G \C70/zhsong/b/n/12/5b ˘ \
+C70/rm/m/n/12/53 ¬ \C70/rm/m/n/12/65 p \C70/rm/m/n/12/52 ^^] \C70/rm/m/n/12/59 
+À \C70/rm/m/n/12/53 ^^V \C70/rm/m/n/12/8f É \C70/rm/m/n/12/65 O \C70/zhsong/m/n
+/12/61 ^^_|\C70/rm/m/n/12/30 ^^B|
  []
 
 
 
 [94 <./figures/chap06/chap5bigdata-ia-soc.pdf>]
-Underfull \hbox (badness 8094) in paragraph at lines 492--493
-[]\C70/rm/m/n/12/4e : Ü \C70/rm/m/n/12/6d K \C70/rm/m/n/12/8b ’ \C70/rm/m/n/12/
-6a ! \C70/rm/m/n/12/57 ã \C70/rm/m/n/12/5b ˘ \C70/rm/m/n/12/4e é \C70/zhsong/b/
-n/12/77 ^^_ \C70/rm/m/n/12/5b û \C70/rm/m/n/12/4e ^^V \C70/zhsong/b/n/12/75 L \
-C70/rm/m/n/12/65 p \C70/rm/m/n/12/63 n \C70/rm/m/n/12/76 Ñ \C70/zhsong/m/n/12/9
-c Å \C70/rm/m/n/12/68 “ \C70/rm/m/n/12/60 ' \C70/rm/m/n/12/4e ^^N \C70/rm/m/n/1
-2/7a 3 \C70/rm/m/n/12/5b ö \C70/rm/m/n/12/60 '|\C70/rm/m/n/12/ff ^^L| \C70/rm/m
-/n/12/67 , \C70/zhsong/b/n/12/82 Ç \C70/rm/m/n/12/63 ^^Q \C70/rm/m/n/12/90 	 \C
-70/rm/m/n/12/4e Ü
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
-\C70/rm/m/n/12/57 ˙ \C70/rm/m/n/12/4e é \C70/rm/m/n/12/6d Ò \C70/rm/m/n/12/5e ¶
-\OT1/txr/m/n/12 VAE\C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/6a ! \C70/rm/m/n/12/57 ã\
-OT1/txr/m/n/12 AdaDyGNN|\C70/rm/m/n/12/30 ^^A| \OT1/txr/m/n/12 DynAERNN|\C70/rm
-/m/n/12/30 ^^A| \OT1/txr/m/n/12 DynGEM|\C70/rm/m/n/12/30 ^^A| \OT1/txr/m/n/12 D
-ynRNN\C70/rm/m/n/12/4e Â
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 492--493
-\C70/rm/m/n/12/53  \OT1/txr/m/n/12 VGRNN\C70/rm/m/n/12/4e ^^N\OT1/txr/m/n/12 VG
-RGMM\C70/rm/m/n/12/8f € \C70/rm/m/n/12/88 L \C70/rm/m/n/12/5b ˘ \C70/zhsong/b/n
-/12/6b ‘|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/56 ‡ \C70/rm/m/n/12/4e 
- \C70/rm/m/n/12/8f  \C70/rm/m/n/12/5b ˘ \C70/zhsong/b/n/12/6b ‘ \C70/rm/m/n/12
-/65 π \C70/rm/m/n/12/6c ’ \C70/rm/m/n/12/57 G \C70/rm/m/n/12/5b ˘ \C70/rm/m/n/1
-2/53 ¬ \C70/rm/m/n/12/65 p \C70/rm/m/n/12/52 ^^] \C70/rm/m/n/12/59 À \C70/rm/m/
-n/12/53 ^^V \C70/rm/m/n/12/8f É \C70/rm/m/n/12/65 O \C70/zhsong/m/n/12/61 ^^_|\
-C70/rm/m/n/12/30 ^^B|
- []
-
-<figures/chap06/chap5STNQ.pdf, id=4678, 1349.23138pt x 661.313pt>
+<figures/chap06/chap5STNQ.pdf, id=4700, 1349.23138pt x 661.313pt>
 File: figures/chap06/chap5STNQ.pdf Graphic file (type pdf)
 <use figures/chap06/chap5STNQ.pdf>
-Package pdftex.def Info: figures/chap06/chap5STNQ.pdf  used on input line 496.
+Package pdftex.def Info: figures/chap06/chap5STNQ.pdf  used on input line 495.
 (pdftex.def)             Requested size: 281.68384pt x 138.06247pt.
-<figures/chap06/workplaceRBNA.pdf, id=4680, 1214.73514pt x 603.9788pt>
+<figures/chap06/workplaceRBNA.pdf, id=4702, 1214.73514pt x 603.9788pt>
 File: figures/chap06/workplaceRBNA.pdf Graphic file (type pdf)
 <use figures/chap06/workplaceRBNA.pdf>
 Package pdftex.def Info: figures/chap06/workplaceRBNA.pdf  used on input line 5
-04.
+03.
 (pdftex.def)             Requested size: 256.0774pt x 127.31851pt.
-<figures/chap06/ComDynVAE-HS12Visulization.pdf, id=4681, 1138.15215pt x 256.156
+<figures/chap06/ComDynVAE-HS12Visulization.pdf, id=4703, 1138.15215pt x 256.156
 37pt>
 File: figures/chap06/ComDynVAE-HS12Visulization.pdf Graphic file (type pdf)
 <use figures/chap06/ComDynVAE-HS12Visulization.pdf>
 Package pdftex.def Info: figures/chap06/ComDynVAE-HS12Visulization.pdf  used on
- input line 515.
+ input line 514.
 (pdftex.def)             Requested size: 277.41176pt x 62.43639pt.
-<figures/chap06/DynAERNN-HS12Visulization.pdf, id=4682, 1138.15215pt x 256.1563
+<figures/chap06/DynAERNN-HS12Visulization.pdf, id=4704, 1138.15215pt x 256.1563
 7pt>
 File: figures/chap06/DynAERNN-HS12Visulization.pdf Graphic file (type pdf)
 <use figures/chap06/DynAERNN-HS12Visulization.pdf>
 Package pdftex.def Info: figures/chap06/DynAERNN-HS12Visulization.pdf  used on 
-input line 518.
+input line 517.
 (pdftex.def)             Requested size: 277.41176pt x 62.43639pt.
-<figures/chap06/DynRNN-HS12Visulization.pdf, id=4683, 1138.15215pt x 256.15637p
+<figures/chap06/DynRNN-HS12Visulization.pdf, id=4705, 1138.15215pt x 256.15637p
 t>
 File: figures/chap06/DynRNN-HS12Visulization.pdf Graphic file (type pdf)
 <use figures/chap06/DynRNN-HS12Visulization.pdf>
 Package pdftex.def Info: figures/chap06/DynRNN-HS12Visulization.pdf  used on in
-put line 521.
+put line 520.
 (pdftex.def)             Requested size: 277.41176pt x 62.43639pt.
 
 
-[95 <./figures/chap06/chap5STNQ.pdf>]
+[95 <./figures/chap06/chap5STNQ.pdf> <./figures/chap06/workplaceRBNA.pdf
 
-[96 <./figures/chap06/workplaceRBNA.pdf> <./figures/chap06/ComDynVAE-HS12Visuli
-zation.pdf
+pdfTeX warning: pdflatex.exe (file ./figures/chap06/workplaceRBNA.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap06/ComDynVAE-H
-S12Visulization.pdf): PDF inclusion: multiple pdfs with page group included in 
-a single page
-> <./figures/chap06/DynAERNN-HS12Visulization.pdf
+[96 <./figures/chap06/ComDynVAE-HS12Visulization.pdf> <./figures/chap06/DynAERN
+N-HS12Visulization.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap06/DynAERNN-HS
-12Visulization.pdf): PDF inclusion: multiple pdfs with page group included in a
- single page
+pdfTeX warning: pdflatex.exe (file ./figures/chap06/DynAERNN-HS12Visulization.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/chap06/DynRNN-HS12Visulization.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/chap06/DynRNN-HS12
-Visulization.pdf): PDF inclusion: multiple pdfs with page group included in a s
-ingle page
+pdfTeX warning: pdflatex.exe (file ./figures/chap06/DynRNN-HS12Visulization.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap06/DimensionsOndifferentData-t.pdf, id=4846, 1287.00514pt x 624.08
+<figures/chap06/DimensionsOndifferentData-t.pdf, id=4865, 1287.00514pt x 624.08
 597pt>
 File: figures/chap06/DimensionsOndifferentData-t.pdf Graphic file (type pdf)
 <use figures/chap06/DimensionsOndifferentData-t.pdf>
 Package pdftex.def Info: figures/chap06/DimensionsOndifferentData-t.pdf  used o
-n input line 540.
+n input line 539.
 (pdftex.def)             Requested size: 256.0774pt x 124.16742pt.
+<figures/chap06/g7truth.pdf, id=4868, 597.23125pt x 583.39153pt>
+File: figures/chap06/g7truth.pdf Graphic file (type pdf)
+<use figures/chap06/g7truth.pdf>
+Package pdftex.def Info: figures/chap06/g7truth.pdf  used on input line 559.
+(pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
+<figures/chap06/g7VGMM.pdf, id=4869, 597.23125pt x 583.39153pt>
+File: figures/chap06/g7VGMM.pdf Graphic file (type pdf)
+<use figures/chap06/g7VGMM.pdf>
+Package pdftex.def Info: figures/chap06/g7VGMM.pdf  used on input line 562.
+(pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
+<figures/chap06/g7VGRG.pdf, id=4870, 597.23125pt x 583.39153pt>
+File: figures/chap06/g7VGRG.pdf Graphic file (type pdf)
+<use figures/chap06/g7VGRG.pdf>
+Package pdftex.def Info: figures/chap06/g7VGRG.pdf  used on input line 565.
+(pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
+<figures/chap06/g8truth.pdf, id=4871, 595.3573pt x 424.05626pt>
+File: figures/chap06/g8truth.pdf Graphic file (type pdf)
+<use figures/chap06/g8truth.pdf>
+Package pdftex.def Info: figures/chap06/g8truth.pdf  used on input line 568.
+(pdftex.def)             Requested size: 128.0387pt x 91.1962pt.
+<figures/chap06/g8VGMM.pdf, id=4872, 597.23125pt x 424.05626pt>
+File: figures/chap06/g8VGMM.pdf Graphic file (type pdf)
+<use figures/chap06/g8VGMM.pdf>
+Package pdftex.def Info: figures/chap06/g8VGMM.pdf  used on input line 571.
+(pdftex.def)             Requested size: 128.0387pt x 90.91148pt.
+<figures/chap06/g8VGRG.pdf, id=4873, 597.23125pt x 424.05626pt>
+File: figures/chap06/g8VGRG.pdf Graphic file (type pdf)
+<use figures/chap06/g8VGRG.pdf>
+Package pdftex.def Info: figures/chap06/g8VGRG.pdf  used on input line 574.
+(pdftex.def)             Requested size: 128.0387pt x 90.91148pt.
 
 
 [97 <./figures/chap06/DimensionsOndifferentData-t.pdf>]
-<figures/chap06/g7truth.pdf, id=4913, 597.23125pt x 583.39153pt>
-File: figures/chap06/g7truth.pdf Graphic file (type pdf)
-<use figures/chap06/g7truth.pdf>
-Package pdftex.def Info: figures/chap06/g7truth.pdf  used on input line 560.
-(pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
-<figures/chap06/g7VGMM.pdf, id=4914, 597.23125pt x 583.39153pt>
-File: figures/chap06/g7VGMM.pdf Graphic file (type pdf)
-<use figures/chap06/g7VGMM.pdf>
-Package pdftex.def Info: figures/chap06/g7VGMM.pdf  used on input line 563.
-(pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
-<figures/chap06/g7VGRG.pdf, id=4915, 597.23125pt x 583.39153pt>
-File: figures/chap06/g7VGRG.pdf Graphic file (type pdf)
-<use figures/chap06/g7VGRG.pdf>
-Package pdftex.def Info: figures/chap06/g7VGRG.pdf  used on input line 566.
-(pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
-<figures/chap06/g8truth.pdf, id=4916, 595.3573pt x 424.05626pt>
-File: figures/chap06/g8truth.pdf Graphic file (type pdf)
-<use figures/chap06/g8truth.pdf>
-Package pdftex.def Info: figures/chap06/g8truth.pdf  used on input line 569.
-(pdftex.def)             Requested size: 128.0387pt x 91.1962pt.
-<figures/chap06/g8VGMM.pdf, id=4917, 597.23125pt x 424.05626pt>
-File: figures/chap06/g8VGMM.pdf Graphic file (type pdf)
-<use figures/chap06/g8VGMM.pdf>
-Package pdftex.def Info: figures/chap06/g8VGMM.pdf  used on input line 572.
-(pdftex.def)             Requested size: 128.0387pt x 90.91148pt.
-<figures/chap06/g8VGRG.pdf, id=4918, 597.23125pt x 424.05626pt>
-File: figures/chap06/g8VGRG.pdf Graphic file (type pdf)
-<use figures/chap06/g8VGRG.pdf>
-Package pdftex.def Info: figures/chap06/g8VGRG.pdf  used on input line 575.
-(pdftex.def)             Requested size: 128.0387pt x 90.91148pt.
-
 
 [98 <./figures/chap06/g7truth.pdf> <./figures/chap06/g7VGMM.pdf> <./figures/cha
 p06/g7VGRG.pdf> <./figures/chap06/g8truth.pdf> <./figures/chap06/g8VGMM.pdf> <.
@@ -3391,13 +3401,13 @@ p06/g7VGRG.pdf> <./figures/chap06/g8truth.pdf> <./figures/chap06/g8VGMM.pdf> <.
 [113]
 
 [114]
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-925.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-)<<ot1tt.cmap>>
 
 [115]
+LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
+957.
+ (c:/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+)<<ot1tt.cmap>>
 
 [116]
 
@@ -3458,21 +3468,21 @@ input line 61.
 
 [137]
 
-[138])
+[138]
 
-[139]
+[139])
+
+[140]
 \openout2 = `appendix/acknowledgements.aux'.
 
- (./appendix/acknowledgements.tex
+ (./appendix/acknowledgements.tex)
 
-[140
-
-
+[141
 
 
-])
 
-[141]
+
+]
 
 [142
 
@@ -3500,16 +3510,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7A7369E5C2DF7A86EDF61A77266652A2;11851.
+(rerunfilecheck)             Checksum: 918050A51F421215ADDC514AE522E9BF;11793.
  ) 
 Here is how much of TeX's memory you used:
- 48733 strings out of 473190
- 1098570 string characters out of 5715801
- 1522542 words of memory out of 5000000
- 69168 multiletter control sequences out of 15000+600000
- 778406 words of font info for 713 fonts, out of 8000000 for 9000
+ 48758 strings out of 473190
+ 1094102 string characters out of 5719979
+ 1523700 words of memory out of 5000000
+ 69171 multiletter control sequences out of 15000+600000
+ 780566 words of font info for 718 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,21n,110p,2758b,3111s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,21n,110p,2758b,3141s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -3517,12 +3527,12 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 <simhei.ttf><simhei.ttf><simhei.ttf><simsun.ttc><simhei.ttf><simhei.ttf><simhei
 .ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><s
 imsun.ttc><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simsun.ttc><simsun.t
-tc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simhei.ttf><sim
-hei.ttf><simsun.ttc><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf
+tc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simhei.ttf><simhei.ttf><sim
+sun.ttc><simsun.ttc><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf
 ><simsun.ttc><simhei.ttf><simhei.ttf><simhei.ttf><simsun.ttc><simsun.ttc><simsu
 n.ttc><simsun.ttc><simsun.ttc><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><
-simhei.ttf><simsun.ttc><simhei.ttf><simsun.ttc><simhei.ttf><simhei.ttf><simhei.
-ttf><simhei.ttf><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><si
+simsun.ttc><simhei.ttf><simsun.ttc><simhei.ttf><simsun.ttc><simhei.ttf><simhei.
+ttf><simhei.ttf><simhei.ttf><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><si
 msun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.tt
 c><simsun.ttc><simsun.ttc><simsun.ttc><simhei.ttf><simsun.ttc><simsun.ttc><sims
 un.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc>
@@ -3536,26 +3546,24 @@ n.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><simsun.ttc><
 simsun.ttc><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.
 ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><si
 mhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.tt
-f><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf></usr/local/texli
-ve/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/txfonts/rtxbmi.pfb></usr/local/texlive/2025/texmf-dist/
-fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2025/texmf-dist/fonts/
-type1/public/txfonts/rtxr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
-ublic/txfonts/txbsy.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
-txfonts/txex.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts
-/txsy.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsya.
-pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (154 pages, 11648587 bytes).
+f><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><simhei.ttf><c:/texlive/2025/
+texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2025/texmf-dist/fonts
+/type1/public/txfonts/rtcxr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/
+txfonts/rtxbmi.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi
+.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texliv
+e/2025/texmf-dist/fonts/type1/public/txfonts/txbsy.pfb><c:/texlive/2025/texmf-d
+ist/fonts/type1/public/txfonts/txex.pfb><c:/texlive/2025/texmf-dist/fonts/type1
+/public/txfonts/txsy.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts
+/txsya.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb><c:
+/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb><c:/texlive/2025/
+texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2025/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/
+utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/te
+xlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (154 pages, 11651215 bytes).
 PDF statistics:
- 6002 PDF objects out of 6186 (max. 8388607)
- 3724 compressed objects within 38 object streams
- 1001 named destinations out of 1200 (max. 500000)
+ 6024 PDF objects out of 6186 (max. 8388607)
+ 3746 compressed objects within 38 object streams
+ 1019 named destinations out of 1200 (max. 500000)
  1350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

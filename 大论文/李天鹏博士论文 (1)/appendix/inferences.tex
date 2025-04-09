@@ -56,15 +56,16 @@
 	\end{longtable}
 \end{center}
 
-\textbf{本文的第三四章变分推断详细求解步骤如下：}
+\noindent\textbf{本文的第三、四章变分推断详细求解步骤如下：}
 \begin{proposition}
 	第三章所提出算法HB-DSBM参数的近似后验结果的推断
+	\label{HB-DSBM:inference}
 \end{proposition}
 %\textbf{HB-DSBM参数的近似后验结果推断证明如下：}
 
 
 \begin{proof}
-	\label{HB-DSBM:inference}
+	
 	由图模型~\ref{fig.4.1}与HB-DSBM的生成过程可写出模型的联合概率分布：
 	
 	\begin{equation}
@@ -351,10 +352,11 @@
 %\textbf{GEABS参数推断证明如下：}
 \begin{proposition}
 	第四章所提出GEABS算法的参数近似后验结果的推断
+	\label{GEABS:inference}
 \end{proposition}
 
 \begin{proof}
-	\label{GEABS:inference}
+	
 	为了优化公式~\ref{eq:O8}的联合分布，需要计算给定观测变量和超参数的后验函数，可以写成如下形式：
 	\begin{equation}
 		Pr(Z,\delta, A, \pi, \lambda, B | W, \mu) =

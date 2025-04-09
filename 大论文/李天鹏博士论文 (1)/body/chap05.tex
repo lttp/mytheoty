@@ -28,7 +28,7 @@
 
 由于网络结构本身随时间演化（动态或时间网络）\cite{huang2015triadic}，例如节点的增加和消失以及边的变化，这些因素也驱动了社团的动态行为。因此，确定动态网络中的变化是正常还是异常变得非常困难。网络异常的原因也非常复杂，异常的形式多种多样，包括异常节点、异常边、异常子图以及变化点检测\cite{ranshous2015anomaly}。与此同时，动态网络中的异常检测有助于更好地理解网络的演化状态，评估网络的异常程度及其影响，并制定有效的干预措施来应对网络中的潜在危机。例如，通过适当使用异常检测来发现由网络演化引起的非平稳演化时间点，可以提高社团检测的准确性。它还可以应用于生物系统中的异常基因识别、气候预测和金融市场等领域。
 
-一般来说，大多数现有的异常检测方法通常基于特定的视角，即分别在宏观、微观和中观层次上追踪动态网络在不同时间的演化，忽略了这三个层次上异常的相互影响。例如，~\cite{hassanzadeh2013semi,heard2010bayesian} 聚焦于微观层次的异常检测（即异常节点或边），~\cite{8648298,7953678,XIAO2019124} 聚焦于各种神经网络的异常检测，以改进收敛性能，~\cite{hulovatyy2016scout,cheung2020simultaneous} 聚焦于宏观层次的异常检测（即变化点）。事实上，在网络演化过程中，多个类型的异常同时发生是很有可能的，并且不同层次上的异常之间是相关的，在一个层次上的异常检测也有助于其他层次上的异常检测。以金融市场中的异常检测为例。在一个金融交易网络中，节点是账户，边是账户之间的交易。那么，微观层次的异常事件可以是与不同社团频繁交易的节点。在现实生活中，该账户可能是正常账户，也可能是用于欺诈的账户。
+一般来说，大多数现有的异常检测方法通常基于特定的视角，即分别在宏观、微观和中观层次上追踪动态网络在不同时间的演化，忽略了这三个层次上异常的相互影响。例如，FALCON~\cite{10597831} 聚焦于微观层次的异常检测（即异常节点或边），QRDN-ZNN~\cite{LI2025107412} 聚焦于神经网络的异常检测，以改进收敛性能，TCDformer~\cite{wan2024tcdformer} 聚焦于宏观层次的异常检测（即变化点）。事实上，在网络演化过程中，多个类型的异常同时发生是很有可能的，并且不同层次上的异常之间是相关的，在一个层次上的异常检测也有助于其他层次上的异常检测。以金融市场中的异常检测为例。在一个金融交易网络中，节点是账户，边是账户之间的交易。那么，微观层次的异常事件可以是与不同社团频繁交易的节点。在现实生活中，该账户可能是正常账户，也可能是用于欺诈的账户。
 
 
 在中观层次上，异常事件可以是一些账户之间频繁交易，随后突然分裂成两个或更多的群体。这些账户在现实生活中可能属于一个大型公司，这一分裂事件可能表明该公司已经进行了重组。在宏观层次上的异常事件是整个市场发生了剧烈波动，这在金融市场网络中表现为网络变化的一个节点。此外，异常账户的积累可能导致账户群体发生剧变，整个市场的大事件可能会影响所有账户群体和账户（如金融危机）。如图~\ref{fig:example}所示，网络中节点$v_{7}$的状态随时间不断变化，因此它可以被视为整个网络演化中的异常点。换句话说，它的异常导致了整个网络的异常。然而，$v_{7}$的异常也可以视为中观层次异常的结果（即社团的分裂和合并）。这导致了网络演化过程中微观层次（异常节点）和中观层次（异常子图）异常的耦合。因此，可以看出，不同层次的异常之间是有相关性的，在一个层次上的异常检测也有助于其他层次上的异常检测。仅仅考虑单一类型的异常不足以支持网络演化规律的全面挖掘。换言之，网络在宏观、微观和中观层次上的异常是相互关联的，并且受到更深层次因素的驱动。异常只是表象，背后的本质尚未揭示。
@@ -367,7 +367,7 @@ O = & Pr(W, Z,\delta, A|\pi, \lambda, \mu, B) = Q_1 \prod_{t=2}^{T} O_t \nonumbe
 % \label{eq:networkanomaly}
 % \end{equation}
 
-\section{模型推断及参数求解}
+\section{模GEABS型推断及参数求解}
 \label{sec4:inference}
 为了优化公式~\ref{eq:O8}的联合分布，需要计算给定观测变量和超参数的后验函数，可以写成如下形式：
 \begin{equation}
@@ -406,7 +406,7 @@ q(\phi,\bar{\delta}, \tilde{\mu}) = \prod_t \Big[ \prod_i q(\phi_i^{(t)}) \prod_
 
 \subsection{隐变量更新公式推断}
 
-在GEABS模型中，快照$t=1$的隐变量依赖于快照$t=2$的隐变量，而快照$T$的变量则受$T-1$的约束。对于快照$t=2, \cdots, T-1$的变量，其推断受到前后两个快照的组合影响。参数及隐变量的更新公式推断详细内容见~\ref{GEABS:inference}，这里给出更新公式。
+在GEABS模型中，快照$t=1$的隐变量依赖于快照$t=2$的隐变量，而快照$T$的变量则受$T-1$的约束。对于快照$t=2, \cdots, T-1$的变量，其推断受到前后两个快照的组合影响。参数及隐变量的更新公式推断详细内容见附录命题~\ref{GEABS:inference}，这里给出更新公式。
 \subsubsection{$t=1$时的隐变量更新公式}
 当$t=1$时，$\phi_{ik}^{(1)}$的更新规则为：
 \begin{equation}
@@ -431,8 +431,7 @@ $\bar{\delta}_i^{(1)}$的梯度为：
 $\phi_{ik}^{(t)}$、$\tilde{\mu}_{kl}^t$、$\frac{\partial \mathscr{L}_t}{\partial \bar{\delta}_i^{(t)}}$的更新规则如公式~\ref{eq:phit} ~\ref{eq:A}和~\ref{eq:deltat} 所示：
    \begin{equation}
    \begin{split}
-   \phi_{ik}^{(t)} \propto \\
-   &\exp\bigg\{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log B_{kl} \\
+   &\phi_{ik}^{(t)} \propto \exp\bigg\{ \sum_{w_{ij}^{(t)}=1} (1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}) \sum_l \phi_{jl}^{(t)} \log B_{kl} \\
    & -\sum_{w_{ij}^{(t)}=0} \sum_l \phi_{jl}^{(t)}  B_{kl}^{1+\bar{\delta}_i^{(t)}+\bar{\delta}_j^{(t)}}  \\
   & +\sum_k \phi_{ik}^{(t-1)} \Big[\psi(\tilde{\mu}_{kl}^{(t)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t)})\Big] \\
    &+ \sum_l \phi_{il}^{(t+1)} \Big[\psi(\tilde{\mu}_{kl}^{(t+1)}) - \psi(\sum_l \tilde{\mu}_{kl}^{(t+1)})\Big] \bigg\},
@@ -550,7 +549,7 @@ z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl
 
 GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^2N^2)$。其中$T$是网络快照数、$N$是网络中的节点数、$K$是社团的平均个数。考虑到大部分真实世界网络都是稀疏的，且社团个数远远少于节点个数，本模型可以进一步引入负采样或并行计算来优化模型的计算效率。
 
-\section{实验评测\label{chap4:experiment}}
+\section{GEABS模型实验\label{chap4:experiment}}
 
 % In this section, we verify the proposed method on both the and synthetic and real-world dynamic networks, including detecting abnormal behaviors caused by changes in the macroscopic, mesoscopic, and micro-scale levels of the network. We compare our results with some baselines on the different tasks (community detection, anomaly detection on network level, community level, and node level). Besides, we also show a case study to verify the effectiveness of the proposed model.
 本节在生成和真实世界的动态网络上验证所提出的方法的贡献，包括检测网络宏观、介观和微观层次变化引起的动态网络演化异常及动态随机块模型的经典任务社团检测。通过将GEABS与典型的对比方法在不同下游任务（社团检测、网络层次的异常检测、社团层次的异常检测和节点层次的异常检测）进行比较，以验证GEABS在多种下游任务的有效性。另外，为了验证本方法的实际应用效果，本章还提供了一个基于世界贸易网络的案例分析。
@@ -567,7 +566,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 
 \item \textbf{Enron email 网络~\cite{benston2002enron}}：Enron网络是由Enron Energy公司的$151$名高级经理之间的电子邮件通信构建的，该公司在$2001$年因被发现商业欺诈而申请破产。本章提取了一个具有$12$个快照的动态社交网络。
 
-\item \textbf{World trade network~\cite{worldset2002}}：世界贸易网络数据记录了$1948$年至$2000$年间$196$个国家和地区的年度进出口贸易总额。本章将数据整理成了一个动态网络，该网络包含$196$个节点，$5,735$条边和$53$个网络快照，每个快照记录了全球一年的各国家和地区的贸易关系。
+\item \textbf{World Trade 网络~\cite{worldset2002}}：世界贸易网络数据记录了$1948$年至$2000$年间$196$个国家和地区的年度进出口贸易总额。本章将数据整理成了一个动态网络，该网络包含$196$个节点，$5,735$条边和$53$个网络快照，每个快照记录了全球一年的各国家和地区的贸易关系。
 \end{itemize}
 
 
@@ -636,7 +635,7 @@ GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^
 			\toprule 
 			数据集 & 日期 & 事件 (对应变更点) \\
 			\midrule
-			&2001-02&Tom White 从 EES 公司辞职\footnote{https://www.agsm.edu.au/bobm/teaching/BE/Enron/timeline.html}\\ 
+			&2001-02&Tom White 从 EES 公司辞职\footnote{https://www.agsm.edu.au/bobm/teaching/BE/Enron/timeline.html} \\ 
 			
 			&2001-04&季度电话会议召开\\ 
 			
@@ -763,7 +762,7 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 		\end{tabular}  
 	\end{threeparttable}  
 \end{table}
-如表~\ref{tab:performance_comparison}所示，本章的方法GEABS在所有对比方法中表现最佳。GEABS在Enron数据上的精度为$1$，这表明GEABS找到的所有异常点都是真实的。GEABS在World Trade数据集上的召回率约为$0.91$，这意味着该方法几乎找到了该数据中的所有异常点。值得一提的是，正如图~\ref{fig:enron-net}所示，该图计算了GEABS、NetWalk和LAD在Enron 数据集和World Trade数据集中，前$k$个网络级异常值对异常事件的击中率。由于 World Trade数据集相对复杂，NetWalk和LAD在该数据集中表现不佳。但在 Enron数据集中，NetWalk具有良好的击中率。然而，NetWalk和LAD的前$10$个击中率都低于GEABS。反观GEABS，其在Enron数据集中，前$5$个网络异常的击中率为$100\%$，而在World Trade数据集中，GEABS的前$3$个网络异常值的击中率为$100\%$，这证明了GEABS网络级异常检测方案的有效性和所提出网络演化异常指标的正确性。
+如表~\ref{tab:performance_comparison}所示，本章的方法 GEABS 在所有对比方法中表现最佳。GEABS在Enron数据上的精度为$1$，这表明GEABS找到的所有异常点都是真实的。GEABS在World Trade数据集上的召回率约为$0.91$，这意味着该方法几乎找到了该数据中的所有异常点。值得一提的是，正如图~\ref{fig:enron-net}所示，该图计算了GEABS、NetWalk和LAD在Enron 数据集和World Trade数据集中，前$k$个网络级异常值对异常事件的击中率。由于 World Trade数据集相对复杂，NetWalk和LAD在该数据集中表现不佳。但在 Enron数据集中，NetWalk具有良好的击中率。然而，NetWalk和LAD的前$10$个击中率都低于GEABS。反观GEABS，其在Enron数据集中，前$5$个网络异常的击中率为$100\%$，而在World Trade数据集中，GEABS的前$3$个网络异常值的击中率为$100\%$，这证明了GEABS网络级异常检测方案的有效性和所提出网络演化异常指标的正确性。
 
 
 

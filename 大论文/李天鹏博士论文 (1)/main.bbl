@@ -11,17 +11,16 @@ Albert~R, Jeong~H, Barab{\'a}si~A-L.
 Diameter of the world-wide web~[J].
 Nature, 1999, 401~(6749):  130--131.
 
-\bibitem{mets2014combining}
-Mets~K, Ojea~J~A, Develder~C.
-Combining power and communication network simulation for cost-effective smart
-  grid analysis~[J].
-IEEE Communications Surveys \& Tutorials, 2014, 16~(3):  1771--1796.
+\bibitem{NEURIPS2024_c7caf017}
+Varbella~A, Amara~K, Gjorgiev~B, \emph{et~al}.
+PowerGraph: A power grid benchmark dataset for graph neural
+  networks~[C]~//~Globerson~A, Mackey~L, Belgrave~D, \emph{et~al}.
+In Advances in Neural Information Processing Systems, 2024:  110784--110804.
 
-\bibitem{bodini2002towards}
-Bodini~A, Bondavalli~C.
-Towards a sustainable use of water resources: a whole-ecosystem approach using
-  network analysis~[J].
-International Journal of Environment and Pollution, 2002, 18~(5):  463--485.
+\bibitem{orgovanyi2025geocoding}
+Orgov{\'a}nyi~P, Hammer~T, Karches~T.
+Geocoding Applications for Enhancing Urban Water Supply Network Analysis~[J].
+Urban Science, 2025, 9~(2): ~51.
 
 \bibitem{barnes2024temporal}
 Barnes~M~R, Karan~M, McQuistin~S, \emph{et~al}.
@@ -35,28 +34,28 @@ Mariani~M~S, Battiston~F, Horv{\'a}t~E-{\'A}, \emph{et~al}.
 Collective dynamics behind success~[J].
 Nature communications, 2024, 15~(1):  10701.
 
-\bibitem{dunne2002food}
-Dunne~J~A, Williams~R~J, Martinez~N~D.
-Food-web structure and network theory: the role of connectance and size~[J].
-Proceedings of the National Academy of Sciences, 2002, 99~(20):  12917--12922.
+\bibitem{sanders2024ecosystem}
+Sanders~D, Frago~E.
+Ecosystem engineers shape ecological network structure and stability: A
+  framework and literature review~[J].
+Functional Ecology, 2024, 38~(8):  1683--1696.
 
-\bibitem{zhang2018review}
-Zhang~L, Lu~J, Fu~B-b, \emph{et~al}.
-A review and prospect for the complexity and resilience of urban public transit
-  network based on complex network theory~[J].
-Complexity, 2018, 2018~(1):  2156309.
+\bibitem{ZHANG2024114379}
+Zhang~J, Zhou~Y, Wang~S, \emph{et~al}.
+Critical station identification and robustness analysis of urban rail transit
+  networks based on comprehensive vote-rank algorithm~[J].
+Chaos, Solitons \& Fractals, 2024, 178~(1):  114379.
 
-\bibitem{zhu2016scalable}
-Zhu~L, Guo~D, Yin~J, \emph{et~al}.
-{Scalable Temporal Latent Space Inference for Link Prediction in Dynamic Social
-  Networks}~[J].
-IEEE Transactions on Knowledge and Data Engineering, 2016, 28~(10):
-  2765--2777.
+\bibitem{NEURIPS2024_25ead0ef}
+Ban~Y, Zou~J, Li~Z, \emph{et~al}.
+PageRank Bandits for Link Prediction~[C]~//~Globerson~A, Mackey~L, Belgrave~D,
+  \emph{et~al}.
+In Advances in Neural Information Processing Systems, 2024:  21342--21376.
 
-\bibitem{ahmed2016survey}
-Ahmed~M, Mahmood~A~N, Islam~M~R.
-A survey of anomaly detection techniques in financial domain~[J].
-Future Generation Computer Systems, 2016, 55~(1):  278--288.
+\bibitem{10535312}
+Cheng~X, Huo~Y, Lin~S, \emph{et~al}.
+Deep Feature Aggregation Network for Hyperspectral Anomaly Detection~[J].
+IEEE Transactions on Instrumentation and Measurement, 2024, 73:  1--16.
 
 \bibitem{kumar2024community}
 Kumar~M, Mishra~S, Singh~S~S, \emph{et~al}.
@@ -85,11 +84,6 @@ Urban mobility analytics amid COVID-19 pandemic: A framework for promoting work
   resumption based on mobile phone data~[J].
 Journal of Transport Geography, 2024, 117~(1):  103887.
 
-\bibitem{wu2019large}
-Wu~L, Wang~D, Evans~J~A.
-Large teams develop and small teams disrupt science and technology~[J].
-Nature, 2019, 566~(7744):  378--382.
-
 \bibitem{wang2022weak}
 Wang~D, Uzzi~B.
 Weak ties, failed tries, and success~[J].
@@ -101,16 +95,26 @@ Knowledge Selection Based Motif for Dynamic Community Detection~[C].
 In Proceedings of the International Conference on Applied Intelligence, 2024:
   139--149.
 
-\bibitem{jin2021survey}
-Jin~D, Yu~Z, Jiao~P, \emph{et~al}.
-A survey of community detection approaches: From statistical modeling to deep
-  learning~[J].
-IEEE Transactions on Knowledge and Data Engineering, 2021, 35~(2):  1149--1170.
+\bibitem{LI2024128169}
+Li~J, Lai~S, Shuai~Z, \emph{et~al}.
+A comprehensive review of community detection in graphs~[J].
+Neurocomputing, 2024, 600:  128169.
+
+\bibitem{peng2024unsupervised}
+Peng~H, Zhang~J, Huang~X, \emph{et~al}.
+Unsupervised social bot detection via structural information theory~[J].
+ACM Transactions on Information Systems, 2024, 42~(6):  1--42.
 
 \bibitem{girvan2002community}
 Girvan~M, Newman~M~E.
 Community structure in social and biological networks~[J].
 Proceedings of the National Academy of Sciences, 2002, 99~(12):  7821--7826.
+
+\bibitem{jin2021survey}
+Jin~D, Yu~Z, Jiao~P, \emph{et~al}.
+A survey of community detection approaches: From statistical modeling to deep
+  learning~[J].
+IEEE Transactions on Knowledge and Data Engineering, 2021, 35~(2):  1149--1170.
 
 \bibitem{zhang2009modularity}
 Zhang~X-S, Wang~R-S, Wang~Y, \emph{et~al}.
@@ -163,11 +167,10 @@ Journal of Graph Algorithms and Applications, 2006, 10~(2):  191--218.
 带偏置的信号传播的随机游走的社团检测算法~[J].
 计算机科学, 2019, 46~(12):  45--55.
 
-\bibitem{snijders1997estimation}
-Snijders~T~A, Nowicki~K.
-Estimation and prediction for stochastic blockmodels for graphs with latent
-  block structure~[J].
-Journal of Classification, 1997, 14~(1):  75--100.
+\bibitem{Huang02072024}
+Huang~S, Sun~J, and~Y~F.
+PCABM: Pairwise Covariates-Adjusted Block Model for Community Detection~[J].
+Journal of the American Statistical Association, 2024, 119~(547):  2092--2104.
 
 \bibitem{karrer2011stochastic}
 Karrer~B, Newman~M~E.
@@ -329,6 +332,12 @@ Falkowski~T, Barth~A, Spiliopoulou~M.
 Studying community dynamics with an incremental graph mining algorithm~[J].
 Americas Conference on Information Systems Proceedings, 2008, 1~(1): ~29.
 
+\bibitem{10486339}
+Kulkarni~O, Burhanpurwala~A.
+A Survey of Advancements in DBSCAN Clustering Algorithms for Big Data~[C].
+In 2024 3rd International conference on Power Electronics and IoT Applications
+  in Renewable Energy and its Control, 2024:  106--111.
+
 \bibitem{nguyen2011adaptive}
 Nguyen~N~P, Dinh~T~N, Xuan~Y, \emph{et~al}.
 Adaptive algorithms for detecting community structure in dynamic social
@@ -343,10 +352,10 @@ In Proceedings of the IEEE International Conference on Data Mining, 2007:
   745--750.
 
 \bibitem{folino2013evolutionary}
-Folino~F, Pizzuti~C.
-An evolutionary multiobjective approach for community discovery in dynamic
-  networks~[J].
-IEEE Transactions on Knowledge and Data Engineering, 2013, 26~(8):  1838--1852.
+Sun~Z, Wang~G, Li~P, \emph{et~al}.
+An improved random forest based on the classification accuracy and correlation
+  measurement of decision trees~[J].
+Expert Systems with Applications, 2024, 237~(1):  121549.
 
 \bibitem{sun2013co}
 Sun~Y, Tang~J, Han~J, \emph{et~al}.
@@ -502,6 +511,12 @@ Travel Behaviour and Society, 2023, 31~(1):  209--222.
 复杂网络社团发现综述~[J].
 计算机科学, 2023, 50~(S2):  414--424.
 
+\bibitem{tantipathananandh2007framework}
+Tantipathananandh~C, Berger-Wolf~T, Kempe~D.
+A framework for community identification in dynamic social networks~[C].
+In Proceedings of the ACM international conference on Knowledge discovery and
+  data mining, 2007:  717--726.
+
 \bibitem{kawadia2012sequential}
 Kawadia~V, Sreenivasan~S.
 Sequential detection of temporal communities by estrangement confinement~[J].
@@ -614,12 +629,6 @@ Mrabah~N, Khan~N~M, Ksantini~R, \emph{et~al}.
 Deep clustering with a Dynamic Autoencoder: From reconstruction towards
   centroids construction~[J].
 Neural Networks, 2020, 130~(1):  206--228.
-
-\bibitem{tantipathananandh2007framework}
-Tantipathananandh~C, Berger-Wolf~T, Kempe~D.
-A framework for community identification in dynamic social networks~[C].
-In Proceedings of the ACM international conference on Knowledge discovery and
-  data mining, 2007:  717--726.
 
 \bibitem{tantipathananandh2009constant}
 Tantipathananandh~C, Berger-Wolf~T.
@@ -744,6 +753,12 @@ A new multi-objective evolutionary framework for community mining in dynamic
   social networks~[J].
 Swarm and Evolutionary Computation, 2016, 31~(1):  90--109.
 
+\bibitem{NEURIPS2024_a3017a8d}
+Chen~Y, Huang~B, Zhao~L, \emph{et~al}.
+Multidimensional Fractional Programming for Normalized Cuts~[C]~//~Globerson~A,
+  Mackey~L, Belgrave~D, \emph{et~al}.
+In Advances in Neural Information Processing Systems, 2024:  89563--89583.
+
 \bibitem{yin2021multi}
 Yin~Y, Zhao~Y, Li~H, \emph{et~al}.
 Multi-objective evolutionary clustering for large-scale dynamic community
@@ -766,7 +781,7 @@ In Proceedings of the ACM international workshop on Complex networks meet
 Hulovatyy~Y, Milenkovi{\'c}~T.
 SCOUT: simultaneous time segmentation and community detection in dynamic
   networks~[J].
-Scientific reports, 2016, 6~(1):  37557.
+Scientific Reports, 2016, 6~(1):  37557.
 
 \bibitem{ghasemian2016detectability}
 Ghasemian~A, Zhang~P, Clauset~A, \emph{et~al}.
@@ -808,6 +823,12 @@ Yu~B, Yin~H, Zhu~Z.
 Spatio-temporal graph convolutional networks: A deep learning framework for
   traffic forecasting~[J].
 arXiv preprint arXiv:1709.04875:  1--1.
+
+\bibitem{aravind2019dysat}
+Sankar~A, Wu~Y, Gou~L, \emph{et~al}.
+Dynamic Graph Representation Learning via Self-Attention Networks~[C].
+In Proceedings of the International Conference on Learning Representations,
+  Workshop on Representation Learning on Graphs and Manifolds, 2019:  1--1.
 
 \bibitem{park2022cgc}
 Park~N, Rossi~R, Koh~E, \emph{et~al}.
@@ -867,9 +888,20 @@ Variational autoencoder~[M]~//~Pinheiro~Cinelli~L, Ara{\'u}jo~Marins~M,
 Springer, 2021: 2021: 111--149.
 
 \bibitem{gong2007machine}
-Gong~Y, Xu~W.
-Machine learning for multimedia content analysis~[M].
-Springer Science \& Business Media, 2007.
+Jerdee~M, Kirkley~A, Newman~M.
+Mutual information and the encoding of contingency tables~[J].
+Physical Review E, 2024, 110~(6):  064306.
+
+\bibitem{ZHAO2024115482}
+Zhao~Z, Zhang~N, Xie~J, \emph{et~al}.
+Detecting network communities based on central node selection and
+  expansion~[J].
+Chaos, Solitons \& Fractals, 2024, 188~(1):  115482.
+
+\bibitem{zhang2024inductive}
+Zhang~R, Pitkow~X, Angelaki~D~E.
+Inductive biases of neural network modularity in spatial navigation~[J].
+Science Advances, 2024, 10~(29):  eadk1256.
 
 \bibitem{papadopoulos2012popularity}
 Papadopoulos~F, Kitsak~M, Serrano~M~{\'A}, \emph{et~al}.
@@ -1102,36 +1134,23 @@ Triadic closure pattern analysis and prediction in social networks~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2015, 27~(12):
   3374--3389.
 
-\bibitem{hassanzadeh2013semi}
-Hassanzadeh~R, Nayak~R.
-A semi-supervised graph-based algorithm for detecting outliers in
-  online-social-networks~[C].
-In Proceedings of the Annual ACM Symposium on Applied Computing, 2013:
-  577--582.
+\bibitem{10597831}
+Chen~D, Zhao~X, Xiao~W.
+Fine-Grained Anomaly Detection on Dynamic Graphs via Attention Alignment~[C].
+In 2024 IEEE 40th International Conference on Data Engineering (ICDE), 2024:
+  3178--3190.
 
-\bibitem{heard2010bayesian}
-Heard~N~A, Weston~D~J, Platanioti~K, \emph{et~al}.
-Bayesian anomaly detection methods for social networks~[J].
-The Annals of Applied Statistics, 2010, 1~(1):  645--662.
+\bibitem{LI2025107412}
+Li~Y, Liu~J, Jia~L, \emph{et~al}.
+Noise-resistant predefined-time convergent ZNN models for dynamic least squares
+  and multi-agent systems~[J].
+Neural Networks, 2025, 187~(1):  107412.
 
-\bibitem{8648298}
-Xiao~L, Zhang~Y, Hu~Z, \emph{et~al}.
-Performance Benefits of Robust Nonlinear Zeroing Neural Network for Finding
-  Accurate Solution of Lyapunov Equation in Presence of Various Noises~[J].
-IEEE Transactions on Industrial Informatics, 2019, 15~(9):  5161--5171.
-
-\bibitem{7953678}
-Xiao~L, Liao~B, Li~S, \emph{et~al}.
-Design and Analysis of FTZNN Applied to the Real-Time Solution of a
-  Nonstationary Lyapunov Equation and Tracking Control of a Wheeled Mobile
-  Manipulator~[J].
-IEEE Transactions on Industrial Informatics, 2018, 14~(1):  98--105.
-
-\bibitem{XIAO2019124}
-Xiao~L, Zhang~Y, Dai~J, \emph{et~al}.
-A new noise-tolerant and predefined-time ZNN model for time-dependent matrix
-  inversion~[J].
-Neural Networks, 2019, 117~(1):  124--134.
+\bibitem{wan2024tcdformer}
+Wan~J, Xia~N, Yin~Y, \emph{et~al}.
+TCDformer: A transformer framework for non-stationary time series forecasting
+  based on trend and change-point detection~[J].
+Neural Networks, 2024, 173~(1):  106196.
 
 \bibitem{cheung2020simultaneous}
 Cheung~R~C, Aue~A, Hwang~S, \emph{et~al}.

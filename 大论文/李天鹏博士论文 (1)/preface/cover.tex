@@ -21,8 +21,9 @@
 %注释多行CTRL + T，取消注释多行CTRL + U
 %非匿名版
 \cheading{天津大学博士学位论文}
-\ctitle{高阶生成机理导向的大规模动态网络\newline 社团检测及演化分析研究}  %封面用论文标题，自己可手动断行
-\etitle{Higher-Order Generative Mechanism Guided Large-scale Dynamic Community Detection and Evolution Analysis}
+\ctitle{高阶生成机理导向的大规模动态网络\newline 
+	社团检测及演化分析研究}  %封面用论文标题，自己可手动断行
+\etitle{Higher-Order Generative Mechanism Guided Large-Scale Dynamic Community Detection and Evolution Analysis}
 %\caffil{计算机科学与技术学院} %学院名称
 \caffil{智能与计算学部} 
 \cmacrosubjecttitle{一级学科}
@@ -66,12 +67,12 @@
 动态网络社团检测及其演化分析能够有效地挖掘复杂网络的结构和功能及其演化模式，广泛应用于城市规划、推荐系统、突发事件检测等领域。动态网络社团检测任务的核心是对动态网络演化模式的有效建模，现有方法对动态网络演化模式的刻画忽略了对网络高阶生成机理的融合，无法有效支撑社团演化分析。针对上述问题，本文在动态随机块模型的基础上，从实证出发，研究融合网络高阶生成机理的动态网络社团检测与演化分析问题。主要研究内容包括：
 
 
-第一，针对动态随机块模型的高阶生成机理建模的问题，首先提出了动态网络节点与社团演化的关联挖掘框架，通过将动态网络中节点的社团演化问题转化为相邻网络快照中节点是否发生社团归属转移的二分类问题，定性挖掘了节点的演化异质性。并基于该实证提出了基于层次狄利克雷生成结构的层次动态随机块模型HB-DSBM，通过引入社团-节点的层次社团转移高阶生成结构建模了同一社团内节点的演化异质性。
+第一，针对动态随机块模型的高阶生成机理建模问题，提出了动态网络节点与社团演化的关联挖掘框架，通过将动态网络中节点的社团演化问题转化为相邻网络快照中节点是否发生社团归属转移的二分类问题，定性挖掘了节点的演化异质性。基于该实证提出了基于层次狄利克雷生成结构的动态随机块模型，通过引入社团-节点的层次社团转移高阶生成结构建模了同一社团内节点的演化异质性。
 
 第二，针对动态随机块模型的演化分析能力提升，提出了动态网络层次演化异常检测方法，引入节点流行度参数捕获节点在拓扑与演化层面的异质性，提出动态网络层次演化异常检测指标以识别动态网络节点、社团、网络快照各层次的演化异常，扩展模型对动态网络演化分析的维度，在真实世界网络中进行了验证与演化异常挖掘实证。
 
 
-第三，提出了基于深度生成模型的动态网络社团检测算法。针对高精度随机块模型参数过多、参数后验推断复杂而造成模型对大规模数据处理能力差的核心问题，通过引入深度生成模型的变分自编码器架构扩展了动态随机块模型的大规模数据应用能力，同时保留参数的可解释性。
+第三，针对动态随机块模型的大规模数据应用，提出了基于深度生成模型的动态网络社团检测算法。针对高精度随机块模型参数过多、参数后验推断复杂而造成模型对大规模数据处理能力差的核心问题，通过引入深度生成模型架构扩展了动态随机块模型的大规模数据应用能力并保留参数的可解释性。
 
 本文从动态网络的高阶生成机理出发，以动态网络高阶演化异质性实证挖掘为基础，基于随机块模型设计了动态网络社团检测与演化分析方法，扩展了随机块模型的演化分析深度，依托深度生成模型为动态随机块模型的大规模数据应用提供了方法框架，实验与实证分析验证了所提出方法的有效性与实用性。
 
@@ -87,18 +88,18 @@
 
 Community detection and evolution analysis in dynamic networks are essential for understanding the structural and functional changes within complex networks. These methods find wide application in areas such as urban planning, recommendation systems, and event detection. A key challenge in this field is modeling the evolution patterns of dynamic networks accurately. Existing approaches often fail to incorporate higher-order generative mechanisms of dynamic networks, which limits their effectiveness in community evolution analysis. This thesis addresses this gap by extending the dynamic stochastic block model (DSBM) and conducting an empirical study of community detection and evolution in dynamic networks. The research is organized around three primary contributions:
 
-First, to address the shortcomings of heuristic modeling in traditional DSBMs, we propose a framework to explore the relationships between node and community evolution in dynamic networks. By reframing node community evolution as a binary classification problem—determining whether a node’s community membership shifts between consecutive network snapshots—we confirm the presence of evolutionary heterogeneity among nodes. Building on this finding, we introduce the Hierarchical Dynamic Stochastic Block Model (HB-DSBM), which integrates a hierarchical Dirichlet generative structure to account for varying evolutionary patterns within communities.
+First, to address the shortcomings of heuristic modeling in traditional DSBMs, we propose a framework to explore the relationships between node and community evolution in dynamic networks. By reframing node community evolution as a binary classification problem—determining whether a node's community membership shifts between consecutive network snapshots—we confirm the presence of evolutionary heterogeneity among nodes. Building on this finding, we introduce the Hierarchical Dynamic Stochastic Block Model, which integrates a hierarchical Dirichlet generative structure to account for varying evolutionary patterns within communities.
 
-Second, we enhance the evolutionary analysis capabilities of the DSBM by developing a method to detect hierarchical evolutionary anomalies in dynamic networks. By incorporating a node popularity parameter, we capture heterogeneity at both topological and evolutionary levels. We then define a set of indicators to identify anomalies across multiple scales, including individual nodes, communities, and network snapshots. Experiments on real-world networks validate this approach, demonstrating its effectiveness in anomaly detection and broadening the model’s analytical scope.
+Second, we enhance the evolutionary analysis capabilities of the DSBM by developing a method to detect hierarchical evolutionary anomalies in dynamic networks. By incorporating a node popularity parameter, we capture heterogeneity at both topological and evolutionary levels. We then define a set of indicators to identify anomalies across multiple scales, including individual nodes, communities, and network snapshots. Experiments on real-world networks validate this approach, demonstrating its effectiveness in anomaly detection and broadening the model's analytical scope.
 
-Third, we propose a deep generative model-based algorithm for community detection in dynamic networks. To overcome the scalability challenges posed by parameter-heavy stochastic block models and their complex posterior inference, we employ a variational autoencoder framework from deep generative models. This adaptation improves the DSBM’s ability to process large-scale data while retaining parameter interpretability.
+Third, we propose a deep generative model-based algorithm for community detection in dynamic networks. To overcome the scalability challenges posed by parameter-heavy stochastic block models and their complex posterior inference, we employ a variational autoencoder framework from deep generative models. This adaptation improves the DSBM's ability to process large-scale data while retaining parameter interpretability.
 
-This thesis begins with an exploration of higher-order generative mechanisms in dynamic networks and, through empirical analysis of evolutionary heterogeneity, develops innovative methods for community detection and evolution analysis based on the stochastic block model. It strengthens the model’s evolutionary analysis capabilities and offers a scalable solution for large datasets using deep generative models. Experimental results and empirical evaluations affirm the effectiveness and practical value of the proposed approaches.
+This thesis begins with an exploration of higher-order generative mechanisms in dynamic networks and, through empirical analysis of evolutionary heterogeneity, develops innovative methods for community detection and evolution analysis based on the stochastic block model. It strengthens the model'  s evolutionary analysis capabilities and offers a scalable solution for large datasets using deep generative models. Experimental results and empirical evaluations affirm the effectiveness and practical value of the proposed approaches.
 
 
 }
 
-\ekeywords{Complex network, community detection, dynamic network community evolution analysis}
+\ekeywords{Complex Network, Community Detection, Dynamic Network Community Evolution Analysis}
 
 \makecover
 
