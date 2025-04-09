@@ -38,7 +38,7 @@ Nature communications, 2024, 15~(1):  10701.
 \bibitem{dunne2002food}
 Dunne~J~A, Williams~R~J, Martinez~N~D.
 Food-web structure and network theory: the role of connectance and size~[J].
-National Academy of Sciences, 2002, 99~(20):  12917--12922.
+Proceedings of the National Academy of Sciences, 2002, 99~(20):  12917--12922.
 
 \bibitem{zhang2018review}
 Zhang~L, Lu~J, Fu~B-b, \emph{et~al}.
@@ -101,16 +101,16 @@ Knowledge Selection Based Motif for Dynamic Community Detection~[C].
 In Proceedings of the International Conference on Applied Intelligence, 2024:
   139--149.
 
-\bibitem{girvan2002community}
-Girvan~M, Newman~M~E.
-Community structure in social and biological networks~[J].
-National Academy of Sciences, 2002, 99~(12):  7821--7826.
-
 \bibitem{jin2021survey}
 Jin~D, Yu~Z, Jiao~P, \emph{et~al}.
 A survey of community detection approaches: From statistical modeling to deep
   learning~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2021, 35~(2):  1149--1170.
+
+\bibitem{girvan2002community}
+Girvan~M, Newman~M~E.
+Community structure in social and biological networks~[J].
+Proceedings of the National Academy of Sciences, 2002, 99~(12):  7821--7826.
 
 \bibitem{zhang2009modularity}
 Zhang~X-S, Wang~R-S, Wang~Y, \emph{et~al}.
@@ -121,7 +121,7 @@ Europhysics Letters, 2009, 87~(3):  38002.
 Zhang~P, Moore~C.
 Scalable detection of statistically significant communities and hierarchies,
   using message passing for modularity~[J].
-National Academy of Sciences, 2014, 111~(51):  18144--18149.
+Proceedings of the National Academy of Sciences, 2014, 111~(51):  18144--18149.
 
 \bibitem{lee2012modularity}
 Lee~J, Gross~S~P, Lee~J.
@@ -286,7 +286,8 @@ Knowledge-Based Systems, 2021, 229~(1):  107345.
 \bibitem{hopcroft2004tracking}
 Hopcroft~J, Khan~O, Kulis~B, \emph{et~al}.
 Tracking evolving communities in large linked networks~[J].
-National Academy of Sciences, 2004, 101~(suppl\_1):  5249--5253.
+Proceedings of the National Academy of Sciences, 2004, 101~(suppl\_1):
+  5249--5253.
 
 \bibitem{asur2009event}
 Asur~S, Parthasarathy~S, Ucar~D.
@@ -715,7 +716,7 @@ Physica A: Statistical Mechanics and its Applications, 2016, 456~(1):
 \bibitem{liu2018global}
 Liu~F, Choi~D, Xie~L, \emph{et~al}.
 Global spectral clustering in dynamic networks~[J].
-National Academy of Sciences, 2018, 115~(5):  927--932.
+Proceedings of the National Academy of Sciences, 2018, 115~(5):  927--932.
 
 \bibitem{karaaslanli2021community}
 Karaaslanl{\i}~A, Aviyente~S.
@@ -895,7 +896,7 @@ Science, 2010, 328~(5980):  876--878.
 \bibitem{PisCes}
 Liu~F, Choi~D, Xie~L, \emph{et~al}.
 Global spectral clustering in dynamic networks~[J].
-National Academy of Sciences, 2018, 115~(5):  927--932.
+Proceedings of the National Academy of Sciences, 2018, 115~(5):  927--932.
 
 \bibitem{rossetti2017tiles}
 Rossetti~G, Pappalardo~L, Pedreschi~D, \emph{et~al}.
@@ -1009,7 +1010,7 @@ Journal of Machine Learning Research, 2021, 22~(69):  1--63.
 Godoy-Lorite~A, Guimer{\`a}~R, Moore~C, \emph{et~al}.
 Accurate and scalable social recommendation using mixed-membership stochastic
   block models~[J].
-National Academy of Sciences, 2016, 113~(50):  14207--14212.
+Proceedings of the National Academy of Sciences, 2016, 113~(50):  14207--14212.
 
 \bibitem{qin2022consistent}
 Qin~J, Lei~J.
@@ -1178,7 +1179,7 @@ Knowledge-Based Systems, 2023, 261~(1):  110202.
 \bibitem{liu2018using}
 Liu~F, Choi~D, Xie~L, \emph{et~al}.
 Global spectral clustering in dynamic networks~[J].
-National Academy of Sciences, 2018, 115~(5):  927--932.
+Proceedings of the National Academy of Sciences, 2018, 115~(5):  927--932.
 
 \bibitem{hartmann2016clustering}
 Hartmann~T, Kappes~A, Wagner~D.
@@ -1224,7 +1225,7 @@ The World Economy, 2012, 35~(7):  946--952.
 \bibitem{gopalan2013efficient}
 Gopalan~P~K, Blei~D~M.
 Efficient discovery of overlapping communities in massive networks~[J].
-National Academy of Sciences, 2013, 110~(36):  14534--14539.
+Proceedings of the National Academy of Sciences, 2013, 110~(36):  14534--14539.
 
 \bibitem{chikhaoui2015new}
 Chikhaoui~B, Chiazzaro~M, Wang~S.
@@ -1253,12 +1254,12 @@ IEEE Transactions on Knowledge and Data Engineering, 2016, 28~(5):  1272--1284.
 \bibitem{del2016spreading}
 Del~Vicario~M, Bessi~A, Zollo~F, \emph{et~al}.
 The spreading of misinformation online~[J].
-National Academy of Sciences, 2016, 113~(3):  554--559.
+Proceedings of the National Academy of Sciences, 2016, 113~(3):  554--559.
 
 \bibitem{lu2015toward}
 L{\"u}~L, Pan~L, Zhou~T, \emph{et~al}.
 Toward link predictability of complex networks~[J].
-National Academy of Sciences, 2015, 112~(8):  2325--2330.
+Proceedings of the National Academy of Sciences, 2015, 112~(8):  2325--2330.
 
 \bibitem{yu2017link}
 Yu~W, Cheng~W, Aggarwal~C~C, \emph{et~al}.
@@ -1479,7 +1480,7 @@ In Proceedings of the IEEE International Conference on Acoustics, Speech and
 \bibitem{Krzakala.2013.Zhang}
 Krzakala~F, Moore~C, Mossel~E, \emph{et~al}.
 {Spectral redemption in clustering sparse networks}~[J].
-National Academy of Sciences, 2013, 110~(52):  20935--20940.
+Proceedings of the National Academy of Sciences, 2013, 110~(52):  20935--20940.
 
 \bibitem{wang2022powerful}
 Wang~X, Zhang~M.
