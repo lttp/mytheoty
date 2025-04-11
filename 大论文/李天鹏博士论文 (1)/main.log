@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.19)  10 APR 2025 03:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.19)  10 APR 2025 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1798,6 +1798,12 @@ n/10.5/8d V \C70/rm/m/n/10.5/4e é \C70/rm/m/n/10.5/52 ^^] \C70/rm/m/n/10.5/59 À
 
  []
 
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <7.34996> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 60.
+
+Package natbib Warning: Citation `jeub2015think' on page 4 undefined on input l
+ine 60.
+
 
 Underfull \hbox (badness 6559) in paragraph at lines 60--60
 []|\C70/rm/m/n/10.5/57 ˙ \C70/rm/m/n/10.5/4e é \C70/rm/m/n/10.5/7e ﬂ \C70/rm/m/
@@ -1812,13 +1818,15 @@ m/n/10.5/66 Ù \C70/rm/m/n/10.5/52 † \C70/rm/m/n/10.5/5b å \C70/rm/m/n/10.5/55 Ñ
 |\C70/rm/m/n/10.5/ff ^^L|
  []
 
-LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <7.34996> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 60.
 
 Package natbib Warning: Citation `snijders1997estimation' on page 4 undefined o
 n input line 60.
 
-<figures/chap01/classification of dcd.png, id=849, 804.18564pt x 332.24799pt>
+
+Package natbib Warning: Citation `he2021community' on page 4 undefined on input
+ line 60.
+
+<figures/chap01/classification of dcd.png, id=846, 804.18564pt x 332.24799pt>
 File: figures/chap01/classification of dcd.png Graphic file (type png)
 <use figures/chap01/classification of dcd.png>
 Package pdftex.def Info: figures/chap01/classification of dcd.png  used on inpu
@@ -1843,7 +1851,7 @@ t line 78.
 [11]
 
 [12]
-<figures/chap01/framework.png, id=1054, 682.92725pt x 442.83563pt>
+<figures/chap01/framework.png, id=1046, 682.92725pt x 442.83563pt>
 File: figures/chap01/framework.png Graphic file (type png)
 <use figures/chap01/framework.png>
 Package pdftex.def Info: figures/chap01/framework.png  used on input line 221.
@@ -1968,6 +1976,14 @@ n/10.5/88 L \C70/rm/m/n/10.5/65 H \C70/rm/m/n/10.5/73 á \C70/rm/m/n/10.5/8f É
 
 
 ]
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 41.
+
+
+Package natbib Warning: Citation `newman2004finding' on page 18 undefined on in
+put line 41.
+
+
 
 [18]
 
@@ -1984,7 +2000,7 @@ n/10.5/88 L \C70/rm/m/n/10.5/65 H \C70/rm/m/n/10.5/73 á \C70/rm/m/n/10.5/8f É
 [24]
 
 [25]
-Underfull \hbox (badness 6559) in paragraph at lines 134--134
+Underfull \hbox (badness 6559) in paragraph at lines 135--135
 []|\C70/rm/m/n/10.5/5c ^^F \C70/zhsong/m/n/10.5/80 T \C70/zhsong/m/n/10.5/54 ^^
 H \C70/rm/m/n/10.5/69 Ç \C70/rm/m/n/10.5/73 á \C70/zhsong/m/n/10.5/52 ^^F \C70/
 zhsong/m/n/10.5/5e ^^C \C70/zhsong/m/n/10.5/52 ^^F \C70/rm/m/n/10.5/89 „|\C70/r
@@ -1996,7 +2012,7 @@ m/m/n/10.5/ff ^^L|
 [26]
 
 [27]
-Underfull \hbox (badness 4479) in paragraph at lines 165--167
+Underfull \hbox (badness 4479) in paragraph at lines 166--168
 \C70/zhsong/b/n/12/51 v \C70/zhsong/b/n/12/4e -$\OML/txmi/m/it/12 n[]$\C70/zhso
 ng/m/n/12/88 h \C70/zhsong/m/n/12/79 :$\OMS/txsy/m/n/12 C[]$\C70/zhsong/m/n/12/
 76 Ñ \C70/zhsong/m/n/12/7b ,$\OML/txmi/m/it/12 i$\C70/zhsong/b/n/12/4e * \C70/z
@@ -2008,26 +2024,22 @@ ong/b/n/12/4e K \C70/zhsong/m/n/12/95 Ù \C70/zhsong/m/n/12/76 Ñ \C70/zhsong/b/n
 /91 œ|\C70/zhsong/b/n/12/ff ^^L| $\OML/txmi/m/it/12 a[] \OT1/txr/m/n/12 =
  []
 
+)
 
-
-[28])
-
-[29]
+[28]
 \openout2 = `body/chap03.aux'.
 
  (./body/chap03.tex
+Á¨¨3Á´† 3.
 
-[30
+
+[29
 
 
 
 
 ]
-Á¨¨3Á´† 3.
-
-
-[31]
-<figures/chap03/figure/modelChap3.png, id=1358, 572.82463pt x 452.05127pt>
+<figures/chap03/figure/modelChap3.png, id=1330, 572.82463pt x 452.05127pt>
 File: figures/chap03/figure/modelChap3.png Graphic file (type png)
 <use figures/chap03/figure/modelChap3.png>
 Package pdftex.def Info: figures/chap03/figure/modelChap3.png  used on input li
@@ -2035,29 +2047,29 @@ ne 25.
 (pdftex.def)             Requested size: 341.43436pt x 269.44633pt.
 
 
-[32]
+[30]
 
-[33 <./figures/chap03/figure/modelChap3.png>]
+[31 <./figures/chap03/figure/modelChap3.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 41.
 
 
-[34]
+[32]
 
-[35]
-<figures/chap03/figure/15cmp.pdf, id=1416, 433.62pt x 289.08pt>
+[33]
+<figures/chap03/figure/15cmp.pdf, id=1389, 433.62pt x 289.08pt>
 File: figures/chap03/figure/15cmp.pdf Graphic file (type pdf)
 <use figures/chap03/figure/15cmp.pdf>
 Package pdftex.def Info: figures/chap03/figure/15cmp.pdf  used on input line 15
 3.
 (pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
-<figures/chap03/figure/resultGenlou.pdf, id=1417, 433.62pt x 289.08pt>
+<figures/chap03/figure/resultGenlou.pdf, id=1390, 433.62pt x 289.08pt>
 File: figures/chap03/figure/resultGenlou.pdf Graphic file (type pdf)
 <use figures/chap03/figure/resultGenlou.pdf>
 Package pdftex.def Info: figures/chap03/figure/resultGenlou.pdf  used on input 
 line 156.
 (pdftex.def)             Requested size: 132.30426pt x 88.20235pt.
-<figures/chap03/figure/resultPNAS15.pdf, id=1418, 433.62pt x 289.08pt>
+<figures/chap03/figure/resultPNAS15.pdf, id=1391, 433.62pt x 289.08pt>
 File: figures/chap03/figure/resultPNAS15.pdf Graphic file (type pdf)
 <use figures/chap03/figure/resultPNAS15.pdf>
 Package pdftex.def Info: figures/chap03/figure/resultPNAS15.pdf  used on input 
@@ -2133,13 +2145,22 @@ n/10.5/7f Q \C70/rm/m/n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5
 Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/txr/m/n/10.5 Wikipedia\C70/rm/m/n/10.5/7f Q \C70/rm/m/n/10.5/98 u \C70/
 zhsong/m/n/10.5/51 s \C70/zhsong/m/n/10.5/80 T \C70/rm/m/n/10.5/7f Q \C70/rm/m/
-n/10.5/7e ‹$[]$|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5
-/95 Ù \C70/zhsong/m/n/10.5/8d Ë
+n/10.5/7e ‹|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5/95 
+Ù \C70/zhsong/m/n/10.5/8d Ë
  []
 
 
 Overfull \hbox (2.0pt too wide) in paragraph at lines 193--193
 []|$\OT1/txr/m/n/10.5 39953145$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
+[]|\C70/rm/m/n/10.5/56 ‡ \C70/zhsong/m/n/10.5/72 y \C70/rm/m/n/10.5/7f Q \C70/r
+m/m/n/10.5/65 p \C70/zhsong/m/n/10.5/63 n|\C70/rm/m/n/10.5/ff ^^L| \C70/rm/m/n/
+10.5/65 ˆ \C70/rm/m/n/10.5/95 Ù \C70/zhsong/m/n/10.5/8d Ë \C70/zhsong/m/n/10.5/
+5e ¶\OT1/txr/m/n/10.5 2004\C70/zhsong/m/n/10.5/5e t\OT1/txr/m/n/10.5 1\C70/rm/m
+/n/10.5/67 ^^H\OT1/txr/m/n/10.5 4\C70/rm/m/n/10.5/65 Â \OT1/txr/m/n/10.5 -
  []
 
 
@@ -2161,15 +2182,15 @@ f ^^L| \C70/rm/m/n/10.5/65 ˆ \C70/rm/m/n/10.5/95 Ù \C70/zhsong/m/n/10.5/8d Ë
 
 
 
-[36 <./figures/chap03/figure/15cmp.pdf> <./figures/chap03/figure/resultGenlou.p
+[34 <./figures/chap03/figure/15cmp.pdf> <./figures/chap03/figure/resultGenlou.p
 df> <./figures/chap03/figure/resultPNAS15.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap03/figure/resultPNAS15.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
 
-[37]
-<figures/chap03/figure/alldata-DG.pdf, id=1593, 1300.86pt x 1445.4pt>
+[35]
+<figures/chap03/figure/alldata-DG.pdf, id=1562, 1300.86pt x 1445.4pt>
 File: figures/chap03/figure/alldata-DG.pdf Graphic file (type pdf)
 <use figures/chap03/figure/alldata-DG.pdf>
 Package pdftex.def Info: figures/chap03/figure/alldata-DG.pdf  used on input li
@@ -2177,8 +2198,8 @@ ne 203.
 (pdftex.def)             Requested size: 362.77524pt x 403.07718pt.
 
 
-[38 <./figures/chap03/figure/alldata-DG.pdf>]
-<figures/chap03/figure/alldata-aND.pdf, id=1612, 1300.86pt x 1445.4pt>
+[36 <./figures/chap03/figure/alldata-DG.pdf>]
+<figures/chap03/figure/alldata-aND.pdf, id=1581, 1300.86pt x 1445.4pt>
 File: figures/chap03/figure/alldata-aND.pdf Graphic file (type pdf)
 <use figures/chap03/figure/alldata-aND.pdf>
 Package pdftex.def Info: figures/chap03/figure/alldata-aND.pdf  used on input l
@@ -2186,8 +2207,8 @@ ine 228.
 (pdftex.def)             Requested size: 362.77524pt x 403.07718pt.
 
 
-[39 <./figures/chap03/figure/alldata-aND.pdf>]
-<figures/chap04/graph-model_v3_cuted.pdf, id=1633, 1013.89104pt x 504.71921pt>
+[37 <./figures/chap03/figure/alldata-aND.pdf>]
+<figures/chap04/graph-model_v3_cuted.pdf, id=1602, 1013.89104pt x 504.71921pt>
 File: figures/chap04/graph-model_v3_cuted.pdf Graphic file (type pdf)
 <use figures/chap04/graph-model_v3_cuted.pdf>
 Package pdftex.def Info: figures/chap04/graph-model_v3_cuted.pdf  used on input
@@ -2195,37 +2216,37 @@ Package pdftex.def Info: figures/chap04/graph-model_v3_cuted.pdf  used on input
 (pdftex.def)             Requested size: 384.10959pt x 191.20998pt.
 
 
-[40 <./figures/chap04/graph-model_v3_cuted.pdf>]
+[38 <./figures/chap04/graph-model_v3_cuted.pdf>]
+
+[39]
+
+[40]
 
 [41]
 
 [42]
-
-[43]
-
-[44]
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 46.
  (c:/texlive/2025/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
 
-[45]
-<figures/chap03/dsbm/chap3generateData1223.pdf, id=1822, 2956.80293pt x 1527.46
+[43]
+<figures/chap03/dsbm/chap3generateData1223.pdf, id=1792, 2956.80293pt x 1527.46
 6pt>
 File: figures/chap03/dsbm/chap3generateData1223.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/chap3generateData1223.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/chap3generateData1223.pdf  used on
  input line 570.
 (pdftex.def)             Requested size: 426.79134pt x 220.46303pt.
-<figures/chap03/dsbm/chap3realData1223.pdf, id=1825, 2069.67442pt x 1527.466pt>
+<figures/chap03/dsbm/chap3realData1223.pdf, id=1795, 2069.67442pt x 1527.466pt>
 
 File: figures/chap03/dsbm/chap3realData1223.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/chap3realData1223.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/chap3realData1223.pdf  used on inp
 ut line 583.
 (pdftex.def)             Requested size: 341.43436pt x 251.9744pt.
-<figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf, id=1829, 307.33821pt x 
+<figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf, id=1799, 307.33821pt x 
 307.77885pt>
 File: figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf Graphic file (type 
 pdf)
@@ -2233,35 +2254,35 @@ pdf)
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf 
  used on input line 600.
 (pdftex.def)             Requested size: 102.43018pt x 53.3455pt.
-<figures/chap03/dsbm/facetNetEvolution/DSBM.pdf, id=1830, 561.64499pt x 560.810
+<figures/chap03/dsbm/facetNetEvolution/DSBM.pdf, id=1800, 561.64499pt x 560.810
 76pt>
 File: figures/chap03/dsbm/facetNetEvolution/DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/DSBM.pdf  used o
 n input line 603.
 (pdftex.def)             Requested size: 102.42865pt x 53.34602pt.
-<figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf, id=1831, 308.2195pt x 307.77
+<figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf, id=1801, 308.2195pt x 307.77
 885pt>
 File: figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/HBDSBM.pdf  used
  on input line 606.
 (pdftex.def)             Requested size: 102.43231pt x 53.3455pt.
-<figures/chap03/dsbm/facetNetEvolution/gen.pdf, id=1832, 448.73347pt x 449.3899
+<figures/chap03/dsbm/facetNetEvolution/gen.pdf, id=1802, 448.73347pt x 449.3899
 1pt>
 File: figures/chap03/dsbm/facetNetEvolution/gen.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/gen.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/gen.pdf  used on
  input line 609.
 (pdftex.def)             Requested size: 102.4328pt x 53.34845pt.
-<figures/chap03/dsbm/facetNetEvolution/PisCES.pdf, id=1833, 307.77885pt x 307.3
+<figures/chap03/dsbm/facetNetEvolution/PisCES.pdf, id=1803, 307.77885pt x 307.3
 372pt>
 File: figures/chap03/dsbm/facetNetEvolution/PisCES.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/PisCES.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/PisCES.pdf  used
  on input line 612.
 (pdftex.def)             Requested size: 102.43144pt x 53.34868pt.
-<figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf, id=1834, 449.38982pt x 449.
+<figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf, id=1804, 449.38982pt x 449.
 38991pt>
 File: figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf Graphic file (type pdf)
 
@@ -2269,21 +2290,21 @@ File: figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/dynmoga.pdf  use
 d on input line 615.
 (pdftex.def)             Requested size: 102.43176pt x 53.34845pt.
-<figures/chap03/dsbm/facetNetEvolution/DECS.pdf, id=1835, 448.73296pt x 449.389
+<figures/chap03/dsbm/facetNetEvolution/DECS.pdf, id=1805, 448.73296pt x 449.389
 91pt>
 File: figures/chap03/dsbm/facetNetEvolution/DECS.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/DECS.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/DECS.pdf  used o
 n input line 618.
 (pdftex.def)             Requested size: 102.43268pt x 53.34845pt.
-<figures/chap03/dsbm/facetNetEvolution/espra.pdf, id=1836, 449.38991pt x 448.73
+<figures/chap03/dsbm/facetNetEvolution/espra.pdf, id=1806, 449.38991pt x 448.73
 245pt>
 File: figures/chap03/dsbm/facetNetEvolution/espra.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/espra.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/espra.pdf  used 
 on input line 621.
 (pdftex.def)             Requested size: 102.4318pt x 53.34572pt.
-<figures/chap03/dsbm/facetNetEvolution/affect.pdf, id=1837, 307.77885pt x 307.7
+<figures/chap03/dsbm/facetNetEvolution/affect.pdf, id=1807, 307.77885pt x 307.7
 7885pt>
 File: figures/chap03/dsbm/facetNetEvolution/affect.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/facetNetEvolution/affect.pdf>
@@ -2292,15 +2313,15 @@ Package pdftex.def Info: figures/chap03/dsbm/facetNetEvolution/affect.pdf  used
 (pdftex.def)             Requested size: 102.43144pt x 53.3455pt.
 
 
-[46]
+[44]
 
-[47 <./figures/chap03/dsbm/chap3generateData1223.pdf> <./figures/chap03/dsbm/ch
+[45 <./figures/chap03/dsbm/chap3generateData1223.pdf> <./figures/chap03/dsbm/ch
 ap3realData1223.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/chap3realData1223.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf, id=2218, 448.0759pt x 
+<figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf, id=2188, 448.0759pt x 
 450.70381pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf Graphic file (type
  pdf)
@@ -2308,14 +2329,14 @@ File: figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf Graphic file (type
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf
   used on input line 642.
 (pdftex.def)             Requested size: 102.4331pt x 64.01276pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf, id=2219, 448.73296pt x 450.70
+<figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf, id=2189, 448.73296pt x 450.70
 381pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1DSBM.pdf  used 
 on input line 645.
 (pdftex.def)             Requested size: 102.43268pt x 64.01276pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf, id=2220, 448.73347pt x 449.
+<figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf, id=2190, 448.73347pt x 449.
 38991pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf Graphic file (type pdf)
 
@@ -2323,14 +2344,14 @@ File: figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1HBDSBM.pdf  use
 d on input line 648.
 (pdftex.def)             Requested size: 102.4328pt x 64.01129pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf, id=2221, 448.73296pt x 449.389
+<figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf, id=2191, 448.73296pt x 449.389
 91pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf  used o
 n input line 651.
 (pdftex.def)             Requested size: 102.43268pt x 64.01129pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf, id=2222, 448.73296pt x 450.
+<figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf, id=2192, 448.73296pt x 450.
 04736pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf Graphic file (type pdf)
 
@@ -2338,7 +2359,7 @@ File: figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1PisCES.pdf  use
 d on input line 654.
 (pdftex.def)             Requested size: 102.43268pt x 64.01567pt.
-<figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf, id=2223, 449.38991pt x 449
+<figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf, id=2193, 449.38991pt x 449
 .38991pt>
 File: figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf Graphic file (type pdf
 )
@@ -2346,7 +2367,7 @@ File: figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf Graphic file (type pdf
 Package pdftex.def Info: figures/chap03/dsbm/ASONEMmsEvolution/1dynmoga.pdf  us
 ed on input line 657.
 (pdftex.def)             Requested size: 102.4318pt x 64.01129pt.
-<figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf, id=2225, 449.39041pt x 448.
+<figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf, id=2195, 449.39041pt x 448.
 07501pt>
 File: figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf Graphic file (type pdf)
 
@@ -2354,42 +2375,42 @@ File: figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/GroundTruth.pdf  use
 d on input line 670.
 (pdftex.def)             Requested size: 102.4319pt x 42.67696pt.
-<figures/chap03/dsbm/dblpEvolution/DSBM.pdf, id=2226, 450.04736pt x 448.07602pt
+<figures/chap03/dsbm/dblpEvolution/DSBM.pdf, id=2196, 450.04736pt x 448.07602pt
 >
 File: figures/chap03/dsbm/dblpEvolution/DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/DSBM.pdf  used on in
 put line 673.
 (pdftex.def)             Requested size: 102.43057pt x 42.67705pt.
-<figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf, id=2227, 448.73296pt x 450.0473
+<figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf, id=2197, 448.73296pt x 450.0473
 6pt>
 File: figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/HB-DSBM.pdf  used on
  input line 676.
 (pdftex.def)             Requested size: 102.43268pt x 42.6794pt.
-<figures/chap03/dsbm/dblpEvolution/gen.pdf, id=2228, 449.38991pt x 448.73245pt>
+<figures/chap03/dsbm/dblpEvolution/gen.pdf, id=2198, 449.38991pt x 448.73245pt>
 
 File: figures/chap03/dsbm/dblpEvolution/gen.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/gen.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/gen.pdf  used on inp
 ut line 679.
 (pdftex.def)             Requested size: 102.4318pt x 42.67795pt.
-<figures/chap03/dsbm/dblpEvolution/PisCES.pdf, id=2229, 448.0765pt x 449.38991p
+<figures/chap03/dsbm/dblpEvolution/PisCES.pdf, id=2199, 448.0765pt x 449.38991p
 t>
 File: figures/chap03/dsbm/dblpEvolution/PisCES.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/PisCES.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/PisCES.pdf  used on 
 input line 682.
 (pdftex.def)             Requested size: 102.43324pt x 42.67876pt.
-<figures/chap03/dsbm/dblpEvolution/dynmoga.pdf, id=2230, 449.38991pt x 449.3899
+<figures/chap03/dsbm/dblpEvolution/dynmoga.pdf, id=2200, 449.38991pt x 449.3899
 1pt>
 File: figures/chap03/dsbm/dblpEvolution/dynmoga.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/dblpEvolution/dynmoga.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/dblpEvolution/dynmoga.pdf  used on
  input line 685.
 (pdftex.def)             Requested size: 102.4318pt x 42.67876pt.
-<figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf, id=2231, 1158.40
+<figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf, id=2201, 1158.40
 273pt x 311.13037pt>
 File: figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf Graphic file
  (type pdf)
@@ -2397,7 +2418,7 @@ File: figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMap3.pdf Graphic file
 Package pdftex.def Info: figures/chap03/dsbm/blockMatrixVis/dblpcommunityHeatMa
 p3.pdf  used on input line 695.
 (pdftex.def)             Requested size: 196.32687pt x 52.73004pt.
-<figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf, id=2232, 1152.
+<figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf, id=2202, 1152.
 85pt x 312.98228pt>
 File: figures/chap03/dsbm/blockMatrixVis/ASONMScommunityHeatMap3.pdf Graphic fi
 le (type pdf)
@@ -2407,7 +2428,7 @@ Map3.pdf  used on input line 699.
 (pdftex.def)             Requested size: 196.32687pt x 53.29701pt.
 
 
-[48 <./figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf> <./figures/chap03
+[46 <./figures/chap03/dsbm/facetNetEvolution/groundTruth.pdf> <./figures/chap03
 /dsbm/facetNetEvolution/DSBM.pdf> <./figures/chap03/dsbm/facetNetEvolution/HBDS
 BM.pdf> <./figures/chap03/dsbm/facetNetEvolution/gen.pdf> <./figures/chap03/dsb
 m/facetNetEvolution/PisCES.pdf> <./figures/chap03/dsbm/facetNetEvolution/dynmog
@@ -2415,7 +2436,7 @@ a.pdf> <./figures/chap03/dsbm/facetNetEvolution/DECS.pdf> <./figures/chap03/dsb
 m/facetNetEvolution/espra.pdf> <./figures/chap03/dsbm/facetNetEvolution/affect.
 pdf>]
 
-[49 <./figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf> <./figures/chap0
+[47 <./figures/chap03/dsbm/ASONEMmsEvolution/1GroundTruth.pdf> <./figures/chap0
 3/dsbm/ASONEMmsEvolution/1DSBM.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1H
 BDSBM.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1gen.pdf> <./figures/chap03
 /dsbm/ASONEMmsEvolution/1PisCES.pdf> <./figures/chap03/dsbm/ASONEMmsEvolution/1
@@ -2442,14 +2463,14 @@ C70/rm/m/n/12/59 Ç \C70/rm/m/n/12/56 ˛ []\OT1/txr/m/n/12 3-12[]\C70/zhsong/b/n/
 12/62 @ \C70/rm/m/n/12/79 :|\C70/rm/m/n/12/ff ^^L|
  []
 
-<figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf, id=2534, 650.9211pt x 403.379
+<figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf, id=2503, 650.9211pt x 403.379
 52pt>
 File: figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf>
 Package pdftex.def Info: figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf  used 
 on input line 721.
 (pdftex.def)             Requested size: 128.0387pt x 79.34497pt.
-<figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf, id=2535, 647.61345pt x 403.
+<figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf, id=2504, 647.61345pt x 403.
 37952pt>
 File: figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf Graphic file (type pdf)
 
@@ -2457,7 +2478,7 @@ File: figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/chap03/dsbm/anomaly/patentAnomalyPic6.pdf  use
 d on input line 724.
 (pdftex.def)             Requested size: 128.0387pt x 79.7512pt.
-<figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf, id=2536, 649.58804pt x 403.3795
+<figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf, id=2505, 649.58804pt x 403.3795
 2pt>
 File: figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf Graphic file (type pdf)
 <use figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf>
@@ -2466,7 +2487,7 @@ Package pdftex.def Info: figures/chap03/dsbm/anomaly/msAnomalyPic6.pdf  used on
 (pdftex.def)             Requested size: 128.0387pt x 79.505pt.
 
 
-[50 <./figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf> <./figures/chap03/dsbm/
+[48 <./figures/chap03/dsbm/anomaly/dblpAnomalyPic6.pdf> <./figures/chap03/dsbm/
 anomaly/patentAnomalyPic6.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/anomaly/patentAnomalyP
@@ -2478,7 +2499,7 @@ pdfTeX warning: pdflatex.exe (file ./figures/chap03/dsbm/anomaly/msAnomalyPic6.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >])
 
-[51]
+[49]
 \openout2 = `body/chap04.aux'.
 
  (./body/chap04.tex)
@@ -2486,7 +2507,7 @@ pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
  (./body/chap05.tex
 
-[52
+[50
 
 
 
@@ -2511,18 +2532,19 @@ m/m/n/12/ff ^^L| \C70/rm/m/n/12/67 * \C70/zhsong/m/n/12/80 ^^C \C70/zhsong/m/n/
 
 
 
-[53]
-LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 25.
+[51]
 
-
-Package natbib Warning: Citation `ahmed2016survey' on page 54 undefined on inpu
+Package natbib Warning: Citation `ahmed2016survey' on page 52 undefined on inpu
 t line 25.
 
 
+Package natbib Warning: Citation `ranshous2015anomaly' on page 52 undefined on 
+input line 29.
 
-[54]
-<figures/chap05/chap5motivation.png, id=2712, 930.29436pt x 541.78249pt>
+
+
+[52]
+<figures/chap05/chap5motivation.png, id=2678, 930.29436pt x 541.78249pt>
 File: figures/chap05/chap5motivation.png Graphic file (type png)
 <use figures/chap05/chap5motivation.png>
 Package pdftex.def Info: figures/chap05/chap5motivation.png  used on input line
@@ -2553,29 +2575,33 @@ rm/m/n/12/67 Ñ \C70/rm/m/n/12/5f ^^B \C70/rm/m/n/12/5e 8 \C70/rm/m/n/12/54 å \C
 
 
 
-[55 <./figures/chap05/chap5motivation.png>]
+[53 <./figures/chap05/chap5motivation.png>]
 
-[56]
+[54]
 
-[57]
-<figures/chap05/graph1.png, id=2745, 309.3156pt x 366.168pt>
+[55]
+<figures/chap05/graph1.png, id=2712, 309.3156pt x 366.168pt>
 File: figures/chap05/graph1.png Graphic file (type png)
 <use figures/chap05/graph1.png>
 Package pdftex.def Info: figures/chap05/graph1.png  used on input line 125.
 (pdftex.def)             Requested size: 110.9634pt x 131.35663pt.
-<figures/chap05/graph2.png, id=2746, 399.894pt x 378.6948pt>
+<figures/chap05/graph2.png, id=2713, 399.894pt x 378.6948pt>
 File: figures/chap05/graph2.png Graphic file (type png)
 <use figures/chap05/graph2.png>
 Package pdftex.def Info: figures/chap05/graph2.png  used on input line 128.
 (pdftex.def)             Requested size: 136.57634pt x 129.33237pt.
 
 
-[58 <./figures/chap05/graph1.png> <./figures/chap05/graph2.png>]
+[56 <./figures/chap05/graph1.png> <./figures/chap05/graph2.png>]
 Missing character: There is no Ñ in font txr!
 Missing character: There is no ª in font txr!
 Missing character: There is no • in font txr!
 Missing character: There is no È in font txr!
 
+
+[57]
+
+[58]
 
 [59]
 
@@ -2588,11 +2614,7 @@ Missing character: There is no È in font txr!
 [63]
 
 [64]
-
-[65]
-
-[66]
-Underfull \hbox (badness 1400) in paragraph at lines 550--551
+Underfull \hbox (badness 1400) in paragraph at lines 551--552
 []\OT1/txr/m/n/12 GEABS\C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/59 ^^M \C70/rm/m/n/12
 /67 B \C70/rm/m/n/12/5e ¶ \C70/rm/m/n/12/4e ; \C70/zhsong/b/n/12/89 Å \C70/rm/m
 /n/12/4f ù \C70/rm/m/n/12/8d V \C70/rm/m/n/12/4e é \C70/zhsong/b/n/12/5b ˘ \C70
@@ -2605,8 +2627,8 @@ n/12/4e :$\OML/txmi/m/it/12 O\OT1/txr/m/n/12 (\OML/txmi/m/it/12 TK[]N[]\OT1/txr
 
 
 
-[67]
-Underfull \hbox (badness 5064) in paragraph at lines 565--566
+[65]
+Underfull \hbox (badness 5064) in paragraph at lines 566--567
 []\OT1/txr/bx/n/12 Kit-email \C70/zhsong/b/n/12/7f Q[][] \C70/zhsong/b/n/12/7e 
 ‹[][]$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8b Â \C70/zhsong/b/n/12/75 5 \C
 70/zhsong/b/n/12/5b P \C70/rm/m/n/12/90 Æ \C70/rm/m/n/12/4e ˆ \C70/zhsong/b/n/1
@@ -2619,25 +2641,25 @@ mi/m/it/12 ; \OT1/txr/m/n/12 097$\C70/rm/m/n/12/4e * \C70/zhsong/b/n/12/75 5 \C
 
 
 
-[68]
+[66]
 
-[69]
-<figures/chap05/chap4Kit-emaili2Communitydetection.pdf, id=2953, 1810.85286pt x
+[67]
+<figures/chap05/chap4Kit-emaili2Communitydetection.pdf, id=2924, 1810.85286pt x
  567.881pt>
 File: figures/chap05/chap4Kit-emaili2Communitydetection.pdf Graphic file (type 
 pdf)
 <use figures/chap05/chap4Kit-emaili2Communitydetection.pdf>
 Package pdftex.def Info: figures/chap05/chap4Kit-emaili2Communitydetection.pdf 
- used on input line 599.
+ used on input line 600.
 (pdftex.def)             Requested size: 384.10959pt x 120.45432pt.
-<figures/chap05/chap4mergesplitC.pdf, id=2954, 1826.81876pt x 567.881pt>
+<figures/chap05/chap4mergesplitC.pdf, id=2925, 1826.81876pt x 567.881pt>
 File: figures/chap05/chap4mergesplitC.pdf Graphic file (type pdf)
 <use figures/chap05/chap4mergesplitC.pdf>
 Package pdftex.def Info: figures/chap05/chap4mergesplitC.pdf  used on input lin
-e 605.
+e 606.
 (pdftex.def)             Requested size: 384.10959pt x 119.39717pt.
 
-Underfull \hbox (badness 1320) in paragraph at lines 620--621
+Underfull \hbox (badness 1320) in paragraph at lines 621--622
 []\OT1/txr/bx/n/12 CICPD$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8f Ÿ \C70/rm
 /m/n/12/66 / \C70/rm/m/n/12/4e ^^@ \C70/zhsong/b/n/12/79 Õ \C70/rm/m/n/12/65 ∞ 
 \C70/zhsong/m/n/12/98 ñ \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/57 ˙ \C70/rm/m/n/12/
@@ -2650,8 +2672,8 @@ m/n/12/4f ^^?
 
 
 
-[70 <./figures/chap05/chap4Kit-emaili2Communitydetection.pdf>]
-Underfull \hbox (badness 7814) in paragraph at lines 765--766
+[68 <./figures/chap05/chap4Kit-emaili2Communitydetection.pdf>]
+Underfull \hbox (badness 7814) in paragraph at lines 766--767
 []\C70/rm/m/n/12/59 Ç \C70/rm/m/n/12/88 h []\OT1/txr/m/n/12 4-3[]\C70/zhsong/b/
 n/12/62 @ \C70/zhsong/b/n/12/79 :|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/67 , \C
 70/rm/m/n/12/7a ‡ \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/65 π \C70/zhsong/b/n/12/6c
@@ -2662,7 +2684,7 @@ C70/zhsong/b/n/12/6c ’ \C70/rm/m/n/12/4e - \C70/rm/m/n/12/88 h \C70/zhsong/m/n/
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 765--766
+Underfull \hbox (badness 1097) in paragraph at lines 766--767
 \C70/rm/m/n/12/63 n \C70/rm/m/n/12/96 ∆ \C70/rm/m/n/12/4e - \C70/rm/m/n/12/88 h
  \C70/zhsong/m/n/12/73 ∞ \C70/rm/m/n/12/4e ^^M \C70/rm/m/n/12/4f s|\C70/rm/m/n/
 12/30 ^^B| \C70/rm/m/n/12/4f F \C70/rm/m/n/12/57 ( \OT1/txr/m/n/12 En-ron\C70/r
@@ -2675,65 +2697,65 @@ rm/m/n/12/71 6 \C70/zhsong/m/n/12/80 ^^L|\C70/rm/m/n/12/ff ^^L|
 
 
 
-[71 <./figures/chap05/chap4mergesplitC.pdf>]
+[69 <./figures/chap05/chap4mergesplitC.pdf>]
 
-[72]
-<figures/chap05/nethitrate-enron-new.pdf, id=3100, 470.91559pt x 293.54605pt>
+[70]
+<figures/chap05/nethitrate-enron-new.pdf, id=3069, 470.91559pt x 293.54605pt>
 File: figures/chap05/nethitrate-enron-new.pdf Graphic file (type pdf)
 <use figures/chap05/nethitrate-enron-new.pdf>
 Package pdftex.def Info: figures/chap05/nethitrate-enron-new.pdf  used on input
- line 775.
+ line 776.
 (pdftex.def)             Requested size: 149.37956pt x 93.11696pt.
-<figures/chap05/nethitrate-World-new.pdf, id=3101, 470.91559pt x 293.54605pt>
+<figures/chap05/nethitrate-World-new.pdf, id=3070, 470.91559pt x 293.54605pt>
 File: figures/chap05/nethitrate-World-new.pdf Graphic file (type pdf)
 <use figures/chap05/nethitrate-World-new.pdf>
 Package pdftex.def Info: figures/chap05/nethitrate-World-new.pdf  used on input
- line 777.
+ line 778.
 (pdftex.def)             Requested size: 149.37956pt x 93.11696pt.
-<figures/chap05/mergesplitAGND.pdf, id=3102, 2258.24881pt x 258.46161pt>
+<figures/chap05/mergesplitAGND.pdf, id=3071, 2258.24881pt x 258.46161pt>
 File: figures/chap05/mergesplitAGND.pdf Graphic file (type pdf)
 <use figures/chap05/mergesplitAGND.pdf>
 Package pdftex.def Info: figures/chap05/mergesplitAGND.pdf  used on input line 
-793.
+794.
 (pdftex.def)             Requested size: 298.75262pt x 34.19275pt.
-<figures/chap05/mergesplitA.pdf, id=3103, 2244.1963pt x 258.46161pt>
+<figures/chap05/mergesplitA.pdf, id=3072, 2244.1963pt x 258.46161pt>
 File: figures/chap05/mergesplitA.pdf Graphic file (type pdf)
 <use figures/chap05/mergesplitA.pdf>
-Package pdftex.def Info: figures/chap05/mergesplitA.pdf  used on input line 795
+Package pdftex.def Info: figures/chap05/mergesplitA.pdf  used on input line 796
 .
 (pdftex.def)             Requested size: 298.75262pt x 34.40572pt.
-<figures/chap05/mergesplitAPisCES.pdf, id=3104, 2258.24881pt x 258.46161pt>
+<figures/chap05/mergesplitAPisCES.pdf, id=3073, 2258.24881pt x 258.46161pt>
 File: figures/chap05/mergesplitAPisCES.pdf Graphic file (type pdf)
 <use figures/chap05/mergesplitAPisCES.pdf>
 Package pdftex.def Info: figures/chap05/mergesplitAPisCES.pdf  used on input li
-ne 797.
+ne 798.
 (pdftex.def)             Requested size: 298.75262pt x 34.19275pt.
 
 
-[73 <./figures/chap05/nethitrate-enron-new.pdf> <./figures/chap05/nethitrate-Wo
+[71 <./figures/chap05/nethitrate-enron-new.pdf> <./figures/chap05/nethitrate-Wo
 rld-new.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap05/nethitrate-World-new.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap05/EnronTransA-heatmap.pdf, id=3219, 2464.24031pt x 287.27327pt>
+<figures/chap05/EnronTransA-heatmap.pdf, id=3186, 2464.24031pt x 287.27327pt>
 File: figures/chap05/EnronTransA-heatmap.pdf Graphic file (type pdf)
 <use figures/chap05/EnronTransA-heatmap.pdf>
 Package pdftex.def Info: figures/chap05/EnronTransA-heatmap.pdf  used on input 
-line 811.
+line 812.
 (pdftex.def)             Requested size: 298.75262pt x 34.82635pt.
-<figures/chap05/worldtradenode-adjusted.pdf, id=3221, 771.04222pt x 396.25917pt
+<figures/chap05/worldtradenode-adjusted.pdf, id=3188, 771.04222pt x 396.25917pt
 >
 File: figures/chap05/worldtradenode-adjusted.pdf Graphic file (type pdf)
 <use figures/chap05/worldtradenode-adjusted.pdf>
 Package pdftex.def Info: figures/chap05/worldtradenode-adjusted.pdf  used on in
-put line 825.
+put line 826.
 (pdftex.def)             Requested size: 256.0774pt x 131.60637pt.
 
 
-[74]
+[72]
 
-[75 <./figures/chap05/mergesplitAGND.pdf> <./figures/chap05/mergesplitA.pdf
+[73 <./figures/chap05/mergesplitAGND.pdf> <./figures/chap05/mergesplitA.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap05/mergesplitA.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
@@ -2750,28 +2772,28 @@ DF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures/chap05/worldtradenode-adjusted.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap05/worldtrade-CNlevel.pdf, id=3471, 1277.22163pt x 625.79788pt>
+<figures/chap05/worldtrade-CNlevel.pdf, id=3440, 1277.22163pt x 625.79788pt>
 File: figures/chap05/worldtrade-CNlevel.pdf Graphic file (type pdf)
 <use figures/chap05/worldtrade-CNlevel.pdf>
 Package pdftex.def Info: figures/chap05/worldtrade-CNlevel.pdf  used on input l
-ine 838.
+ine 839.
 (pdftex.def)             Requested size: 426.79134pt x 209.11124pt.
-<figures/chap05/worldtrade-Nlevel.pdf, id=3472, 1246.6575pt x 470.23682pt>
+<figures/chap05/worldtrade-Nlevel.pdf, id=3441, 1246.6575pt x 470.23682pt>
 File: figures/chap05/worldtrade-Nlevel.pdf Graphic file (type pdf)
 <use figures/chap05/worldtrade-Nlevel.pdf>
 Package pdftex.def Info: figures/chap05/worldtrade-Nlevel.pdf  used on input li
-ne 846.
+ne 847.
 (pdftex.def)             Requested size: 426.79134pt x 160.98338pt.
 
 
-[76 <./figures/chap05/worldtrade-CNlevel.pdf>])
+[74 <./figures/chap05/worldtrade-CNlevel.pdf>])
 
-[77 <./figures/chap05/worldtrade-Nlevel.pdf>]
+[75 <./figures/chap05/worldtrade-Nlevel.pdf>]
 \openout2 = `body/chap06.aux'.
 
  (./body/chap06.tex
 
-[78
+[76
 
 
 
@@ -2780,10 +2802,10 @@ ne 846.
 Á¨¨5Á´† 5.
 
 
-[79]
+[77]
 
-[80]
-<figures/chap06/VGRGMM.png, id=4111, 2920.87209pt x 1531.25095pt>
+[78]
+<figures/chap06/VGRGMM.png, id=4077, 2920.87209pt x 1531.25095pt>
 File: figures/chap06/VGRGMM.png Graphic file (type png)
 <use figures/chap06/VGRGMM.png>
 Package pdftex.def Info: figures/chap06/VGRGMM.png  used on input line 47.
@@ -2802,15 +2824,20 @@ m/m/n/12/63 – \C70/rm/m/n/12/51 ˙
 
 
 
-[81]
+[79]
 
-[82 <./figures/chap06/VGRGMM.png
+Package natbib Warning: Citation `kingma2013auto' on page 80 undefined on input
+ line 67.
+
+
+
+[80 <./figures/chap06/VGRGMM.png
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap06/VGRGMM.png): large interlac
 ed PNG might cause out of memory (use non-interlaced PNG to fix this)
 >]
 
-[83]
+[81]
 Underfull \hbox (badness 2221) in paragraph at lines 124--126
 \C70/rm/m/n/12/51 v \C70/rm/m/n/12/4e -|\C70/rm/m/n/12/ff ^^L| $\OT1/txr/bx/n/1
 2 W[]$\C70/zhsong/b/n/12/75 ( \C70/rm/m/n/12/4e é \C70/zhsong/b/n/12/7b Ä \C70/
@@ -2824,7 +2851,7 @@ rm/m/n/12/53 ^^V \C70/rm/m/n/12/88 h \C70/zhsong/b/n/12/79 : \C70/rm/m/n/12/5e
 
 
 
-[84]
+[82]
 Underfull \hbox (badness 10000) in paragraph at lines 187--188
 []\C70/rm/m/n/12/4e : Ü \C70/rm/m/n/12/4f ^^X \C70/rm/m/n/12/53 ^^V$\OML/txmi/m
 /it/12 q\OT1/txr/m/n/12 (^^A[])$\C70/rm/m/n/12/4f ^^? \C70/rm/m/n/12/51 v \C70/
@@ -2849,15 +2876,24 @@ ML/txmi/m/it/12 log$\C70/rm/m/n/12/4f < \C70/rm/m/n/12/71 6|\C70/rm/m/n/12/ff ^
 
 
 
-[85]
+[83]
 
-[86]
+Package natbib Warning: Citation `kingma2013auto' on page 84 undefined on input
+ line 198.
+
+
+
+[84]
+
+Package natbib Warning: Citation `kingma2013auto' on page 85 undefined on input
+ line 271.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[87]
+[85]
 Underfull \hbox (badness 3989) in paragraph at lines 301--302
 []\C70/zhsong/b/n/12/75 ^^_[][] \C70/zhsong/b/n/12/62 ^^P[][] \C70/rm/m/n/12/65
  p[][] \C70/rm/m/n/12/63 n[][] \C70/zhsong/b/n/12/96 ∆[][]|\C70/rm/m/n/12/ff ^^
@@ -2871,7 +2907,7 @@ ong/b/n/12/75 ^^_ \C70/zhsong/b/n/12/62 ^^P \C70/rm/m/n/12/65 p \C70/rm/m/n/12/
 
 
 
-[88]
+[86]
 Underfull \hbox (badness 3229) in paragraph at lines 302--303
 []\C70/rm/m/n/12/51 w[][] \C70/zhsong/b/n/12/67 	[][] \C70/zhsong/b/n/12/77 ^^_
 [][] \C70/zhsong/b/n/12/5b û[][] \C70/zhsong/b/n/12/79 >[][] \C70/zhsong/b/n/12
@@ -2886,7 +2922,7 @@ Underfull \hbox (badness 3229) in paragraph at lines 302--303
 
 
 
-[89]
+[87]
 Underfull \hbox (badness 2556) in paragraph at lines 365--366
 []\OT1/txr/bx/n/12 DynRNN$[]$|\C70/rm/m/n/12/ff ^^Z| \C70/rm/m/n/12/8b Â \C70/r
 m/m/n/12/65 π \C70/zhsong/b/n/12/6c ’ \C70/rm/m/n/12/4e Â \C70/rm/m/n/12/5f S \
@@ -2898,9 +2934,13 @@ C70/rm/m/n/12/52 M \C70/rm/m/n/12/65 ˆ \C70/rm/m/n/12/52 ; \C70/rm/m/n/12/4e K
  []
 
 
+Package natbib Warning: Citation `choong2018learning' on page 88 undefined on i
+nput line 368.
 
-[90]
-<figures/chap06/chap5synthData.pdf, id=4299, 3115.60226pt x 513.91035pt>
+
+
+[88]
+<figures/chap06/chap5synthData.pdf, id=4260, 3115.60226pt x 513.91035pt>
 File: figures/chap06/chap5synthData.pdf Graphic file (type pdf)
 <use figures/chap06/chap5synthData.pdf>
 Package pdftex.def Info: figures/chap06/chap5synthData.pdf  used on input line 
@@ -2908,20 +2948,20 @@ Package pdftex.def Info: figures/chap06/chap5synthData.pdf  used on input line
 (pdftex.def)             Requested size: 426.79134pt x 70.3943pt.
 
 
-[91]
-<figures/chap06/chap5realDataGHS-box.pdf, id=4309, 3115.60226pt x 441.88605pt>
+[89]
+<figures/chap06/chap5realDataGHS-box.pdf, id=4269, 3115.60226pt x 441.88605pt>
 File: figures/chap06/chap5realDataGHS-box.pdf Graphic file (type pdf)
 <use figures/chap06/chap5realDataGHS-box.pdf>
 Package pdftex.def Info: figures/chap06/chap5realDataGHS-box.pdf  used on input
  line 424.
 (pdftex.def)             Requested size: 426.79134pt x 60.52858pt.
-<figures/chap06/chap5realDataGpw-box.pdf, id=4310, 3115.60226pt x 441.88605pt>
+<figures/chap06/chap5realDataGpw-box.pdf, id=4270, 3115.60226pt x 441.88605pt>
 File: figures/chap06/chap5realDataGpw-box.pdf Graphic file (type pdf)
 <use figures/chap06/chap5realDataGpw-box.pdf>
 Package pdftex.def Info: figures/chap06/chap5realDataGpw-box.pdf  used on input
  line 425.
 (pdftex.def)             Requested size: 426.79134pt x 60.52858pt.
-<figures/chap06/chap5realDataNG.pdf, id=4311, 2717.95111pt x 507.38597pt>
+<figures/chap06/chap5realDataNG.pdf, id=4271, 2717.95111pt x 507.38597pt>
 File: figures/chap06/chap5realDataNG.pdf Graphic file (type pdf)
 <use figures/chap06/chap5realDataNG.pdf>
 Package pdftex.def Info: figures/chap06/chap5realDataNG.pdf  used on input line
@@ -2929,7 +2969,7 @@ Package pdftex.def Info: figures/chap06/chap5realDataNG.pdf  used on input line
 (pdftex.def)             Requested size: 426.79134pt x 79.66595pt.
 
 
-[92 <./figures/chap06/chap5synthData.pdf> <./figures/chap06/chap5realDataGHS-bo
+[90 <./figures/chap06/chap5synthData.pdf> <./figures/chap06/chap5realDataGHS-bo
 x.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap06/chap5realDataGHS-box.pdf): 
@@ -3218,8 +3258,8 @@ m/n/12/65 π
 
 
 
-[93 <./figures/chap06/chap5realDataNG.pdf>]
-<figures/chap06/chap5bigdata-ia-soc.pdf, id=4628, 1226.81151pt x 415.79967pt>
+[91 <./figures/chap06/chap5realDataNG.pdf>]
+<figures/chap06/chap5bigdata-ia-soc.pdf, id=4590, 1226.81151pt x 415.79967pt>
 File: figures/chap06/chap5bigdata-ia-soc.pdf Graphic file (type pdf)
 <use figures/chap06/chap5bigdata-ia-soc.pdf>
 Package pdftex.def Info: figures/chap06/chap5bigdata-ia-soc.pdf  used on input 
@@ -3260,33 +3300,33 @@ C70/rm/m/n/12/53 ¬ \C70/rm/m/n/12/65 p \C70/rm/m/n/12/52 ^^] \C70/rm/m/n/12/59
 
 
 
-[94 <./figures/chap06/chap5bigdata-ia-soc.pdf>]
-<figures/chap06/chap5STNQ.pdf, id=4700, 1349.23138pt x 661.313pt>
+[92 <./figures/chap06/chap5bigdata-ia-soc.pdf>]
+<figures/chap06/chap5STNQ.pdf, id=4662, 1349.23138pt x 661.313pt>
 File: figures/chap06/chap5STNQ.pdf Graphic file (type pdf)
 <use figures/chap06/chap5STNQ.pdf>
 Package pdftex.def Info: figures/chap06/chap5STNQ.pdf  used on input line 495.
 (pdftex.def)             Requested size: 281.68384pt x 138.06247pt.
-<figures/chap06/workplaceRBNA.pdf, id=4702, 1214.73514pt x 603.9788pt>
+<figures/chap06/workplaceRBNA.pdf, id=4664, 1214.73514pt x 603.9788pt>
 File: figures/chap06/workplaceRBNA.pdf Graphic file (type pdf)
 <use figures/chap06/workplaceRBNA.pdf>
 Package pdftex.def Info: figures/chap06/workplaceRBNA.pdf  used on input line 5
 03.
 (pdftex.def)             Requested size: 256.0774pt x 127.31851pt.
-<figures/chap06/ComDynVAE-HS12Visulization.pdf, id=4703, 1138.15215pt x 256.156
+<figures/chap06/ComDynVAE-HS12Visulization.pdf, id=4665, 1138.15215pt x 256.156
 37pt>
 File: figures/chap06/ComDynVAE-HS12Visulization.pdf Graphic file (type pdf)
 <use figures/chap06/ComDynVAE-HS12Visulization.pdf>
 Package pdftex.def Info: figures/chap06/ComDynVAE-HS12Visulization.pdf  used on
  input line 514.
 (pdftex.def)             Requested size: 277.41176pt x 62.43639pt.
-<figures/chap06/DynAERNN-HS12Visulization.pdf, id=4704, 1138.15215pt x 256.1563
+<figures/chap06/DynAERNN-HS12Visulization.pdf, id=4666, 1138.15215pt x 256.1563
 7pt>
 File: figures/chap06/DynAERNN-HS12Visulization.pdf Graphic file (type pdf)
 <use figures/chap06/DynAERNN-HS12Visulization.pdf>
 Package pdftex.def Info: figures/chap06/DynAERNN-HS12Visulization.pdf  used on 
 input line 517.
 (pdftex.def)             Requested size: 277.41176pt x 62.43639pt.
-<figures/chap06/DynRNN-HS12Visulization.pdf, id=4705, 1138.15215pt x 256.15637p
+<figures/chap06/DynRNN-HS12Visulization.pdf, id=4667, 1138.15215pt x 256.15637p
 t>
 File: figures/chap06/DynRNN-HS12Visulization.pdf Graphic file (type pdf)
 <use figures/chap06/DynRNN-HS12Visulization.pdf>
@@ -3295,13 +3335,13 @@ put line 520.
 (pdftex.def)             Requested size: 277.41176pt x 62.43639pt.
 
 
-[95 <./figures/chap06/chap5STNQ.pdf> <./figures/chap06/workplaceRBNA.pdf
+[93 <./figures/chap06/chap5STNQ.pdf> <./figures/chap06/workplaceRBNA.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap06/workplaceRBNA.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
 
-[96 <./figures/chap06/ComDynVAE-HS12Visulization.pdf> <./figures/chap06/DynAERN
+[94 <./figures/chap06/ComDynVAE-HS12Visulization.pdf> <./figures/chap06/DynAERN
 N-HS12Visulization.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/chap06/DynAERNN-HS12Visulization.p
@@ -3311,57 +3351,57 @@ df): PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures/chap06/DynRNN-HS12Visulization.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/chap06/DimensionsOndifferentData-t.pdf, id=4865, 1287.00514pt x 624.08
+<figures/chap06/DimensionsOndifferentData-t.pdf, id=4827, 1287.00514pt x 624.08
 597pt>
 File: figures/chap06/DimensionsOndifferentData-t.pdf Graphic file (type pdf)
 <use figures/chap06/DimensionsOndifferentData-t.pdf>
 Package pdftex.def Info: figures/chap06/DimensionsOndifferentData-t.pdf  used o
 n input line 539.
 (pdftex.def)             Requested size: 256.0774pt x 124.16742pt.
-<figures/chap06/g7truth.pdf, id=4868, 597.23125pt x 583.39153pt>
+<figures/chap06/g7truth.pdf, id=4830, 597.23125pt x 583.39153pt>
 File: figures/chap06/g7truth.pdf Graphic file (type pdf)
 <use figures/chap06/g7truth.pdf>
 Package pdftex.def Info: figures/chap06/g7truth.pdf  used on input line 559.
 (pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
-<figures/chap06/g7VGMM.pdf, id=4869, 597.23125pt x 583.39153pt>
+<figures/chap06/g7VGMM.pdf, id=4831, 597.23125pt x 583.39153pt>
 File: figures/chap06/g7VGMM.pdf Graphic file (type pdf)
 <use figures/chap06/g7VGMM.pdf>
 Package pdftex.def Info: figures/chap06/g7VGMM.pdf  used on input line 562.
 (pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
-<figures/chap06/g7VGRG.pdf, id=4870, 597.23125pt x 583.39153pt>
+<figures/chap06/g7VGRG.pdf, id=4832, 597.23125pt x 583.39153pt>
 File: figures/chap06/g7VGRG.pdf Graphic file (type pdf)
 <use figures/chap06/g7VGRG.pdf>
 Package pdftex.def Info: figures/chap06/g7VGRG.pdf  used on input line 565.
 (pdftex.def)             Requested size: 128.0387pt x 125.07065pt.
-<figures/chap06/g8truth.pdf, id=4871, 595.3573pt x 424.05626pt>
+<figures/chap06/g8truth.pdf, id=4833, 595.3573pt x 424.05626pt>
 File: figures/chap06/g8truth.pdf Graphic file (type pdf)
 <use figures/chap06/g8truth.pdf>
 Package pdftex.def Info: figures/chap06/g8truth.pdf  used on input line 568.
 (pdftex.def)             Requested size: 128.0387pt x 91.1962pt.
-<figures/chap06/g8VGMM.pdf, id=4872, 597.23125pt x 424.05626pt>
+<figures/chap06/g8VGMM.pdf, id=4834, 597.23125pt x 424.05626pt>
 File: figures/chap06/g8VGMM.pdf Graphic file (type pdf)
 <use figures/chap06/g8VGMM.pdf>
 Package pdftex.def Info: figures/chap06/g8VGMM.pdf  used on input line 571.
 (pdftex.def)             Requested size: 128.0387pt x 90.91148pt.
-<figures/chap06/g8VGRG.pdf, id=4873, 597.23125pt x 424.05626pt>
+<figures/chap06/g8VGRG.pdf, id=4835, 597.23125pt x 424.05626pt>
 File: figures/chap06/g8VGRG.pdf Graphic file (type pdf)
 <use figures/chap06/g8VGRG.pdf>
 Package pdftex.def Info: figures/chap06/g8VGRG.pdf  used on input line 574.
 (pdftex.def)             Requested size: 128.0387pt x 90.91148pt.
 
 
-[97 <./figures/chap06/DimensionsOndifferentData-t.pdf>]
+[95 <./figures/chap06/DimensionsOndifferentData-t.pdf>]
 
-[98 <./figures/chap06/g7truth.pdf> <./figures/chap06/g7VGMM.pdf> <./figures/cha
+[96 <./figures/chap06/g7truth.pdf> <./figures/chap06/g7VGMM.pdf> <./figures/cha
 p06/g7VGRG.pdf> <./figures/chap06/g8truth.pdf> <./figures/chap06/g8VGMM.pdf> <.
 /figures/chap06/g8VGRG.pdf>])
 
-[99]
+[97]
 \openout2 = `body/chap07.aux'.
 
  (./body/chap07.tex
 
-[100
+[98
 
 
 
@@ -3370,17 +3410,21 @@ p06/g7VGRG.pdf> <./figures/chap06/g8truth.pdf> <./figures/chap06/g8VGMM.pdf> <.
 Á¨¨6Á´† 6.
 
 
-[101]
+[99]
 
-[102])
+[100])
 
-[103] (./main.bbl
+[101] (./main.bbl
 
-[104
+[102
 
 
 
 ]
+
+[103]
+
+[104]
 
 [105]
 
@@ -3403,46 +3447,41 @@ p06/g7VGRG.pdf> <./figures/chap06/g8truth.pdf> <./figures/chap06/g8VGMM.pdf> <.
 [114]
 
 [115]
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-957.
- (c:/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-)<<ot1tt.cmap>>
 
 [116]
 
 [117]
 
-[118]
+[118])
 
 [119]
-
-[120]
-
-[121])
-
-[122]
 \openout2 = `appendix/publications.aux'.
 
- (./appendix/publications.tex)
+ (./appendix/publications.tex
 
-[123
+[120
 
 
-]
+])
+
+[121]
 \openout2 = `appendix/inferences.aux'.
 
  (./appendix/inferences.tex
 
-[124
+[122
 
 
 
 
-] [125]
+] [123]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 61.
 
+
+[124]
+
+[125]
 
 [126]
 
@@ -3466,25 +3505,21 @@ input line 61.
 
 [136]
 
-[137]
+[137])
 
 [138]
-
-[139])
-
-[140]
 \openout2 = `appendix/acknowledgements.aux'.
 
  (./appendix/acknowledgements.tex)
 
-[141
+[139
 
 
 
 
 ]
 
-[142
+[140
 
 
 
@@ -3510,16 +3545,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 918050A51F421215ADDC514AE522E9BF;11793.
+(rerunfilecheck)             Checksum: 2C122434982077E20842FFF75CFDE1F0;11817.
  ) 
 Here is how much of TeX's memory you used:
- 48758 strings out of 473190
- 1094102 string characters out of 5719979
- 1523700 words of memory out of 5000000
- 69171 multiletter control sequences out of 15000+600000
- 780566 words of font info for 718 fonts, out of 8000000 for 9000
+ 48643 strings out of 473190
+ 1091479 string characters out of 5719979
+ 1525450 words of memory out of 5000000
+ 69077 multiletter control sequences out of 15000+600000
+ 780290 words of font info for 717 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,21n,110p,2758b,3141s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,21n,110p,2758b,3073s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -3556,14 +3591,13 @@ ist/fonts/type1/public/txfonts/txex.pfb><c:/texlive/2025/texmf-dist/fonts/type1
 /public/txfonts/txsy.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts
 /txsya.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb><c:
 /texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb><c:/texlive/2025/
-texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2025/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/
-utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (154 pages, 11651215 bytes).
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/t
+ype1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (152 pages, 11641135 bytes).
 PDF statistics:
- 6024 PDF objects out of 6186 (max. 8388607)
- 3746 compressed objects within 38 object streams
- 1019 named destinations out of 1200 (max. 500000)
- 1350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5975 PDF objects out of 6186 (max. 8388607)
+ 3701 compressed objects within 38 object streams
+ 1005 named destinations out of 1200 (max. 500000)
+ 1346 words of extra memory for PDF output out of 10000 (max. 10000000)
 

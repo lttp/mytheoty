@@ -14,354 +14,337 @@ A level-1 auxiliary file: appendix/inferences.aux
 A level-1 auxiliary file: appendix/acknowledgements.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated field_info (elt_size=4) to 16835 items from 5000.
+Reallocated field_info (elt_size=4) to 16385 items from 5000.
 Database file #1: references/reference.bib
+I was expecting a `,' or a `}'---line 297 of file references/reference.bib
+ :  
+ :  pages = {128169},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 511 of file references/reference.bib
  :   
  :   year={2017}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 709 of file references/reference.bib
+I was expecting a `,' or a `}'---line 693 of file references/reference.bib
  :   
  :   number={1},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 825 of file references/reference.bib
+I was expecting a `,' or a `}'---line 809 of file references/reference.bib
  :  
  :  issn = {1000-9825},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1421 of file references/reference.bib
+Repeated entry---line 1411 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1841 of file references/reference.bib
+Repeated entry---line 1861 of file references/reference.bib
  : @article{riverain2023poisson
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2281 of file references/reference.bib
+Repeated entry---line 2279 of file references/reference.bib
  : @article{liu2020detecting
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2435 of file references/reference.bib
+Repeated entry---line 2433 of file references/reference.bib
  : @inproceedings{yao2021interpretable
  :                                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2453 of file references/reference.bib
+Repeated entry---line 2451 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2649 of file references/reference.bib
+Repeated entry---line 2627 of file references/reference.bib
  : @inproceedings{nguyen2011adaptive
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2823 of file references/reference.bib
+Repeated entry---line 2785 of file references/reference.bib
  : @article{rossetti2018community
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3045 of file references/reference.bib
+Repeated entry---line 3007 of file references/reference.bib
  : @article{girvan2002community
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3161 of file references/reference.bib
+Repeated entry---line 3123 of file references/reference.bib
  : @article{yang2011detecting
  :                           ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 3335 of file references/reference.bib
- :  
- :  year={2015}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 3369 of file references/reference.bib
- :  
- :  year = {2009}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 3737 of file references/reference.bib
+Repeated entry---line 3679 of file references/reference.bib
  : @article{hopcroft2004tracking
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3757 of file references/reference.bib
+Repeated entry---line 3699 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3793 of file references/reference.bib
- : @inproceedings{he2017joint
- :                           ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 3825 of file references/reference.bib
+Repeated entry---line 3757 of file references/reference.bib
  : @article{tang2014detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3901 of file references/reference.bib
+Repeated entry---line 3833 of file references/reference.bib
  : @article{asur2009event
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3921 of file references/reference.bib
+Repeated entry---line 3853 of file references/reference.bib
  : @article{brodka2013ged
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3941 of file references/reference.bib
+Repeated entry---line 3873 of file references/reference.bib
  : @inproceedings{greene2010tracking
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4191 of file references/reference.bib
+Repeated entry---line 4131 of file references/reference.bib
  : @article{watts1998collective
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4231 of file references/reference.bib
+Repeated entry---line 4171 of file references/reference.bib
+ : @article{rossetti2018community
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4381 of file references/reference.bib
  : @article{rossetti2018community
  :                               ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 4459 of file references/reference.bib
- : @article{rossetti2018community
- :                               ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 4537 of file references/reference.bib
  : @article{yang2011detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4631 of file references/reference.bib
+Repeated entry---line 4553 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4651 of file references/reference.bib
+Repeated entry---line 4573 of file references/reference.bib
  : @article{ilhan2016feature
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4671 of file references/reference.bib
+Repeated entry---line 4593 of file references/reference.bib
  : @article{rossetti2017tiles
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4691 of file references/reference.bib
+Repeated entry---line 4613 of file references/reference.bib
  : @article{menze2009comparison
  :                             ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 4745 of file references/reference.bib
- :  
- :  year={2011}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 4843 of file references/reference.bib
+Repeated entry---line 4769 of file references/reference.bib
  : @inproceedings{greene2010tracking
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5025 of file references/reference.bib
+Repeated entry---line 4955 of file references/reference.bib
  : @article{mucha2010community
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5109 of file references/reference.bib
+Repeated entry---line 5039 of file references/reference.bib
  : @article{tang2014detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5189 of file references/reference.bib
+Repeated entry---line 5119 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5223 of file references/reference.bib
+Repeated entry---line 5153 of file references/reference.bib
  : @inproceedings{greene2010tracking
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5257 of file references/reference.bib
+Repeated entry---line 5187 of file references/reference.bib
  : @inproceedings{tantipathananandh2011finding
  :                                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5369 of file references/reference.bib
+Repeated entry---line 5299 of file references/reference.bib
  : @article{karaaslanli2021community
  :                                  ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 5753 of file references/reference.bib
+Repeated entry---line 5447 of file references/reference.bib
+ : @article{singh2024social
+ :                         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5689 of file references/reference.bib
  :   
  :   year={2015}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 5953 of file references/reference.bib
+Repeated entry---line 5869 of file references/reference.bib
  : @article{brodka2013ged
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5977 of file references/reference.bib
+Repeated entry---line 5893 of file references/reference.bib
  : @article{he2015fast
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6001 of file references/reference.bib
+Repeated entry---line 5917 of file references/reference.bib
  : @article{rossetti2017tiles
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6099 of file references/reference.bib
+Repeated entry---line 6031 of file references/reference.bib
  : @inproceedings{yu2018netwalk
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6337 of file references/reference.bib
+Repeated entry---line 6241 of file references/reference.bib
  : @inproceedings{greene2010tracking
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6353 of file references/reference.bib
+Repeated entry---line 6257 of file references/reference.bib
  : @misc{gorkedynamic
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6389 of file references/reference.bib
+Repeated entry---line 6293 of file references/reference.bib
  : @article{liu2020detecting
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6413 of file references/reference.bib
+Repeated entry---line 6317 of file references/reference.bib
  : @inproceedings{liu2019evolutionary
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6449 of file references/reference.bib
+Repeated entry---line 6353 of file references/reference.bib
  : @article{yang2011detecting
  :                           ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 6479 of file references/reference.bib
- :   
- :   year={2017}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 6485 of file references/reference.bib
+Repeated entry---line 6391 of file references/reference.bib
  : @inproceedings{yu2018netwalk
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6499 of file references/reference.bib
+Repeated entry---line 6405 of file references/reference.bib
  : @inproceedings{pareja2020evolvegcn
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6517 of file references/reference.bib
+Repeated entry---line 6423 of file references/reference.bib
  : @article{lin2009analyzing
  :                          ,
 I'm skipping whatever remains of this entry
-You're missing a field name---line 6579 of file references/reference.bib
- :  note         = {Accessed: 2023-10-15}, 
- :                                         % 添加访问日期
-I'm skipping whatever remains of this entry
-Repeated entry---line 6855 of file references/reference.bib
+Repeated entry---line 6767 of file references/reference.bib
  : @article{rossetti2018community
  :                               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 6959 of file references/reference.bib
- :   
- :   year={2015}
-(Error may have been on previous line)
+Repeated entry---line 6857 of file references/reference.bib
+ : @article{mariani2024collective
+ :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6965 of file references/reference.bib
+Repeated entry---line 6879 of file references/reference.bib
  : @article{girvan2002community
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7015 of file references/reference.bib
+Repeated entry---line 6929 of file references/reference.bib
  : @article{xu2014adaptive
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7063 of file references/reference.bib
+Repeated entry---line 6977 of file references/reference.bib
  : @inproceedings{liu2020detecting
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7159 of file references/reference.bib
+Repeated entry---line 7073 of file references/reference.bib
  : @article{jutla2011generalized
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7171 of file references/reference.bib
+Repeated entry---line 7085 of file references/reference.bib
  : @inproceedings{pareja2020evolvegcn
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7523 of file references/reference.bib
+Repeated entry---line 7441 of file references/reference.bib
  : @article{liu2018global
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7573 of file references/reference.bib
+Repeated entry---line 7491 of file references/reference.bib
  : @article{tang2014detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7641 of file references/reference.bib
+Repeated entry---line 7561 of file references/reference.bib
  : @article{goyal2020dyngraph2vec
  :                               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 7683 of file references/reference.bib
- :   
- :   year={2019}
-(Error may have been on previous line)
+Repeated entry---line 7665 of file references/reference.bib
+ : @inproceedings{li2024contrastive
+ :                                 ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 7855 of file references/reference.bib
- :  
- :  year={2024}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 7947 of file references/reference.bib
+Repeated entry---line 7857 of file references/reference.bib
  : @article{goyal2018dyngem
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7987 of file references/reference.bib
+Repeated entry---line 7903 of file references/reference.bib
  : @article{ma2017evolutionary
  :                            ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 8141 of file references/reference.bib
- :   
- :   year={2015}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 8247 of file references/reference.bib
+Repeated entry---line 8163 of file references/reference.bib
  : @inproceedings{zhao2019large
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8307 of file references/reference.bib
+Repeated entry---line 8223 of file references/reference.bib
  : @article{palla2007quantifying
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8383 of file references/reference.bib
+Repeated entry---line 8299 of file references/reference.bib
  : @article{yang2011detecting
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8517 of file references/reference.bib
+Repeated entry---line 8433 of file references/reference.bib
  : @article{folino2013evolutionary
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8597 of file references/reference.bib
+Repeated entry---line 8495 of file references/reference.bib
  : @article{kim2009particle
  :                         ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 8633 of file references/reference.bib
+I was expecting a `,' or a `}'---line 8531 of file references/reference.bib
  : 
  : keywords = {}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 8961 of file references/reference.bib
+Repeated entry---line 8839 of file references/reference.bib
  : @inproceedings{wang2008commtracker
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9165 of file references/reference.bib
- : @inproceedings{zhou2018dynamic
- :                               ,
+I was expecting a `,' or a `}'---line 9091 of file references/reference.bib
+ :   
+ :   year={2018}
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 9295 of file references/reference.bib
+Repeated entry---line 9207 of file references/reference.bib
  :   @article{mucha2010community
  :                              ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "jeub2015think"
 Warning--I didn't find a database entry for "snijders1997estimation"
+Warning--I didn't find a database entry for "he2021community"
+Warning--I didn't find a database entry for "newman2004finding"
 Warning--I didn't find a database entry for "ahmed2016survey"
+Warning--I didn't find a database entry for "ranshous2015anomaly"
+Warning--I didn't find a database entry for "kingma2013auto"
+Warning--I didn't find a database entry for "choong2018learning"
 -- BUPTThesis.bst version 0.2 (2009/01/25) by Yu Zhang.
 -- http://code.google.com/p/buptthesis/
 -- See the "userguide.pdf" manual for usage information.
+Warning--The editor in NEURIPS2024_c7caf017 is missing.
+Warning--empty editor in NEURIPS2024_c7caf017
 Warning--The editor in barnes2024temporal is missing.
 Warning--empty editor in barnes2024temporal
 Warning--The editor in ma2024knowledge is missing.
 Warning--empty editor in ma2024knowledge
-`editor' is a missing field, not a string, for entry zhang2020struct
-while executing---line 2538 of file TJUThesis.bst
-Warning--there's a publisher but no address in zhang2020struct
+Warning--The author in LI2024128169 is missing.
+Warning--empty author in LI2024128169
+Warning--empty pages in LI2024128169
 Warning--The editor in zhang2020seal is missing.
 Warning--empty editor in zhang2020seal
-Warning--The editor in he2021community is missing.
-Warning--empty editor in he2021community
-Warning--The editor in michlmayr2005case is missing.
-Warning--empty editor in michlmayr2005case
+Warning--The editor in bernini2024evading is missing.
+Warning--empty editor in bernini2024evading
+Warning--The editor in falkowski2006mining is missing.
+Warning--empty editor in falkowski2006mining
+Warning--The editor in shang2014real is missing.
+Warning--empty editor in shang2014real
 Warning--The editor in cazabet2011simulate is missing.
 Warning--empty editor in cazabet2011simulate
 Warning--The editor in wang2008commtracker is missing.
 Warning--empty editor in wang2008commtracker
 Warning--The editor in chen2010detecting is missing.
 Warning--empty editor in chen2010detecting
-Warning--The editor in falkowski2006mining is missing.
-Warning--empty editor in falkowski2006mining
-Warning--there's neither address nor publisher in miller2010continuous
+Warning--The editor in miller2010continuous is missing.
+Warning--empty editor in miller2010continuous
+Warning--The editor in aynaud2010static is missing.
+Warning--empty editor in aynaud2010static
 Warning--The editor in gorke2010modularity is missing.
 Warning--empty editor in gorke2010modularity
+Warning--The editor in falkowski2008studying is missing.
+Warning--empty editor in falkowski2008studying
 Warning--The editor in 10486339 is missing.
 Warning--empty editor in 10486339
 Warning--The editor in nguyen2011adaptive is missing.
@@ -395,7 +378,6 @@ Warning--The editor in xie2013labelrankt is missing.
 Warning--empty editor in xie2013labelrankt
 Warning--The editor in hajiramezanali2019variational is missing.
 Warning--empty editor in hajiramezanali2019variational
-Warning--There is month but no year in hajiramezanali2019variational
 Warning--The editor in tantipathananandh2009constant is missing.
 Warning--empty editor in tantipathananandh2009constant
 Warning--The editor in tantipathananandh2011finding is missing.
@@ -406,34 +388,33 @@ Warning--The editor in yu2017temporally is missing.
 Warning--empty editor in yu2017temporally
 Warning--The editor in chi2007evolutionary is missing.
 Warning--empty editor in chi2007evolutionary
+Warning--The editor in NEURIPS2024_a3017a8d is missing.
+Warning--empty editor in NEURIPS2024_a3017a8d
 Warning--The editor in duan2009community is missing.
 Warning--empty editor in duan2009community
+Warning--The editor in yu2017spatio is missing.
+Warning--empty editor in yu2017spatio
 Warning--The editor in aravind2019dysat is missing.
 Warning--empty editor in aravind2019dysat
 Warning--The editor in park2022cgc is missing.
 Warning--empty editor in park2022cgc
 Warning--The editor in you2021robust is missing.
 Warning--empty editor in you2021robust
-Warning--there's a publisher but no address in foster2022generative
 Warning--The editor in oussidi2018deep is missing.
 Warning--empty editor in oussidi2018deep
 Warning--The editor in you2018graphrnn is missing.
 Warning--empty editor in you2018graphrnn
-`editor' is a missing field, not a string, for entry pinheiro2021variational
-while executing---line 2538 of file TJUThesis.bst
-Warning--there's a publisher but no address in pinheiro2021variational
+Warning--The editor in jiang2024incomplete is missing.
+Warning--empty editor in jiang2024incomplete
 Warning--The editor in nr is missing.
 Warning--empty editor in nr
-Warning--There is month but no year in nr
-Warning--there's a school but no address in mislove-2009-socialnetworksthesis
 Warning--The editor in viswanath-2009-activity is missing.
 Warning--empty editor in viswanath-2009-activity
-Warning--There is month but no year in viswanath-2009-activity
 Warning--The editor in kumar2016edge is missing.
 Warning--empty editor in kumar2016edge
 Warning--The editor in lin2008facetnet is missing.
 Warning--empty editor in lin2008facetnet
-Warning--There is month but no year in gorkedynamic
+Warning--empty journal in gorkedynamic
 Warning--The editor in konect:2017:dblp-cite is missing.
 Warning--empty editor in konect:2017:dblp-cite
 Warning--The editor in liu2019evolutionary is missing.
@@ -441,112 +422,84 @@ Warning--empty editor in liu2019evolutionary
 Warning--The editor in he2017joint is missing.
 Warning--empty editor in he2017joint
 Warning--There is month but no year in he2017joint
-Warning--The editor in zenati2018adversarially is missing.
-Warning--empty editor in zenati2018adversarially
-Warning--The editor in zhou2019towards is missing.
-Warning--empty editor in zhou2019towards
-Warning--The editor in ley2002dblp is missing.
-Warning--empty editor in ley2002dblp
-Warning--The editor in ding2019interactive is missing.
-Warning--empty editor in ding2019interactive
-Warning--The editor in ding2020inductive is missing.
-Warning--empty editor in ding2020inductive
+Warning--The editor in he2024diffusion is missing.
+Warning--empty editor in he2024diffusion
+Warning--The editor in yan2024modeling is missing.
+Warning--empty editor in yan2024modeling
+Warning--The editor in li2024unsupervised is missing.
+Warning--empty editor in li2024unsupervised
 Warning--The editor in 10597831 is missing.
 Warning--empty editor in 10597831
 Warning--The editor in cheng2008robust is missing.
 Warning--empty editor in cheng2008robust
-Warning--empty pages in worldset2002
-`editor' is a missing field, not a string, for entry hartmann2016clustering
-while executing---line 2538 of file TJUThesis.bst
-Warning--there's a publisher but no address in hartmann2016clustering
 Warning--The editor in peel2015detecting is missing.
 Warning--empty editor in peel2015detecting
 Warning--There is month but no year in peel2015detecting
 Warning--The editor in huang2020laplacian is missing.
 Warning--empty editor in huang2020laplacian
-Warning--there's a publisher but no address in rushton2014handbook
-Warning--The editor in chikhaoui2015new is missing.
-Warning--empty editor in chikhaoui2015new
-Warning--There is month but no year in chikhaoui2015new
 Warning--The editor in yu2017link is missing.
 Warning--empty editor in yu2017link
-Warning--The editor in perozzi2014deepwalk is missing.
-Warning--empty editor in perozzi2014deepwalk
-Warning--The editor in grover2016node2vec is missing.
-Warning--empty editor in grover2016node2vec
-Warning--The editor in tang2015line is missing.
-Warning--empty editor in tang2015line
-Warning--The editor in wang2016structural is missing.
-Warning--empty editor in wang2016structural
-Warning--The editor in cavallari2017learning is missing.
-Warning--empty editor in cavallari2017learning
-Warning--The editor in choong2018learning is missing.
-Warning--empty editor in choong2018learning
-Warning--The editor in jin2019community is missing.
-Warning--empty editor in jin2019community
-Warning--The editor in trivedi2017know is missing.
-Warning--empty editor in trivedi2017know
-Warning--The editor in zhou2018dynamic is missing.
-Warning--empty editor in zhou2018dynamic
-Warning--empty pages in zhou2018dynamic
-Warning--empty pages in lipton2015critical
+Warning--The editor in NEURIPS2024_015a8c69 is missing.
+Warning--empty editor in NEURIPS2024_015a8c69
+Warning--The editor in yan2024pacer is missing.
+Warning--empty editor in yan2024pacer
+Warning--The editor in he2022sssnet is missing.
+Warning--empty editor in he2022sssnet
+Warning--The editor in li2024contrastive is missing.
+Warning--empty editor in li2024contrastive
+Warning--The editor in NEURIPS2024_18969919 is missing.
+Warning--empty editor in NEURIPS2024_18969919
 Warning--The editor in Kipf.2017.Welling is missing.
 Warning--empty editor in Kipf.2017.Welling
-Warning--empty editor in kipf2016variational
-Warning--empty booktitle in kipf2016variational
-Warning--empty pages in kipf2016variational
 Warning--The editor in jiang2017variational is missing.
 Warning--empty editor in jiang2017variational
 Warning--The editor in ditursi2017local is missing.
 Warning--empty editor in ditursi2017local
 Warning--The editor in rossi2015network is missing.
 Warning--empty editor in rossi2015network
-Warning--There is month but no year in rossi2015network
-Warning--The editor in li2024contrastive is missing.
-Warning--empty editor in li2024contrastive
 Warning--The editor in wang2022powerful is missing.
 Warning--empty editor in wang2022powerful
 
 Done.
-You've used 261 entries,
+You've used 245 entries,
             4577 wiz_defined-function locations,
-            2375 strings with 58112 characters,
-and the built_in function-call counts, 176026 in all, are:
-= -- 20462
-> -- 2862
-< -- 252
-+ -- 1728
-- -- 867
-* -- 13746
-:= -- 19300
-add.period$ -- 787
-call.type$ -- 261
+            2325 strings with 56939 characters,
+and the built_in function-call counts, 166902 in all, are:
+= -- 19465
+> -- 2693
+< -- 243
++ -- 1632
+- -- 828
+* -- 12955
+:= -- 18199
+add.period$ -- 733
+call.type$ -- 245
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 423
-duplicate$ -- 11537
-empty$ -- 18350
-format.name$ -- 867
-if$ -- 43573
+cite$ -- 390
+duplicate$ -- 10920
+empty$ -- 17320
+format.name$ -- 816
+if$ -- 41391
 int.to.chr$ -- 0
-int.to.str$ -- 261
-missing$ -- 3
-newline$ -- 1313
-num.names$ -- 267
-pop$ -- 1108
+int.to.str$ -- 245
+missing$ -- 0
+newline$ -- 1227
+num.names$ -- 245
+pop$ -- 1040
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 5761
+skip$ -- 5620
 stack$ -- 0
-substring$ -- 20551
-swap$ -- 3896
-text.length$ -- 252
+substring$ -- 19416
+swap$ -- 3805
+text.length$ -- 255
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 3051
-warning$ -- 162
-while$ -- 1783
-width$ -- 264
-write$ -- 2331
-(There were 79 error messages)
+type$ -- 2939
+warning$ -- 145
+while$ -- 1677
+width$ -- 248
+write$ -- 2202
+(There were 70 error messages)

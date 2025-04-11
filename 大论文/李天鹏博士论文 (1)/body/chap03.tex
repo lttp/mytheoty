@@ -180,8 +180,8 @@
 			ia-yahoo-messages & 雅虎\cite{nr}的消息网络，时间跨度未知& $99303$& $3179718$\\
 			soc-epinions-trust-dir & Epinion的关联网络\cite{nr}，时间跨度未知& $131828$ & $841373$\\
 			soc-wiki-elec & Wikipedia的页面投票网络\cite{nr}，时间跨度2004年9月14日-2008年1月5日 & $8271$ & $107071$\\
-			wiki& Wikipedia网页关联网络\cite{mislove-2009-socialnetworksthesis}，时间跨度2001年2月20日-2002年12月6日 & $329623$ &$39953145$\\
-			Internet & 因特网\cite{mislove-2009-socialnetworksthesis}数据，时间跨度2004年1月4日 -2005年4月4日& $33936$ & $104824$\\
+			wiki& Wikipedia网页关联网络，时间跨度2001年2月20日-2002年12月6日 & $329623$ &$39953145$\\
+			Internet & 因特网数据，时间跨度2004年1月4日 -2005年4月4日& $33936$ & $104824$\\
 			Facebook & 脸书在新奥尔良地区的交友网络\cite{viswanath-2009-activity} ，时间跨度 2008年8月6日-2009年1月21日&$62306$& $905565$\\
 			bitcoin & 比特币\cite{kumar2016edge}的信任链网络，时间跨度2010年11月9日-2016年1月19日 & $5881$ & $35592$\\
 			Friend & 美国某社区的现实世界交友网络\cite{aharony2011social}，时间跨度2010年7月10日-2011年7月16日 & $130$ & $60518$\\
@@ -565,7 +565,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 生成数据集中的社团检测结果如图~\ref{fig.4.2}所示，其中前四列为生成数据集1中不同数据参数的社团检测结果，分别为：(a) $\sigma =5, nC=9, aD=20$; (b) $\sigma =5, nC=3, aD=20$; (c) $\sigma =4, nC=9, aD=16$; (d) $\sigma =4, nC=3, aD=16$；后两列为生成数据集2中的社团检测结果，分别为社团交换事件与社团分裂合并事件的生成数据。从图中可以看出，HB-DSBM在生成数据集中表现出了优异的效果，其层次贝叶斯结构能够在提升演化建模精度的同时保证相对的鲁棒性，注意到社团演化事件使各算法均呈现出不同程度的效果下降，但HB-DSBM的结果相对稳定，社团划分曲线平滑。而对比方法如ESPRA、GenLouvain等呈现出社团检测效果的剧烈变化，这表明其对时序演化模式的刻画能力较差。
 
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\textwidth]{figures/chap03/dsbm/chap3generateData1223.pdf}
 	\caption{生成数据集中的社团检测结果}
@@ -578,7 +578,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/chap03/dsbm/chap3realData1223.pdf}
 	\caption{真实世界数据的社团检测结果}
