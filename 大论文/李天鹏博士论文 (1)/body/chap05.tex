@@ -64,13 +64,13 @@
 \end{itemize}
 
 
-\section{GEABS模型描述\label{chap4:model}}
+\section{融合节点流行度的动态随机块模型描述\label{chap4:model}}
 
 \label{sec:method}
 本节首先介绍模型问题定义及参数介绍，随后详细介绍本文提出的动态网络生成模型的架构及其参数后验推断过程。
 
 
-\subsection{GEABS的准备工作}
+\subsection{准备工作}
 给定一个动态网络 $G =\{ G^{(1)}, G^{(2)}, \cdots, G^{(T)} \}$，每个 $G^{(t)} (1 \le t \le T)$ 是在时间 $t$ 的快照网络。这里记 $N^{(t)}$、$K^{(t)}$ 和 $W^{(t)}$ 分别为快照网络 $G^{(t)}$ 的节点数、社团数和邻接矩阵。为了方便推断与理解，本章假设 $N^{(t)} = N$ 随时间 $t$ 保持不变，而 $W^{(t)}$ 和 $K^{(t)}$ 随时间变化。如果网络是无向无权的，当节点 $V_i$ 和 $V_j$ 在快照 $t$ 上有边时，记 $W^{(t)}_{ij} = 1$ ；否则 $W^{(t)}_{ij} = 0$。为了方便叙述，本文假设动态网络为无向无权网络，但可以很容易地扩展到加权或有向网络（通过将连边概率矩阵$B$约束为非对称矩阵或更改连边概率为泊松分布）。
 
 对于动态网络 $G$，记社团结构为 $Z = \{ Z^{(1)}, Z^{(2)}, \cdots, Z^{(T)} \}$。这里 $Z^{(t)} \in \{0, 1 \}^{K_t \times K_t}$，且 $Z^{(t)}_{ik} = 1$ 表示节点 $V_i$ 属于社团 $k$，$K_t$ 是快照 $t$ 的社团数。在本模型中，只考虑非重叠社团，即 $\sum_{k=1}^{K_t} Z^{(t)}_{ik} = 1$。此外，为了方便，也记 $z^{(t)}_{i} = k$ 代替 $Z^{(t)}_{ik} = 1$。
@@ -87,7 +87,7 @@
 在这里，本章将这些问题称为动态网络中的演化异常。网络层面的异常易于分析和评估，但后两个异常难以量化。在本章的GEABS模型中，将从生成模型与社团检测的角度给出网络演化异常的具体定义并进行检测。
 本文涉及的主要符号总结在附录A.1~表~\ref{symbols:all} 中。
 
-\subsection{GEABS模型的生成过程}
+\subsection{模型的生成过程}
 
 本节将详细介绍GEABS模型的生成过程。对于一个动态网络，它由两部分组成，即网络快照 $t=1$ 和 $t \ge 2$。
 
@@ -195,7 +195,7 @@
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{GEABS模型的参数近似后验推断}
+\subsection{模型的参数近似后验推断}
 
 
 
@@ -339,7 +339,7 @@ O = & Pr(W, Z,\delta, A|\pi, \lambda, \mu, B) = Q_1 \prod_{t=2}^{T} O_t \nonumbe
 \label{eq:O8}
 \end{align}
 
-\subsection{基于GEABS的动态网络层次演化异常检测定义}
+\subsection{动态网络层次演化异常检测定义}
 本章的GEABS模型所建模的变量 $\delta$、$Z$ 和 $A$分别可以表示节点层次的流行度、社团级别的结构及其演化。为了捕捉不同层次的异常，本章进一步定义了三层次的异常指标以刻画动态网络的层次异常。
 
 在\textbf{网络层次}，其异常也被称为动态网络的变更点，其本质是严重违背动态网络平滑性假设的网络快照，此类快照的识别能够帮助更好地对动态网络进行建模及挖掘。考虑到网络快照层次的变化往往受节点及社团的影响，即当网络中存在影响力过大的节点的剧烈变化及社团的剧烈变化时，会导致网络出现变更点。因此网络层次的异常本文通过结合节点流行度$\delta$和社团层次的转移参数$A$以及社团结构$Z$来定义快照$t$时的网络层次异常值：
@@ -367,7 +367,7 @@ O = & Pr(W, Z,\delta, A|\pi, \lambda, \mu, B) = Q_1 \prod_{t=2}^{T} O_t \nonumbe
 % \label{eq:networkanomaly}
 % \end{equation}
 
-\section{GEABS模型推断及参数求解}
+\section{融合节点流行度的动态随机块模型的推断及参数求解}
 \label{sec4:inference}
 为了优化公式~\ref{eq:O8}的联合分布，需要计算给定观测变量和超参数的后验函数，可以写成如下形式：
 \begin{equation}
@@ -550,7 +550,7 @@ z^{(t)}_i = \arg \max_k \phi_{ik}^{(t)}, ~~~A_{kl}^{(t)} \propto \tilde{\mu}_{kl
 
 GEABS的复杂度主要依赖于对参数$\phi$的计算，其复杂度为$O(TK^2N^2)$。其中$T$是网络快照数、$N$是网络中的节点数、$K$是社团的平均个数。考虑到大部分真实世界网络都是稀疏的，且社团个数远远少于节点个数，本模型可以进一步引入负采样或并行计算来优化模型的计算效率。
 
-\section{GEABS模型实验\label{chap4:experiment}}
+\section{融合节点流行度的动态随机块模型实验\label{chap4:experiment}}
 
 % In this section, we verify the proposed method on both the and synthetic and real-world dynamic networks, including detecting abnormal behaviors caused by changes in the macroscopic, mesoscopic, and micro-scale levels of the network. We compare our results with some baselines on the different tasks (community detection, anomaly detection on network level, community level, and node level). Besides, we also show a case study to verify the effectiveness of the proposed model.
 本节在生成和真实世界的动态网络上验证所提出的方法的贡献，包括检测网络宏观、介观和微观层次变化引起的动态网络演化异常及动态随机块模型的经典任务社团检测。通过将GEABS与典型的对比方法在不同下游任务（社团检测、网络层次的异常检测、社团层次的异常检测和节点层次的异常检测）进行比较，以验证GEABS在多种下游任务的有效性。另外，为了验证本方法的实际应用效果，本章还提供了一个基于世界贸易网络的案例分析。
@@ -773,9 +773,9 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 \begin{figure}
 	\centering
 	\subfigure[Enron]{
-		\includegraphics[width=0.35\textwidth]{figures/chap05/nethitrate-enron-new.pdf}}
+		\includegraphics[width=0.4\textwidth]{figures/chap05/nethitrate-enron-new.pdf}}
 	\subfigure[World trade]{
-		\includegraphics[width=0.35\textwidth]{figures/chap05/nethitrate-World-new.pdf}}
+		\includegraphics[width=0.4\textwidth]{figures/chap05/nethitrate-World-new.pdf}}
 	\caption{GEABS与LAD、NetWalk的网络级别演化异常$top-k$击中率}
 	\label{fig:enron-net}
 \end{figure}
@@ -788,7 +788,7 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 \subsection{社团级别异常检测}
 \label{community anomaly}
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\subfigure[GroundTruth]{
 		\includegraphics[width=0.7\textwidth]{figures/chap05/mergesplitAGND.pdf}}
@@ -807,7 +807,7 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 
 另外，GEABS可以处理动态网络中社团数量的变化。在真实网络中，每个快照的社团数量是未知的。社团可能在演化过程中进行合并、分裂或消亡，这些社团级别的演化事件都可能导致社团数量的变化。因此，本节在Enron数据集上测试了GEABS在不同快照下不同社团数量的刻画能力，每个快照的社团数量由静态社团检测方法进行确定。如图~\ref{fig:enronTransA}所示，Enron数据中节点的社团成员转移非常剧烈，社团数量在$t=5,6,7,8,9$中均发生了变化。而与表~\ref{tab:groundE}中Enron公司的重大事件进行对比，可以发现$t=6,7,8,9$快照中存在网络变更点，这表明GEABS能够处理不断变化的社团数量，且可以通过对GEABS中社团数量变化对社团级别异常事件进行有效推断。
  
- \begin{figure}
+ \begin{figure}[!htbp]
  	\centering
  	\includegraphics[width=0.7\textwidth]{figures/chap05/EnronTransA-heatmap.pdf}
  	\caption{在不同快照$t$下，GEABS在Enron数据上随社团数量$K$变化的转移矩阵可视化热图}
@@ -821,7 +821,7 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 由于缺乏合理的评价指标和数据集，对节点的异常演化行为很难判断。为评估基于模型参数$\delta$定义的节点异常指数${E_{cl}}_{(i)}$的有效性，本章在World Trade网络中绘制了节点异常指数的散点图，通过世界历史信息启发式地验证参数${E_{cl}}_{(i)}$的合理性。如图~\ref{fig:worldtradenode}所示，红色表示$top-5$异常值最高的国家，绿色节点表示本节手动选出的全球贸易主要国家（包括美国、加拿大、德国、俄罗斯、中国和日本）.二战后，美国（USA）是世界上贸易最稳定的国家，也是西方国家的领袖，其节点的异常值达到最低。而日本（JPN）相比其他大多数国家也有较低的异常值，考虑到直到$2000$年，日本的GDP位居世界第二，这也是节点异常指数${E_{cl}}_{(i)}$有效性的一个实例。此外，像海地（HAI）、圣卢西亚（SLU）和多米尼加（DMA）等小国的节点异常值始终较高，通过调研得知，上述国家并没有在国际贸易中具有竞争力的商品，且受到西方制约，这使得这些国家在国际贸易中具有较高的波动性。
 
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{figures/chap05/worldtradenode-adjusted.pdf}
 	\caption{World Trade数据中的节点异常识别结果}
@@ -832,24 +832,24 @@ ${F_1}$提供了平衡精度和召回率的单一指标。
 
 \subsection{数据挖掘实证}
 
-为了进一步挖掘本模型的演化异常检测能力，本节同时从宏观、微观和介观层面可视化了GEABS模型在国际贸易数据集上检测到的演化异常。如图~\ref{fig:worldtradecaseCN}及图~\ref{fig:worldtradecaseN}所示。其中，图~\ref{fig:worldtradecaseCN}展示了在世界贸易网络中，网络变更点与对应的社团变化之间的关系；而图图~\ref{fig:worldtradecaseN}则展示了对应时间点的异常节点与挑选的核心节点的异常值。从图中可以看出，不同的级别异常指数可能由不同的因素所引起，通过横向与纵向对比，可以有效对动态网络的演化异常进行深入挖掘。例如，在$1950$年，英国举行了关贸总协定（GATT）第三回合谈判，这使得当年有多个国际贸易团体发生合并（社团级别）。而在节点层面，注意到中国（CHN）的$\delta$值非常高，经调研，我国于$1949$年建国，且并未加入国际贸易组织，因而$1950$年的国际贸易并不稳定。
+为了进一步挖掘本模型的演化异常检测能力，本节同时从宏观、微观和介观层面可视化了GEABS模型在国际贸易数据集上检测到的演化异常。如图~\ref{fig:worldtradecaseCN}及图~\ref{fig:worldtradecaseN}所示。其中，图~\ref{fig:worldtradecaseCN}展示了在世界贸易网络中，网络变更点与对应的社团变化之间的关系；而图图~\ref{fig:worldtradecaseN}则展示了对应时间点的异常节点与挑选的核心节点的异常值。从图中可以看出，不同的级别异常指数可能由不同的因素所引起，通过横向与纵向对比，可以有效对动态网络的演化异常进行深入挖掘。例如，在$1950$年，英国举行了关贸总协定（GATT）第三回合谈判，这使得当年有多个国际贸易团体发生合并（社团级别）。而在节点层面，注意到中国（CHN）的$\delta$值非常高，经调研，我国于$1949$年建国，且并未加入国际贸易组织，因而$1950$年的国际贸易并不稳定。$1973$年的石油危机使得俄罗斯的$\delta$值急剧上升。由于俄罗斯的主要出口商品是石油，中东石油危机对俄罗斯的石油出口影响巨大，反而对其他主要国家影响较小。有趣的是，苏联的解体（$1991$年）甚至没有影响俄罗斯的进出口贸易（节点层面），但这一事件使得多个国家集团分裂（社团层面）。
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-CNlevel.pdf}
 	\caption{World Trade的层次异常检测案例-社团及网络级别}
 	\label{fig:worldtradecaseCN}
-	\vspace{-2cm}
+%	\vspace{-2cm}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-Nlevel.pdf}
+	\includegraphics[width=\textwidth]{figures/chap05/worldtrade-Nlevel-new.pdf}
 	\caption{World Trade的层次异常检测案例-节点级别}
 	\label{fig:worldtradecaseN}
 %	\vspace{-2cm}
 \end{figure}
-$1973$年的石油危机使得俄罗斯的$\delta$值急剧上升。由于俄罗斯的主要出口商品是石油，中东石油危机对俄罗斯的石油出口影响巨大，反而对其他主要国家影响较小。有趣的是，苏联的解体（$1991$年）甚至没有影响俄罗斯的进出口贸易（节点层面），但这一事件使得多个国家集团分裂（社团层面）。
+
 
 另外从图中可以发现，每一次的国际重要事件总会使小国的$\delta$值达到最高。这表明在全球性事件中，小国比大国更易受到影响，这也符合直觉。此外，社团级别的异常和网络级别的异常密切相关，图~\ref{fig:worldtradecaseCN}中的大多数网络变更点都存在社团的重大变化，如$1949$年、$1955$年和$1983$年。然而，节点级别的异常总是受到社团或网络级别的事件影响，例如前文提到的小国节点级沿海异常。这一现象揭示了网络不同层次之间的演化存在更复杂的关系，值得进一步研究。
 

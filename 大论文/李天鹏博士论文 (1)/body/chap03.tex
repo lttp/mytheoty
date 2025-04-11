@@ -22,7 +22,7 @@
 	\setlength{\abovecaptionskip}{0pt} 
 	\setlength{\belowcaptionskip}{10pt} 
         \centering
-	\includegraphics[width=.8\textwidth]{figures/chap03/figure/modelChap3.png}
+	\includegraphics[width=.7\textwidth]{figures/chap03/figure/modelChap3.pdf}
 	\caption{节点社团转移异质性探究方法流程图}
 	\label{fig.3.1}
 \end{figure}
@@ -37,12 +37,12 @@
 \item 节点社团变迁的异质性探究。本部分采用决策树模型对节点社团归属变更标签进行分类。在分类完成后，通过计算平均不纯度降低（Mean Decrease in Impurity，MDI）指标，评估各特征在分类任务中的贡献度，从而量化不同结构属性在节点社团变迁过程中的相对重要性。这一分析结果进一步为揭示驱动节点社团归属异质性的深层机制提供了依据。
 \end{enumerate}
 
-\begin{algorithm}[!htbp]
+\begin{algorithm}[H]
 	\caption{特征提取}
 	\label{chap3:alg1}
-	\algorithmicrequire \quad 无向图序列 $W = {W}^1,..{W}^T$ 和社团标签 $\mathcal{C} = \mathcal{C}^1,...\mathcal{C}^T$\\
-	\algorithmicensure \quad 分类特征$F$ 和分类标签$L$
 	\begin{algorithmic}[1]
+		\STATE \textbf{输入：}\quad 无向图序列 $W = {W}^1,..{W}^T$ 和社团标签 $\mathcal{C} = \mathcal{C}^1,...\mathcal{C}^T$\\
+		\STATE \textbf{输出：}\quad 分类特征$F$ 和分类标签$L$
 		\FOR{图${W}^t$， $t \neq T$}
 		\FOR{在$\mathcal{C}^t$的社团 $\mathcal{C}_l^t$  }
 		\STATE 统计社团的特征$F_c$
@@ -144,24 +144,24 @@
 % 按照上文所述的研究框架处理上述$15$个数据集，并计算其特征重要性。结果如图\ref{fig.3.3}所示，图中横坐标表示节点如表\ref{fig.3.1}所述的分类特征；纵坐标分别表示$15$个数据集，颜色代表特征在不同数据集中的分类任务中所占重要性，颜色越浅表示该特征重要性越高。可以看到$f7$(节点的度)与$f8$(节点的平均邻居度)在所有特征分类中均占很大比重，尤其在$fb-forum$数据中，节点的平均邻居度在分类中所占比重超过了$0.5$；而$f5$(社团活跃度)在$ia-slashdot-reply-dir$数据中所占比重超过其他数据，该数据为技术网站Slashdot的回复网络，从这一点来看，\textbf{科技类网站的圈子活跃度}是影响其用户更换兴趣圈的主要因素；与此同时，在$internet$网络中，$f9$(节点的接近中心性)对其节点的社团转移影响最大，显而易见，在因特网中，连通性是其最至关重要的指标之一。虽然$f5,f9$均在某些数据集中显示出了对节点社团转移的重要影响力，但是其并不具有普遍性。反观$f7,f8$，其在所有数据集中对节点的社团转移均具有可观的影响力。因此本研究可得出初步结论，\textbf{节点的度以及节点的平均邻居度是影响节点发生社团转移的重要的结构特征}。进一步可以确定，节点的社团转移存在异质性，即\textbf{社团内不同的节点具有不同的转移倾向性}。
 
 % 另外，为了去除社团检测算法偏差，本研究基于GenLouvain和PisCES两个社团检测算法的结果如图~\ref{fig.3.3Gen}和图~\ref{fig.3.3Pis}所示，其结果也证实了本研究的结论，即社团内不同节点具有不同的转移倾向，但细节方面存在一定偏差，如节点级特征$f9,f10$在GenLouvain方法中具有更大的占比，而在PisCES中$f7$节点的度在$ia_reality_call$数据集中相较于另外两个社团检测方法具有更高的重要性。
-通过对上述数据集的挖掘，结果如图~\ref{fig.3.3}所示。热图中横坐标代表特征编号，纵坐标代表数据集，颜色越浅表示分类特征重要性越高。可以看到，去除社团检测算法差异后，节点级别的特征在社团转移过程中占有较高的重要性，其中以节点的平均邻居度（$f8$）和节点的度($f7$)对分类影响最大，即动态网络中，社团内不同的节点具有不同的社团转移倾向性，且单独的某一个特征并不能决定节点的社团转移。这证明了在动态网络生成过程中，节点的高阶特征如平均邻居度对网络及社团演化具有显著的影响，这为后续模型对动态网络生成模式的建模提供了实证依据。
+通过对上述数据集的挖掘，结果如图~\ref{fig.3.3}所示。热图中横坐标代表特征编号，纵坐标代表数据集（部分数据集由于命名过长，部分进行缩写表示，不影响其对应关系），颜色越浅表示分类特征重要性越高。可以看到，去除社团检测算法差异后，节点级别的特征在社团转移过程中占有较高的重要性，其中以节点的度（$f7$）和节点的平均邻居度($f8$)对分类影响最大，另外节点的接近中心性（$f9$）也对节点的社团变化具有较高的影响力。即动态网络中，社团内不同的节点具有不同的社团转移倾向性，且单独的某一个特征并不能决定节点的社团转移。这证明了在动态网络生成过程中，节点的高阶特征，特别是邻域特征如平均邻居度对网络及社团演化具有显著的影响，这为后续模型对动态网络生成模式的建模提供了实证依据。
 
 
 \begin{figure}[!htbp]
         \subfigure[基于TILES]{
-        \includegraphics[width=.31\textwidth]{figures/chap03/figure/15cmp.pdf}
+        \includegraphics[width=.31\textwidth]{figures/chap03/figure/chap3TILES.pdf}
         }
 	\subfigure[基于GenLouvain]{
-    \includegraphics[width=.31\textwidth]{figures/chap03/figure/resultGenlou.pdf}
+    \includegraphics[width=.31\textwidth]{figures/chap03/figure/chap3Gen.pdf}
         }
         \subfigure[基于PisCES]{
-    \includegraphics[width=.31\textwidth]{figures/chap03/figure/resultPNAS15.pdf}
+    \includegraphics[width=.31\textwidth]{figures/chap03/figure/chap3PisCES.pdf}
         }
 	\caption{基于不同社团检测算法的$15$个数据集的特征重要性热图}
 	\label{fig.3.3}
 \end{figure}
 
-为了从定量的角度探究节点的度与平均邻居度如何影响节点的社团转移，本
+为了从定量的角度探究节点的度、平均邻居度以及接近中心性如何影响节点
 
 \begin{table}[H]
 	\centering
@@ -193,27 +193,69 @@
 	}
 \end{table}
 
-\noindent节还绘制了二者在所有数据集中发生与未发生社团转移的数据分位图。如图~\ref{fig.3.4}与图~\ref{fig.3.5}所示，其中横坐标为$1$表示发生节点转移，横坐标为$0$表示未发生节点社团转移，可以看到节点的度越小，节点越可能受到邻居影响而发生社团转移；反之节点的平均邻居度越大，越可能发生社团转移，但各数据集的噪声过多且模式并不清晰，因此难以得到定量的结论。但仍然能够定性地确定节点在社团演化中存在异质性，且与节点及其邻居的重要性直接相关。
+\noindent的社团转移，本节还绘制了三者在代表数据集中发生与未发生社团转移的数据分位图，由于大部分数据集的分位图的呈现较差（数据较集中，离群点较多等）影响观察，因此这里为每个特征各选取了三个代表性数据集进行呈现。如图~\ref{fig.3.4}、图~\ref{fig.3.5}与图~\ref{fig.3.6}所示，图中横坐标中“转移社团”表示所有转移社团节点的对应指标的集中趋势，“未转移社团”表示所有演化过程中保持在本社团中的节点的集中趋势，绿色横线表示中位数，黑色圆圈表示离群点。可以看到节点的度越小，越可能受到邻居影响而发生社团转移；反之节点的平均邻居度越大，越可能发生社团转移。而节点的接近中心性则表现出了一定的一致性，尤其在 ia\_r\_call 数据中，虽然总体上看转移社团的节点的接近中心性高于未转移社团的节点，但二者中位数接近。但各数据集的噪声过多且模式并不统一，因此难以得到定量的结论。
 % 为了探究节点的度以及节点的平均邻居度是以何种模式影响节点的社团转移的，本文分别统计了以上两个节点结构属性在$15$个数据集中的分布。如图\ref{fig.3.4}所示，该图展示了节点的度在十五个数据集中的分位图，每个子图中共有两列分位图，分别为发生转移的节点(横坐标为$1$)以及未发生转移的节点(横坐标为$0$)的度的分位统计图。从图中可以看到，在所有$15$个数据集中，发生社团转移的节点的度普遍比未发生转移的节点的度更高，即在一个网络中，节点的度越高，其越有可能发生社团转移。这也验证了社团检测中的大量度修正方法~\cite{wilson2016modeling,jin2015modeling}的正确性。而图\ref{fig.3.5}则展示了节点的平均邻居度在十五个数据集中的分位图，每个子图中共有两列分位图，分别为发生转移的节点(横坐标为$1$)以及未发生转移的节点(横坐标为$0$)的平均邻居度的分位统计图。可以看到节点的平均邻居度在不同数据集中的发生转移以及未发生转移节点中的值并不相同，这说明不同的节点平均邻居度确实在影响节点的社团转移行为，然而其模式在所有十五个数据集中并不统一。
 
+% \begin{figure}[!htbp]
+% 	\centering
+% 	\setlength{\abovecaptionskip}{0pt} 
+% 	\setlength{\belowcaptionskip}{10pt} 
+% 	\includegraphics[width=.85\textwidth]{figures/chap03/figure/alldata-DG.pdf}
+% 	\caption{15个数据集的节点度的分位图}
+% 	\label{fig.3.4}
+% 	\vspace{-1cm}
+% \end{figure}
+
+\begin{figure}[!htbp]
+	\centering
+	\subfigure{
+		\includegraphics[width=.31\textwidth]{figures/chap03/figure/degree/ia_d_replydegree.pdf}
+	}
+	\subfigure{
+		\includegraphics[width=.31\textwidth]{figures/chap03/figure/degree/ia_r_calldegree.pdf}
+	}
+	\subfigure{
+		\includegraphics[width=.31\textwidth]{figures/chap03/figure/degree/stackexchdegree.pdf}
+	}
+ 	\caption{代表数据集的节点度分位图}
+	\label{fig.3.4}
+	\vspace{-1cm}
+\end{figure}
  \begin{figure}[!htbp]
- 	\centering
- 	\setlength{\abovecaptionskip}{0pt} 
- 	\setlength{\belowcaptionskip}{10pt} 
- 	\includegraphics[width=.85\textwidth]{figures/chap03/figure/alldata-DG.pdf}
- 	\caption{15个数据集的节点度的分位图}
- 	\label{fig.3.4}
- 	\vspace{-1cm}
- \end{figure}
+	\centering
+	\subfigure{
+	\includegraphics[width=.31\textwidth]{figures/chap03/figure/avgdegree/fb_messagesavgde.pdf}
+}
+\subfigure{
+	\includegraphics[width=.31\textwidth]{figures/chap03/figure/avgdegree/Friendavgde.pdf}
+}
+\subfigure{
+	\includegraphics[width=.31\textwidth]{figures/chap03/figure/avgdegree/internetavgde.pdf}
+}
+	\caption{代表数据集的节点平均邻居度分位图}
+	\label{fig.3.5}
+	\vspace{-0.5cm}
+\end{figure}
+ \begin{figure}[!htbp]
+	\centering
+	\subfigure{
+		\includegraphics[width=.31\textwidth]{figures/chap03/figure/closeness/Friendcloseness.pdf}
+	}
+	\subfigure{
+		\includegraphics[width=.31\textwidth]{figures/chap03/figure/closeness/ia_r_callcloseness.pdf}
+	}
+	\subfigure{
+		\includegraphics[width=.31\textwidth]{figures/chap03/figure/closeness/ia_yahoocloseness.pdf}
+	}
+	\caption{代表数据集的节点接近中心性分位图}
+	\label{fig.3.6}
+	\vspace{-0.5cm}
+\end{figure}
 
-
-
-
-
-\section{HB-DSBM模型描述}
+\section{层次狄利克雷动态随机块模型描述}
 上述研究从实际数据集的角度证明了节点在动态网络中社团转移异质性的存在，受此启发，本文提出了基于动态随机块模型DSBM的层次贝叶斯动态随机块模型HB-DSBM。
 
-\subsection{HB-DSBM的准备工作}
+\subsection{准备工作}
 
 
 % 在介绍模型前，本节首先介绍模型的符号表示。如表\ref{tab.4.1}所示，用$W=\{W^1,W^2,...,W^T\}$表示动态网络邻接矩阵，即$W^t$表示第$t$个网络快照的邻接矩阵，其中$t \in 1,...,T$。这里$W^t \in \{0,1\}^{N\times N}$，$W_{ij}^t = 0$则代表$i$节点与$j$节点在网络快照$t$中没有边，若为$1$则有边。这里为了方便叙述，本章认为网络是无向无权的，这里需要说明，HB-DSBM可以有效的扩展为有向有权网络。$Z = \{Z^1,Z^2,...,Z^T\}$代表每个网络快照中节点的社团划分，例如$z_i^t = k$则表示$i$节点在网络快照$t$中属于$k$社团，其中$k\in K$。
@@ -221,19 +263,11 @@
 在正式介绍模型之前，本节首先阐释本章的符号体系。如附录A.1~表\ref{symbols:all}所示，
 动态网络的邻接矩阵集合用$W={W^1, W^2, \dots, W^T}$表示，其中$W^t$对应第$t$个网络快照的邻接矩阵，$t$取值范围为$1$至$T$。
 
- \begin{figure}[!htbp]
-	\centering
-	\setlength{\abovecaptionskip}{0pt} 
-	\setlength{\belowcaptionskip}{10pt} 
-	\includegraphics[width=.85\textwidth]{figures/chap03/figure/alldata-aND.pdf}
-	\caption{15个数据集的节点的平均邻居度的分位图}
-	\label{fig.3.5}
-	\vspace{-0.5cm}
-\end{figure}
+
 
 \noindent本章中，$W^t \in {0,1}^{N \times N}$，$W_{ij}^t = 0$表示在快照$t$中节点$i$与节点$j$之间不存在边，而$W_{ij}^t = 1$反之。为了方便描述，本章假设输入的网络是无向且无权的。对于无向无权网络，可以通过设置邻接矩阵非对称或邻接矩阵的数值为大于等于$0$的整数，并将连边分布设置为泊松分布进行适配。$Z = {Z^1, Z^2, \dots, Z^T}$则表示动态网络每个快照的社团划分，当$z_i^t = k$时，表示节点$i$在$t$时刻属于社团$k$，$k \in K$，$z_i$也可以用one-hot向量进行表示。
 
-\subsection{HB-DSBM的模型设计}
+\subsection{层次狄利克雷动态随机块模型设计}
 
 \begin{figure}[!htbp]
 	\centering
@@ -336,10 +370,10 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 % 其中块矩阵变分参数$q(B|\widetilde{\alpha},\widetilde{\beta}) = \prod_{k,l\geq k} Beta(\widetilde{\alpha}_{kl},\widetilde{\beta}_{kl})$, 社团级别转移矩阵变分参数 $q(A|\widetilde{\mu}) = \prod_{k=1}^K \prod_{l=1}^K Dir(\widetilde{\mu}_{kl})$。 而社团归属变分参数$q(z_i^t|\widetilde{\phi}_i^t)$ 服从以$\widetilde{\phi}_i^t$为参数的多项分布。
 % 而$q(c_i^t|\widetilde{\xi}_i^t)$和$q(\pi|\widetilde{\gamma})$都分别服从以$\widetilde{\xi}_i^t$和$\widetilde{\mu}_{kl}$为参数的狄利克雷分布。
 
-\section{HB-DSBM模型求解}
+\section{层次狄利克雷动态随机块模型模型求解}
 本节介绍基于变分推断的HB-DSBM参数后验求解方法，具体如下所述。
 
-\subsection{HB-DSBM参数的近似后验推断}
+\subsection{模型参数的近似后验推断}
 
 模型后验分布$p(Z, C, B, A, \pi | W)$由于各分部并非共轭分部，因此难以直接推断。本研究基于平均场理论，提出基于变分推断理论，以$q(Z, C, B, A, \pi)$近似替代$p(Z, C, B, A, \pi | W)$。为简化表述，本节将参数集合$\{\pi, B, A, C, Z\}$统一记作$\Delta$。具体而言，变分分布的因子分解形式如下：
 \begin{equation}
@@ -493,7 +527,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 
 
-\subsection{HB-DSBM算法迭代}
+\subsection{模型算法迭代}
 
 在获得所有参数的更新公式后，本节提出变分EM算法的迭代过程，如算法~\ref{alg4.1}所示。
 
@@ -513,7 +547,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 算法的计算复杂度主要由三部分构成。更新$\widetilde{\phi}$的复杂度为$O(TN^2K^2)$，其中$T$表示网络快照数量，$N$为节点总数，$K$为社团数量。$\widetilde{\xi}$的计算复杂度为$O(TNK^2)$。模型变分下界的计算复杂度为$O(TN^2K^2)$。考虑到网络规模增大时，节点数、快照数和社团数的变化均为线性，因此其具备一定规模数据的处理能力，但仍然难以应用到实际的大规模数据计算中，这也是后续需要解决的问题之一。
 
-\section{HB-DSBM的实验}
+\section{层次狄利克雷动态随机块模型实验}
 
 
 本节首先将HB-DSBM与领域内具有代表性的动态社团检测算法进行对比，以验证节点演化异质性建模对动态社团检测的效果，值得注意的是，HB-DSBM去除层次狄利克雷结构后将退化成DSBM算法，因此本节不单独设置消融实验进行对比。随后，通过在DBLP数据集的演化分析挖掘，证明了本文建模的节点演化异质性在社团演化分析中的效果。
@@ -562,7 +596,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 \subsubsection{实验结果}
 
-生成数据集中的社团检测结果如图~\ref{fig.4.2}所示，其中前四列为生成数据集1中不同数据参数的社团检测结果，分别为：(a) $\sigma =5, nC=9, aD=20$; (b) $\sigma =5, nC=3, aD=20$; (c) $\sigma =4, nC=9, aD=16$; (d) $\sigma =4, nC=3, aD=16$；后两列为生成数据集2中的社团检测结果，分别为社团交换事件与社团分裂合并事件的生成数据。从图中可以看出，HB-DSBM在生成数据集中表现出了优异的效果，其层次贝叶斯结构能够在提升演化建模精度的同时保证相对的鲁棒性，注意到社团演化事件使各算法均呈现出不同程度的效果下降，但HB-DSBM的结果相对稳定，社团划分曲线平滑。而对比方法如ESPRA、GenLouvain等呈现出社团检测效果的剧烈变化，这表明其对时序演化模式的刻画能力较差。
+生成数据集中的社团检测结果如图~\ref{fig.4.2}所示，其中前四列为生成数据集1中不同数据参数的社团检测结果，分别为：(a) $\sigma =5, nC=9, aD=20$; (b) $\sigma =5, nC=3, aD=20$; (c) $\sigma =4, nC=9, aD=16$; (d) $\sigma =4, nC=3, aD=16$；后两列为生成数据集2中的社团检测结果，分别为(e)社团交换事件与(f)社团分裂合并事件的生成数据。从图中可以看出，HB-DSBM在生成数据集中表现出了优异的效果，其层次贝叶斯结构能够在提升演化建模精度的同时保证相对的鲁棒性，注意到社团演化事件使各算法均呈现出不同程度的效果下降，但HB-DSBM的结果相对稳定，社团划分曲线平滑。而对比方法如ESPRA、GenLouvain等呈现出社团检测效果的剧烈变化，这表明其对时序演化模式的刻画能力较差。
 
 
 \begin{figure}[!htbp]
