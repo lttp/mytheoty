@@ -3,8 +3,8 @@
 
 \bibitem{watts1998collective}
 Watts~D~J, Strogatz~S~H.
-Collective dynamics of 'small-world' networks~[J].
-Nature, 1998, 393~(6684):  440--442.
+Collective dynamics of `small-world' networks~[J].
+Nature, 1998, 393~(6684):  440.
 
 \bibitem{albert1999diameter}
 Albert~R, Jeong~H, Barab{\'a}si~A-L.
@@ -14,12 +14,12 @@ Nature, 1999, 401~(6749):  130--131.
 \bibitem{NEURIPS2024_c7caf017}
 Varbella~A, Amara~K, Gjorgiev~B, \emph{et~al}.
 PowerGraph: A power grid benchmark dataset for graph neural networks~[C].
-In Proceedings of the Advances in Neural Information Processing Systems, 2024:
-  110784--110804.
+In Proceedings of the 37th International Conference on Neural Information
+  Processing Systems, 2024:  110784--110804.
 
 \bibitem{orgovanyi2025geocoding}
 Orgov{\'a}nyi~P, Hammer~T, Karches~T.
-Geocoding Applications for Enhancing Urban Water Supply Network Analysis~[J].
+Geocoding applications for enhancing urban water supply network analysis~[J].
 Urban Science, 2025, 9~(2): ~51.
 
 \bibitem{barnes2024temporal}
@@ -32,7 +32,7 @@ In Proceedings of the International Applications of Artificial Intelligence
 \bibitem{mariani2024collective}
 Mariani~M~S, Battiston~F, Horv{\'a}t~E-{\'A}, \emph{et~al}.
 Collective dynamics behind success~[J].
-Nature communications, 2024, 15~(1):  10701.
+Nature Communications, 2024, 15~(1):  10701.
 
 \bibitem{sanders2024ecosystem}
 Sanders~D, Frago~E.
@@ -48,14 +48,13 @@ Chaos, Solitons \& Fractals, 2024, 178~(1):  114379.
 
 \bibitem{NEURIPS2024_25ead0ef}
 Ban~Y, Zou~J, Li~Z, \emph{et~al}.
-PageRank Bandits for Link Prediction~[C]~//~Globerson~A, Mackey~L, Belgrave~D,
-  \emph{et~al}.
-In Proceedings of the Advances in Neural Information Processing Systems, 2024:
-  21342--21376.
+PageRank bandits for link prediction~[C].
+In Proceedings of the 37th International Conference on Neural Information
+  Processing Systems, 2024:  21342--21376.
 
 \bibitem{10535312}
 Cheng~X, Huo~Y, Lin~S, \emph{et~al}.
-Deep Feature Aggregation Network for Hyperspectral Anomaly Detection~[J].
+Deep feature aggregation network for hyperspectral anomaly detection~[J].
 IEEE Transactions on Instrumentation and Measurement, 2024, 73~(1):  1--16.
 
 \bibitem{kumar2024community}
@@ -86,13 +85,14 @@ Science, 2022, 377~(6612):  1256--1258.
 
 \bibitem{ma2024knowledge}
 Ma~H, Yan~T, Wang~C, \emph{et~al}.
-Knowledge Selection Based Motif for Dynamic Community Detection~[C].
-In Proceedings of the International Conference on Applied Intelligence, 2024:
-  139--149.
+Knowledge selection based motif for dynamic community detection~[C].
+In Proceedings of the 10th International Conference on Applied Intelligence,
+  2024:  139--149.
 
 \bibitem{LI2024128169}
+Li~J, Lai~S, Shuai~Z, \emph{et~al}.
 A comprehensive review of community detection in graphs~[J].
-Neurocomputing.
+Neurocomputing, 2024, 600~(1):  128169.
 
 \bibitem{peng2024unsupervised}
 Peng~H, Zhang~J, Huang~X, \emph{et~al}.
@@ -127,14 +127,9 @@ Modularity optimization by conformational space annealing~[J].
 Physical Review E—Statistical, Nonlinear, and Soft Matter Physics, 2012,
   85~(5):  056702.
 
-\bibitem{JSJA20241121007}
-俞山青，宋亦聃，周金涛，等．
-基于梯度引导的社团隐匿扰动子结构优化方法~[J]．
-计算机科学，2024，1~(1)： 1--15．
-
 \bibitem{10684291}
 Tsai~F-S, Hsu~S-Y, Shih~M-H.
-A Seed Growth Algorithm for Local Clustering in Complex Networks~[J].
+A seed growth algorithm for local clustering in complex networks~[J].
 IEEE Transactions on Network Science and Engineering, 2024, 11~(6):
   5878--5891.
 
@@ -156,14 +151,14 @@ Rw-heco: A random walk and network centrality based graph neural network for
   community detection in heterogeneous networks~[J].
 Multimedia Tools and Applications, 2025, 84~(1):  463--486.
 
-\bibitem{JSJA201912008}
-尹欣红，赵世燕，陈晓云．
-带偏置的信号传播的随机游走的社团检测算法~[J]．
-计算机科学，2019，46~(12)： 45--55．
+\bibitem{RJXB201912017}
+许平华，胡文斌，邱振宇，等．
+节点不对称转移概率的网络社区发现算法~[J]．
+软件学报，2019，30~(12)： 3829--3845．
 
 \bibitem{Huang02072024}
 Huang~S, Sun~J, and~Y~F.
-PCABM: Pairwise Covariates-Adjusted Block Model for Community Detection~[J].
+PCABM: Pairwise covariates-adjusted block model for community detection~[J].
 Journal of the American Statistical Association, 2024, 119~(547):  2092--2104.
 
 \bibitem{karrer2011stochastic}
@@ -171,6 +166,11 @@ Karrer~B, Newman~M~E.
 Stochastic blockmodels and community structure in networks~[J].
 Physical Review E—Statistical, Nonlinear, and Soft Matter Physics, 2011,
   83~(1):  016107.
+
+\bibitem{JSJX202204007}
+刘明义，涂志莹，徐晓飞，等．
+基于随机块模型的多层次服务生态系统演化分析~[J]．
+计算机学报，2022，45~(04)： 798--811．
 
 \bibitem{WANG2025130432}
 Wang~X, Dai~F, Guo~W, \emph{et~al}.
@@ -195,15 +195,20 @@ Evading Community Detection via Counterfactual Neighborhood Search~[C].
 In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and
   Data Mining, 2024:  131--140.
 
-\bibitem{JSJA201912048}
-付立东，李丹，李占利．
-从属度树算法检测复杂网络重叠社团~[J]．
-计算机科学，2019，46~(12)： 322--326．
+\bibitem{JFYZ202312011}
+赵兴旺，张珧溥，梁吉业．
+基于2阶段集成的多层网络社区发现算法~[J]．
+计算机研究与发展，2023，60~(12)： 2832--2843．
+
+\bibitem{JSJX202204009}
+钱爱娟，樊昕，董笑菊，等．
+基于社区发现的网络异常检测方法~[J]．
+计算机学报，2022，45~(04)： 825--837．
 
 \bibitem{zhou2023influential}
 Zhou~Y, Fang~Y, Luo~W, \emph{et~al}.
 Influential community search over large heterogeneous information networks~[J].
-Proceedings of the VLDB Endowment, 2023, 16~(8):  2047--2060.
+Very Large Data Bases Endowment, 2023, 16~(8):  2047--2060.
 
 \bibitem{chen2021community}
 Chen~X, Jiang~Z, Li~H, \emph{et~al}.
@@ -212,7 +217,7 @@ IEEE Transactions on Computational Social Systems, 2021, 8~(3):  704--715.
 
 \bibitem{rossetti2018community}
 Rossetti~G, Cazabet~R.
-Community discovery in dynamic networks: a survey~[J].
+Community discovery in dynamic networks: A survey~[J].
 ACM Computing Surveys, 2018, 51~(2):  1--37.
 
 \bibitem{holmgren2023mapping}
@@ -224,7 +229,7 @@ Applied Network Science, 2023, 8~(1): ~42.
 \bibitem{falkowski2006mining}
 Falkowski~T, Bartelheimer~J, Spiliopoulou~M.
 Mining and visualizing the evolution of subgroups in social networks~[C].
-In Proceedings of the 2006 IEEE International Conference on Web Intelligence,
+In Proceedings of the 4th IEEE International Conference on Web Intelligence,
   2006:  52--58.
 
 \bibitem{shang2014real}
@@ -236,14 +241,15 @@ In Proceedings of the 6th SNA-KDD Workshop on Social Network Mining and
 
 \bibitem{cazabet2011simulate}
 Cazabet~R, Amblard~F.
-Simulate to detect: a multi-agent system for community detection~[C].
-In Proceedings of the 2011 IEEE/WIC/ACM International Conferences on Web
-  Intelligence and Intelligent Agent Technology, 2011:  402--408.
+Simulate to detect: A multi-agent system for community detection~[C].
+In Proceedings of the 4th IEEE International Conferences on Web Intelligence
+  and Intelligent Agent Technology, 2011:  402--408.
 
 \bibitem{liu2020detecting}
 Liu~F, Wu~J, Xue~S, \emph{et~al}.
-Detecting the evolving community structure in dynamic social networks~[J].
-World Wide Web, 2020, 23~(2):  715--733.
+Detecting the evolving community structure in dynamic social networks~[C].
+In Proceedings of the 29th International Conference on World Wide Web, 2020:
+  715--733.
 
 \bibitem{ma2019detecting}
 Ma~X, Li~D, Tan~S, \emph{et~al}.
@@ -255,7 +261,7 @@ Physica A: Statistical Mechanics and its Applications, 2019, 530~(1):  121279.
 Yang~T, Chi~Y, Zhu~S, \emph{et~al}.
 Detecting communities and their evolutions in dynamic social networks—a
   Bayesian approach~[J].
-Machine learning, 2011, 82~(1):  157--189.
+Machine Learning, 2011, 82~(1):  157--189.
 
 \bibitem{wilson2019modeling}
 Wilson~J~D, Stevens~N~T, Woodall~W~H.
@@ -265,8 +271,8 @@ Quality and Reliability Engineering International, 2019, 35~(5):  1363--1378.
 
 \bibitem{de2021deep}
 De~Santo~A, Galli~A, Moscato~V, \emph{et~al}.
-A deep learning approach for semi-supervised community detection in Online
-  Social Networks~[J].
+A deep learning approach for semi-supervised community detection in online
+  social networks~[J].
 Knowledge-Based Systems, 2021, 229~(1):  107345.
 
 \bibitem{hopcroft2004tracking}
@@ -281,35 +287,40 @@ An event-based framework for characterizing the evolutionary behavior of
   interaction graphs~[J].
 ACM Transactions on Knowledge Discovery from Data, 2009, 3~(4):  1--36.
 
+\bibitem{JFYZ202201012}
+肖睿卿，费金龙，祝跃飞，等．
+基于社团检测算法的固件二进制比对技术~[J]．
+计算机研究与发展，2022，59~(01)： 209--235．
+
 \bibitem{wang2008commtracker}
 Wang~Y, Wu~B, Pei~X.
 Commtracker: A core-based algorithm of tracking community evolution~[C].
-In Proceedings of the Advanced Data Mining and Applications: 4th International
-  Conference, 2008:  229--240.
+In Proceedings of the 4th International Conference on Advanced Data Mining and
+  Applications, 2008:  229--240.
 
 \bibitem{chen2010detecting}
 Chen~Z, Wilson~K~A, Jin~Y, \emph{et~al}.
 Detecting and tracking community dynamics in evolutionary networks~[C].
-In Proceedings of the 2010 IEEE International Conference on Data Mining
+In Proceedings of the 10th IEEE International Conference on Data Mining
   Workshops, 2010:  318--327.
 
 \bibitem{miller2010continuous}
 Miller~K, Eliassi-Rad~T.
 Continuous time group discovery in dynamic graphs~[C].
-In Proceedings of the 2009 Neural Information Processing Systems Workshop,
-  2009:  1--1.
+In Proceedings of the 23nd International Conference on Neural Information
+  Processing Systems Workshop, 2009:  1--1.
 
 \bibitem{aynaud2010static}
 Aynaud~T, Guillaume~J-L.
 Static community detection algorithms for evolving networks~[C].
-In 8th international symposium on modeling and optimization in mobile, ad hoc,
-  and wireless networks, 2010:  513--519.
+In Proceedings of the 8th International Symposium on Modeling and Optimization
+  in Mobile, ad hoc, and Wireless Networks, 2010:  513--519.
 
 \bibitem{gorke2010modularity}
 G{\"o}rke~R, Maillard~P, Staudt~C, \emph{et~al}.
 Modularity-driven clustering of dynamic graphs~[C].
-In Proceedings of the International symposium on experimental algorithms, 2010:
-   436--448.
+In Proceedings of the 9th International Symposium on Experimental Algorithms,
+  2010:  436--448.
 
 \bibitem{falkowski2008studying}
 Falkowski~T, Barth~A, Spiliopoulou~M.
@@ -319,15 +330,15 @@ In Proceedings of the 40th Americas Conference on Information Systems, 2008:
 
 \bibitem{10486339}
 Kulkarni~O, Burhanpurwala~A.
-A Survey of Advancements in DBSCAN Clustering Algorithms for Big Data~[C].
-In 2024 3rd International conference on Power Electronics and IoT Applications
-  in Renewable Energy and its Control, 2024:  106--111.
+A Survey of Advancements in DBSCAN clustering algorithms for big data~[C].
+In Proceedings of the 3rd International conference on Power Electronics and IoT
+  Applications in Renewable Energy and its Control, 2024:  106--111.
 
 \bibitem{nguyen2011adaptive}
 Nguyen~N~P, Dinh~T~N, Xuan~Y, \emph{et~al}.
 Adaptive algorithms for detecting community structure in dynamic social
   networks~[C].
-In Proceedings of the 2011 IEEE International Conference on Computer
+In Proceedings of the 30th IEEE International Conference on Computer
   Communications, 2011:  2282--2290.
 
 \bibitem{zhou2007discovering}
@@ -367,7 +378,7 @@ ACM Transactions on Knowledge Discovery from Data, 2009, 3~(2):  1--31.
 \bibitem{gao2017dynamic}
 Gao~F, Yuan~L, Wang~W, \emph{et~al}.
 Dynamic community detection using nonnegative matrix factorization~[C].
-In Proceedings of the 2017 International Conference on Computing Intelligence
+In Proceedings of the 2nd International Conference on Computing Intelligence
   and Information System, 2017:  39--45.
 
 \bibitem{ma2017evolutionary}
@@ -413,7 +424,7 @@ In Proceedings of the 43rd International ACM SIGIR Conference on Research and
 \bibitem{pareja2020evolvegcn}
 Pareja~A, Domeniconi~G, Chen~J, \emph{et~al}.
 Evolvegcn: Evolving graph convolutional networks for dynamic graphs~[C].
-In Proceedings of the AAAI conference on artificial intelligence, 2020:
+In Proceedings of the 35th AAAI conference on artificial intelligence, 2020:
   5363--5370.
 
 \bibitem{cui2019hierarchical}
@@ -424,25 +435,25 @@ Neurocomputing, 2019, 358~(1):  141--149.
 
 \bibitem{goyal2018dyngem}
 Goyal~P, Kamra~N, He~X, \emph{et~al}.
-Dyngem: Deep embedding method for dynamic graphs~[J].
-arXiv preprint arXiv:1805.11273, 2018.
+DynGEM: Deep embedding method for dynamic graphs~[J].
+Arxiv, 2018, abs/1805.11273~(1):  1--8.
 
 \bibitem{yu2018netwalk}
 Yu~W, Cheng~W, Aggarwal~C~C, \emph{et~al}.
 Netwalk: A flexible deep embedding approach for anomaly detection in dynamic
   networks~[C].
-In Proceedings of the 24th ACM SIGKDD international conference on knowledge
-  discovery \& data mining, 2018:  2672--2681.
+In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge
+  Discovery \& Data Mining, 2018:  2672--2681.
 
 \bibitem{zhao2019large}
 Zhao~Y, Wang~X, Yang~H, \emph{et~al}.
-Large Scale Evolving Graphs with Burst Detection~[C].
+Large scale evolving graphs with burst detection~[C].
 In Proceedings of the 28th International Joint Conference on Artificial
   Intelligence, 2019:  4412--4418.
 
 \bibitem{goyal2020dyngraph2vec}
 Goyal~P, Chhetri~S~R, Canedo~A.
-dyngraph2vec: Capturing network dynamics using dynamic graph representation
+Dyngraph2vec: Capturing network dynamics using dynamic graph representation
   learning~[J].
 Knowledge-Based Systems, 2020, 187~(1):  104816.
 
@@ -450,8 +461,8 @@ Knowledge-Based Systems, 2020, 187~(1):  104816.
 Yao~Y, Joe-Wong~C.
 Interpretable clustering on dynamic graphs with recurrent graph neural
   networks~[C].
-In Proceedings of the Conference on Applications of Artificial Intelligence,
-  2021:  4608--4616.
+In Proceedings of the 36th AAAI Conference on Artificial Intelligence, 2021:
+  4608--4616.
 
 \bibitem{zhong2014evolution}
 Zhong~W, An~H, Gao~X, \emph{et~al}.
@@ -460,19 +471,19 @@ Physica A: Statistical Mechanics and its Applications, 2014, 413~(1):  42--52.
 
 \bibitem{wang2024community}
 Wang~J, Wang~S.
-Community-Based Robustness Analysis of Cyber-Physical Systems~[C].
-In Proceedings of the 2024 International Conference on Artificial Intelligence
+Community-based robustness analysis of cyber-physical systems~[C].
+In Proceedings of the 2nd International Conference on Artificial Intelligence
   of Things and Systems, 2024:  1--8.
 
 \bibitem{greene2010tracking}
 Greene~D, Doyle~D, Cunningham~P.
 Tracking the evolution of communities in dynamic social networks~[C].
-In Proceedings of the international conference on advances in social networks
-  analysis and mining, 2010:  176--183.
+In Proceedings of the 2nd International Conference on Advances in Social
+  Networks Analysis and Mining, 2010:  176--183.
 
 \bibitem{brodka2013ged}
 Br{\'o}dka~P, Saganowski~S, Kazienko~P.
-GED: the method for group evolution discovery in social networks~[J].
+GED: The method for group evolution discovery in social networks~[J].
 Social Network Analysis and Mining, 2013, 3~(1):  1--14.
 
 \bibitem{mazza2023modularity}
@@ -486,10 +497,10 @@ Zhao~Y, Chen~B~Y, Gao~F, \emph{et~al}.
 Dynamic community detection considering daily rhythms of human mobility~[J].
 Travel Behaviour and Society, 2023, 31~(1):  209--222.
 
-\bibitem{JSJA2023S2059}
-曹金鑫，许伟忠，金弟，等．
-复杂网络社团发现综述~[J]．
-计算机科学，2023，50~(S2)： 414--424．
+\bibitem{JSJX202302004}
+焦鹏飞，潘婷，金弟，等．
+角色导向的网络表示学习综述~[J]．
+计算机学报，2023，46~(02)： 274--303．
 
 \bibitem{tantipathananandh2007framework}
 Tantipathananandh~C, Berger-Wolf~T, Kempe~D.
@@ -505,7 +516,7 @@ Journal of Complex Networks, 2016, 4~(3):  363--406.
 
 \bibitem{10452807}
 Wu~K, Jelfs~B, Neville~K, \emph{et~al}.
-Dynamic Reconfiguration of Brain Functional Network in Stroke~[J].
+Dynamic reconfiguration of brain functional network in stroke~[J].
 IEEE Journal of Biomedical and Health Informatics, 2024, 28~(6):  3649--3659.
 
 \bibitem{wang2010low}
@@ -539,7 +550,7 @@ Pattern Recognition Letters, 2016, 84~(1):  78--84.
 \bibitem{karaaslanli2020constrained}
 Karaaslanli~A, Aviyente~S.
 Constrained spectral clustering for dynamic community detection~[C].
-In Proceedings of the 2020 IEEE International Conference on Acoustics, Speech
+In Proceedings of the 45th IEEE International Conference on Acoustics, Speech
   and Signal Processing, 2020:  8474--8478.
 
 \bibitem{niu2017label}
@@ -552,8 +563,8 @@ Computer Communications, 2017, 108~(1):  110--122.
 Xie~J, Chen~M, Szymanski~B~K.
 LabelrankT: Incremental community detection in dynamic networks via label
   propagation~[C].
-In Proceedings of the Workshop on Dynamic Networks Management and Mining, 2013:
-   25--32.
+In Proceedings of the Workshop on Dynamic Networks Management and Mining 2013,
+  2013:  25--32.
 
 \bibitem{xin2016adaptive}
 Xin~Y, Xie~Z-Q, Yang~J.
@@ -579,13 +590,13 @@ Advances in Data Analysis and Classification, 2023, 17~(1):  135--162.
 
 \bibitem{hajiramezanali2019variational}
 Hasanzadeh~A, Hajiramezanali~E, Narayanan~K, \emph{et~al}.
-Variational Graph Recurrent Neural Networks~[C].
-In Proceedings of the Advances in Neural Information Processing Systems, 2019:
-  1--1.
+Variational graph recurrent neural networks~[C].
+In Proceedings of the 32nd International Conference on Neural Information
+  Processing Systems, 2019:  1--1.
 
 \bibitem{mrabah2019deep}
 Mrabah~N, Khan~N~M, Ksantini~R, \emph{et~al}.
-Deep clustering with a Dynamic Autoencoder: From reconstruction towards
+Deep clustering with a dynamic autoencoder: From reconstruction towards
   centroids construction~[J].
 Neural Networks, 2020, 130~(1):  206--228.
 
@@ -599,8 +610,13 @@ In Proceedings of the 15th ACM SIGKDD International Conference on Knowledge
 \bibitem{tantipathananandh2011finding}
 Tantipathananandh~C, Berger-Wolf~T~Y.
 Finding communities in dynamic social networks~[C].
-In Proceedings of the IEEE 11th International Conference on Data Mining, 2011:
+In Proceedings of the 11th IEEE International Conference on Data Mining, 2011:
   1236--1241.
+
+\bibitem{zhang2024inductive}
+Zhang~R, Pitkow~X, Angelaki~D~E.
+Inductive biases of neural network modularity in spatial navigation~[J].
+Science Advances, 2024, 10~(29):  eadk1256.
 
 \bibitem{he2015fast}
 He~J, Chen~D.
@@ -709,8 +725,9 @@ Swarm and Evolutionary Computation, 2016, 31~(1):  90--109.
 
 \bibitem{NEURIPS2024_a3017a8d}
 Chen~Y, Huang~B, Zhao~L, \emph{et~al}.
-Multidimensional Fractional Programming for Normalized Cuts~[C].
-In Advances in Neural Information Processing Systems, 2024:  89563--89583.
+Multidimensional fractional programming for normalized cuts~[C].
+In Proceedings of the 36th International Conference on Neural Information
+  Processing Systems, 2024:  89563--89583.
 
 \bibitem{LI2025129548}
 Li~X, Shi~W, Peng~Q, \emph{et~al}.
@@ -727,14 +744,8 @@ Knowledge-Based Systems, 2015, 89~(1):  487--496.
 \bibitem{duan2009community}
 Duan~D, Li~Y, Jin~Y, \emph{et~al}.
 Community mining on dynamic weighted directed graphs~[C].
-In Proceedings of the 1st ACM international workshop on Complex networks meet
-  information \& knowledge management, 2009:  11--18.
-
-\bibitem{hulovatyy2016scout}
-Hulovatyy~Y, Milenkovi{\'c}~T.
-SCOUT: simultaneous time segmentation and community detection in dynamic
-  networks~[J].
-Scientific Reports, 2016, 6~(1):  37557.
+In Proceedings of the 1st ACM International Workshop on Complex Networks Meet
+  Information \& Knowledge Management, 2009:  11--18.
 
 \bibitem{ghasemian2016detectability}
 Ghasemian~A, Zhang~P, Clauset~A, \emph{et~al}.
@@ -756,9 +767,9 @@ IEEE Transactions on Neural Networks and Learning Systems, 2014, 26~(9):
   2072--2085.
 
 \bibitem{RJXB20241211002}
-王笑, 戴芳, 郭文艳, \emph{et~al}.
-面向属性网络社团检测的度修正广义随机块模型~[J].
-软件学报, 2025, 1~(1):  1--13.
+王笑，戴芳，郭文艳，等．
+面向属性网络社团检测的度修正广义随机块模型~[J]．
+软件学报，2025~(05)： 2308--2320．
 
 \bibitem{pensky2019spectral}
 Pensky~M, Zhang~T.
@@ -767,23 +778,22 @@ Electronic Journal of Statistics, 2019, 13~(1):  678--709.
 
 \bibitem{keriven2022sparse}
 Keriven~N, Vaiter~S.
-Sparse and smooth: improved guarantees for spectral clustering in the dynamic
+Sparse and smooth: Improved guarantees for spectral clustering in the dynamic
   stochastic block model~[J].
 Electronic Journal of Statistics, 2022, 16~(1):  1330--1366.
 
 \bibitem{yu2017spatio}
 Yu~B, Yin~H, Zhu~Z.
-Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for
-  Traffic Forecasting~[C].
+Spatio-temporal graph convolutional networks: A deep learning framework for
+  traffic forecasting~[C].
 In Proceedings of the 27th International Joint Conference on Artificial
   Intelligence, 2018:  3634--3640.
 
 \bibitem{aravind2019dysat}
 Sankar~A, Wu~Y, Gou~L, \emph{et~al}.
-Dynamic Graph Representation Learning via Self-Attention Networks~[C].
-In Proceedings of the 2019 International Conference on Learning
-  Representations, Workshop on Representation Learning on Graphs and Manifolds,
-  2019:  1--1.
+Dynamic graph representation learning via self-attention networks~[C].
+In Proceedings of the 7th International Conference on Learning Representations,
+  Workshop on Representation Learning on Graphs and Manifolds, 2019:  1--18.
 
 \bibitem{park2022cgc}
 Park~N, Rossi~R, Koh~E, \emph{et~al}.
@@ -792,8 +802,8 @@ In Proceedings of the ACM Web Conference 2022, 2022:  1115--1126.
 
 \bibitem{10502242}
 Ai~Y, Xie~X, Ma~X.
-Graph Contrastive Learning for Tracking Dynamic Communities in Temporal
-  Networks~[J].
+Graph contrastive learning for tracking dynamic communities in temporal
+  networks~[J].
 IEEE Transactions on Emerging Topics in Computational Intelligence, 2024,
   8~(5):  3422--3435.
 
@@ -822,13 +832,14 @@ Communications of the ACM, 2020, 63~(11):  139--144.
 \bibitem{you2018graphrnn}
 You~J, Ying~R, Ren~X, \emph{et~al}.
 Graphrnn: Generating realistic graphs with deep auto-regressive models~[C].
-In Proceedings of the International conference on machine learning, 2018:
+In Proceedings of the 35th International Conference on Machine Learning, 2018:
   5708--5717.
 
 \bibitem{kingma2021variational}
 Kingma~D, Salimans~T, Poole~B, \emph{et~al}.
 Variational diffusion models~[J].
-Advances in neural information processing systems, 2021, 34~(1):  21696--21707.
+Proceedings of the 34th International Conference on Neural Information
+  Processing Systems, 2021, 34~(1):  21696--21707.
 
 \bibitem{papamakarios2021normalizing}
 Papamakarios~G, Nalisnick~E, Rezende~D~J, \emph{et~al}.
@@ -839,8 +850,8 @@ Journal of Machine Learning Research, 2021, 22~(57):  1--64.
 Jiang~X, Qin~Z, Xu~J, \emph{et~al}.
 Incomplete graph learning via attribute-structure decoupled variational
   auto-encoder~[C].
-In Proceedings of the 17th ACM international conference on web search and data
-  mining, 2024:  304--312.
+In Proceedings of the 17th ACM International Conference on Web Search and Data
+  Mining, 2024:  304--312.
 
 \bibitem{gong2007machine}
 Jerdee~M, Kirkley~A, Newman~M.
@@ -852,11 +863,6 @@ Zhao~Z, Zhang~N, Xie~J, \emph{et~al}.
 Detecting network communities based on central node selection and
   expansion~[J].
 Chaos, Solitons \& Fractals, 2024, 188~(1):  115482.
-
-\bibitem{zhang2024inductive}
-Zhang~R, Pitkow~X, Angelaki~D~E.
-Inductive biases of neural network modularity in spatial navigation~[J].
-Science Advances, 2024, 10~(29):  eadk1256.
 
 \bibitem{papadopoulos2012popularity}
 Papadopoulos~F, Kitsak~M, Serrano~M~{\'A}, \emph{et~al}.
@@ -871,13 +877,14 @@ Nature communications, 2020, 11~(1):  2785.
 
 \bibitem{dreveton2024exact}
 Dreveton~M, Fernandes~F, Figueiredo~D.
-Exact recovery and Bregman hard clustering of node-attributed Stochastic Block
-  Model~[J].
-Advances in Neural Information Processing Systems, 2024, 36~(1):  1--1.
+Exact recovery and Bregman hard clustering of node-attributed stochastic block
+  model~[J].
+International Conference on Neural Information Processing Systems, 2024,
+  36~(1):  1--1.
 
 \bibitem{GenLouvain}
 Mucha~P~J, Richardson~T, Macon~K, \emph{et~al}.
-Community Structure in Time-Dependent, Multiscale, and Multiplex Networks~[J].
+Community structure in time-dependent, multiscale, and multiplex networks~[J].
 Science, 2010, 328~(5980):  876--878.
 
 \bibitem{PisCes}
@@ -887,7 +894,7 @@ Proceedings of the National Academy of Sciences, 2018, 115~(5):  927--932.
 
 \bibitem{rossetti2017tiles}
 Rossetti~G, Pappalardo~L, Pedreschi~D, \emph{et~al}.
-Tiles: an online algorithm for community discovery in dynamic social
+TILES: An online algorithm for community discovery in dynamic social
   networks~[J].
 Machine Learning, 2017, 106~(8):  1213--1241.
 
@@ -901,19 +908,20 @@ Engineering Applications of Artificial Intelligence, 2016, 55~(1):  202--218.
 Menze~B~H, Kelm~B~M, Masuch~R, \emph{et~al}.
 A comparison of random forest and its Gini importance with standard chemometric
   methods for the feature selection and classification of spectral data~[J].
-BMC bioinformatics, 2009, 10~(1):  213.
+BMC Bioinformatics, 2009, 10~(1):  213--229.
 
 \bibitem{nr}
 Rossi~R~A, Ahmed~N~K.
-The Network Data Repository with Interactive Graph Analytics and
-  Visualization~[C].
-In Proceedings of the AAAI conference on artificial intelligence, 2015:  1--1.
+The network data repository with interactive graph analytics and
+  visualization~[C].
+In Proceedings of the 30th AAAI conference on artificial intelligence, 2015:
+  1--9.
 
 \bibitem{viswanath-2009-activity}
 Viswanath~B, Mislove~A, Cha~M, \emph{et~al}.
-On the Evolution of User Interaction in Facebook~[C].
+On the evolution of user interaction in facebook~[C].
 In Proceedings of the 2nd ACM SIGCOMM Workshop on Social Networks, August 2009:
-   1--1.
+   1--10.
 
 \bibitem{kumar2016edge}
 Kumar~S, Spezzano~F, Subrahmanian~V, \emph{et~al}.
@@ -928,27 +936,22 @@ Pervasive and Mobile Computing, 2011, 7~(6):  643--659.
 
 \bibitem{lin2008facetnet}
 Lin~Y-R, Chi~Y, Zhu~S, \emph{et~al}.
-Facetnet: a framework for analyzing communities and their evolutions in dynamic
+Facetnet: A framework for analyzing communities and their evolutions in dynamic
   networks~[C].
-In Proceedings of the International Conference on World Wide Web, 2008:
+In Proceedings of the 17th International Conference on World Wide Web, 2008:
   685--694.
-
-\bibitem{gorkedynamic}
-Grke~R, Holzer~M.
-Dynamic network of email communication at the Department of Informatics at
-  Karlsruhe Institute of Technology (KIT)~[J], 2011:  1--1.
 
 \bibitem{konect:2017:dblp-cite}
 Kunegis~J.
-Konect: the koblenz network collection~[C].
+Konect: The koblenz network collection~[C].
 In Proceedings of the 22nd International Conference on World Wide Web, 2013:
   1343--1350.
 
 \bibitem{liu2019evolutionary}
 Liu~F, Wu~J, Zhou~C, \emph{et~al}.
 Evolutionary community detection in dynamic social networks~[C].
-In Proceedings of the International Joint Conference on Neural Networks, 2019:
-  1--7.
+In Proceedings of the 29th International Joint Conference on Neural Networks,
+  2019:  1--7.
 
 \bibitem{wang2017dynamic}
 Wang~P, Gao~L, Ma~X.
@@ -965,7 +968,7 @@ Journal of Complex Networks, 2022, 10~(6):  cnac048.
 
 \bibitem{Li2024DyGNN}
 Li~H, Li~C, Feng~K, \emph{et~al}.
-Robust Knowledge Adaptation for Dynamic Graph Neural Networks~[J].
+Robust knowledge adaptation for dynamic graph neural networks~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2024, 36~(11):
   6920--6933.
 
@@ -997,12 +1000,13 @@ Proceedings of the National Academy of Sciences, 2016, 113~(50):  14207--14212.
 He~D, Feng~Z, Jin~D, \emph{et~al}.
 Joint identification of network communities and semantics via integrative
   modeling of network topologies and node contents~[C].
-In Proceedings of the AAAI Conference on Artificial Intelligence:  1--1.
+In Proceedings of the 32th AAAI Conference on Artificial Intelligence, 2017:
+  1--9.
 
 \bibitem{10214123}
 Deng~C, Xu~X-J, Ying~S.
-Strong Consistency of Spectral Clustering for the Sparse Degree-Corrected
-  Hypergraph Stochastic Block Model~[J].
+Strong consistency of spectral clustering for the sparse degree-corrected
+  hypergraph stochastic block model~[J].
 IEEE Transactions on Information Theory, 2024, 70~(3):  1962--1977.
 
 \bibitem{xing2010state}
@@ -1018,8 +1022,15 @@ ACM Computing Surveys, 2009, 41~(3):  1--58.
 \bibitem{he2024diffusion}
 He~H, Zhang~J, Chen~H, \emph{et~al}.
 A diffusion-based framework for multi-class anomaly detection~[C].
-In Proceedings of the AAAI conference on artificial intelligence, 2024:
+In Proceedings of the 39th AAAI conference on artificial intelligence, 2024:
   8472--8480.
+
+\bibitem{xu2024revisiting}
+Xu~F, Wang~N, Wu~H, \emph{et~al}.
+Revisiting graph-based fraud detection in sight of heterophily and
+  spectrum~[C].
+In Proceedings of the 39th AAAI Conference on Artificial Intelligence, 2024:
+  9214--9222.
 
 \bibitem{amraee2018anomaly}
 Amraee~S, Vafaei~A, Jamshidi~K, \emph{et~al}.
@@ -1058,8 +1069,9 @@ Computers \& Security, 2024, 139~(1):  103733.
 
 \bibitem{li2024unsupervised}
 Li~H, Wang~S, Liu~X, \emph{et~al}.
-Unsupervised Graph Anomaly Detection on Directed Attribute Network~[C].
-In 2024 International Joint Conference on Neural Networks (IJCNN), 2024:  1--8.
+Unsupervised graph anomaly detection on directed attribute network~[C].
+In Proceedings of the 34th International Joint Conference on Neural Networks,
+  2024:  1--8.
 
 \bibitem{hayat2024deep}
 Hayat~M~K, Daud~A, Banjar~A, \emph{et~al}.
@@ -1072,10 +1084,16 @@ Triadic closure pattern analysis and prediction in social networks~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2015, 27~(12):
   3374--3389.
 
+\bibitem{huang2020laplacian}
+Huang~S, Hitti~Y, Rabusseau~G, \emph{et~al}.
+Laplacian change point detection for dynamic graphs~[C].
+In Proceedings of the 26th ACM SIGKDD International Conference on Knowledge
+  Discovery \& Data Mining, 2020:  349--358.
+
 \bibitem{10597831}
 Chen~D, Zhao~X, Xiao~W.
-Fine-Grained Anomaly Detection on Dynamic Graphs via Attention Alignment~[C].
-In Proceedings of the IEEE 40th International Conference on Data Engineering,
+Fine-grained anomaly detection on dynamic graphs via attention alignment~[C].
+In Proceedings of the 40th IEEE International Conference on Data Engineering,
   2024:  3178--3190.
 
 \bibitem{LI2025107412}
@@ -1099,8 +1117,8 @@ IEEE Transactions on Signal and Information Processing over Networks, 2020, 6:
 
 \bibitem{wang2019nodes}
 Wang~H, Qiao~C.
-A Nodes' Evolution Diversity Inspired Method to Detect Anomalies in Dynamic
-  Social Networks~[J].
+A nodes' evolution diversity inspired method to detect anomalies in dynamic
+  social networks~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2019, 32~(10):
   1868--1880.
 
@@ -1135,29 +1153,24 @@ Proceedings of the National Academy of Sciences, 2018, 115~(5):  927--932.
 \bibitem{hartmann2016clustering}
 Hartmann~T, Kappes~A, Wagner~D.
 Clustering evolving networks~[J].
-Algorithm engineering: Selected results and surveys, 2016, 1~(1):  280--329.
+Algorithm Engineering: Selected Results and Surveys, 2016, 1~(1):  280--329.
 
 \bibitem{zhu2020change}
 Zhu~T, Li~P, Yu~L, \emph{et~al}.
-Change Point Detection in Dynamic Networks Based on Community
-  Identification~[J].
+Change point detection in dynamic networks based on community
+  identification~[J].
 IEEE Transactions on Network Science and Engineering, 2020, 7~(3):  2067--2077.
 
 \bibitem{peel2015detecting}
 Peel~L, Clauset~A.
 Detecting change points in the large-scale structure of evolving networks~[C].
-In Proceedings of the AAAI conference on artificial intelligence:  1--1.
-
-\bibitem{huang2020laplacian}
-Huang~S, Hitti~Y, Rabusseau~G, \emph{et~al}.
-Laplacian Change Point Detection for Dynamic Graphs~[C].
-In Proceedings of the 26th ACM SIGKDD International Conference on Knowledge
-  Discovery \& Data Mining, 2020:  349--358.
+In Proceedings of the 30th AAAI conference on artificial intelligence, 2015:
+  1--9.
 
 \bibitem{karrar2016resumption}
 Karrar~H~H.
-The resumption of Sino--Central Asian trade, c. 1983--94: confidence building
-  and reform along a Cold War fault line~[J].
+The resumption of sino--central asian trade, c. 1983--94: Confidence building
+  and reform along a cold war fault line~[J].
 Central Asian Survey, 2016, 35~(3):  334--350.
 
 \bibitem{cuaresma2012borders}
@@ -1174,7 +1187,7 @@ Nature Communications, 2024, 15~(1):  7391.
 \bibitem{liu2023data}
 Liu~L, Jones~B~F, Uzzi~B, \emph{et~al}.
 Data, measurement and empirical methods in the science of science~[J].
-Nature human behaviour, 2023, 7~(7):  1046--1058.
+Nature Human Behaviour, 2023, 7~(7):  1046--1058.
 
 \bibitem{palla2005uncovering}
 Palla~G, Der{\'e}nyi~I, Farkas~I, \emph{et~al}.
@@ -1184,13 +1197,13 @@ Nature, 2005, 435~(7043):  814--818.
 
 \bibitem{reed2024tapioca}
 Reed~T~J, Tyl~M~D, Tadych~A, \emph{et~al}.
-Tapioca: a platform for predicting de novo protein--protein interactions in
+Tapioca: A platform for predicting de novo protein--protein interactions in
   dynamic contexts~[J].
 Nature Methods, 2024, 21~(3):  488--500.
 
 \bibitem{7384503}
 Whang~J~J, Gleich~D~F, Dhillon~I~S.
-Overlapping Community Detection Using Neighborhood-Inflated Seed Expansion~[J].
+Overlapping community detection using neighborhood-inflated seed dxpansion~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2016, 28~(5):  1272--1284.
 
 \bibitem{del2016spreading}
@@ -1205,50 +1218,50 @@ Proceedings of the National Academy of Sciences, 2015, 112~(8):  2325--2330.
 
 \bibitem{yu2017link}
 Yu~W, Cheng~W, Aggarwal~C~C, \emph{et~al}.
-Link Prediction with Spatial and Temporal Consistency in Dynamic Networks~[C].
+Link prediction with spatial and temporal consistency in dynamic networks~[C].
 In Proceedings of the 26th International Joint Conference on Artificial
   Intelligence, 2017:  3343--3349.
 
 \bibitem{Ma.2019.Ming}
 Ma~L, Li~J, Lin~Q, \emph{et~al}.
-{Reliable Link Inference for Network Data With Community Structures}~[J].
+{Reliable link inference for network data With community structures}~[J].
 IEEE Transactions on Cybernetics, 2019, 49~(9):  3347--3361.
 
 \bibitem{Mucha.2010.Onnela}
 Mucha~P~J, Richardson~T, Macon~K, \emph{et~al}.
-{Community Structure in Time-Dependent, Multiscale, and Multiplex
-  Networks}~[J].
+{Community structure in time-dependent, multiscale, and multiplex
+  networks}~[J].
 Science, 2010, 328~(5980):  876--878.
 
 \bibitem{Zhang.2017.Niu}
 Zhang~L, Pan~H, Su~Y, \emph{et~al}.
-{A Mixed Representation-Based Multiobjective Evolutionary Algorithm for
-  Overlapping Community Detection}~[J].
+{A mixed representation-based multiobjective evolutionary algorithm for
+  overlapping community detection}~[J].
 IEEE Transactions on Cybernetics, 2017, 47~(9):  2703--2716.
 
 \bibitem{Zhang.2020.Jin}
 Zhang~X, Zhou~K, Pan~H, \emph{et~al}.
-{A Network Reduction-Based Multiobjective Evolutionary Algorithm for Community
-  Detection in Large-Scale Complex Networks}~[J].
+{A network reduction-based multiobjective evolutionary algorithm for community
+  detection in large-scale complex networks}~[J].
 IEEE Transactions on Cybernetics, 2020, 50~(2):  703--716.
 
 \bibitem{Ma.2017.Dong}
 Ma~X, Dong~D.
-{Evolutionary Nonnegative Matrix Factorization Algorithms for Community
-  Detection in Dynamic Networks}~[J].
+{Evolutionary nonnegative matrix factorization algorithms for Ccommunity
+  detection in dynamic networks}~[J].
 IEEE Transactions on Knowledge and Data Engineering, 2017, 29~(5):  1045--1058.
 
 \bibitem{Sun.2021.Xu}
 Sun~J, Zheng~W, Zhang~Q, \emph{et~al}.
-{Graph Neural Network Encoding for Community Detection in Attribute
-  Networks}~[J].
-IEEE Transactions on Cybernetics, 2021, PP~(99):  1--14.
+Graph neural network encoding for community detection in attribute
+  networks~[J].
+IEEE Transactions on Cybernetics, 2022, 52~(8):  7791--7804.
 
 \bibitem{iyer2024non}
 Iyer~R, Wang~Y, Wang~W, \emph{et~al}.
 Non-Euclidean Mixture Model for Social Network Embedding~[J].
-Advances in Neural Information Processing Systems, 2024, 37~(1):
-  111464--111488.
+Proceedings of the 37th International Conference on Neural Information
+  Processing Systems, 2024, 37~(1):  111464--111488.
 
 \bibitem{jiang2024self}
 Jiang~M, Liu~G, Su~Y, \emph{et~al}.
@@ -1263,17 +1276,18 @@ Neural Networks, 2024, 1~(1):  106207.
 
 \bibitem{jeyaraj2024deepwalk}
 Jeyaraj~R, Balasubramaniam~T, Balasubramaniam~A, \emph{et~al}.
-DeepWalk with Reinforcement Learning (DWRL) for node embedding~[J].
+DeepWalk with reinforcement learning (DWRL) for node embedding~[J].
 Expert Systems with Applications, 2024, 243~(1):  122819.
 
 \bibitem{NEURIPS2024_015a8c69}
 Davison~A, Morgan~S~C, Ward~O~G.
-Community Detection Guarantees using Embeddings Learned by Node2Vec~[C].
-In Advances in Neural Information Processing Systems, 2024:  685--738.
+Community detection guarantees using embeddings learned by Node2Vec~[C].
+In Proceedings of the 37th International Conference on Neural Information
+  Processing Systems, 2024:  685--738.
 
 \bibitem{zhang2025hmne}
 Zhang~Y, Lai~S, Peng~Z, \emph{et~al}.
-HMNE: link prediction using hypergraph motifs and network embedding in social
+HMNE: Link prediction using hypergraph motifs and network embedding in social
   networks~[J].
 Knowledge and Information Systems, 2025, 67~(2):  1787--1809.
 
@@ -1284,14 +1298,14 @@ In Proceedings of the ACM Web Conference 2024, 2024:  2485--2496.
 
 \bibitem{he2022sssnet}
 He~Y, Reinert~G, Wang~S, \emph{et~al}.
-SSSNET: semi-supervised signed network clustering~[C].
-In Proceedings of the 2022 SIAM International Conference on Data Mining, 2022:
+SSSNET: Semi-supervised signed network clustering~[C].
+In Proceedings of the 22nd International Conference on Data Mining, 2022:
   244--252.
 
 \bibitem{li2024contrastive}
 Li~Y, Chen~J, Chen~C, \emph{et~al}.
 Contrastive deep nonnegative matrix factorization for community detection~[C].
-In Proceedings of the 2024 IEEE International Conference on Acoustics, Speech
+In Proceedings of the 49th IEEE International Conference on Acoustics, Speech
   and Signal Processing, 2024:  6725--6729.
 
 \bibitem{rashnodi2024community}
@@ -1307,8 +1321,8 @@ Knowledge-Based Systems, 2024, 296~(1):  111893.
 
 \bibitem{7880588}
 Zhang~Q, Yao~Q.
-Dynamic Uncertain Causality Graph for Knowledge Representation and Reasoning:
-  Utilization of Statistical Data and Domain Knowledge in Complex Cases~[J].
+Dynamic uncertain causality graph for knowledge representation and reasoning:
+  Utilization of statistical data and domain knowledge in complex cases~[J].
 IEEE Transactions on Neural Networks and Learning Systems, 2018, 29~(5):
   1637--1651.
 
@@ -1320,13 +1334,13 @@ Machine Learning, 2024, 113~(4):  2207--2226.
 
 \bibitem{Yang.2020.Shen}
 Yang~M, Liu~J, Chen~L, \emph{et~al}.
-{An Advanced Deep Generative Framework for Temporal Link Prediction in Dynamic
-  Networks}~[J].
+{An advanced deep generative framework for temporal link prediction in dynamic
+  networks}~[J].
 IEEE Transactions on Cybernetics, 2020, 50~(12):  4946--4957.
 
 \bibitem{jmlr:v21:19-447}
 Kazemi~S~M, Goel~R, Jain~K, \emph{et~al}.
-{Representation Learning for Dynamic Graphs: A Survey}~[J].
+{Representation learning for dynamic graphs: A survey}~[J].
 Journal of Machine Learning Research, 2020, 21~(70):  1--73.
 
 \bibitem{liang2024survey}
@@ -1336,20 +1350,21 @@ ACM Computing Surveys, 2024, 56~(10):  1--40.
 
 \bibitem{NEURIPS2024_18969919}
 Liu~Z, Hou~J, Wang~X, \emph{et~al}.
-LION: Linear Group RNN for 3D Object Detection in Point Clouds~[C].
-In Advances in Neural Information Processing Systems, 2024:  13601--13626.
+LION: Linear group RNN for 3D object detection in point clouds~[C].
+In Proceedings of the 37th International Conference on Neural Information
+  Processing Systems, 2024:  13601--13626.
 
 \bibitem{10526486}
 Ji~F, Wu~J, Chiclana~F, \emph{et~al}.
-Decayed Trust Propagation Method in Multiple Overlapping Communities for
-  Improving Consensus Under Social Network Group Decision Making~[J].
+Decayed trust propagation method in multiple overlapping communities for
+  improving consensus under social network group decision making~[J].
 IEEE Transactions on Fuzzy Systems, 2024, 32~(8):  4401--4412.
 
 \bibitem{Kipf.2017.Welling}
 Kipf~T~N, Welling~M.
-{Semi-Supervised Classification with Graph Convolutional Networks}~[C].
-In Proceedings of the International Conference on Learning Representations,
-  2017:  1--1.
+{Semi-supervised classification with graph convolutional networks}~[C].
+In Proceedings of the 5th International Conference on Learning Representations,
+  2017:  1--10.
 
 \bibitem{mrabah2024contrastive}
 Mrabah~N, Bouguessa~M, Ksantini~R.
@@ -1358,7 +1373,7 @@ Pattern recognition, 2024, 149~(1):  110209.
 
 \bibitem{jiang2017variational}
 Jiang~Z, Zheng~Y, Tan~H, \emph{et~al}.
-Variational deep embedding: an unsupervised and generative approach to
+Variational deep embedding: An unsupervised and generative approach to
   clustering~[C].
 In Proceedings of the 26th International Joint Conference on Artificial
   Intelligence, 2017:  1965--1972.
@@ -1396,7 +1411,8 @@ Network Science, 2015, 3~(3):  326--347.
 Rossi~R, Ahmed~N.
 The network data repository with interactive graph analytics and
   visualization~[C].
-In Proceedings of the AAAI conference on artificial intelligence, 2015:  1--1.
+In Proceedings of the 30th AAAI conference on artificial intelligence, 2015:
+  1--9.
 
 \bibitem{Krzakala.2013.Zhang}
 Krzakala~F, Moore~C, Mossel~E, \emph{et~al}.
@@ -1406,7 +1422,7 @@ Proceedings of the National Academy of Sciences, 2013, 110~(52):  20935--20940.
 \bibitem{wang2022powerful}
 Wang~X, Zhang~M.
 How powerful are spectral graph neural networks~[C].
-In Proceedings of the International Conference on Machine Learning, 2022:
+In Proceedings of the 39th International Conference on Machine Learning, 2022:
   23341--23362.
 
 \end{thebibliography}

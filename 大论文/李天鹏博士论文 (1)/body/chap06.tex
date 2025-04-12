@@ -64,7 +64,7 @@
 
 \subsection{模型框架}
 
-本研究旨在利用网络表示学习框架检测动态网络中的动态社团结构，提出了名为VGRGMM的模型。该模型将第一个快照视为静态网络，并对快照$t \ge 2$时的动态演化进行建模。模型采用变分自编码器框架，在编码器部分，使用图卷积网络（GCN）\cite{Kipf.2017.Welling}将节点投影到高维空间中，同时，考虑网络生成和演化机制与社团结构，在变分自编码器（VAE）\cite{kingma2013auto}的隐变量中引入混合高斯分布，以增强动态网络各快照的社团检测能力。此外，模型的核心是对动态网络演化的建模，通过采用门控循环单元（GRU）拟合节点表示向量的时序演化模式来实现对动态网络演化中的时序依赖关系的建模。
+本研究旨在利用网络表示学习框架检测动态网络中的动态社团结构，提出了名为VGRGMM的模型。该模型将第一个快照视为静态网络，并对快照$t \ge 2$时的动态演化进行建模。模型采用变分自编码器框架，在编码器部分，使用图卷积网络（GCN）\cite{Kipf.2017.Welling}将节点投影到高维空间中，同时，考虑网络生成和演化机制与社团结构，在变分自编码器（VAE）\cite{jiang2024incomplete}的隐变量中引入混合高斯分布，以增强动态网络各快照的社团检测能力。此外，模型的核心是对动态网络演化的建模，通过采用门控循环单元（GRU）拟合节点表示向量的时序演化模式来实现对动态网络演化中的时序依赖关系的建模。
  
 
 如图~\ref{fig1} 展示了快照$t$下的VGRGMM模型流程。该模型框架主要分为三个部分，首先是基于混合高斯GMM先验对节点表示进行生成，并最终获得$t$时刻网络快照的生成部分；随后是基于节点表示和GRU的演化部分，利用GRU的隐变量$h$来实现对动态网络演化模式的建模；最后是推断部分，即利用节点拓扑$W^{(t)}$和属性矩阵$X^{(t)}$以及前一时刻的隐藏表示$h^{(t-1)}$结合GCN获得$t$时刻的节点表示。
@@ -195,7 +195,7 @@ z_i^{(t)} \sim \bm{Cat}(\bm{\pi}^{(t)}),
 \end{align}
 
 
-根据式~(\ref{eq:1}) - (\ref{chap6:eq:3})和式~(\ref{eq:10})，本研究通过使用SGVB~\cite{kingma2013auto}估计器，进一步具体化$\mathcal{L}_{ELBO}$为以下公式：
+根据式~(\ref{eq:1}) - (\ref{chap6:eq:3})和式~(\ref{eq:10})，本研究通过使用SGVB~\cite{jiang2024incomplete}估计器，进一步具体化$\mathcal{L}_{ELBO}$为以下公式：
 \begin{align} 
 {\mathcal{L}_{ELBO}}  = &\sum_{t=1}^T \sum_{i=1}^{N^{(t)}}\Bigg[ \frac{1}{|\mathcal{S}_i^{(t)}|} \sum_{v_s\in \mathcal{S}_i^{(t)}} \Big[ \mathbf{W}_{i,s}^{(t)}\log{b_{i,s}^{(t)}} \nonumber\\
 & + (1-\mathbf{W}_{i,s}^{(t)}) \log(1-\log{b_{i,s}^{(t)}}) \Big]\nonumber \\
@@ -230,32 +230,9 @@ z_i^{(t)} \sim \bm{Cat}(\bm{\pi}^{(t)}),
 
 
 
-%\begin{algorithm}
-%	\caption{VGRGMM算法的伪代码}
-%	\algorithmicrequire ~迭代次数 $L$，邻接矩阵 $\mathbf{W}^{(\le T)}$，特征矩阵 $\mathbf{X}^{(\le T)}$ \\
-%	\algorithmicensure ~节点表示矩阵 $\mathbf{F}^{(\le T)}$，社团分配矩阵 $\mathbf{Z}^{(\le T)}$ 
-%	\begin{algorithmic}[1]
-%		\STATE 初始化：$\bm{\pi^{(t)}} \sim \bm{\mathcal{U}(0,1)}$ ($1 \le t \le T$)，$\mathbf{h}^{(0)}=\mathbf{0}$
-%		\FOR {$t = 1,...,T$} 
-%		\STATE 获取高斯参数 $\hat{\mathbf{\theta}}^{(t)}, \hat{\mathbf{\sigma}}^{(t)}$ (式~(\ref{eq:10}))
-%		\STATE 生成节点表示 $\mathbf{F}_i^{(t)}$ (式~(\ref{eq:11}))
-%		\STATE 学习GRU隐藏状态 $\mathbf{h}^{(t)}$ (式~(\ref{eq:8}))
-%		\FOR {每个 $v_i \in V^{(t)}$}
-%		\STATE 采样社团划分 $\mathbf{Z}_i^{(t)} \sim \boldsymbol{Cat}(\bm{\pi}^{(t)})$
-%		\STATE MC采样 $\mathcal{S}_i^{(t)} \subseteq V^{(t)}$~\cite{kingma2013auto}
-%		\STATE 重构 $\mathbf{W}_{i,s}^{(t)}$ ($v_s \in \mathcal{S}_i^{(t)}$, 式~(\ref{chap6:eq:3}))
-%		\ENDFOR
-%		\ENDFOR
-%		\STATE 计算 $\mathcal{L}_{ELBO}$ (式~(\ref{eq:16}))
-%		\STATE 通过SGD最大化 $\mathcal{L}_{ELBO}$ 更新参数
-%		\STATE 重复步骤 2-10 直到迭代 $L$ 次
-%		\STATE 获取社团分配 $\mathbf{Z}^{(\le T)}$ (式~(\ref{eq:12}))
-%		\RETURN $\mathbf{F}^{(\le T)}, \mathbf{Z}^{(\le T)}$
-%	\end{algorithmic}
-%	\label{algorithm:chap6}
-%\end{algorithm}
+
 \begin{algorithm}[h]
-	\caption{VGRGMM算法的伪代码} %
+	\caption{VGRGMM的迭代算法} %
 	%
 	\begin{algorithmic}[1]
 		\STATE \textbf{输入：} ~迭代次数 $L$，邻接矩阵 $\mathbf{W}^{(\le T)}$ 和特征矩阵 $\mathbf{X}^{(\le T)}$。\\
@@ -268,7 +245,7 @@ z_i^{(t)} \sim \bm{Cat}(\bm{\pi}^{(t)}),
 		\STATE 根据式~(\ref{eq:8}) 学习GRU隐藏状态 $\mathbf{h}^{(t)}$； \label{al:ev}
 		\FOR {对于每个 $v_i \in V^{(t)}$}   \label{al:destart}
 		\STATE 从分类分布 $\boldsymbol{Cat}(\bm{\pi}^{(t)})$ 中采样社团划分 $\mathbf{Z}_i^{(t)}$；
-		\STATE 通过MC采样 $\mathcal{S}_i^{(t)} \subseteq V^{(t)}$~\cite{kingma2013auto}；
+		\STATE 通过MC采样 $\mathcal{S}_i^{(t)} \subseteq V^{(t)}$~\cite{jiang2024incomplete}；
 		\FOR {对于每个 $v_s \in \mathcal{S}_i^{(t)}$}
 		\STATE 根据式~(\ref{chap6:eq:3}) 重构邻接矩阵 $\mathbf{W}_{i,s}^{(t)}$；
 		\ENDFOR
@@ -309,10 +286,10 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 	\centering%居中
 	\renewcommand\arraystretch{1}{
 		\begin{tabular}{ccccccc}
-			\toprule
+			\toprule[1.5pt]
 			\centering
 			~~数据集~~ & ~ $T$~ &~  $\overline{N}$ ~& ~$\overline{M}$~ & ~$\overline{K}$~ & ~$\overline{d_{\mathrm{avg}}}$~ & ~$\overline{\mathrm{cc}_{\mathrm{avg}}}$~\\
-			\hline
+			\midrule[1.0pt]
 			Var &  10 & 393 & 3,055 & 8 & 15.4926 & 0.1622\\ 
 			
 			Synth &  10 & 15,000 & 300,000 & 8 & 20.000 & 0.2530\\ 
@@ -336,7 +313,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 			iadublin & 8 & 10,972 & 415,913 & - & 75 & 1.0607\\
 			
 			soc-wiki & 12 & 7,118 & 100,811 & - & 28.3257 & 0.1408 \\
-			\bottomrule
+			\bottomrule[1.5pt]
 	\end{tabular}} 
 	\vspace{0cm}
 \end{table}
@@ -365,7 +342,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
     \item \textbf{DynRNN}~\cite{goyal2020dyngraph2vec}：该方法以当前时刻之前的所有网络快照作为输入，利用RNN建模网络的时序演化模式，将当前时刻的网络结构作为输出，从而能够捕捉每个快照节点之间以及多个快照的非线性交互。
     \item \textbf{DynAERNN}~\cite{goyal2020dyngraph2vec}：该方法的模型框架与DynRNN相同，改进点主要关注对动态网络快照的重构，通过自编码器来对其进行实现。
     \item \textbf{VGRNN}~\cite{hajiramezanali2019variational}：该方法在时序建模中依然通过RNN来实现，但其自编码器部分为节点引入了先验概率（即变分自编码器），并利用变分推断与SGVB实现对随机变量的梯度传播。
-    \item \textbf{VGAECD}：该方法在静态网络上独立使用变分图自编码器进行社团检测。其思路与\cite{choong2018learning}中的方法一致，也是本章所提出VGRGMM方法中忽略动态网络快照间依赖关系的特例，可以视作消融。
+    \item \textbf{VGAECD}：该方法在静态网络上独立使用变分图自编码器进行社团检测。通过引入社团先验实现将图变分自编码器应用到静态社团检测中，也是本章所提出VGRGMM方法中忽略动态网络快照间依赖关系的特例，可以视作消融。
 \end{itemize}
 
 
@@ -378,13 +355,13 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 本章引入四种广泛使用的指标来评估社团检测的性能，具体如下。
 \begin{itemize}
   \item \textbf{归一化互信息（NMI）}：其衡量了在$t$时刻，计算得到的社团划分$\mathcal{C}^{(t)}$ 与真实社团划分$\mathcal{C}_{\mathrm{T}}^{(t)}$之间的相似程度。NMI值越高，社团检测效果越好。
-\item \textbf{精度（AC）}：其通过与真实值的比较来衡量社团划分效果。AC值越低，社团检测性能越好。
+\item \textbf{精确度（AC）}：其通过与真实值的比较来衡量社团划分效果。AC值越低，社团检测性能越好。
 
 \item \textbf{调整兰德指数（ARI）}：其是一个数据聚类指标，用于衡量模型计算的社团划分$\mathcal{C}^{(t)}$与真实社团划分$\mathcal{C}_{\mathrm{T}}^{(t)}$之间的相似性。ARI越高表示社团检测效果越好。
 
 \item \textbf{模块度（Q）}：其衡量了所划分社团内节点连边的紧密程度，其通过对比所识别社团结构在网络快照中的紧密程度与空模型的紧密程度之差。模块度越高，表示社团内节点连边越紧密，社团间节点连边越稀疏。
 \end{itemize}
-需要注意的是，\emph{NMI}、\emph{AC}和\emph{ARI}仅在数据中存在社团标签时适用，而$Q$可以在没有真实社团标签的情况下进行测量。较大的\emph{NMI}、\emph{ARI}和$Q$值表示社团划分结果更好，而\emph{AC}越小则表示社团划分结果更好。
+需要注意的是，NMI、AC和ARI仅在数据中存在社团标签时适用，而$Q$可以在没有真实社团标签的情况下进行测量。较大的NMI、ARI和$Q$值表示社团划分结果更好，而AC越小则表示社团划分结果更好。
 各评价指标的详细定义见~\ref{chap2:metrics}
 
 
@@ -401,16 +378,15 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 
 \subsubsection{生成数据集实验结果}
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
     \centering
     \hspace{-2mm}
     \includegraphics[width=1\textwidth]{figures/chap06/chap5synthData.pdf}
-    \caption{两种生成的动态网络的实验结果对比。(a) Var 数据集, (b) Synth 数据集。图中每个值是基于$10$次具有相同参数的随机生成网络的计算的平均值。}
+    \caption{Var 和 Synth 两种生成的动态网络的实验结果对比。}
     \label{fig:gene}
-\end{figure*}
+\end{figure}
 
-如图~\ref{fig:gene}所示，本节展示了所有方法在生成的数据集Var和Synth（网络规模更大）上的社团检测结果。在\emph{NMI}、\emph{AC}和\emph{ARI}指标上对这些方法进行了评估。
-
+如图~\ref{fig:gene}所示，本节展示了所有方法在生成的数据集Var和Synth（网络规模更大）上的社团检测结果。在NMI、AC和ARI指标上对这些方法进行了评估。图中每个值是基于$10$次具有相同参数的随机生成网络的计算的平均值。
 对于两种不同规模的网络，本节的方法VGRGMM在所有三个指标上几乎表现最佳。CDNMF和VGRNN相较于VGRGMM具有一定竞争力，并且优于其他对比方法。CDNMF的对比学习机制能够有效地捕获网络的全局特征，VGRNN则捕捉了动态网络的时序演化以及高维和非线性结构。另一方面，深度表示学习方法DynRNN和DynAERNN仅专注于建模网络拓扑的动态变化，因此未能捕捉到动态社团的结构信息。经典的动态社团检测方法DYNMOGA通过多目标函数优化获得社团结构，也取得了较好的表现。此外，静态方法VGAECD在所有数据集和指标上表现非常差，因其无法建模网络与社团的演化。总体而言，VGRGMM能够有效建模跨快照建模时序依赖性，并使用GMM先验捕获了社团结构信息，并建模了动态网络的非线性结构，因此能在节点和社团层面的任务获得更好的表现。
 
 
@@ -436,7 +412,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
     \vspace{0cm}
 \end{figure*}
 
-本节展示了在真实世界数据集上的实验结果，这些数据集分为有真实标签和无真实标签的动态网络。图~\ref{fig:realnet}展示了不同方法在四个具有社团真相的动态网络上的结果，使用\emph{NMI}、\emph{AC}和\emph{ARI}指标进行评估。为了使比较更加清晰，本章使用箱形图展示了所有方法在每个动态网络上的社团检测效果，每个箱形图表示$30$次实验结果的平均值和标准差。总体而言，本研究的VGRGMM在这三个指标上的表现均优于其他对比方法，较小的标准差意味着其在快照间具有稳定和平滑的结果。VGAECD表现较差，因为其仅忽略了动态网络的时序演化，这意味着动态网络的历史信息对于动态社团检测非常重要。对于其他对比方法，没有一个方法在所有网络上都能与本研究的方法竞争。尽管VGRNN在整体上表现第二好，但在HS11数据集上不如DECS。
+本节展示了在真实世界数据集上的实验结果，这些数据集分为有真实标签和无真实标签的动态网络。图~\ref{fig:realnet}展示了不同方法在四个具有社团真相的动态网络上的结果，使用NMI、AC和ARI指标进行评估。为了使比较更加清晰，本章使用箱形图展示了所有方法在每个动态网络上的社团检测效果，每个箱形图表示$30$次实验结果的平均值和标准差。总体而言，本研究的VGRGMM在这三个指标上的表现均优于其他对比方法，较小的标准差意味着其在快照间具有稳定和平滑的结果。VGAECD表现较差，因为其仅忽略了动态网络的时序演化，这意味着动态网络的历史信息对于动态社团检测非常重要。对于其他对比方法，没有一个方法在所有网络上都能与本研究的方法竞争。尽管VGRNN在整体上表现第二好，但在HS11数据集上不如DECS。
 
 本章还展示了对于没有社团真相的动态网络的实验结果，基于模块度$Q$进行评估，如图~\ref{fig:noTruth}所示，VGRGMM在图中的四组网络上也表现出最佳或次佳的性能。此外，VGRGMM、DYNMOGA、DECS和VGRNN都表现出优异的结果，因为这些方法要么模型设计是基于模块度优化进行的改进，要么建模了动态网络的时序演化。
 
@@ -449,9 +425,9 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 		\caption{\label{tab2}不同方法的运行时间对比（s）}
 		\vspace{0.5em}\centering\wuhao
 		\begin{tabular}{cp{0.6cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.85cm}p{0.85cm}p{0.7cm}}
-			\hline
+			\toprule[1.5pt]
 			\diagbox{方法名}{数据集}& Var & HS11 & HS12 & Pri & Work & Cphone & Enron & Voles & fbmsg & Synth \\
-			\hline
+			\midrule[1.0pt]
 			AdaDyGNN & 91.7 & 57.5 & 65.9 & 75.1 & 52.3 & 91.1 & 60.6 & 382.2  & 254.8 & 10943.2\\
 			
 			DynAERNN & 94.9 & 75.1 & 70.7 & 76.9 & 61.8 & 96.4 & 78.1 & 388.1 & 289.8 & 10102.3\\
@@ -469,7 +445,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 			VGRNN+GMM & 100.8 & 106.5 & 21.9 & 51.4 & 114.8 & 37.4 &  17.2 & 96.5 & 127.9 & 9620.4\\
 			
 			VGRGMM & 35.4 & 5.522 & 8.9 & 22.8 & 6.4& 32.9 &  12.2 & 12.7 & 40.0 & 9036.1\\
-			\hline
+			\bottomrule[1.5pt]
 		\end{tabular} 
 		
 		% \end{table*}
@@ -500,7 +476,7 @@ VGRGMM的复杂度为$O(TND^2W)$，其中，$W$是GRU的所有参数数量，其
 本节进一步利用cellphone数据对模型进行了鲁棒性测试，如图~\ref{fig:robustWP}所示，横坐标表示对cellphone随机抽取边的比例。随着网络的边移除比例提升，网络的结构被破坏程度也越来越高。可以看出，VGRGMM的鲁棒性随网络边的扰动变化不大，因模型的混合高斯先验能够很好地捕获数据分布，精准地刻画了网络的高阶生成机制（即社团结构 ），因此模型对网络噪声敏感性较低，具备良好的鲁棒性。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.6\textwidth]{figures/chap06/workplaceRBNA.pdf}
+	\includegraphics[width=.66\textwidth]{figures/chap06/workplaceRBNA.pdf}
 	\caption{模型鲁棒性小提琴图}
 	\label{fig:robustWP}
 \end{figure}
@@ -532,7 +508,7 @@ VGRGMM可以同时实现动态网络嵌入和社团检测任务，相较与传�
 
 
 
-在本研究的模型VGRGMM中，除了嵌入维度$D$之外，没有其他额外的超参数。本研究分析了$D$对动态网络中社团检测结果的敏感性。本节选择了两个数据集，Primary和Enron数据集，分别使用\emph{NMI}和$Q$进行评估。如图~\ref{fig:Hyper} 所示，VGRGMM在两个网络中每个快照上$D$从$4$到$128$变化的结果。VGRGMM在节点表示向量维度为$32$时可以达到最佳性能。如果维度$D < 32$，则没有足够的维度来刻画网络结构。反之，当$D > 32$时，节点表示向量将对动态网络过拟合，因此在实验中设置$D = 32$。
+在本研究的模型VGRGMM中，除了嵌入维度$D$之外，没有其他额外的超参数。本研究分析了$D$对动态网络中社团检测结果的敏感性。本节选择了两个数据集，Primary和Enron数据集，分别使用NMI和$Q$进行评估。如图~\ref{fig:Hyper} 所示，VGRGMM在两个网络中每个快照上$D$从$4$到$128$变化的结果。VGRGMM在节点表示向量维度为$32$时可以达到最佳性能。如果维度$D < 32$，则没有足够的维度来刻画网络结构。反之，当$D > 32$时，节点表示向量将对动态网络过拟合，因此在实验中设置$D = 32$。
 
 \begin{figure}[htbp]
 	\centering

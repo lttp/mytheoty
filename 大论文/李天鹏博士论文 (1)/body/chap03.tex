@@ -13,7 +13,7 @@
 
 动态随机块模型\cite{yang2011detecting}作为生成模型的典型方法由于其模型设计符合直觉，且对于真实世界的社团检测效果较好而受到部分研究人员的青睐，经典动态随机块模型通过引入了节点的时序社团转移矩阵实现了对动态网络及动态社团的显式演化建模。但该假设并未考虑节点在演化过程中的异质性，虽然对于网络中的噪声不敏感，具有更好的鲁棒性，但对于社团演化的建模并不精准。
 
-本章针对动态随机块模型所面临的两个问题进行探究与改进，首先，对于动态网络演化建模过程中的高阶生成机理进行实证探究，挖掘动态网络演化的高阶机理；其次，在该研究的基础上依据动态随机块模型设计融合网络高阶生成机理的动态网络及社团的演化机制的层次贝叶斯随机块模型（hierarchical Bayesian dynamic SBM，HB-DSBM）并进行实验验证。
+本章针对动态随机块模型所面临的两个问题进行探究与改进，首先，对于动态网络演化建模过程中的高阶生成机理进行实证探究，挖掘动态网络演化的高阶机理；其次，在该研究的基础上依据动态随机块模型设计融合网络高阶生成机理的动态网络及社团的演化机制的层次贝叶斯随机块模型 HB-DSBM 并进行实验验证。
 
 \section{网络高阶生成机理挖掘}
 
@@ -38,7 +38,7 @@
 \end{enumerate}
 
 \begin{algorithm}[H]
-	\caption{特征提取}
+	\caption{特征提取算法}
 	\label{chap3:alg1}
 	\begin{algorithmic}[1]
 		\STATE \textbf{输入：}\quad 无向图序列 $W = {W}^1,..{W}^T$ 和社团标签 $\mathcal{C} = \mathcal{C}^1,...\mathcal{C}^T$\\
@@ -82,9 +82,9 @@
 	\vspace{0.5em}\centering\wuhao
 	\begin{tabular}{lll}
 		% \begin{tabular}{|l|l|l|l|}
-			\hline
+			\toprule[1.5pt]
 			符号&节点局部特征名 & 定义\\
-			\hline
+			\midrule[1.0pt]
 			$f1$&社团节点数  & $n_l^t$\\
 			$f2$&社团边数 & $e_l^t$\\
 			$f3$&社团内的边数 & $\frac{e_l^t(in)}{n_l^t}$\\
@@ -95,7 +95,7 @@
 			$f8$&节点的平均邻居度 &  $\frac{1}{|N(i)^t|}\sum_{j\in N(i)^t}e_j^t$ \\
 			$f9$&节点的接近中心性 &  $\sum_{j\in C_{l,-i}^t}\frac{C_l^t}{d(i,j)}$ \\
 			$f10$&节点的介数中心性 &  $\sum_{j,k \in C_{l,-i}^t}\frac{\sigma_{jk}(i)}{\sigma_{jk}}$\\
-			\hline
+			\bottomrule[1.5pt]
 		\end{tabular}
 		
 	\end{table}
@@ -169,9 +169,9 @@
 	\vspace{0.5em}\centering\wuhao
 	\resizebox{\textwidth}{!}{
 		\begin{tabular}{p{70pt}p{200pt}p{55pt}p{40pt}}
-			\hline
+			\toprule[1.5pt]
 			数据集&数据内容 & 节点数$|\mathcal{V}|$ & 边数$|\mathcal{E}|$\\
-			\hline
+			\midrule[1.0pt]
 			ia-digg-reply &Digg社交网站网络\cite{nr}，时间跨度为2008年10月29日至2008年11月13日 & $30397$ & $87627$\\
 			ia-facebook-wall-wosn-dir & Facebook关注与被关注网络\cite{nr}，时间跨度2004年5月15日至2004年10月24日 & $44668$ & $876993$\\
 			ia-reality-call & MIT的手机接打电话网络\cite{nr}，时间跨度为 2004年9月24日-2005年10月7日& $6810$ & $52050$\\
@@ -188,7 +188,7 @@
 			fb-forum & 脸书某论坛帖子网络\cite{nr}，时间跨度2004年5月15日-2004年10月24日 & $899$ & $33720$\\
 			fb-messages & 脸书加州学生社区的消息网络\cite{nr}，时间跨度2004年3月 24日-2004年10月22日 & $1897$ & $61734$\\
 			
-			\hline
+			\bottomrule[1.5pt]
 		\end{tabular}
 	}
 \end{table}
@@ -537,8 +537,8 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 		\STATE \textbf{输入：}~~ 动态网络邻接矩阵 $W$，最大迭代次数 $n_{max}$，收敛阈值 $\varepsilon$ \\
 		\STATE \textbf{输出：}~~ $\widetilde{\alpha}, \widetilde{\beta}, \widetilde{\gamma}, \widetilde{\mu}, \widetilde{\xi}, \widetilde{\phi}$ \\
 		\REPEAT
-		\STATE 根据给定$\widetilde{\phi}$，利用迭代公式~\ref{eq4}、\ref{eq5}、\ref{eq6}、\ref{eq7}更新$\widetilde{\xi}, \widetilde{\gamma}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}$；
-		\STATE 根据给定$\widetilde{\xi}, \widetilde{\gamma}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}$，利用迭代公式~\ref{eq8}、\ref{eq9}、\ref{eq10}更新$\widetilde{\phi}$；
+		\STATE 根据给定$\widetilde{\phi}$，利用迭代公式~\ref{eq4}、\ref{eq5}、\ref{eq6}、\ref{eq7}更新$\widetilde{\xi}, \widetilde{\gamma}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}$
+		\STATE 根据给定$\widetilde{\xi}, \widetilde{\gamma}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}$，利用迭代公式~\ref{eq8}、\ref{eq9}、\ref{eq10}更新$\widetilde{\phi}$
 		\UNTIL {$|\mathcal{L}^{new} - \mathcal{L}^{old}| < \varepsilon$ 或迭代次数超过 $n_{max}$}
 		\RETURN $\widetilde{\xi}, \widetilde{\gamma}, \widetilde{\alpha}, \widetilde{\beta}, \widetilde{\mu}, \widetilde{\phi}$
 	\end{algorithmic}
@@ -561,7 +561,7 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 \textbf{生成数据2} ~\cite{greene2010tracking}则包含不同社团演化事件，其度分布服从重尾分布，与现实世界的动态网络演化更加符合。本节选取了社团扩展事件与社团交换事件两组数据，快照数为$10$，每个快照包含$1000$个节点，社团个数为$20$。
 
-\textbf{KIT-email}~\cite{gorkedynamic}数据集来源于卡尔斯鲁厄理工学院公布的开源电子邮件收发网络。本章首先对其进行初步处理，以时间间隔$2$个月和$3$个月和$6$个月进行分割。
+\textbf{KIT-email}~\footnote{Dynamic network of email communication at the Department of Informatics at Karlsruhe Institute of Technology (KIT)}数据集来源于卡尔斯鲁厄理工学院公布的开源电子邮件收发网络。本章首先对其进行初步处理，以时间间隔$2$个月和$3$个月和$6$个月进行分割。
 
 \textbf{DBLP}~\cite{konect:2017:dblp-cite}为开源计算机领域学术论文数据集，本文抽取了数据挖掘（DM）、数据库（DB）和人工智能（AI）三个子领域的作者合作网络，本文以$1$年为间隔进行快照划分，每个快照包含$1163$个节点、$3$个社团。
 
@@ -577,22 +577,22 @@ P&(W_T, Z_T, C_T, B, A, \pi | \alpha, \beta, \gamma, \mu) \\
 
 动态随机块模型对动态网络的建模效果因其将社团结构纳入模型中，因此可以通过社团检测效果进行衡量。本节将HB-DSBM与多个动态社团检测算法进行对比，各方法的简介如下：
 \begin{itemize}
-	\item ECD~\cite{liu2019evolutionary}将进化聚类方法进行改进，区分了节点在社团内和社团间的连接倾向，在社团聚类效果和时序平滑间取得了较好的平衡。
-	\item DECS~\cite{liu2020detecting}通过启发式的融合人口模型与标签传播算法，改进了多目标优化方法以获得更好的聚类效果。
-	\item ESPRA~\cite{wang2017dynamic}将资源分配指数（RA）与拓扑扰动模型进行融合，形成了基于密度估计的社团检测算法。
-	\item GenLouvain~\cite{jutla2011generalized}改进的模块度优化算法，通过启发式的优化提升了模型对时序耦合的建模效果。
+	\item \textbf{ECD}~\cite{liu2019evolutionary}将进化聚类方法进行改进，区分了节点在社团内和社团间的连接倾向，在社团聚类效果和时序平滑间取得了较好的平衡。
+	\item \textbf{DECS}~\cite{liu2020detecting}通过启发式的融合人口模型与标签传播算法，改进了多目标优化方法以获得更好的聚类效果。
+	\item \textbf{ESPRA}~\cite{wang2017dynamic}将资源分配指数（RA）与拓扑扰动模型进行融合，形成了基于密度估计的社团检测算法。
+	\item \textbf{GenLouvain}~\cite{jutla2011generalized}改进的模块度优化算法，通过启发式的优化提升了模型对时序耦合的建模效果。
 %	\item AFFECT~\cite{xu2014adaptive}将经典的进化聚类算法进行改进，去除了平衡参数，提升了模型的鲁棒性与聚类效果。
-	\item AdaDyGNN~\cite{Li2024DyGNN}基于强化学习的动态表示学习方法，通过设计决策机制对网络中的边的变化进行影响进行过滤以提升模型鲁棒性。
-	\item DYNMOGA~\cite{folino2014evolutionary}基于多目标优化的进化聚类算法，可以自动确定社团个数并同时考虑了历史信息的影响。
-	\item DSBM~\cite{yang2011detecting}经典动态随机块模型，作为本文方法的消融，通过设计社团转移矩阵显式地刻画网络及社团的演化。
-	\item PisCES~\cite{liu2018global}基于全局优化的谱聚类算法，同时考虑了网络演化、谱平滑以及度修正因素。
+	\item \textbf{AdaDyGNN}~\cite{Li2024DyGNN}基于强化学习的动态表示学习方法，通过设计决策机制对网络中的边的变化进行影响进行过滤以提升模型鲁棒性。
+	\item \textbf{DYNMOGA}~\cite{folino2014evolutionary}基于多目标优化的进化聚类算法，可以自动确定社团个数并同时考虑了历史信息的影响。
+	\item \textbf{DSBM}~\cite{yang2011detecting}经典动态随机块模型，作为本文方法的消融，通过设计社团转移矩阵显式地刻画网络及社团的演化。
+	\item \textbf{PisCES}~\cite{liu2018global}基于全局优化的谱聚类算法，同时考虑了网络演化、谱平滑以及度修正因素。
 \end{itemize}
 
 本文超参数包括$\alpha$、$\beta$、$\mu$和$\gamma$。其中，$\alpha_{kl} = 1$，$\alpha_{kk} = 10$用以控制社团内部连边概率更大，而$\beta$的设置与$\alpha$一致。对于$\mu$和$\gamma$，$\mu_k = \gamma_k = \frac{1}{K}$，因二者均属于Dirchlet分布的超参数。
 
 \subsubsection{评价指标}
 
-实验采用精度（AC）、调整兰德指数（ARI）与标准化互信息（NMI）~\cite{gong2007machine}作为社团检测性能的评估标准，这是当前动态社团检测领域广泛使用的指标。各指标的具体定义可参见~\ref{chap2:metrics}中的动态社团检测评价指标描述。
+实验采用精确度（AC）、调整兰德指数（ARI）与标准化互信息（NMI）作为社团检测性能的评估标准，这是当前动态社团检测领域广泛使用的指标。各指标的具体定义可参见~\ref{chap2:metrics}中的动态社团检测评价指标描述。
 
 \subsubsection{实验结果}
 
